@@ -7,6 +7,7 @@ import (
 
 func main() {
 	createTh()
+	createsql()
 }
 func createTh() {
 	for itemName, oItemDef := range itemDef.EntityDefMap {
@@ -28,7 +29,7 @@ func createsql() {
 			//            fmt.Println("idx:", idx)
 			fieldsql = fieldsql + "," + field.Name
 			switch field.Model {
-			case "sn", "text", "password", "enum":
+			case "sn", "text", "password", "enum", "curtime", "curuser":
 				fieldsql = fieldsql + " varchar"
 			case "timestamp":
 				fieldsql = fieldsql + " time"

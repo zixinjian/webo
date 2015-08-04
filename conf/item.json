@@ -130,9 +130,19 @@
         "default": ""
       },
       {
-        "name":"username",
+        "name":"keyword",
         "type":"string",
-        "label":"用户名",
+        "label":"关键字",
+        "require":"true",
+        "unique":"false",
+        "input":"text",
+        "model":"text",
+        "default": ""
+      },
+      {
+        "name":"category",
+        "type":"string",
+        "label":"类别",
         "require":"true",
         "unique":"true",
         "input":"text",
@@ -140,43 +150,162 @@
         "default": ""
       },
       {
-        "name":"password",
+        "name":"spscope",
         "type":"string",
-        "label":"密码",
-        "require":"true",
+        "label":"经营内容",
+        "require":"false",
         "unique":"false",
-        "input":"password",
-        "model":"password",
+        "input":"select",
+        "model":"text",
         "default": ""
       },
       {
-        "name":"department",
+        "name":"contact",
         "type":"string",
-        "label":"部门",
+        "label":"联系人",
         "require":"false",
         "unique":"false",
-        "input":"select",
+        "input":"text",
         "model":"text",
-        "default": "",
-        "enum":[
-          "department_purchase",
-          "department_sale",
-          "department_product"
-        ]
+        "default": ""
       },
       {
-        "name":"role",
+        "name":"jobtitle",
         "type":"string",
-        "label":"权限",
+        "label":"职位",
         "require":"false",
         "unique":"false",
-        "input":"select",
+        "input":"text",
         "model":"text",
-        "default": "role_user",
-        "enum":[
-          "role_user",
-          "role_admin"
-        ]
+        "default": ""
+      },
+      {
+        "name":"phone",
+        "type":"string",
+        "label":"电话",
+        "require":"false",
+        "unique":"false",
+        "input":"text",
+        "model":"text",
+        "default": ""
+      },
+      {
+        "name":"webchat",
+        "type":"string",
+        "label":"微信",
+        "require":"false",
+        "unique":"false",
+        "input":"text",
+        "model":"text",
+        "default": ""
+      },
+      {
+        "name":"qq",
+        "type":"string",
+        "label":"QQ",
+        "require":"false",
+        "unique":"false",
+        "input":"text",
+        "model":"text",
+        "default": ""
+      },{
+        "name":"contact2",
+        "type":"string",
+        "label":"联系人",
+        "require":"false",
+        "unique":"false",
+        "input":"text",
+        "model":"text",
+        "default": ""
+      },
+      {
+        "name":"jobtitle2",
+        "type":"string",
+        "label":"职位",
+        "require":"false",
+        "unique":"false",
+        "input":"text",
+        "model":"text",
+        "default": ""
+      },
+      {
+        "name":"phone2",
+        "type":"string",
+        "label":"电话",
+        "require":"false",
+        "unique":"false",
+        "input":"text",
+        "model":"text",
+        "default": ""
+      },
+      {
+        "name":"webchat2",
+        "type":"string",
+        "label":"微信",
+        "require":"false",
+        "unique":"false",
+        "input":"text",
+        "model":"text",
+        "default": ""
+      },
+      {
+        "name":"qq2",
+        "type":"string",
+        "label":"QQ",
+        "require":"false",
+        "unique":"false",
+        "input":"text",
+        "model":"text",
+        "default": ""
+      },{
+        "name":"contact3",
+        "type":"string",
+        "label":"联系人",
+        "require":"false",
+        "unique":"false",
+        "input":"text",
+        "model":"text",
+        "default": ""
+      },
+      {
+        "name":"jobtitle3",
+        "type":"string",
+        "label":"职位",
+        "require":"false",
+        "unique":"false",
+        "input":"text",
+        "model":"text",
+        "default": ""
+      },
+      {
+        "name":"phone3",
+        "type":"string",
+        "label":"电话",
+        "require":"false",
+        "unique":"false",
+        "input":"text",
+        "model":"text",
+        "default": ""
+      },
+      {
+        "name":"webchat3",
+        "type":"string",
+        "label":"微信",
+        "require":"false",
+        "unique":"false",
+        "input":"text",
+        "model":"text",
+        "default": ""
+      },
+      {
+        "name":"qq3",
+        "type":"string",
+        "label":"QQ",
+        "require":"false",
+        "unique":"false",
+        "input":"text",
+        "model":"text",
+        "default": ""
       },
       {
         "name":"flag",

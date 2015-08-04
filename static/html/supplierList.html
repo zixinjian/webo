@@ -1,54 +1,59 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../../asserts/3rd/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../asserts/3rd/bootstrap-table/bootstrap-table.css">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../../asserts/3rd/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../asserts/3rd/bootstrap-table/bootstrap-table.css">
 </head>
-<body>
+<body style="padding-top: 50px;">
 <div style="padding:20px;">
-<table id="table" data-fixed-column="2">
-    <thead>
-    <tr>
-        <th data-field="id" >Item ID</th>
-        <th data-field="name">Item Name</th>
-        <th data-field="name2">Item Name</th>
-        <th data-field="name3">Item Name</th>
-        <th data-field="price">Item Price</th>
-    </tr>
-    </thead>
-</table>
+    <button id="add_user" type="button" class="btn btn-primary">添加用户</button>
+    <table id="user_table">
+        <thead>
+        <tr>
+            <th data-field="name" data-sortable="true">姓名</th>
+            <th data-field="keyword" data-sortable="true">关键字</th>
+            <th data-field="category" data-sortable="true">类别</th>
+            <th data-field="spscope" data-sortable="true">经营内容</th>
+            <th data-field="contact" data-sortable="true">联系人</th>
+            <th data-field="jobtitle" data-sortable="true">职位</th>
+            <th data-field="phone" data-sortable="true">电话</th>
+            <th data-field="webchat" data-sortable="true">微信</th>
+            <th data-field="qq" data-sortable="true">QQ</th>
+            <th data-field="contact2" data-sortable="true">联系人</th>
+            <th data-field="jobtitle2" data-sortable="true">职位</th>
+            <th data-field="phone2" data-sortable="true">电话</th>
+            <th data-field="webchat2" data-sortable="true">微信</th>
+            <th data-field="qq2" data-sortable="true">QQ</th>
+            <th data-field="contact3" data-sortable="true">联系人</th>
+            <th data-field="jobtitle3" data-sortable="true">职位</th>
+            <th data-field="phone3" data-sortable="true">电话</th>
+            <th data-field="webchat3" data-sortable="true">微信</th>
+            <th data-field="qq3" data-sortable="true">QQ</th>
+            <th data-field="flag" data-sortable="true">状态</th>
+        </tr>
+        </thead>
+    </table>
 </div>
 <script src="../../asserts/3rd/jquery/jquery.js"></script>
 <script src="../../asserts/3rd/bootstrap/js/bootstrap.min.js"></script>
 <script src="../../asserts/3rd/bootstrap-table/bootstrap-table.min.js"></script>
 <script src="../../asserts/3rd/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
 <script>
-$(function(){
-    $("#table").bootstrapTable({
-        data: [{
-            id: 1,
-            name: 'Item 1',
-            price: '$1'
-        }, {
-            id: 2,
-            name: 'Item 2',
-            price: '$2'
-        }, {
-            id: 2,
-            name: 'Item 2',
-            price: '$2'
-        }, {
-            id: 2,
-            name: 'Item 2',
-            price: '$2'
-        }, {
-            id: 2,
-            name: 'Item 2',
-            price: '$2'
-        }]
+    $(function(){
+        $("#user_table").bootstrapTable({url:"/item/list/user", method:"post", sidePagination:"server", pagination:true});
+        $("#add_user").on("click", function(){
+            //console.log("click add user")
+            top.showTopModal({url:"/ui/add/user", refreshContent:refreshContent});
+        })
     });
-});
+    function refreshContent(options){
+        top.hideTopModal()
+        $("#user_table").bootstrapTable("refresh")
+        console.log("refresh")
+    }
+    function queryParams(){
+        return {"abc":"abc"}
+    }
 </script>
 </body>
 </html>

@@ -21,18 +21,20 @@
 <script>
     function showResponse(resp) {
         if(resp.ret == "success"){
+            refreshContent()
             showSuccess("添加成功!");
 
         }else{
             showError("添加失败!")
         }
     }
+    var refreshContent
     function onTopModalOk(options){
         if(options.refreshContent){
-            options.refreshContent();
+            refreshContent = options.refreshContent
         }
-        console.log("onTopModalOk")
-        console.log("valid", $("#item_form").valid());
+//        console.log("onTopModalOk")
+//        console.log("valid", $("#item_form").valid());
         $("#item_form").ajaxSubmit({
             type: "post",
             url: "{{.Service}}",
@@ -41,7 +43,7 @@
         return "not"
     }
     $(function(){
-        console.log("function()")
+//        console.log("function()")
     });
 </script>
 </body>

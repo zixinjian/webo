@@ -7,7 +7,7 @@ import (
 
 func main() {
 	createTh()
-    createsql()
+	createsql()
 }
 func createTh() {
 	for itemName, oItemDef := range itemDef.EntityDefMap {

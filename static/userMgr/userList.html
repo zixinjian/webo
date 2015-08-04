@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../asserts/3rd/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../asserts/3rd/bootstrap-table/bootstrap-table.css">
+</head>
+<body style="padding-top: 50px;">
+<div style="padding:20px;">
+    <button id="add_user" type="button" class="btn btn-primary">添加用户</button>
+    <table id="user_table">
+        <thead>
+            <tr>
+                <th data-field="name" data-sortable="true">姓名</th>
+                <th data-field="username" data-sortable="true">用户名</th>
+                <th data-field="password" data-sortable="true">密码</th>
+                <th data-field="department" data-sortable="true">部门</th>
+                <th data-field="role" data-sortable="true">权限</th>
+                <th data-field="flag" data-sortable="true">状态</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+<script src="../../asserts/3rd/jquery/jquery.js"></script>
+<script src="../../asserts/3rd/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../asserts/3rd/bootstrap-table/bootstrap-table.min.js"></script>
+<script src="../../asserts/3rd/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
+<script>
+    $(function(){
+        $("#user_table").bootstrapTable({url:"/item/list/user", method:"post", sidePagination:"server", pagination:true});
+        $("#add_user").on("click", function(){
+            //console.log("click add user")
+            top.showTopModal({url:"/ui/add/user", refreshContent:refreshContent});
+        })
+    });
+    function refreshContent(options){
+        top.hideTopModal()
+        $("#user_table").bootstrapTable("refresh")
+        console.log("refresh")
+    }
+    function queryParams(){
+        return {"abc":"abc"}
+    }
+</script>
+</body>
+</html>

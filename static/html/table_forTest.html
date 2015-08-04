@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../asserts/3rd/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../asserts/3rd/bootstrap-table/bootstrap-table.css">
+</head>
+<body style="padding-top: 50px;">
+<div style="padding:20px;">
+<table id="table" data-fixed-column="2">
+    <thead>
+    <tr>
+        <th data-field="id" >Item ID</th>
+        <th data-field="name">Item Name</th>
+        <th data-field="name2">Item Name</th>
+        <th data-field="name3">Item Name</th>
+        <th data-field="price">Item Price</th>
+    </tr>
+    </thead>
+</table>
+</div>
+<script src="../../asserts/3rd/jquery/jquery.js"></script>
+<script src="../../asserts/3rd/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../asserts/3rd/bootstrap-table/bootstrap-table.min.js"></script>
+<script src="../../asserts/3rd/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
+<script>
+$(function(){
+    $("#table").bootstrapTable({
+        data: [{
+            id: 1,
+            name: 'Item 1',
+            price: '$1'
+        }, {
+            id: 2,
+            name: 'Item 2',
+            price: '$2'
+        }, {
+            id: 2,
+            name: 'Item 2',
+            price: '$2'
+        }, {
+            id: 2,
+            name: 'Item 2',
+            price: '$2'
+        }, {
+            id: 2,
+            name: 'Item 2',
+            price: '$2'
+        }]
+    });
+});
+</script>
+</body>
+</html>

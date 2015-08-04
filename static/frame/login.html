@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>webo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- styles -->
+    <link href="../../asserts/3rd/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="../../asserts/css/main.css" rel="stylesheet" />
+    <link href="../../asserts/3rd/beego/css/font-awesome.css" rel="stylesheet" />
+    <link href="../../asserts/3rd/beego/css/animate.css" rel="stylesheet" />
+    <link href="../../asserts/3rd/beego/css/uniform.default.css" rel="stylesheet" />
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="../../asserts/3rd/html5shiv.min.js"></script>
+    <![endif]-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+</head>
+
+<body>
+<!-- section header -->
+<header>
+    <!--nav bar helper-->
+    <nav class="navbar navbar-default" style="padding-top: 0">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#" style="color:white;">华力机电</a>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="container" style="width:600px;margin-top:100px;">
+    <div class="signin-form row-fluid">
+        <!--Sign In-->
+        <form class="form-horizontal" id="sign-in">
+            <div class="form-group">
+                <label class="col-sm-4 control-label">用户名</label>
+                <div  class="col-sm-8">
+                    <input type="text" class="input-block-level" data-validate="{required: true, messages:{required:'请输入用户名'}}" name="login_username" id="login_username" autocomplete="off" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-4 control-label">密码</label>
+                <div class="col-sm-8">
+                    <input type="password" class="input-block-level" data-validate="{required: true, messages:{required:'请输入密码'}}" name="login_password" id="login_password" autocomplete="off" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-4 col-sm-8">
+                    <label class="checkbox">
+                        <input type="checkbox" data-form="uniform" name="remember_me" id="remember_me_yes" value="yes" /> 记住我
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-4 col-sm-8">
+                    <input type="submit" class="btn btn-default btn-primary" value="登录" />
+                    <p id="login-msg" style="margin-top:20px;"></p>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- /row -->
+</div>
+<!-- /container -->
+
+<!-- javascript
+    ================================================== -->
+<script src="../../asserts/3rd/beego/js/widgets.js"></script>
+<script src="../../asserts/3rd/jquery/jquery.js"></script>
+<script src="../../asserts/3rd/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../asserts/3rd/jquery/jquery.uniform.min.js"></script>
+<script src="../../asserts/3rd/jquery/jquery.form.js"></script>
+<script src="../../asserts/3rd/jquery/validate/jquery.metadata.js"></script>
+<script src="../../asserts/3rd/jquery/validate/jquery.validate.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        // uniform
+        $('[data-form=uniform]').uniform();
+//        $('#sign-up').validate();
+//        $('#form-recover').validate();
+        function showResponse(resp) {
+            console.log("showReponse", resp)
+            if(resp.ret =="success"){
+                window.location.href="/static/main.html";
+                return;
+            }
+            var result = "登录失败: " + resp.result
+            $("#login-msg").text(result);
+        }
+        // validate
+        $('#sign-in').validate({
+            submitHandler: function (form) {
+                console.log("submitHandler")
+                $("#sign-in").ajaxSubmit({
+                    type: "post",
+                    url: "/",
+                    success: showResponse
+                });
+            }
+        })
+    })
+</script>
+</body>
+
+</html>

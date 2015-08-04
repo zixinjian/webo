@@ -1,0 +1,2 @@
+CREATE TABLE user (id integer NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,sn varchar,name varchar NOT NULL,username varchar NOT NULL UNIQUE,password varchar NOT NULL,department varchar,role varchar,flag varchar,createtime timestamp NOT NULL,creater varchar NOT NULL)
+CREATE TABLE user(id integer NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,sn varchar UNIQUE,name varchar NOT NULL,username varchar NOT NULL UNIQUE,password varchar NOT NULL,department varchar,role varchar,flag varchar,createtime timestamp NOT NULL,creater varchar NOT NULL)

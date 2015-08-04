@@ -77,12 +77,12 @@ func init() {
 	//fmt.Println("itemde", EntityDefMap)
 	for _, oDef := range EntityDefMap {
 		oDef.initAccDate()
-		odefd, ok := EntityDefMap["user"]
-		if ok {
-			for idx, v := range odefd.Fields {
-				fmt.Println(v.Name, idx, v.Model)
-			}
-		}
+		//		odefd, ok := EntityDefMap["user"]
+		//		if ok {
+		//			for idx, v := range odefd.Fields {
+		//				fmt.Println(v.Name, idx, v.Model)
+		//			}
+		//		}
 	}
 	//	fmt.Println(EntityDefMap)
 }

@@ -19,6 +19,10 @@ type Field struct {
 	Default interface{} `json:default`
 }
 
+var fieldSn = Field{"sn", "string", "sn", "none", "false", "false", "text"}
+var fieldCreater = Field{"creater", "string", "创建人", "none", "false", "false", "text"}
+var fieldCreateTime = Field{"createtime", "time", "创建时间", "none", "false", "false", "curtime"}
+
 type ItemDef struct {
 	Name      string  `json:name`
 	Fields    []Field `json:fields`
@@ -64,6 +68,32 @@ func (field *Field) GetValue(valueString string) (interface{}, bool) {
 
 var EntityDefMap = make(map[string]ItemDef)
 
+func initDefault(oItemDef ItemDef) {
+	nField := len(oItemDef.Fields)
+	fields := make([]Field, nField+3)
+	fields[0] = fieldSn
+	for idx, field := range oItemDef.Fields {
+		if field.Type == "" {
+			field.Type = "string"
+		}
+		if field.Model == "" {
+			field.Model = "text"
+		}
+		if field.Input == "" {
+			field.Input = "text"
+		}
+		if field.Require == "" {
+			field.Require = "false"
+		}
+		if field.Unique == "" {
+			field.Unique = "false"
+		}
+		fields[idx+1] = field
+	}
+	fields[nField-2] = fieldCreater
+	fields[nField-1] = fieldCreateTime
+}
+
 func init() {
 	//fmt.Println("initItemDefMap")
 	bytes, err := ioutil.ReadFile("conf/item.json")
@@ -77,6 +107,7 @@ func init() {
 	//fmt.Println("itemde", EntityDefMap)
 	for _, oDef := range EntityDefMap {
 		oDef.initAccDate()
+
 		//		odefd, ok := EntityDefMap["user"]
 		//		if ok {
 		//			for idx, v := range odefd.Fields {

@@ -155,7 +155,7 @@
         "label":"经营内容",
         "require":"false",
         "unique":"false",
-        "input":"select",
+        "input":"text",
         "model":"text",
         "default": ""
       },
@@ -313,7 +313,7 @@
         "label":"状态",
         "require":"false",
         "unique":"false",
-        "input":"select",
+        "input":"none",
         "model":"enum",
         "default": "flag_available",
         "enum":[

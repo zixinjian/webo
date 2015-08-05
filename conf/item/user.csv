@@ -1,0 +1,6 @@
+name,type,label,require,unique,input,model,default,enum
+name,string,姓名,TRUE,text,text,,,
+username,string,用户名,TRUE,text,text,,,
+password,string,密码,TRUE,password,password,12345,,
+department,string,部门,TRUE,select,text,,,"department_purchase,department_sale,department_product"
+role,string,权限,TRUE,select,text,,role_user,"role_user,role_admin"

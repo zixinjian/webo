@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	createTh()
+	//	createTh()
 	createsql()
 }
 func createTh() {

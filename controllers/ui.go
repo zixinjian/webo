@@ -12,9 +12,9 @@ type UiController struct {
 }
 
 func (this *UiController) Add() {
-	fmt.Println("requestBosy", this.Ctx.Input.RequestBody)
-	fmt.Println("params", this.Ctx.Input.Params)
-	fmt.Println("requestBosy", this.Input()["id"])
+	//	fmt.Println("requestBosy", this.Ctx.Input.RequestBody)
+	//	fmt.Println("params", this.Ctx.Input.Params)
+	//	fmt.Println("requestBosy", this.Input()["id"])
 	item, ok := this.Ctx.Input.Params[":hi"]
 	if !ok {
 		fmt.Println("hi", item)
@@ -24,6 +24,21 @@ func (this *UiController) Add() {
 	this.Data["Service"] = "/item/add/" + item
 	this.Data["Form"] = ui.BuildAddForm(item)
 	this.TplNames = "add.html"
+}
+
+func (this *UiController) List() {
+	//	fmt.Println("requestBosy", this.Ctx.Input.RequestBody)
+	//	fmt.Println("params", this.Ctx.Input.Params)
+	//	fmt.Println("requestBosy", this.Input()["id"])
+	item, ok := this.Ctx.Input.Params[":hi"]
+	if !ok {
+		fmt.Println("hi", item)
+	}
+	//	oEntityDef, ok := itemDef.EntityDefMap[item]
+	//	fmt.Println("form", this.GetFormValues(oEntityDef))
+	this.Data["item"] = item
+	this.Data["thlist"] = ui.BuildListThs(item)
+	this.TplNames = "list.html"
 }
 
 func (this *UiController) Update() {

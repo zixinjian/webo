@@ -16,5 +16,6 @@ func init() {
 	beego.Router("/item/update/:hi:string", &controllers.ItemController{}, "*:Update")
 	beego.Router("/item/delete/:hi:string", &controllers.ItemController{}, "*:Delete")
 	beego.Router("/ui/add/:hi:string", &controllers.UiController{}, "*:Add")
+	beego.Router("/ui/list/:hi:string", &controllers.UiController{}, "*:List")
 	beego.Router("/ui/update/:hi:string", &controllers.UiController{}, "*:Update")
 }

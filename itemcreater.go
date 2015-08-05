@@ -17,7 +17,6 @@ func createTh() {
 				th := fmt.Sprintf(`<th data-field="%s" data-sortable="true">%s</th>`, field.Name, field.Label)
 				fmt.Println(th)
 			}
-
 		}
 	}
 }
@@ -36,7 +35,7 @@ func createsql() {
 			case "integer":
 				fieldsql = fieldsql + " integer"
 			default:
-				fmt.Println("no such modal", field.Name, field.Model)
+				fmt.Println("no such modal", field.Name, field.Model, field)
 			}
 			if field.Require == "true" {
 				fieldsql = fieldsql + " NOT NULL"
@@ -54,7 +53,6 @@ func createsql() {
 				fmt.Println("no default", field.Name)
 			}
 		}
-
 		fieldsql = fieldsql + ")"
 		fmt.Println(fieldsql)
 	}

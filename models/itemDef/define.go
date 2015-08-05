@@ -19,9 +19,9 @@ type Field struct {
 	Default interface{} `json:default`
 }
 
-var fieldSn = Field{"sn", "string", "sn", "none", "false", "false", "text"}
-var fieldCreater = Field{"creater", "string", "创建人", "none", "false", "false", "text"}
-var fieldCreateTime = Field{"createtime", "time", "创建时间", "none", "false", "false", "curtime"}
+var fieldSn = Field{"sn", "string", "sn", "none", "false", "false", "text", []string{}, ""}
+var fieldCreater = Field{"creater", "string", "创建人", "none", "false", "false", "text", []string{}, ""}
+var fieldCreateTime = Field{"createtime", "time", "创建时间", "none", "false", "false", "curtime", []string{}, ""}
 
 type ItemDef struct {
 	Name      string  `json:name`
@@ -49,12 +49,23 @@ func (this *ItemDef) GetFieldMap() map[string]Field {
 	}
 	return fieldMap
 }
-
+func (this *ItemDef) initDefault() {
+	nField := len(this.Fields)
+	fields := make([]Field, nField+3)
+	fields[0] = fieldSn
+	for idx, field := range this.Fields {
+		field.initDefault()
+		fields[idx+1] = field
+	}
+	fields[nField+1] = fieldCreater
+	fields[nField+2] = fieldCreateTime
+	this.Fields = fields
+}
 func (field *Field) GetValue(valueString string) (interface{}, bool) {
 	switch field.Type {
 	case "string":
 		return valueString, true
-	case "int64":
+	case "int":
 		value, err := strconv.ParseInt(valueString, 10, 64)
 		if err != nil {
 			return value, true
@@ -65,34 +76,35 @@ func (field *Field) GetValue(valueString string) (interface{}, bool) {
 		return 0, false
 	}
 }
+func (field *Field) initDefault() {
+	if field.Type == "" {
+		field.Type = "string"
+	}
+	if field.Model == "" {
+		field.Model = "text"
+	}
+	if field.Input == "" {
+		field.Input = "text"
+	}
+	if field.Require == "" {
+		field.Require = "false"
+	}
+	if field.Unique == "" {
+		field.Unique = "false"
+	}
+	if field.Model == "" {
+		field.Model = "text"
+	}
+	if field.Default == nil {
+		if field.Type == "int" {
+			field.Default = 0
+		} else {
+			field.Default = ""
+		}
+	}
+}
 
 var EntityDefMap = make(map[string]ItemDef)
-
-func initDefault(oItemDef ItemDef) {
-	nField := len(oItemDef.Fields)
-	fields := make([]Field, nField+3)
-	fields[0] = fieldSn
-	for idx, field := range oItemDef.Fields {
-		if field.Type == "" {
-			field.Type = "string"
-		}
-		if field.Model == "" {
-			field.Model = "text"
-		}
-		if field.Input == "" {
-			field.Input = "text"
-		}
-		if field.Require == "" {
-			field.Require = "false"
-		}
-		if field.Unique == "" {
-			field.Unique = "false"
-		}
-		fields[idx+1] = field
-	}
-	fields[nField-2] = fieldCreater
-	fields[nField-1] = fieldCreateTime
-}
 
 func init() {
 	//fmt.Println("initItemDefMap")
@@ -101,19 +113,20 @@ func init() {
 		fmt.Println("ReadFile: ", err.Error())
 	}
 	//    fmt.Println("readFile", bytes)
-	if err := json.Unmarshal(bytes, &EntityDefMap); err != nil {
+	var lEntityDefMap = make(map[string]ItemDef)
+	if err := json.Unmarshal(bytes, &lEntityDefMap); err != nil {
 		fmt.Println("Unmarshal: ", err.Error())
 	}
-	//fmt.Println("itemde", EntityDefMap)
-	for _, oDef := range EntityDefMap {
-		oDef.initAccDate()
 
-		//		odefd, ok := EntityDefMap["user"]
-		//		if ok {
-		//			for idx, v := range odefd.Fields {
-		//				fmt.Println(v.Name, idx, v.Model)
-		//			}
-		//		}
+	//fmt.Println("itemde", EntityDefMap)
+	for k, oItemDef := range lEntityDefMap {
+		oItemDef.initDefault()
+		oItemDef.initAccDate()
+		EntityDefMap[k] = oItemDef
 	}
+	//	odefd, ok := EntityDefMap["user"]
+	//	if ok {
+	//		fmt.Println("ddd", odefd.Name, odefd.Fields)
+	//	}
 	//	fmt.Println(EntityDefMap)
 }

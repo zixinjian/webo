@@ -1,54 +1,30 @@
-{"user":{
+{
+  "user":{
   "name":"user",
   "fields":[
     {
-      "name": "sn",
-      "type": "string",
-      "label":"sn",
-      "require":"false",
-      "unique":"true",
-      "input":"none",
-      "model":"sn",
-      "default": ""
-    },
-    {
       "name":"name",
-      "type": "string",
       "label":"姓名",
-      "require":"true",
-      "unique":"false",
-      "input":"text",
-      "model":"text",
-      "default": ""
+      "require":"true"
     },
     {
       "name":"username",
-      "type":"string",
       "label":"用户名",
       "require":"true",
-      "unique":"true",
-      "input":"text",
-      "model":"text",
-      "default": ""
+      "unique":"true"
     },
     {
       "name":"password",
-      "type":"string",
       "label":"密码",
       "require":"true",
-      "unique":"false",
       "input":"password",
-      "model":"password",
-      "default": ""
+      "model":"password"
     },
     {
       "name":"department",
-      "type":"string",
       "label":"部门",
-      "require":"false",
-      "unique":"false",
       "input":"select",
-      "model":"text",
+      "model":"enum",
       "default": "",
       "enum":[
         "department_purchase",
@@ -63,7 +39,7 @@
       "require":"false",
       "unique":"false",
       "input":"select",
-      "model":"text",
+      "model":"enum",
       "default": "role_user",
       "enum":[
         "role_user",
@@ -83,42 +59,12 @@
         "flag_available",
         "flag_delete"
       ]
-    },
-    {
-      "name":"createtime",
-      "type":"time",
-      "label":"创建时间",
-      "require":"true",
-      "unique":"false",
-      "input":"none",
-      "model":"curtime",
-      "default": ""
-    },
-    {
-      "name":"creater",
-      "type":"string",
-      "label":"创建人",
-      "require":"true",
-      "unique":"false",
-      "input":"none",
-      "model":"curuser",
-      "default": ""
     }
   ]
-},
+  },
   "supplier":{
     "name":"supplier",
     "fields":[
-      {
-        "name": "sn",
-        "type": "string",
-        "label":"sn",
-        "require":"false",
-        "unique":"true",
-        "input":"none",
-        "model":"sn",
-        "default": ""
-      },
       {
         "name":"name",
         "type": "string",
@@ -305,40 +251,6 @@
         "unique":"false",
         "input":"text",
         "model":"text",
-        "default": ""
-      },
-      {
-        "name":"flag",
-        "type":"string",
-        "label":"状态",
-        "require":"false",
-        "unique":"false",
-        "input":"none",
-        "model":"enum",
-        "default": "flag_available",
-        "enum":[
-          "flag_available",
-          "flag_delete"
-        ]
-      },
-      {
-        "name":"createtime",
-        "type":"time",
-        "label":"创建时间",
-        "require":"true",
-        "unique":"false",
-        "input":"none",
-        "model":"curtime",
-        "default": ""
-      },
-      {
-        "name":"creater",
-        "type":"string",
-        "label":"创建人",
-        "require":"true",
-        "unique":"false",
-        "input":"none",
-        "model":"curuser",
         "default": ""
       }
     ]

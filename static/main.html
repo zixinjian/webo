@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="../asserts/3rd/bootstrap-table/bootstrap-table.css">
     <link rel="stylesheet" href="../asserts/css/main.css">
 </head>
-<body>
+<body style="bottom:0;height:100%">
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -46,7 +46,7 @@
             </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" style="padding: 0;">
-            <iframe name = "frame-content" src="html/table_forTest.html" style="height:750px;width:100%;border:none"></iframe>
+            <iframe name = "frame-content" src="html/table_forTest.html" layout-auto-height="-20" style="width:100%;border:none"></iframe>
         </div>
     </div>
 </div>
@@ -74,13 +74,17 @@
 <script src="../asserts/3rd/bootstrap/js/bootstrap.min.js"></script>
 <script src="../asserts/3rd/bootstrap-table/bootstrap-table.min.js"></script>
 <script src="../asserts/3rd/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
+<script src="js/ui.js"></script>
 <script>
     $(function(){
         $(".sidebar li").on("click", function(event){
             $(".sidebar li").removeClass("active");
             $(this).addClass("active");
         });
-
+        autoHeight()
+        $(window).resize(function () {
+            autoHeight()
+        });
     });
     function showTopModal(options){
         if(options.url){
@@ -107,7 +111,13 @@
         $("#top_modal_content").attr({src:""});
         $('#top_modal').modal("hide");
     }
-
+    function autoHeight(){
+        $.each($("[layout-auto-height]"), function(){
+            var outHeight = $(this).attr("layout-auto-height")
+            console.log("outHeight", outHeight, $(".main").height(), $(".main").height() + parseInt(outHeight))
+            $(this).height($(".main").height() + parseInt(outHeight))
+        });
+    }
 </script>
 </body>
 </html>

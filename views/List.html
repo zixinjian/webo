@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="../../asserts/3rd/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../asserts/3rd/bootstrap-table/bootstrap-table.css">
 </head>
-<body style="padding-top: 50px;">
+<body>
 <div style="padding:20px;">
     <button id="add_item" type="button" class="btn btn-primary">添加</button>
     <table id="item_table">
@@ -20,20 +20,30 @@
 <script src="../../asserts/3rd/bootstrap-table/bootstrap-table.js"></script>
 <script src="../../asserts/3rd/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
 <script>
+    var $table = $("#item_table")
     $(function(){
-        $("#item_table").bootstrapTable({url:"/item/list/{{.item}}", method:"post", sidePagination:"server", pagination:true});
+        $table.bootstrapTable({url:"/item/list/{{.item}}", method:"post", sidePagination:"server", pagination:true, height:getHeight()});
         $("#add_item").on("click", function(){
             //console.log("click add user")
             top.showTopModal({url:"/ui/add/{{.item}}", refreshContent:refreshContent});
         })
+        $(window).resize(function () {
+            $table.bootstrapTable('resetView', {
+                height: getHeight()
+            });
+        });
     });
     function refreshContent(options){
         top.hideTopModal()
-        $("#item_table").bootstrapTable("refresh")
+        $table.bootstrapTable("refresh")
 //        console.log("refreshs")
     }
     function queryParams(){
         return {"abc":"abc"}
+    }
+
+    function getHeight() {
+        return $(window).height()-50;
     }
 </script>
 </body>

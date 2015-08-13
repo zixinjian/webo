@@ -30,9 +30,9 @@ func createsql() {
 			switch field.Model {
 			case "sn", "text", "password", "enum", "curtime", "curuser":
 				fieldsql = fieldsql + " varchar"
-			case "timestamp":
+			case "time":
 				fieldsql = fieldsql + " time"
-			case "integer":
+			case "int":
 				fieldsql = fieldsql + " integer"
 			default:
 				fmt.Println("no such modal", field.Name, field.Model, field)

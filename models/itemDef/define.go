@@ -1,9 +1,9 @@
 package itemDef
 
 import (
-	"encoding/json"
-	"fmt"
-	"io/ioutil"
+	//	"encoding/json"
+	//	"fmt"
+	//	"io/ioutil"
 	"strconv"
 )
 
@@ -19,9 +19,9 @@ type Field struct {
 	Default interface{} `json:default`
 }
 
-var fieldSn = Field{"sn", "string", "sn", "none", "false", "false", "text", []string{}, ""}
-var fieldCreater = Field{"creater", "string", "创建人", "none", "false", "false", "text", []string{}, ""}
-var fieldCreateTime = Field{"createtime", "time", "创建时间", "none", "false", "false", "curtime", []string{}, ""}
+var fieldSn = Field{"sn", "string", "sn", "none", "false", "false", "text", nil, ""}
+var fieldCreater = Field{"creater", "string", "创建人", "none", "false", "false", "curuser", nil, ""}
+var fieldCreateTime = Field{"createtime", "time", "创建时间", "none", "false", "false", "curtime", nil, ""}
 
 type ItemDef struct {
 	Name      string  `json:name`
@@ -76,6 +76,7 @@ func (field *Field) GetValue(valueString string) (interface{}, bool) {
 		return 0, false
 	}
 }
+
 func (field *Field) initDefault() {
 	if field.Type == "" {
 		field.Type = "string"
@@ -107,17 +108,17 @@ func (field *Field) initDefault() {
 var EntityDefMap = make(map[string]ItemDef)
 
 func init() {
-	//fmt.Println("initItemDefMap")
-	bytes, err := ioutil.ReadFile("conf/item.json")
-	if err != nil {
-		fmt.Println("ReadFile: ", err.Error())
-	}
-	//    fmt.Println("readFile", bytes)
-	var lEntityDefMap = make(map[string]ItemDef)
-	if err := json.Unmarshal(bytes, &lEntityDefMap); err != nil {
-		fmt.Println("Unmarshal: ", err.Error())
-	}
-
+	//	fmt.Println("initItemDefMap")
+	//	bytes, err := ioutil.ReadFile("conf/item.json")
+	//	if err != nil {
+	//		fmt.Println("ReadFile: ", err.Error())
+	//	}
+	//	//    fmt.Println("readFile", bytes)
+	//	var lEntityDefMap = make(map[string]ItemDef)
+	//	if err := json.Unmarshal(bytes, &lEntityDefMap); err != nil {
+	//		fmt.Println("Unmarshal: ", err.Error())
+	//	}
+	lEntityDefMap := ReadDefFromCsv()
 	//fmt.Println("itemde", EntityDefMap)
 	for k, oItemDef := range lEntityDefMap {
 		oItemDef.initDefault()

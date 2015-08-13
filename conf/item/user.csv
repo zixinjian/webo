@@ -1,6 +1,7 @@
-name,type,label,require,unique,input,model,default,enum
-name,string,姓名,true,text,text,,,
-username,string,用户名,true,text,text,,,
-password,string,密码,true,password,password,,12345,
-department,string,部门,true,select,text,,,"department_purchase,department_sale,department_product"
-role,string,权限,true,select,text,,role_user,"role_user,role_admin"
+item,user,,,,,,,,
+title,name,type,label,require,unique,input,model,default,enum
+field,name,string,姓名,true,text,text,,,
+field,username,string,用户名,true,text,text,,,
+field,password,string,密码,true,password,password,,12345,
+field,department,string,部门,true,select,text,,,"department_purchase,department_sale,department_product"
+field,role,string,权限,true,select,text,,role_user,"role_user,role_admin"

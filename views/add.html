@@ -35,6 +35,9 @@
         }
 //        console.log("onTopModalOk")
 //        console.log("valid", $("#item_form").valid());
+        if (! $("#item_form").valid()){
+            return "not"
+        }
         $("#item_form").ajaxSubmit({
             type: "post",
             url: "{{.Service}}",

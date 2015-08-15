@@ -4,6 +4,7 @@ import (
 	//	"encoding/json"
 	//	"fmt"
 	//	"io/ioutil"
+	"fmt"
 	"strconv"
 )
 
@@ -19,7 +20,7 @@ type Field struct {
 	Default interface{} `json:default`
 }
 
-var fieldSn = Field{"sn", "string", "sn", "none", "false", "false", "text", nil, ""}
+var fieldSn = Field{"sn", "string", "string", "none", "false", "false", "sn", nil, ""}
 var fieldCreater = Field{"creater", "string", "创建人", "none", "false", "false", "curuser", nil, ""}
 var fieldCreateTime = Field{"createtime", "time", "创建时间", "none", "false", "false", "curtime", nil, ""}
 
@@ -34,11 +35,13 @@ func (this *ItemDef) initAccDate() map[string]Field {
 	for _, field := range this.Fields {
 		fieldMap[field.Name] = field
 	}
+	this.fieldMaps = fieldMap
 	return fieldMap
 }
 
 func (this *ItemDef) IsValidField(fieldName string) bool {
 	_, ok := this.fieldMaps[fieldName]
+	fmt.Println("ok", ok, this.fieldMaps)
 	return ok
 }
 
@@ -48,6 +51,11 @@ func (this *ItemDef) GetFieldMap() map[string]Field {
 		fieldMap[field.Name] = field
 	}
 	return fieldMap
+}
+
+func (this *ItemDef) GetField(filedName string) (Field, bool) {
+	v, ok := this.fieldMaps[filedName]
+	return v, ok
 }
 func (this *ItemDef) initDefault() {
 	nField := len(this.Fields)
@@ -125,9 +133,9 @@ func init() {
 		oItemDef.initAccDate()
 		EntityDefMap[k] = oItemDef
 	}
-	//	odefd, ok := EntityDefMap["user"]
-	//	if ok {
-	//		fmt.Println("ddd", odefd.Name, odefd.Fields)
-	//	}
-	//	fmt.Println(EntityDefMap)
+	odefd, ok := EntityDefMap["user"]
+	if ok {
+		fmt.Println("ddd", odefd.Name, odefd.GetFieldMap())
+	}
+	fmt.Println(EntityDefMap)
 }

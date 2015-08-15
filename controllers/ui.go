@@ -44,20 +44,23 @@ func (this *UiController) List() {
 func (this *UiController) Update() {
 	fmt.Println("Update", this.Ctx.Input.RequestBody)
 	fmt.Println("params", this.Ctx.Input.Params)
-	fmt.Println("requestBosy", this.Input()["id"])
-	id := this.GetString("id")
-	fmt.Println("id", id)
+	fmt.Println("requestBosy", this.Input()["sn"])
+	sn := this.GetString("sn")
+	if sn == "" {
+		fmt.Println("sn is none")
+	}
+	fmt.Println("sn", sn)
 	item, ok := this.Ctx.Input.Params[":hi"]
 	if !ok {
 		fmt.Println("hi", item)
 	}
-	params := svc.Params{"id": id}
+	params := svc.Params{"sn": sn}
 	code, oldValueMap := svc.Get(item, params)
 	if code == "success" {
-		//		fmt.Println("oldValue", oldValueMap)
+		fmt.Println("oldValue", oldValueMap)
 		this.Data["Service"] = "/item/update/" + item
 		this.Data["Form"] = ui.BuildUpdatedForm(item, oldValueMap)
-		this.TplNames = "add.html"
+		this.TplNames = "update.html"
 	} else {
 		this.Ctx.WriteString("Id not found")
 	}

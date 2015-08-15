@@ -6,10 +6,22 @@
 </head>
 <body>
 <div style="padding:20px;">
-    <button id="add_item" type="button" class="btn btn-primary">添加</button>
-    <table id="item_table">
+    <p class="toolbar">
+        <a id="add_item" class="create btn btn-primary">新建</a>
+    </p>
+    <table id="item_table"
+           data-show-refresh="true"
+           data-show-columns="true"
+           data-search="true"
+           data-query-params="queryParams"
+           data-toolbar=".toolbar">
         <thead>
             <tr>
+                <th data-field="action"
+                    data-align="center"
+                    data-formatter="actionFormatter"
+                    data-events="actionEvents"
+                    data-width="75px">  操作  </th>
                 {{str2html .thlist}}
             </tr>
         </thead>
@@ -41,7 +53,34 @@
     function queryParams(){
         return {"abc":"abc"}
     }
-
+    function actionFormatter(value) {
+        return [
+            '<a class="update" href="javascript:" title="修改" style="margin-right: 5px;"><i class="glyphicon glyphicon-edit"></i></a>',
+            '<a class="remove" href="javascript:" title="删除" style="margin-right: 5px;"><i class="glyphicon glyphicon-remove"></i></a>',
+            '<a class="upload" href="javascript:" title="上传附件"><i class="glyphicon glyphicon-upload"></i></a>',
+        ].join('');
+    }
+    window.actionEvents = {
+        'click .update': function (e, value, row) {
+            console.log("value", value, row)
+            top.showTopModal({url:"/ui/update/{{.item}}?sn=" + row.sn, refreshContent:refreshContent});
+        },
+        'click .remove': function (e, value, row) {
+            if (confirm('你确定要删除本行吗?')) {
+                $.ajax({
+                    url: API_URL + row.id,
+                    type: 'delete',
+                    success: function () {
+                        $table.bootstrapTable('refresh');
+                        showAlert('Delete item successful!', 'success');
+                    },
+                    error: function () {
+                        showAlert('Delete item error!', 'danger');
+                    }
+                })
+            }
+        }
+    }
     function getHeight() {
         return $(window).height()-50;
     }

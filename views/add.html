@@ -21,9 +21,8 @@
 <script>
     function showResponse(resp) {
         if(resp.ret == "success"){
+            top.hideTopModal()
             refreshContent()
-            showSuccess("添加成功!");
-
         }else{
             showError("添加失败!")
         }
@@ -36,14 +35,13 @@
 //        console.log("onTopModalOk")
 //        console.log("valid", $("#item_form").valid());
         if (! $("#item_form").valid()){
-            return "not"
+            return
         }
         $("#item_form").ajaxSubmit({
             type: "post",
             url: "{{.Service}}",
             success: showResponse
         });
-        return "not"
     }
     $(function(){
 //        console.log("function()")

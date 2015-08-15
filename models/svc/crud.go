@@ -7,28 +7,32 @@ import (
 	"strings"
 	"time"
 	"webo/models/itemDef"
+	"webo/models/s"
+	"webo/models/status"
 	"webo/models/util"
 )
 
 func Query(entity string, queryParams Params, limitParams map[string]int64, orderBy Params) (string, []map[string]interface{}) {
 	sqlBuilder := NewQueryBUilder()
 	sqlBuilder.QueryTable(entity)
+	fmt.Println("queryParams", queryParams)
 	for k, v := range queryParams {
 		sqlBuilder.Filter(k, v)
 	}
 	//	fmt.Println("order", orderBy)
-	if limit, ok := limitParams["limit"]; ok {
+	if limit, ok := limitParams[s.Limit]; ok {
 		sqlBuilder.Limit(limit)
 	}
-	if offset, ok := limitParams["offset"]; ok {
+	if offset, ok := limitParams[s.Offset]; ok {
 		sqlBuilder.Offset(offset)
 	}
 	for k, v := range orderBy {
 		sqlBuilder.OrderBy(k, v)
 	}
 	query := sqlBuilder.GetSql()
+
 	values := sqlBuilder.GetValues()
-	//	fmt.Println("buildsql: ", query)
+	fmt.Println("buildsql: ", query)
 	o := orm.NewOrm()
 	var resultMaps []orm.Params
 	retList := make([]map[string]interface{}, 0)
@@ -44,11 +48,11 @@ func Query(entity string, queryParams Params, limitParams map[string]int64, orde
 			}
 			retList[idx] = retMap
 		}
-		return "success", retList
+		return status.Success, retList
 	} else {
 		fmt.Println("res", err)
 	}
-	return "faild", retList
+	return status.Failed, retList
 }
 
 func List(entity string, queryParams Params, limitParams map[string]int64, orderBy Params) (string, int64, []map[string]interface{}) {
@@ -74,8 +78,6 @@ func Count(entity string, params Params) int64 {
 			if err != nil {
 				panic(err)
 			}
-
-			fmt.Println("total", total64)
 			return total64
 		}
 	}
@@ -83,19 +85,19 @@ func Count(entity string, params Params) int64 {
 }
 
 func Get(entity string, params Params) (string, map[string]interface{}) {
-	_, _, retList := List(entity, params, map[string]int64{}, Params{})
+	_, retList := Query(entity, params, map[string]int64{}, Params{})
 	if len(retList) > 0 {
-		return "success", retList[0]
+		return status.Success, retList[0]
 	}
-	return "not_found", nil
+	return status.ItemNotFound, nil
 }
 
-func Add(entity string, params Params) string {
+func Add(entity string, params Params) (string, string) {
 
 	Q := "'"
 	oEntityDef, ok := itemDef.EntityDefMap[entity]
 	if !ok {
-		return "entity_no_define"
+		return status.ItemNotDefine, ""
 	}
 	nFieldLen := len(oEntityDef.Fields)
 	fields := make([]string, nFieldLen)
@@ -109,11 +111,11 @@ func Add(entity string, params Params) string {
 			values[idx] = value
 			continue
 		}
-		if field.Model == "sn" {
+		if field.Model == s.Sn {
 			values[idx] = util.TUId()
 			continue
 		}
-		if field.Model == "curtime" {
+		if field.Model == s.CurTime {
 			now := time.Now().Unix()
 			values[idx] = now
 			//			fmt.Println("time", time.Unix(now , 0).String())
@@ -132,28 +134,33 @@ func Add(entity string, params Params) string {
 	query := fmt.Sprintf("INSERT INTO %s%s%s (%s%s%s) VALUES (%s)", Q, entity, Q, Q, columns, Q, qmarks)
 	//
 	o := orm.NewOrm()
-	if res, err := o.Raw(query, values...).Exec(); err != nil {
-		fmt.Println(err)
-		fmt.Println("res", res)
+	if res, err := o.Raw(query, values...).Exec(); err == nil {
+		//		b, c := res.LastInsertId()
+		//		fmt.Println("e", b, c)
+		if i, e := res.LastInsertId(); e == nil && i > 0 {
+			return status.Success, ""
+		}
+	} else {
+		return ParseSqlError(err, oEntityDef)
 	}
-	return "success"
+	return status.UnKnownFailed, ""
 }
 
-func Update(entity string, params Params) string {
+func Update(entity string, params Params) (string, string) {
 	Q := "'"
 	oEntityDef, ok := itemDef.EntityDefMap[entity]
 	if !ok {
-		return "entity_no_define"
+		return status.ItemNotDefine, ""
 	}
 
-	id, ok := params["id"]
+	id, ok := params[s.Sn]
 	if !ok {
-		return "no_id"
+		return status.SnNotFound, ""
 	}
 	var names []string
 	var values []interface{}
 	for _, field := range oEntityDef.Fields {
-		if field.Name == "id" {
+		if field.Name == s.Sn {
 			continue
 		}
 
@@ -167,11 +174,32 @@ func Update(entity string, params Params) string {
 	sep := fmt.Sprintf("%s = ?, %s", Q, Q)
 	setColumns := strings.Join(names, sep)
 
-	query := fmt.Sprintf("UPDATE %s%s%s SET %s%s%s = ? WHERE %s%s%s = ?", Q, entity, Q, Q, setColumns, Q, Q, "id", Q)
-
+	query := fmt.Sprintf("UPDATE %s%s%s SET %s%s%s = ? WHERE %s = ?", Q, entity, Q, Q, setColumns, Q, s.Sn)
+	//	fmt.Println("sql", query, values)
 	o := orm.NewOrm()
 	if res, err := o.Raw(query, values...).Exec(); err == nil {
-		fmt.Println("res", res)
+		if i, e := res.RowsAffected(); e == nil && i > 0 {
+			return status.Success, ""
+		}
+	} else {
+		return ParseSqlError(err, oEntityDef)
 	}
-	return "success"
+	return status.UnKnownFailed, ""
+}
+
+func ParseSqlError(err error, oEntityDef itemDef.ItemDef) (string, string) {
+	errStr := err.Error()
+	if strings.HasPrefix(errStr, SqlErrUniqueConstraint) {
+		itemAndField := strings.TrimPrefix(errStr, SqlErrUniqueConstraint)
+		lstStr := strings.Split(itemAndField, ".")
+		if len(lstStr) < 2 {
+			return status.DuplicatedValue, itemAndField
+		}
+		field := strings.TrimSpace(lstStr[1])
+		if v, ok := oEntityDef.GetField(field); ok {
+			return status.DuplicatedValue, v.Label
+		}
+		return status.DuplicatedValue, itemAndField
+	}
+	return status.UnKnownFailed, ""
 }

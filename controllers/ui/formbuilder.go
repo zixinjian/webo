@@ -46,7 +46,11 @@ func BuildUpdatedForm(entity string, oldValueMap map[string]interface{}) string 
 	if !ok {
 		fmt.Println("BuildUpdatedForm none")
 	}
-	var form string
+	sn, ok := oldValueMap["sn"]
+	if !ok {
+		fmt.Println("no sn found")
+	}
+	form := fmt.Sprintf(`<input type="hidden" name="sn" value="%s"></input>`, sn)
 	for _, field := range oEntityDef.Fields {
 		var oldValue interface{}
 		//        fmt.Println("old", oldValueMap, field.Name)

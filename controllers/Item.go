@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"webo/models/itemDef"
+	"webo/models/status"
 	"webo/models/svc"
 )
 
@@ -40,8 +41,8 @@ func (this *ItemController) List() {
 	this.ServeJson()
 }
 func (this *ItemController) Get() {
-	fmt.Println("requestBosy", this.Ctx.Input.RequestBody)
-	fmt.Println("params", this.Ctx.Input.Params)
+	//	fmt.Println("requestBosy", this.Ctx.Input.RequestBody)
+	//	fmt.Println("params", this.Ctx.Input.Params)
 	tr := new(TableResult)
 	tr.Rows = []map[string]string{{"id": "1", "user": "user1", "name": "a", "department": "dep1", "role": "admin", "flat": ""}}
 	tr.Total = 1
@@ -56,19 +57,29 @@ func (this *ItemController) Add() {
 		fmt.Println("hi", item)
 	}
 	oEntityDef, ok := itemDef.EntityDefMap[item]
+	if !ok {
+		fmt.Println("no_")
+	}
 	svcParams := this.GetFormValues(oEntityDef)
-	ret := svc.Add(item, svcParams)
+	status, reason := svc.Add(item, svcParams)
 	//fmt.Println("addservice", ret)
-	this.Data["json"] = &JsonResult{ret, ""}
+	this.Data["json"] = &JsonResult{status, reason}
 	this.ServeJson()
 }
 func (this *ItemController) Update() {
-	fmt.Println("requestBosy", this.Ctx.Input.RequestBody)
-	fmt.Println("params", this.Ctx.Input.Params)
-	tr := new(TableResult)
-	tr.Rows = []map[string]string{{"id": "1", "user": "user1", "name": "a", "department": "dep1", "role": "admin", "flat": ""}}
-	tr.Total = 1
-	this.Data["json"] = tr
+	item, ok := this.Ctx.Input.Params[":hi"]
+	if !ok {
+		fmt.Println("hi", item)
+	}
+	oEntityDef, ok := itemDef.EntityDefMap[item]
+	if !ok {
+		fmt.Println(status.ItemNotDefine)
+	}
+	svcParams := this.GetFormValues(oEntityDef)
+	status, reason := svc.Update(item, svcParams)
+	//fmt.Println("addservice", ret)
+	this.Data["json"] = &JsonResult{status, reason}
+	this.ServeJson()
 	this.ServeJson()
 }
 func (this *ItemController) Delete() {

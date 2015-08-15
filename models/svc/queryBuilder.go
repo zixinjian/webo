@@ -31,6 +31,7 @@ func (this *queryBuilder) QueryTable(table string) {
 }
 
 func (this *queryBuilder) Filter(fieldName string, value interface{}) {
+	fmt.Println("ddd", this.oEntityDef.IsValidField(fieldName), fieldName, value)
 	if this.oEntityDef.IsValidField(fieldName) {
 		this.conditions = append(this.conditions, condition{fieldName, value, "="})
 	}
@@ -61,6 +62,7 @@ func (this *queryBuilder) OrderBy(fieldName string, value interface{}) {
 }
 func (this *queryBuilder) GetWhere() string {
 	sql := "WHERE "
+	fmt.Println("where", this.conditions)
 	for idx, cond := range this.conditions {
 		if idx > 0 {
 			sql = sql + "AND "

@@ -1,0 +1,7 @@
+field,showInList,sortable,order,visible
+username,,true,,
+password,false,,,false
+name,,true,,
+department,,,,
+role,,,,
+

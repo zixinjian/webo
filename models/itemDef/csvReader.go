@@ -11,24 +11,96 @@ import (
 
 func ReadDefFromCsv() map[string]ItemDef {
 	var lEntityDefMap = make(map[string]ItemDef)
-	filepath.Walk("conf/item", func(filePath string, f os.FileInfo, err error) error {
+	filepath.Walk("conf/item/fields", func(filePath string, f os.FileInfo, err error) error {
 		if strings.HasSuffix(filePath, ".csv") {
-			oItemDef := readCsv(filePath)
+			oItemDef := readItemDefCsv(filePath)
 			lEntityDefMap[oItemDef.Name] = oItemDef
 		}
 		return nil
 	})
+	filepath.Walk("conf/item/uilist", func(filePath string, f os.FileInfo, err error) error {
+		if strings.HasSuffix(filePath, ".csv") {
+			itemName := strings.TrimSuffix(f.Name(), ".csv")
+			//			fmt.Println("itemName", itemName)
+			oItemDef, ok := lEntityDefMap[itemName]
+			if !ok {
+				return nil
+			}
+			uiListMap := readUiListCsv(filePath)
+			for idx, field := range oItemDef.Fields {
+				if u, ok := uiListMap[field.Name]; ok {
+					field.UiList = u
+					//					fmt.Println("uiList", field.UiList)
+					oItemDef.Fields[idx] = field
+				}
+			}
+			lEntityDefMap[itemName] = oItemDef
+		}
+		return nil
+	})
+
 	//	fmt.Println("entity", lEntityDefMap)
 	return lEntityDefMap
 }
-func readCsv(fileName string) ItemDef {
+func readUiListCsv(fileName string) map[string]UiListStruct {
 	cntb, err := ioutil.ReadFile(fileName)
-	fmt.Println("read file: ", fileName)
+	//	fmt.Println("read Ui file: ", fileName)
 	if err != nil {
 		panic(err)
 	}
 	r2 := csv.NewReader(strings.NewReader(string(cntb)))
 	rows, _ := r2.ReadAll()
+	if len(rows) < 2 {
+		panic(fmt.Sprintf("File:%s rows < 2", fileName))
+	}
+	retMap := make(map[string]UiListStruct)
+
+	for ridx, row := range rows {
+		if ridx < 1 {
+			continue
+		}
+		filedName := strings.TrimSpace(row[0])
+		if filedName == "" {
+			continue
+		}
+		UiList := UiListStruct{}
+
+		if showInList := strings.TrimSpace(row[1]); strings.EqualFold(showInList, "false") {
+			UiList.Shown = false
+		} else {
+			UiList.Shown = true
+		}
+
+		if sorable := strings.TrimSpace(row[2]); strings.EqualFold(sorable, "true") {
+			UiList.Sortable = true
+		} else {
+			UiList.Sortable = false
+		}
+
+		if order := strings.TrimSpace(row[3]); strings.EqualFold(order, "desc") {
+			UiList.Order = "desc"
+		} else {
+			UiList.Order = "asc"
+		}
+		if visiable := strings.TrimSpace(row[4]); strings.EqualFold(visiable, "false") {
+			UiList.Visiable = false
+		} else {
+			UiList.Visiable = true
+		}
+		retMap[filedName] = UiList
+	}
+	return retMap
+}
+
+func readItemDefCsv(fileName string) ItemDef {
+	cntb, err := ioutil.ReadFile(fileName)
+	//	fmt.Println("read file: ", fileName)
+	if err != nil {
+		panic(err)
+	}
+	r2 := csv.NewReader(strings.NewReader(string(cntb)))
+	rows, _ := r2.ReadAll()
+	//	fmt.Println("file rows", rows)
 	if len(rows) < 3 {
 		panic(fmt.Sprintf("File:%s rows < 3", fileName))
 	}
@@ -59,7 +131,7 @@ func readCsv(fileName string) ItemDef {
 		}
 		field.Name = name
 
-		typo := strings.Trim(row[2], " ")
+		typo := strings.TrimSpace(row[2])
 		switch typo {
 		case "string", "int":
 			field.Type = typo

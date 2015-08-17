@@ -3,6 +3,8 @@ package controllers
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/astaxie/beego"
+	"strings"
 	"webo/models/itemDef"
 	"webo/models/status"
 	"webo/models/svc"
@@ -28,6 +30,7 @@ func (this *ItemController) List() {
 	//	oEntityDef, ok := itemDef.EntityDefMap[item]
 	queryParams := make(svc.Params, 0)
 	limitParams := make(map[string]int64, 0)
+	beego.Debug("List Item user", requestMap)
 	if k, ok := requestMap["limit"]; ok {
 		limitParams["limit"] = int64(k.(float64))
 	}
@@ -35,6 +38,18 @@ func (this *ItemController) List() {
 		limitParams["offset"] = int64(k.(float64))
 	}
 	orderByParams := make(svc.Params, 0)
+	if sort, ok := requestMap["sort"]; ok {
+		sortStr := strings.TrimSpace(sort.(string))
+		if sortStr != "" {
+			order := "asc"
+			if o, ok := requestMap["order"]; ok {
+				if strings.TrimSpace(o.(string)) == "desc" {
+					order = "desc"
+				}
+			}
+			orderByParams[sortStr] = order
+		}
+	}
 	result, total, retList := svc.List(item, queryParams, limitParams, orderByParams)
 	fmt.Println(result, total, retList)
 	this.Data["json"] = &TableResult{result, int64(total), retList}

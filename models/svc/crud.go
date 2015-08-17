@@ -32,7 +32,7 @@ func Query(entity string, queryParams Params, limitParams map[string]int64, orde
 	query := sqlBuilder.GetSql()
 
 	values := sqlBuilder.GetValues()
-	fmt.Println("buildsql: ", query)
+	//fmt.Println("buildsql: ", query)
 	o := orm.NewOrm()
 	var resultMaps []orm.Params
 	retList := make([]map[string]interface{}, 0)

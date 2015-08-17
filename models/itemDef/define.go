@@ -8,6 +8,12 @@ import (
 	"strconv"
 )
 
+type ItemDef struct {
+	Name      string  `json:name`
+	Fields    []Field `json:fields`
+	fieldMaps map[string]Field
+}
+
 type Field struct {
 	Name    string      `json:name`
 	Type    string      `json:type`
@@ -18,17 +24,18 @@ type Field struct {
 	Model   string      `json:model`
 	Enum    []string    `json:enum`
 	Default interface{} `json:default`
+	UiList  UiListStruct
+}
+type UiListStruct struct {
+	Shown    bool
+	Sortable bool
+	Order    string
+	Visiable bool
 }
 
-var fieldSn = Field{"sn", "string", "string", "none", "false", "false", "sn", nil, ""}
-var fieldCreater = Field{"creater", "string", "创建人", "none", "false", "false", "curuser", nil, ""}
-var fieldCreateTime = Field{"createtime", "time", "创建时间", "none", "false", "false", "curtime", nil, ""}
-
-type ItemDef struct {
-	Name      string  `json:name`
-	Fields    []Field `json:fields`
-	fieldMaps map[string]Field
-}
+var fieldSn = Field{"sn", "string", "string", "none", "false", "false", "sn", nil, "", UiListStruct{false, false, "", false}}
+var fieldCreater = Field{"creater", "string", "创建人", "none", "false", "false", "curuser", nil, "", UiListStruct{false, false, "", false}}
+var fieldCreateTime = Field{"createtime", "time", "创建时间", "none", "false", "false", "curtime", nil, "", UiListStruct{false, false, "", false}}
 
 func (this *ItemDef) initAccDate() map[string]Field {
 	fieldMap := make(map[string]Field, len(this.Fields))
@@ -133,9 +140,9 @@ func init() {
 		oItemDef.initAccDate()
 		EntityDefMap[k] = oItemDef
 	}
-	odefd, ok := EntityDefMap["user"]
-	if ok {
-		fmt.Println("ddd", odefd.Name, odefd.GetFieldMap())
-	}
-	fmt.Println(EntityDefMap)
+	//	odefd, ok := EntityDefMap["user"]
+	//	if ok {
+	//		fmt.Println("ddd", odefd.Name, odefd.GetFieldMap())
+	//	}
+	//	fmt.Println(EntityDefMap)
 }

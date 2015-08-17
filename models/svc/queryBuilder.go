@@ -53,8 +53,9 @@ func (this *queryBuilder) OrderBy(fieldName string, value interface{}) {
 	if !this.oEntityDef.IsValidField(fieldName) {
 		return
 	}
-	if strings.EqualFold(value.(string), "DESC") {
+	if strings.EqualFold(value.(string), "ASC") {
 		this.orders = append(this.orders, fieldName+" ASC")
+		return
 	}
 	if strings.EqualFold(value.(string), "DESC") {
 		this.orders = append(this.orders, fieldName+" DESC")
@@ -84,12 +85,6 @@ func (this *queryBuilder) GetSql() string {
 	if len(this.conditions) > 0 {
 		sql = sql + this.GetWhere()
 	}
-	if this.limit > 0 {
-		sql = sql + fmt.Sprintf("LIMIT %d ", this.limit)
-	}
-	if this.offset > 0 {
-		sql = sql + fmt.Sprintf("OFFSET %d ", this.offset)
-	}
 	if len(this.orders) > 0 {
 		sql = sql + "ORDER BY "
 		for idx, v := range this.orders {
@@ -98,6 +93,12 @@ func (this *queryBuilder) GetSql() string {
 			}
 			sql = sql + v + " "
 		}
+	}
+	if this.limit > 0 {
+		sql = sql + fmt.Sprintf("LIMIT %d ", this.limit)
+	}
+	if this.offset > 0 {
+		sql = sql + fmt.Sprintf("OFFSET %d ", this.offset)
 	}
 	return sql
 }

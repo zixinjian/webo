@@ -5,13 +5,9 @@ import (
 	"webo/models/itemDef"
 )
 
-func BuildListThs(entity string) string {
-	oEntityDef, ok := itemDef.EntityDefMap[entity]
-	if !ok {
-		fmt.Println("BuildAddForm none")
-	}
+func BuildListThs(itemDef itemDef.ItemDef) string {
 	th := ""
-	for _, field := range oEntityDef.Fields {
+	for _, field := range itemDef.Fields {
 		if field.UiList.Shown {
 			visible := ""
 			if !field.UiList.Visiable {

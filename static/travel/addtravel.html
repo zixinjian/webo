@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="zh">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../asserts/3rd/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../../asserts/3rd/datetimepicker/jquery.datetimepicker.css">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="alert" role="alert" style="display: none">添加成功！</div>
+    <form class="form-horizontal" id="item_form">
+        <div class="form-group">
+            <label class="col-sm-3 control-label">出差人</label>
+            <div class="col-sm-6">
+                <input type="text" class="input-block-level form-control" data-validate="{required: true, messages:{required:'请输入出差人!'}}" name="traveler" id="traveler" autocomplete="off" value=""/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">任务</label>
+            <div class="col-sm-6">
+                <input type="text" class="input-block-level form-control" data-validate="{required: true, messages:{required:'请输入任务!'}}" name="task" id="task" autocomplete="off" value=""/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">开始时间</label>
+            <div class="col-sm-6">
+                <input type="text" class="input-block-level form-control datepicker" data-value="" data-validate="{required: true, messages:{required:'请输入开始时间!'}}" name="starttime" id="starttime" autocomplete="off" value="%s"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">结束时间</label>
+            <div class="col-sm-6">
+                <input type="text" class="input-block-level form-control datepicker" data-validate="{required: true, messages:{required:'请输入结束时间!'}}" name="endtime" id="endtime" autocomplete="off" value=""/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">路线</label>
+            <div class="col-sm-6">
+                <textarea class="form-control" rows="3" class="input-block-level form-control" data-validate="{required: true, messages:{required:'请输入路线!'}}" name="path" id="path" autocomplete="off" value=""></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">达标标准</label>
+            <div class="col-sm-6">
+                <textarea class="form-control" rows="3" class="input-block-level form-control" data-validate="{required: true, messages:{required:'请输入达标标准!'}}" name="requirement" id="requirement" autocomplete="off" value=""></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">完成任务所给予的费用</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" class="input-block-level form-control" data-validate="{required: true, digits:true messages:{required:'请输入完成任务所给予的费用!'}}" name="expenses" id="expenses" autocomplete="off" value=""></text>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">审批人</label>
+            <div class="col-sm-6">
+                <input type="text" class="input-block-level form-control" data-validate="{required: true, messages:{required:'请输入审批人!'}}" name="approve" id="approve" autocomplete="off" value=""/>
+            </div>
+        </div>
+    </form>
+    <div>
+
+    </div>
+</div>
+
+<script src="../../asserts/3rd/jquery/jquery.js"></script>
+<script src="../../asserts/3rd/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../asserts/3rd/jquery/jquery.form.js"></script>
+<script src="../../asserts/3rd/jquery/validate/jquery.metadata.js"></script>
+<script src="../../asserts/3rd/jquery/validate/jquery.validate.js"></script>
+<script src="../../asserts/3rd/datetimepicker/jquery.datetimepicker.js"></script>
+<script src="../../static/js/ui.js"></script>
+<script>
+    function showResponse(resp) {
+        if(resp.ret == "success"){
+            top.hideTopModal()
+            refreshContent()
+        }else{
+            showError("添加失败!")
+        }
+    }
+    var refreshContent
+    function onTopModalOk(options){
+        if(options.refreshContent){
+            refreshContent = options.refreshContent
+        }
+        if (! $("#item_form").valid()){
+            return
+        }
+        $("#item_form").ajaxSubmit({
+            type: "post",
+            url: "\/item\/add\/travel",
+            success: showResponse
+        });
+    }
+    $(function(){
+        $(".datepicker").datetimepicker({
+            timepicker:false,
+            format:'Y.m.d',
+            lang:'zh'
+        })
+    });
+</script>
+</body>
+</html>

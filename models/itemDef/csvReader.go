@@ -3,6 +3,7 @@ package itemDef
 import (
 	"encoding/csv"
 	"fmt"
+	"github.com/astaxie/beego"
 	"io/ioutil"
 	"os"
 	"path/filepath"
@@ -44,7 +45,7 @@ func ReadDefFromCsv() map[string]ItemDef {
 }
 func readUiListCsv(fileName string) map[string]UiListStruct {
 	cntb, err := ioutil.ReadFile(fileName)
-	//	fmt.Println("read Ui file: ", fileName)
+	beego.Debug(fmt.Sprintf("start parse uiList File:%s", fileName))
 	if err != nil {
 		panic(err)
 	}
@@ -94,7 +95,7 @@ func readUiListCsv(fileName string) map[string]UiListStruct {
 
 func readItemDefCsv(fileName string) ItemDef {
 	cntb, err := ioutil.ReadFile(fileName)
-	//	fmt.Println("read file: ", fileName)
+	beego.Debug(fmt.Sprintf("start parse item File:%s", fileName))
 	if err != nil {
 		panic(err)
 	}
@@ -158,7 +159,7 @@ func readItemDefCsv(fileName string) ItemDef {
 		switch input {
 		case "":
 			field.Input = "text"
-		case "text", "select", "password", "date", "time", "none":
+		case "text", "select", "password", "date", "time", "none", "textarea", "datetime":
 			field.Input = input
 		default:
 			panic(fmt.Sprintf("File:%s, row:%d input :[%s] is not vaild", fileName, ridx, input))
@@ -182,8 +183,10 @@ func readItemDefCsv(fileName string) ItemDef {
 			}
 		}
 		field.Enum = getEnumValue(strings.Trim(row[9], " "), field.Type)
+		field.UiList = UiListStruct{true, false, "", true}
 		oItemDef.Fields = append(oItemDef.Fields, field)
 	}
+	fmt.Println("oItemDef", oItemDef)
 	return oItemDef
 }
 

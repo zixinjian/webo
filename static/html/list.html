@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../asserts/3rd/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../asserts/3rd/bootstrap-table/bootstrap-table.css">
+    <link rel="stylesheet" href="../../asserts/3rd/bootstrap-editable/bootstrap3-editable/css/bootstrap-editable.css">
+</head>
+<body>
+<div style="padding:20px;">
+    <p class="toolbar">
+        <a id="add_item" class="create btn btn-primary">新建</a>
+    </p>
+    <table id="item_table"
+           data-show-refresh="true"
+           data-show-columns="true"
+           data-search="true"
+           data-query-params="queryParams"
+           data-toolbar=".toolbar">
+    </table>
+</div>
+<script src="../../asserts/3rd/jquery/jquery.js"></script>
+<script src="../../asserts/3rd/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../asserts/3rd/bootstrap-table/bootstrap-table.js"></script>
+<script src="../../asserts/3rd/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
+<script src="../../asserts/3rd/bootstrap-table/extensions/editable/bootstrap-table-editable.js"></script>
+<script src="../../asserts/3rd/bootstrap-editable/bootstrap3-editable/js/bootstrap-editable.js"></script>
+<script>
+    var $table = $("#item_table")
+    $(function(){
+        $table.bootstrapTable({url:"/item/list/user", method:"post", sidePagination:"server", pagination:true, height:getHeight(), columns:[{
+            field: 'name',
+                    title: 'names',
+                    sortable: true,
+                    editable: {
+                type: 'select',
+                        source: [
+                    {value: 'active', text: 'Active'},
+                    {value: 'blocked', text: 'Blocked'},
+                    {value: 'deleted', text: 'Deleted'}
+                ]
+            }}]});
+        $("#add_item").on("click", function(){
+            //console.log("click add user")
+            top.showTopModal({url:"/ui/add/user", refreshContent:refreshContent});
+        })
+        $(window).resize(function () {
+            $table.bootstrapTable('resetView', {
+                height: getHeight()
+            });
+        });
+    });
+    function refreshContent(options){
+        top.hideTopModal()
+        $table.bootstrapTable("refresh")
+//        console.log("refreshs")
+    }
+    function queryParams(params){
+        return params
+    }
+    function actionFormatter(value) {
+        return [
+            '<a class="update" href="javascript:" title="修改" style="margin-right: 5px;"><i class="glyphicon glyphicon-edit"></i></a>',
+            '<a class="upload" href="javascript:" title="上传附件"><i class="glyphicon glyphicon-upload"></i></a>',
+        ].join('');
+    }
+    window.actionEvents = {
+        'click .update': function (e, value, row) {
+            console.log("value", value, row)
+            top.showTopModal({url:"/ui/update/{{.item}}?sn=" + row.sn, refreshContent:refreshContent});
+        },
+        'click .remove': function (e, value, row) {
+            if (confirm('你确定要删除本行吗?')) {
+                $.ajax({
+                    url: API_URL + row.id,
+                    type: 'delete',
+                    success: function () {
+                        $table.bootstrapTable('refresh');
+                        showAlert('Delete item successful!', 'success');
+                    },
+                    error: function () {
+                        showAlert('Delete item error!', 'danger');
+                    }
+                })
+            }
+        }
+    }
+    function getHeight() {
+        return $(window).height()-50;
+    }
+</script>
+</body>
+</html>

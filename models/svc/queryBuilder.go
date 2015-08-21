@@ -111,7 +111,7 @@ func (this *queryBuilder) GetValues() []interface{} {
 	return values
 }
 
-func NewQueryBUilder() *queryBuilder {
+func NewQueryBuilder() *queryBuilder {
 	o := &queryBuilder{}
 	o.limit = 0
 	o.offset = 0

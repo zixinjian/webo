@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-  <meta charset="UTF-8">
-    <link rel="stylesheet" href="../asserts/3rd/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../asserts/3rd/bootstrap-table/bootstrap-table.css">
-    <link rel="stylesheet" href="../asserts/css/main.css">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../asserts/3rd/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="../asserts/3rd/bootstrap-table/bootstrap-table.css">
+<link rel="stylesheet" href="../asserts/css/main.css">
 </head>
 <body style="bottom:0;height:100%">
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -31,19 +31,8 @@
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
             <ul class="nav nav-sidebar">
-                <li><a href="html/supplierList.html" target="frame-content">采购信息<span class="sr-only"></span></a></li>
-                <li><a href="html/table_forTest.html" target="frame-content">采购历史</a></li>
-                <li><a href="html/table_forTest.html" target="frame-content">成本价分析</a></li>
-                <li><a href="html/table_forTest.html" target="frame-content">报账</a></li>
-                <li><a href="html/table_forTest.html" target="frame-content">往来帐</a></li>
-            </ul>
-            <ul class="nav nav-sidebar">
-                <li><a href="/ui/list/supplier" target="frame-content">供应商</a></li>
-                <li><a href="html/table_forTest.html" target="frame-content">产品</a></li>
-            </ul>
-            <ul class="nav nav-sidebar">
-                <li class="active"><a href="/ui/list/travel" target="frame-content">我的出差申请</a></li>
-                <li><a href="html/table_forTest.html" target="frame-content">带我审批的出差申请</a></li>
+                <li class="active"><a href="html/supplierList.html" target="frame-content">我的申请<span class="sr-only"></span></a></li>
+                <li><a href="html/table_forTest.html" target="frame-content">待我审批</a></li>
             </ul>
             <ul class="nav nav-sidebar">
                 <!--<li><a href="/static/userMgr/userList.html" target="frame-content">用户管理</a></li>-->
@@ -51,7 +40,7 @@
             </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" style="padding: 0;">
-            <iframe name = "frame-content" src="/ui/list/travel" layout-auto-height="-20" style="width:100%;border:none"></iframe>
+            <iframe name = "frame-content" src="html/table_forTest.html" layout-auto-height="-20" style="width:100%;border:none"></iframe>
         </div>
     </div>
 </div>

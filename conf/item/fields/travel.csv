@@ -1,0 +1,10 @@
+item,travel,,,,,,,,
+title,name,type,label,require,unique,input,model,default,enum
+field,traveler,string,出差人,true,false,text,text,,
+field,task,string,任务,true,false,text,text,,
+field,starttime,string,开始日期,true,false,date,text,curtime,
+field,endtime,string,结束日期,true,false,date,text,,
+field,path,string,路线,true,false,textarea,text,,
+field,requirement,string,达标标准,true,false,textarea,text,,
+field,expenses,string,完成任务所给予的费用(可分项),true,false,text,text,,
+field,approve,string,审批人,true,false,text,text,,

@@ -3,12 +3,13 @@
 <head lang="zh">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../../asserts/3rd/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../../asserts/3rd/datetimepicker/jquery.datetimepicker.css">
 </head>
 <body>
 <div class="container-fluid">
     <div class="alert" role="alert" style="display: none">添加成功！</div>
     <form class="form-horizontal" id="item_form">
-        {{str2html .Form}}
+    {{str2html .Form}}
     </form>
 </div>
 
@@ -17,7 +18,8 @@
 <script src="../../asserts/3rd/jquery/jquery.form.js"></script>
 <script src="../../asserts/3rd/jquery/validate/jquery.metadata.js"></script>
 <script src="../../asserts/3rd/jquery/validate/jquery.validate.js"></script>
-<script src="/static/js/ui.js"></script>
+<script src="../../asserts/3rd/datetimepicker/jquery.datetimepicker.js"></script>
+<script src="../../static/js/ui.js"></script>
 <script>
     function showResponse(resp) {
         if(resp.ret == "success"){
@@ -43,9 +45,7 @@
             success: showResponse
         });
     }
-    $(function(){
-//        console.log("function()")
-    });
 </script>
+{{str2html .Onload}}
 </body>
 </html>

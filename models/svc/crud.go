@@ -2,6 +2,7 @@ package svc
 
 import (
 	"fmt"
+	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
 	"strconv"
 	"strings"
@@ -13,9 +14,9 @@ import (
 )
 
 func Query(entity string, queryParams Params, limitParams map[string]int64, orderBy Params) (string, []map[string]interface{}) {
-	sqlBuilder := NewQueryBUilder()
+	sqlBuilder := NewQueryBuilder()
 	sqlBuilder.QueryTable(entity)
-	fmt.Println("queryParams", queryParams)
+	//fmt.Println("queryParams", queryParams)
 	for k, v := range queryParams {
 		sqlBuilder.Filter(k, v)
 	}
@@ -50,7 +51,7 @@ func Query(entity string, queryParams Params, limitParams map[string]int64, orde
 		}
 		return status.Success, retList
 	} else {
-		fmt.Println("res", err)
+		beego.Error(fmt.Sprintf("Query error:%s for sql:%s", err.Error(), query))
 	}
 	return status.Failed, retList
 }
@@ -61,7 +62,7 @@ func List(entity string, queryParams Params, limitParams map[string]int64, order
 	return code, total, retMaps
 }
 func Count(entity string, params Params) int64 {
-	sqlBuilder := NewQueryBUilder()
+	sqlBuilder := NewQueryBuilder()
 	sqlBuilder.QueryTable(entity)
 	for k, v := range params {
 		sqlBuilder.Filter(k, v)

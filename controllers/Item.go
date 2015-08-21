@@ -6,6 +6,7 @@ import (
 	"github.com/astaxie/beego"
 	"strings"
 	"webo/models/itemDef"
+	"webo/models/lang"
 	"webo/models/status"
 	"webo/models/svc"
 )
@@ -26,8 +27,15 @@ func (this *ItemController) List() {
 	item, ok := this.Ctx.Input.Params[":hi"]
 	if !ok {
 		this.Data["json"] = TableResult{"false", 0, ""}
+		this.ServeJson()
+		return
 	}
-	//	oEntityDef, ok := itemDef.EntityDefMap[item]
+	oItemDef, ok := itemDef.EntityDefMap[item]
+	if !ok {
+		this.Data["json"] = TableResult{"false", 0, ""}
+		this.ServeJson()
+		return
+	}
 	queryParams := make(svc.Params, 0)
 	limitParams := make(map[string]int64, 0)
 	beego.Debug("List Item user", requestMap)
@@ -50,10 +58,35 @@ func (this *ItemController) List() {
 			orderByParams[sortStr] = order
 		}
 	}
-	result, total, retList := svc.List(item, queryParams, limitParams, orderByParams)
-	fmt.Println(result, total, retList)
+	result, total, resultMaps := svc.List(item, queryParams, limitParams, orderByParams)
+	//fmt.Println(result, total, retList)
+	retList := transList(oItemDef, resultMaps)
+	//fmt.Println("retList", retList)
 	this.Data["json"] = &TableResult{result, int64(total), retList}
 	this.ServeJson()
+}
+func transList(oItemDef itemDef.ItemDef, resultMaps []map[string]interface{}) []map[string]interface{} {
+	if len(resultMaps) < 0 {
+		return resultMaps
+	}
+	retList := make([]map[string]interface{}, len(resultMaps))
+	neetTransMap := oItemDef.GetNeedTrans()
+	//fmt.Println("neetTransMap", neetTransMap)
+	for idx, oldMap := range resultMaps {
+		var retMap = make(map[string]interface{}, len(oldMap))
+		for key, value := range oldMap {
+			if _, ok := neetTransMap[key]; ok {
+				//fmt.Println("need", key, value, lang.GetLabel(value.(string)))
+				retMap[key] = lang.GetLabel(value.(string))
+			} else {
+				retMap[key] = value
+			}
+
+		}
+		//fmt.Println("retMap", retMap)
+		retList[idx] = retMap
+	}
+	return retList
 }
 func (this *ItemController) Get() {
 	//	fmt.Println("requestBosy", this.Ctx.Input.RequestBody)

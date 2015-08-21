@@ -1,11 +1,12 @@
 package main
 
 import (
-//	"fmt"
+	//	"fmt"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/context"
 	"github.com/astaxie/beego/orm"
 	_ "github.com/mattn/go-sqlite3"
+	_ "webo/models/lang"
 	_ "webo/routers"
 )
 
@@ -48,6 +49,10 @@ var FilterUser = func(ctx *context.Context) {
 //		ctx.Redirect(302, "/login")
 //	}
 //}
+func hello(in string) (out string) {
+	out = string(in)
+	return
+}
 
 func main() {
 	initDb()
@@ -61,12 +66,13 @@ func main() {
 	//	fmt.Println(svc.Get("user", params))
 	//	fmt.Println(util.TUId())
 	//	fmt.Println(svc.Add("user", params))
-//	o := orm.NewOrm()
-//	qs := o.QueryTable("user").Limit(10, 0)
-//	qs=qs.Limit(10, 0)
-//	var resultMaps []orm.Params
-//	qs.Values(&resultMaps)
-//	fmt.Println("res", len(resultMaps), resultMaps)
-//	fmt.Println("start")
+	//	o := orm.NewOrm()
+	//	qs := o.QueryTable("user").Limit(10, 0)
+	//	qs=qs.Limit(10, 0)
+	//	var resultMaps []orm.Params
+	//	qs.Values(&resultMaps)
+	//	fmt.Println("res", len(resultMaps), resultMaps)
+	//	fmt.Println("start")
+	beego.AddFuncMap("hi", hello)
 	beego.Run()
 }

@@ -5,6 +5,7 @@ import (
 	//	"fmt"
 	//	"io/ioutil"
 	"fmt"
+	"github.com/astaxie/beego"
 	"strconv"
 )
 
@@ -48,8 +49,27 @@ func (this *ItemDef) initAccDate() map[string]Field {
 
 func (this *ItemDef) IsValidField(fieldName string) bool {
 	_, ok := this.fieldMaps[fieldName]
-	fmt.Println("ok", ok, this.fieldMaps)
+	//	fmt.Println("ok", ok, this.fieldMaps)
 	return ok
+}
+
+func (this *ItemDef) GetFieldModel(fieldName string) string {
+	field, ok := this.fieldMaps[fieldName]
+	if ok {
+		return field.Model
+	}
+	beego.Error(fmt.Sprintf("GetFieldModel: Error filed name %s", fieldName))
+	return ""
+}
+
+func (this *ItemDef) GetNeedTrans() map[string]bool {
+	retMap := make(map[string]bool)
+	for _, field := range this.Fields {
+		if field.Model == "enum" {
+			retMap[field.Name] = true
+		}
+	}
+	return retMap
 }
 
 func (this *ItemDef) GetFieldMap() map[string]Field {

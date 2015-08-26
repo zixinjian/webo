@@ -8,6 +8,7 @@ import (
 	_ "github.com/mattn/go-sqlite3"
 	_ "webo/models/lang"
 	_ "webo/routers"
+	"webo/controllers"
 )
 
 func initDb() {
@@ -25,7 +26,7 @@ var FilterUser = func(ctx *context.Context) {
 	if ctx.Request.RequestURI == "/logout" {
 		return
 	}
-	_, ok := ctx.Input.Session("role").(string)
+	_, ok := ctx.Input.Session(controllers.SessionUserName).(string)
 	//	fmt.Println("role", role)
 	if !ok && ctx.Request.RequestURI != "/login" {
 		ctx.Redirect(302, "/login")
@@ -57,7 +58,7 @@ func hello(in string) (out string) {
 func main() {
 	initDb()
 	//	beego.InsertFilter("/*", beego.BeforeStatic, FilterStatic)
-	//	beego.InsertFilter("/*", beego.BeforeRouter, FilterUser)
+//		beego.InsertFilter("/*", beego.BeforeRouter, FilterUser)
 	//	params := svc.SvcParams{
 	//		"username": "a",
 	//		"password": "a",
@@ -73,6 +74,6 @@ func main() {
 	//	qs.Values(&resultMaps)
 	//	fmt.Println("res", len(resultMaps), resultMaps)
 	//	fmt.Println("start")
-	beego.AddFuncMap("hi", hello)
+	beego.SetLogger("file", `{"filename":"logs/running.log", "level":6 }`)
 	beego.Run()
 }

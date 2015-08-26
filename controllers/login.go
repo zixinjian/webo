@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"fmt"
+//	"fmt"
 	"github.com/astaxie/beego"
 	"webo/models/rpc"
 	"webo/models/svc"
@@ -34,21 +34,45 @@ func (this *LoginController) Post() {
 	code, user := svc.Get("user", params)
 
 	if code != "success" {
-		fmt.Println("err", code)
+		beego.Error("User:%s login error code: %s", username, code)
 		loginRet.Result = "用户名或密码错误！"
-	} else {
-
-		this.SetSession("username", username)
-		if role, ok:= user["role"];ok{
-			this.SetSession("role", role)
-			loginRet.Ret = "success"
-		}else {
-			loginRet.Ret = "faild"
-			loginRet.Result = "获取权限失败"
-		}
+		this.Data["json"] = &loginRet
+		this.ServeJson()
+		return
+	}
+	loginRet = this.setSessionFromUser(user)
+	if loginRet.Ret == "success"{
+		this.SetSession(SessionUserName, username)
 	}
 	this.Data["json"] = &loginRet
 	this.ServeJson()
+}
+func (this *LoginController)setSessionFromUser(user map[string]interface{})rpc.JsonResult{
+	loginRet := rpc.JsonResult{}
+	role, ok:= user["role"]
+	if !ok{
+		loginRet.Ret = "faild"
+		loginRet.Result = "获取权限失败"
+		return loginRet
+	}
+	sn, ok := user["sn"]
+	if !ok {
+		loginRet.Ret = "faild"
+		loginRet.Result = "获取权限失败"
+		return loginRet
+	}
+	department, ok := user["department"]
+	if !ok{
+		loginRet.Ret = "faild"
+		loginRet.Result = "获取权限失败"
+		return loginRet
+	}
+	this.SetSession(SessionUserRole, role)
+	this.SetSession(SessionUserSn, sn)
+	this.SetSession(SessionUserDepartment, department)
+	loginRet.Ret = "success"
+	loginRet.Result = "登录成功"
+	return loginRet
 }
 
 type LogoutController struct {
@@ -56,7 +80,9 @@ type LogoutController struct {
 }
 
 func (this *LogoutController) Get() {
-	this.DelSession("role")
-	this.DelSession("username")
+	this.DelSession(SessionUserName)
+	this.DelSession(SessionUserRole)
+	this.DelSession(SessionUserDepartment)
+	this.DelSession(SessionUserSn)
 	this.Redirect("/", 302)
 }

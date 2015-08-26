@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8">
+    <link rel="stylesheet" href="../asserts/3rd/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../asserts/3rd/bootstrap-table/bootstrap-table.css">
+    <link rel="stylesheet" href="../asserts/css/main.css">
+</head>
+<body style="bottom:0;height:100%">
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">华力机电</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a>{{.userName}}</a></li>
+                <li><a href="#">帮助</a></li>
+                <li><a href="/logout">退出</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+                <!--{{str2html .orderNav}}-->
+                <li class="active"><a href="/ui/list/travel" target="frame-content">出差派遣</a></li>
+                <!--<li><a href="html/table_forTest.html" target="frame-content">成本价分析</a></li>-->
+                <!--<li><a href="html/table_forTest.html" target="frame-content">报账</a></li>-->
+                <!--<li><a href="html/table_forTest.html" target="frame-content">往来帐</a></li>-->
+            </ul>
+            <!--<ul class="nav nav-sidebar">-->
+                <!--<li><a href="/ui/list/supplier" target="frame-content">供应商</a></li>-->
+                <!--<li><a href="html/table_forTest.html" target="frame-content">产品</a></li>-->
+            <!--</ul>-->
+            <!--{{str2html .userMgr}}-->
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" style="padding: 0;">
+            <iframe name = "frame-content" src="/ui/list/travel" layout-auto-height="-20" style="width:100%;border:none"></iframe>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="top_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" style="width: 800px;">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="top_modal_title">Modal title</h4>
+            </div>
+            <div class="modal-body" id="top_modal_body">
+                <iframe id="top_modal_content" name = "modal_content" src="" style="width:100%;border:none;height:500px"></iframe>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" id="top_modal_btn_cancel" data-dismiss="modal">取消</button>
+                <button id="top_modal_btn_ok" type="button" class="btn btn-primary">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../asserts/3rd/jquery/jquery.js"></script>
+<script src="../asserts/3rd/bootstrap/js/bootstrap.min.js"></script>
+<script src="../asserts/3rd/bootstrap-table/bootstrap-table.min.js"></script>
+<script src="../asserts/3rd/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
+<script src="../static/js/ui.js"></script>
+<script>
+    $(function(){
+        $(".sidebar li").on("click", function(event){
+            $(".sidebar li").removeClass("active");
+            $(this).addClass("active");
+        });
+        autoHeight()
+        $(window).resize(function () {
+            autoHeight()
+        });
+    });
+    function showTopModal(options){
+        if(options.url){
+            //console.log("showTopModal, option", options)
+            $("#top_modal_content").attr({src:options.url});
+        }
+        if(options.height){
+            $("#modal_content").css({height:options.height});
+        }
+        $("#top_modal_btn_ok").off("click").on("click", function(evt){
+            var topModalWindows = $("#top_modal_content")[0].contentWindow;
+            console.log("topModalWindows", topModalWindows, topModalWindows.onOk);
+            if(!topModalWindows || !topModalWindows.onTopModalOk){
+                return;
+            }
+            topModalWindows.onTopModalOk(options)
+//            if(topModalWindows.onTopModalOk(options)=="ok"){
+//            };
+        })
+        $('#top_modal').modal(options);
+    }
+    function hideTopModal(){
+        $("#top_modal_btn_ok").off("click")
+        $("#top_modal_content").attr({src:""});
+        $('#top_modal').modal("hide");
+    }
+    function autoHeight(){
+        $.each($("[layout-auto-height]"), function(){
+            var outHeight = $(this).attr("layout-auto-height")
+            console.log("outHeight", outHeight, $(".main").height(), $(".main").height() + parseInt(outHeight))
+            $(this).height($(".main").height() + parseInt(outHeight))
+        });
+    }
+</script>
+</body>
+</html>

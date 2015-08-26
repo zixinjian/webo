@@ -84,10 +84,10 @@ func BuildAddOnLoadJs(oItemDef itemDef.ItemDef) string {
 			if strings.EqualFold(field.Default.(string), "curtime") {
 				defaultDate = "value:new Date()"
 			}
-			OnLoadJs = OnLoadJs + fmt.Sprintf(initDatePickerFormat, "timepicker:false,", field.Name, defaultDate)
+			OnLoadJs = OnLoadJs + fmt.Sprintf(initDatePickerFormat, field.Name, "timepicker:false,",defaultDate)
 		}
 	}
-	return "<script>" + OnLoadJs + "</script>"
+	return "<script>" + OnLoadJs + "</script>\n"
 }
 
 func BuildUpdatedForm(oItemDef itemDef.ItemDef, oldValueMap map[string]interface{}) string {

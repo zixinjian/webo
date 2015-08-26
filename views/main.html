@@ -19,7 +19,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">配置</a></li>
+                <li><a>{{.userName}}</a></li>
                 <li><a href="#">帮助</a></li>
                 <li><a href="/logout">退出</a></li>
             </ul>
@@ -31,7 +31,7 @@
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
             <ul class="nav nav-sidebar">
-                <li class="active"><a href="html/supplierList.html" target="frame-content">采购信息<span class="sr-only"></span></a></li>
+                {{str2html .orderNav}}
                 <li><a href="html/table_forTest.html" target="frame-content">采购历史</a></li>
                 <li><a href="html/table_forTest.html" target="frame-content">成本价分析</a></li>
                 <li><a href="html/table_forTest.html" target="frame-content">报账</a></li>
@@ -41,13 +41,10 @@
                 <li><a href="/ui/list/supplier" target="frame-content">供应商</a></li>
                 <li><a href="html/table_forTest.html" target="frame-content">产品</a></li>
             </ul>
-            <ul class="nav nav-sidebar">
-                <!--<li><a href="/static/userMgr/userList.html" target="frame-content">用户管理</a></li>-->
-                <li><a href="/ui/list/user" target="frame-content">用户管理</a></li>
-            </ul>
+            {{str2html .userMgr}}
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" style="padding: 0;">
-            <iframe name = "frame-content" src="html/table_forTest.html" layout-auto-height="-20" style="width:100%;border:none"></iframe>
+            <iframe name = "frame-content" src="static/html/table_forTest.html" layout-auto-height="-20" style="width:100%;border:none"></iframe>
         </div>
     </div>
 </div>
@@ -75,7 +72,7 @@
 <script src="../asserts/3rd/bootstrap/js/bootstrap.min.js"></script>
 <script src="../asserts/3rd/bootstrap-table/bootstrap-table.min.js"></script>
 <script src="../asserts/3rd/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
-<script src="js/ui.js"></script>
+<script src="../static/js/ui.js"></script>
 <script>
     $(function(){
         $(".sidebar li").on("click", function(event){

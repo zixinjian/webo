@@ -37,10 +37,10 @@
 <script>
     var $table = $("#item_table")
     $(function(){
-        $table.bootstrapTable({url:"/item/list/{{.item}}", method:"post", sidePagination:"server", pagination:true, height:getHeight()});
+        $table.bootstrapTable({url:"{{.listUrl}}", method:"post", sidePagination:"server", pagination:true, height:getHeight()});
         $("#add_item").on("click", function(){
             //console.log("click add user")
-            top.showTopModal({url:"/ui/add/{{.item}}", refreshContent:refreshContent});
+            top.showTopModal({url:"{{.addUrl}}", refreshContent:refreshContent});
         })
         $(window).resize(function () {
             $table.bootstrapTable('resetView', {
@@ -66,7 +66,7 @@
     window.actionEvents = {
         'click .update': function (e, value, row) {
             console.log("value", value, row)
-            top.showTopModal({url:"/ui/update/{{.item}}?sn=" + row.sn, refreshContent:refreshContent});
+            top.showTopModal({url:"{{.updateUrl}}?sn=" + row.sn, refreshContent:refreshContent});
         },
         'click .remove': function (e, value, row) {
             if (confirm('你确定要删除本行吗?')) {

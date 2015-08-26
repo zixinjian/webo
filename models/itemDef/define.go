@@ -140,10 +140,15 @@ func (field *Field) initDefault() {
 	}
 }
 
+func (field * Field) IsEditable() bool{
+	return true
+}
+
 var EntityDefMap = make(map[string]ItemDef)
 
 func init() {
-	//	fmt.Println("initItemDefMap")
+	beego.Info("Init itemDef")
+		fmt.Println("initItemDefMap")
 	//	bytes, err := ioutil.ReadFile("conf/item.json")
 	//	if err != nil {
 	//		fmt.Println("ReadFile: ", err.Error())

@@ -3,8 +3,6 @@ package controllers
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/astaxie/beego"
-	"strings"
 	"webo/models/itemDef"
 	"webo/models/lang"
 	"webo/models/status"
@@ -37,27 +35,8 @@ func (this *ItemController) List() {
 		return
 	}
 	queryParams := make(svc.Params, 0)
-	limitParams := make(map[string]int64, 0)
-	beego.Debug("List Item user", requestMap)
-	if k, ok := requestMap["limit"]; ok {
-		limitParams["limit"] = int64(k.(float64))
-	}
-	if k, ok := requestMap["offset"]; ok {
-		limitParams["offset"] = int64(k.(float64))
-	}
-	orderByParams := make(svc.Params, 0)
-	if sort, ok := requestMap["sort"]; ok {
-		sortStr := strings.TrimSpace(sort.(string))
-		if sortStr != "" {
-			order := "asc"
-			if o, ok := requestMap["order"]; ok {
-				if strings.TrimSpace(o.(string)) == "desc" {
-					order = "desc"
-				}
-			}
-			orderByParams[sortStr] = order
-		}
-	}
+	limitParams := getLimitParamFromRequestMap(requestMap)
+	orderByParams := getOrderParamFromRequestMap(requestMap)
 	result, total, resultMaps := svc.List(item, queryParams, limitParams, orderByParams)
 	//fmt.Println(result, total, retList)
 	retList := transList(oItemDef, resultMaps)
@@ -65,6 +44,11 @@ func (this *ItemController) List() {
 	this.Data["json"] = &TableResult{result, int64(total), retList}
 	this.ServeJson()
 }
+
+
+
+
+
 func transList(oItemDef itemDef.ItemDef, resultMaps []map[string]interface{}) []map[string]interface{} {
 	if len(resultMaps) < 0 {
 		return resultMaps
@@ -81,7 +65,6 @@ func transList(oItemDef itemDef.ItemDef, resultMaps []map[string]interface{}) []
 			} else {
 				retMap[key] = value
 			}
-
 		}
 		//fmt.Println("retMap", retMap)
 		retList[idx] = retMap

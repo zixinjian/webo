@@ -7,6 +7,7 @@ import (
 
 func init() {
 	beego.Router("/", &controllers.LoginController{})
+	beego.Router("/main", &controllers.MainController{})
 	beego.Router("/login", &controllers.LoginController{})
 	beego.Router("/logout", &controllers.LogoutController{})
 	beego.Router("/service", &controllers.ServiceController{})
@@ -18,4 +19,7 @@ func init() {
 	beego.Router("/ui/add/:hi:string", &controllers.UiController{}, "*:Add")
 	beego.Router("/ui/list/:hi:string", &controllers.UiController{}, "*:List")
 	beego.Router("/ui/update/:hi:string", &controllers.UiController{}, "*:Update")
+
+	beego.Router("/ui/list/mycreate", &controllers.OrderController{}, "*:UiMyCreate")
+	beego.Router("/travel", &controllers.MainController{}, "*:Travel")
 }

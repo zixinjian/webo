@@ -8,4 +8,7 @@ const (
 const (
 	Sn      = "sn"
 	CurTime = "curtime"
+	Creater = "creater"
+	CreaterTime = "createtime"
 )
+

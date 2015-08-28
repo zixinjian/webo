@@ -134,7 +134,7 @@ func readItemDefCsv(fileName string) ItemDef {
 
 		typo := strings.TrimSpace(row[2])
 		switch typo {
-		case "string", "int":
+		case "string", "int", "float":
 			field.Type = typo
 		default:
 			panic(fmt.Sprintf("File:%s, row:%d type :[%s] is not vaild", fileName, ridx, typo))
@@ -159,7 +159,7 @@ func readItemDefCsv(fileName string) ItemDef {
 		switch input {
 		case "":
 			field.Input = "text"
-		case "text", "select", "password", "date", "time", "none", "textarea", "datetime":
+		case "text", "select", "password", "date", "time", "none", "textarea", "datetime", "money":
 			field.Input = input
 		default:
 			panic(fmt.Sprintf("File:%s, row:%d input :[%s] is not vaild", fileName, ridx, input))

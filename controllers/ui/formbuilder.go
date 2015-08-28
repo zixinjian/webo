@@ -14,14 +14,14 @@ type FormBuilder struct {
 var textFormat = `    <div class="form-group">
 			<label class="col-sm-3 control-label">%s</label>
 			<div class="col-sm-6">
-				<input type="text" class="input-block-level form-control" data-validate="{required: %s, messages:{required:'请输入%s!'}}" name="%s" id="%s" autocomplete="off" value="%s"/>
+				<input type="text" class="input-block-level form-control" data-validate="{required: %s, messages:{required:'请输入正确的%s!'}}" name="%s" id="%s" autocomplete="off" value="%s"/>
 			</div>
 		</div>
     	`
 var moneyFormat = `    <div class="form-group">
 			<label class="col-sm-3 control-label">%s</label>
 			<div class="col-sm-6">
-				<input type="text" class="input-block-level form-control" data-validate="{required: %s, messages:{required:'请输入%s!'}}" name="%s" id="%s" autocomplete="off" value="%s"/>
+				<input type="text" class="input-block-level form-control" data-validate="{required: %s, number:true, messages:{required:'请输入正确的%s!'}}" name="%s" id="%s" autocomplete="off" value="%s"/>
 			</div>
 		</div>
     	`
@@ -117,8 +117,9 @@ func createFromGroup(field itemDef.Field, value interface{}) string {
 	case "textarea":
 		fromGroup = fmt.Sprintf(textareaFormat, field.Label, field.Require, field.Label, field.Name, field.Name, value)
 	case "text":
-		//fmt.Println("text", value)
-		fromGroup = fmt.Sprintf(textFormat, field.Label, field.Require, field.Label, field.Name, field.Name, value)
+		fromGroup = fmt.Sprintf(textFormat, field.Label, field.Require, field.Label, field.Name, field.Name, field.GetValueStr(value))
+	case "money":
+		fromGroup = fmt.Sprintf(moneyFormat, field.Label, field.Require, field.Label, field.Name, field.Name, field.GetValueStr(value))
 	case "date", "datetime":
 		//fmt.Println("text", value)
 		fromGroup = fmt.Sprintf(dateFormate, field.Label, field.Require, field.Label, field.Name, field.Name, value)

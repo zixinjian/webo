@@ -7,6 +7,8 @@ import (
 	"webo/models/lang"
 	"webo/models/status"
 	"webo/models/svc"
+	"webo/models/s"
+	"github.com/astaxie/beego"
 )
 
 type ItemController struct {
@@ -14,14 +16,9 @@ type ItemController struct {
 }
 
 func (this *ItemController) List() {
-	//	fmt.Println("requestBosy", this.Ctx.Input.RequestBody)
-	//	fmt.Println("params", this.Ctx.Input.Params)
-	//	fmt.Println("requestBosy", this.Input()["id"])
-	//	fmt.Println("ge", this.GetString("xx"))
 	requestBody := this.Ctx.Input.RequestBody
 	var requestMap map[string]interface{}
 	json.Unmarshal(requestBody, &requestMap)
-	//	fmt.Println("requestMap", requestMap)
 	item, ok := this.Ctx.Input.Params[":hi"]
 	if !ok {
 		this.Data["json"] = TableResult{"false", 0, ""}
@@ -35,19 +32,19 @@ func (this *ItemController) List() {
 		return
 	}
 	queryParams := make(svc.Params, 0)
+	creater := this.GetString(s.Creater)
+	if creater == "curuser" {
+		sn := this.GetCurUserSn()
+		queryParams[s.Creater]= sn
+	}
+
 	limitParams := getLimitParamFromRequestMap(requestMap)
 	orderByParams := getOrderParamFromRequestMap(requestMap)
 	result, total, resultMaps := svc.List(item, queryParams, limitParams, orderByParams)
-	//fmt.Println(result, total, retList)
 	retList := transList(oItemDef, resultMaps)
-	//fmt.Println("retList", retList)
 	this.Data["json"] = &TableResult{result, int64(total), retList}
 	this.ServeJson()
 }
-
-
-
-
 
 func transList(oItemDef itemDef.ItemDef, resultMaps []map[string]interface{}) []map[string]interface{} {
 	if len(resultMaps) < 0 {
@@ -81,8 +78,6 @@ func (this *ItemController) Get() {
 	this.ServeJson()
 }
 func (this *ItemController) Add() {
-	//	fmt.Println("requestBosy", this.Ctx.Input.RequestBody)
-	//	fmt.Println("params", this.Ctx.Input.Params)
 	item, ok := this.Ctx.Input.Params[":hi"]
 	if !ok {
 		fmt.Println("hi", item)
@@ -91,13 +86,16 @@ func (this *ItemController) Add() {
 	if !ok {
 		fmt.Println("no_")
 	}
+	curUserSn := this.GetSessionString(SessionUserSn)
 	svcParams := this.GetFormValues(oEntityDef)
+	svcParams[s.Creater] = curUserSn
 	status, reason := svc.Add(item, svcParams)
-	//fmt.Println("addservice", ret)
 	this.Data["json"] = &JsonResult{status, reason}
 	this.ServeJson()
 }
 func (this *ItemController) Update() {
+	beego.Debug("Update requestBody: ", this.Ctx.Input.RequestBody)
+	beego.Debug("Update params:", this.Ctx.Input.Params)
 	item, ok := this.Ctx.Input.Params[":hi"]
 	if !ok {
 		fmt.Println("hi", item)
@@ -108,9 +106,7 @@ func (this *ItemController) Update() {
 	}
 	svcParams := this.GetFormValues(oEntityDef)
 	status, reason := svc.Update(item, svcParams)
-	//fmt.Println("addservice", ret)
 	this.Data["json"] = &JsonResult{status, reason}
-	this.ServeJson()
 	this.ServeJson()
 }
 func (this *ItemController) Delete() {

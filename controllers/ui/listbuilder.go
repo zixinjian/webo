@@ -7,6 +7,8 @@ import (
 	"webo/models/lang"
 )
 
+const thFormat = `                <th data-field="%s" %s %s>%s</th>
+`
 func BuildListThs(itemDef itemDef.ItemDef) string {
 	th := ""
 	for _, field := range itemDef.Fields {
@@ -22,7 +24,7 @@ func BuildListThs(itemDef itemDef.ItemDef) string {
 					sortable = sortable + `data-order="desc"`
 				}
 			}
-			th = th + fmt.Sprintf(`<th data-field="%s" %s %s>%s</th>`, field.Name, visible, sortable, field.Label)
+			th = th + fmt.Sprintf(thFormat, field.Name, visible, sortable, field.Label)
 		}
 	}
 	return th
@@ -62,6 +64,7 @@ func BuildColums(itemDef itemDef.ItemDef) string {
 			switch field.Input {
 			case "text", "textarea":
 				column = column + fmt.Sprintf(",editable:{type:\"%s\"}\n", field.Input)
+				fmt.Println()
 			case "select":
 				srcs := []string{}
 				for _, v:= range field.Enum{

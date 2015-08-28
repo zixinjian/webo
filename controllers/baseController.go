@@ -33,7 +33,11 @@ func (this *BaseController) GetRequestParams(itemD itemDef.ItemDef)svc.Params{
 }
 
 func (this *BaseController) GetSessionString(sessionName string) string {
-	return this.GetSession(sessionName).(string)
+	if this.GetSession(sessionName) != nil{
+		return this.GetSession(sessionName).(string)
+	}
+	// TODO
+	return "d"
 }
 
 func (this *BaseController) GetCurUserSn() string {
@@ -48,6 +52,10 @@ func (this *BaseController) GetCurRole() string{
 func (this *BaseController) GetCurDepartment() string{
 	return this.GetSessionString(SessionUserDepartment)
 }
+
+//func getQueryParamFromRequestMap(requestMap map[string]interface{}) map[string]interface{}{
+//	e
+//}
 
 func getLimitParamFromRequestMap(requestMap map[string]interface{}) map[string]int64{
 	limitParams := make(map[string]int64, 0)

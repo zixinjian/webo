@@ -102,13 +102,39 @@ func (field *Field) GetValue(valueString string) (interface{}, bool) {
 		return valueString, true
 	case "int":
 		value, err := strconv.ParseInt(valueString, 10, 64)
-		if err != nil {
+		if err == nil {
 			return value, true
 		} else {
+			beego.Error(fmt.Sprintf("Get field:%s varlue: %s as %s error:%s", field.Name, valueString, field.Type, err.Error()))
+			return 0, false
+		}
+	case "float":
+		value, err := strconv.ParseFloat(valueString, 64)
+		if err == nil {
+			return value, true
+		} else {
+			beego.Error(fmt.Sprintf("Get field:%s varlue: %s as %s error:%s", field.Name, valueString, field.Type, err.Error()))
 			return 0, false
 		}
 	default:
+		beego.Error(fmt.Sprintf("Get field:%s varlue: %s as %s error, not support type", field.Name, valueString, field.Type))
 		return 0, false
+	}
+}
+
+func (field *Field) GetValueStr(value interface{})string{
+	switch field.Type {
+	case "string":
+		return value.(string)
+	case "int":
+//		fmt.Println("int", field.Name, v)
+		v, ok := value.(int64)
+		if ok{
+			return fmt.Sprintf("%d", v)
+		}
+		return value.(string)
+	default:
+		return value.(string)
 	}
 }
 
@@ -133,7 +159,7 @@ func (field *Field) initDefault() {
 	}
 	if field.Default == nil {
 		if field.Type == "int" {
-			field.Default = 0
+			field.Default = int64(0)
 		} else {
 			field.Default = ""
 		}

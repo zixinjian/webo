@@ -12,10 +12,12 @@ const userMgrHtml  = `<ul class="nav nav-sidebar">
 	<li><a href="/ui/list/user" target="frame-content">用户管理</a></li>
 </ul>
 `
-const managerNavHtml = `<li class="active"><a href="../static/html/supplierList.html" target="frame-content">创建订单<span class="sr-only"></span></a></li>
+const managerNavHtml = `<li class="active"><a href="/ui/purchase/mycreate" target="frame-content">创建订单<span class="sr-only"></span></a></li>
 <li><a href="../static/html/supplierList.html" target="frame-content">待处理的订单<span class="sr-only"></span></a></li>
 `
 const userNavHtml = `<li class="active"><a href="../static/html/supplierList.html" target="frame-content">待处理的订单<span class="sr-only"></span></a></li>
+`
+const activeUrlFormat = `<iframe name = "frame-content" src="%s" layout-auto-height="-20" style="width:100%%;border:none"></iframe>
 `
 func (this *MainController) Get() {
 	this.SetSession(SessionUserName, "admin")
@@ -31,10 +33,12 @@ func (this *MainController) Get() {
 		beego.Debug("Show role", userRole)
 		this.Data["orderNav"] = managerNavHtml
 		this.Data["userMgr"] = userMgrHtml
+		this.Data["activeUrl"] = fmt.Sprintf(activeUrlFormat, "/ui/purchase/mycreate")
 
 	default:
 		this.Data["orderNav"] = userNavHtml
 		this.Data["userMgr"] = ""
+		this.Data["activeUrl"] = fmt.Sprintf(activeUrlFormat, "/ui/purchase/mycreate")
 	}
 	this.TplNames = "main.html"
 }

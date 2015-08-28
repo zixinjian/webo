@@ -32,6 +32,7 @@
         <div class="col-sm-3 col-md-2 sidebar">
             <ul class="nav nav-sidebar">
                 {{str2html .orderNav}}
+                <li><a href="html/table_forTest.html" target="frame-content"></a></li>
                 <li><a href="html/table_forTest.html" target="frame-content">采购历史</a></li>
                 <li><a href="html/table_forTest.html" target="frame-content">成本价分析</a></li>
                 <li><a href="html/table_forTest.html" target="frame-content">报账</a></li>
@@ -44,7 +45,7 @@
             {{str2html .userMgr}}
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" style="padding: 0;">
-            <iframe name = "frame-content" src="static/html/table_forTest.html" layout-auto-height="-20" style="width:100%;border:none"></iframe>
+            {{str2html .activeUrl}}
         </div>
     </div>
 </div>

@@ -18,6 +18,7 @@
 <script src="../../asserts/3rd/jquery/jquery.form.js"></script>
 <script src="../../asserts/3rd/jquery/validate/jquery.metadata.js"></script>
 <script src="../../asserts/3rd/jquery/validate/jquery.validate.js"></script>
+<script src="../../static/js/validateExtend.js"></script>
 <script src="../../asserts/3rd/datetimepicker/jquery.datetimepicker.js"></script>
 <script src="../../static/js/ui.js"></script>
 <script>

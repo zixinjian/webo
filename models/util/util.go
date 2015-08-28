@@ -22,6 +22,24 @@ func ToInt64(value interface{}) (d int64) {
 	return
 }
 
+//func Str2Float(value string) float64{
+//	f, err = ParseFloat(s, 32)
+//}
+
+//func ToString(value interface{})string{
+//	val := reflect.ValueOf(value)
+//	int64
+//	switch value.(type) {
+//	case int, int8, int16, int32, int64:
+//		d = val.Int()
+//	case uint, uint8, uint16, uint32, uint64:
+//		d = int64(val.Uint())
+//	default:
+//		panic(fmt.Errorf("ToInt64 need numeric not `%T`", value))
+//	}
+//	return
+//}
+
 func TUId() string {
 	now := time.Now()
 	if gOldTime.After(now) {

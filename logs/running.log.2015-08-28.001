@@ -1,0 +1,454 @@
+2015/08/25 19:41:38 [language.go:46] [E] GetLang error key:d 
+2015/08/25 19:41:38 [language.go:46] [E] GetLang error key:c 
+2015/08/25 19:41:38 [language.go:46] [E] GetLang error key:ffdd 
+2015/08/25 19:41:38 [language.go:46] [E] GetLang error key:c 
+2015/08/25 19:41:38 [language.go:46] [E] GetLang error key:e 
+2015/08/25 19:41:44 [language.go:46] [E] GetLang error key:d 
+2015/08/25 19:41:44 [language.go:46] [E] GetLang error key:c 
+2015/08/25 19:41:44 [language.go:46] [E] GetLang error key:ffdd 
+2015/08/25 19:41:44 [language.go:46] [E] GetLang error key:c 
+2015/08/25 19:41:44 [language.go:46] [E] GetLang error key:e 
+2015/08/25 19:41:49 [language.go:46] [E] GetLang error key:d 
+2015/08/25 19:41:49 [language.go:46] [E] GetLang error key:c 
+2015/08/25 19:41:49 [language.go:46] [E] GetLang error key:ffdd 
+2015/08/25 19:41:49 [language.go:46] [E] GetLang error key:c 
+2015/08/25 19:41:49 [language.go:46] [E] GetLang error key:e 
+2015/08/25 19:41:54 [language.go:46] [E] GetLang error key:d 
+2015/08/25 19:41:54 [language.go:46] [E] GetLang error key:c 
+2015/08/25 19:41:54 [language.go:46] [E] GetLang error key:ffdd 
+2015/08/25 19:41:54 [language.go:46] [E] GetLang error key:c 
+2015/08/25 19:41:54 [language.go:46] [E] GetLang error key:e 
+2015/08/25 19:41:55 [language.go:46] [E] GetLang error key:d 
+2015/08/25 19:41:55 [language.go:46] [E] GetLang error key:c 
+2015/08/25 19:41:55 [language.go:46] [E] GetLang error key:ffdd 
+2015/08/25 19:41:55 [language.go:46] [E] GetLang error key:c 
+2015/08/25 19:41:55 [language.go:46] [E] GetLang error key:e 
+2015/08/26 08:27:30 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/26 08:27:30 [asm_amd64.s:2232] [C] ListenAndServe: %!(EXTRA *net.OpError=listen tcp :8080: bind: address already in use)
+2015/08/26 08:27:46 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/26 08:57:12 [language.go:46] [E] GetLang error key:d 
+2015/08/26 08:57:12 [language.go:46] [E] GetLang error key:c 
+2015/08/26 08:57:12 [language.go:46] [E] GetLang error key:ffdd 
+2015/08/26 08:57:12 [language.go:46] [E] GetLang error key:c 
+2015/08/26 08:57:12 [language.go:46] [E] GetLang error key:e 
+2015/08/26 08:57:13 [language.go:46] [E] GetLang error key:d 
+2015/08/26 08:57:13 [language.go:46] [E] GetLang error key:c 
+2015/08/26 08:57:13 [language.go:46] [E] GetLang error key:ffdd 
+2015/08/26 08:57:13 [language.go:46] [E] GetLang error key:c 
+2015/08/26 08:57:13 [language.go:46] [E] GetLang error key:e 
+2015/08/26 09:04:52 [language.go:46] [E] GetLang error key:d 
+2015/08/26 09:04:52 [language.go:46] [E] GetLang error key:c 
+2015/08/26 09:04:52 [language.go:46] [E] GetLang error key:ffdd 
+2015/08/26 09:04:52 [language.go:46] [E] GetLang error key:c 
+2015/08/26 09:04:52 [language.go:46] [E] GetLang error key:e 
+2015/08/26 09:04:55 [language.go:46] [E] GetLang error key:d 
+2015/08/26 09:04:55 [language.go:46] [E] GetLang error key:c 
+2015/08/26 09:04:55 [language.go:46] [E] GetLang error key:ffdd 
+2015/08/26 09:04:55 [language.go:46] [E] GetLang error key:c 
+2015/08/26 09:04:55 [language.go:46] [E] GetLang error key:e 
+2015/08/26 09:04:55 [language.go:46] [E] GetLang error key:d 
+2015/08/26 09:04:55 [language.go:46] [E] GetLang error key:c 
+2015/08/26 09:04:55 [language.go:46] [E] GetLang error key:ffdd 
+2015/08/26 09:04:55 [language.go:46] [E] GetLang error key:c 
+2015/08/26 09:04:55 [language.go:46] [E] GetLang error key:e 
+2015/08/26 09:06:18 [language.go:46] [E] GetLang error key:d 
+2015/08/26 09:06:18 [language.go:46] [E] GetLang error key:c 
+2015/08/26 09:06:18 [language.go:46] [E] GetLang error key:ffdd 
+2015/08/26 09:06:18 [language.go:46] [E] GetLang error key:c 
+2015/08/26 09:06:18 [language.go:46] [E] GetLang error key:e 
+2015/08/26 09:06:18 [language.go:46] [E] GetLang error key:d 
+2015/08/26 09:06:18 [language.go:46] [E] GetLang error key:c 
+2015/08/26 09:06:18 [language.go:46] [E] GetLang error key:ffdd 
+2015/08/26 09:06:18 [language.go:46] [E] GetLang error key:c 
+2015/08/26 09:06:18 [language.go:46] [E] GetLang error key:e 
+2015/08/26 09:06:21 [language.go:46] [E] GetLang error key:d 
+2015/08/26 09:06:21 [language.go:46] [E] GetLang error key:c 
+2015/08/26 09:06:21 [language.go:46] [E] GetLang error key:ffdd 
+2015/08/26 09:06:21 [language.go:46] [E] GetLang error key:c 
+2015/08/26 09:06:21 [language.go:46] [E] GetLang error key:e 
+2015/08/26 12:52:08 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/26 13:16:36 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/26 13:23:21 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/26 13:23:54 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/26 13:24:04 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/26 13:24:04 [asm_amd64.s:2232] [C] ListenAndServe: %!(EXTRA *net.OpError=listen tcp :8080: bind: address already in use)
+2015/08/26 13:27:49 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/26 13:27:49 [asm_amd64.s:2232] [C] ListenAndServe: %!(EXTRA *net.OpError=listen tcp :8080: bind: address already in use)
+2015/08/26 13:28:26 [asm_amd64.s:2232] [I] http server Running on 127.0.0.1:8000
+2015/08/26 13:39:40 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/26 13:39:58 [asm_amd64.s:2232] [I] http server Running on 127.0.0.1:8000
+2015/08/26 13:43:42 [asm_amd64.s:2232] [I] http server Running on 127.0.0.1:8000
+2015/08/26 13:44:06 [asm_amd64.s:2232] [I] http server Running on 127.0.0.1:8000
+2015/08/26 13:54:50 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/26 13:55:01 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/26 13:55:01 [asm_amd64.s:2232] [C] ListenAndServe: %!(EXTRA *net.OpError=listen tcp :8080: bind: address already in use)
+2015/08/26 13:55:03 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/26 15:36:18 [language.go:46] [E] GetLang error key:d 
+2015/08/26 15:36:18 [language.go:46] [E] GetLang error key:c 
+2015/08/26 15:36:18 [language.go:46] [E] GetLang error key:ffdd 
+2015/08/26 15:36:18 [language.go:46] [E] GetLang error key:c 
+2015/08/26 15:36:18 [language.go:46] [E] GetLang error key:e 
+2015/08/26 15:36:19 [language.go:46] [E] GetLang error key:d 
+2015/08/26 15:36:19 [language.go:46] [E] GetLang error key:c 
+2015/08/26 15:36:19 [language.go:46] [E] GetLang error key:ffdd 
+2015/08/26 15:36:19 [language.go:46] [E] GetLang error key:c 
+2015/08/26 15:36:19 [language.go:46] [E] GetLang error key:e 
+2015/08/26 15:36:19 [language.go:46] [E] GetLang error key:d 
+2015/08/26 15:36:19 [language.go:46] [E] GetLang error key:c 
+2015/08/26 15:36:19 [language.go:46] [E] GetLang error key:ffdd 
+2015/08/26 15:36:19 [language.go:46] [E] GetLang error key:c 
+2015/08/26 15:36:19 [language.go:46] [E] GetLang error key:e 
+2015/08/26 15:36:19 [language.go:46] [E] GetLang error key:d 
+2015/08/26 15:36:19 [language.go:46] [E] GetLang error key:c 
+2015/08/26 15:36:19 [language.go:46] [E] GetLang error key:ffdd 
+2015/08/26 15:36:19 [language.go:46] [E] GetLang error key:c 
+2015/08/26 15:36:19 [language.go:46] [E] GetLang error key:e 
+2015/08/26 15:36:20 [language.go:46] [E] GetLang error key:d 
+2015/08/26 15:36:20 [language.go:46] [E] GetLang error key:c 
+2015/08/26 15:36:20 [language.go:46] [E] GetLang error key:ffdd 
+2015/08/26 15:36:20 [language.go:46] [E] GetLang error key:c 
+2015/08/26 15:36:20 [language.go:46] [E] GetLang error key:e 
+2015/08/26 15:36:20 [language.go:46] [E] GetLang error key:d 
+2015/08/26 15:36:20 [language.go:46] [E] GetLang error key:c 
+2015/08/26 15:36:20 [language.go:46] [E] GetLang error key:ffdd 
+2015/08/26 15:36:20 [language.go:46] [E] GetLang error key:c 
+2015/08/26 15:36:20 [language.go:46] [E] GetLang error key:e 
+2015/08/26 15:36:20 [language.go:46] [E] GetLang error key:d 
+2015/08/26 15:36:20 [language.go:46] [E] GetLang error key:c 
+2015/08/26 15:36:20 [language.go:46] [E] GetLang error key:ffdd 
+2015/08/26 15:36:20 [language.go:46] [E] GetLang error key:c 
+2015/08/26 15:36:20 [language.go:46] [E] GetLang error key:e 
+2015/08/26 15:36:20 [language.go:46] [E] GetLang error key:d 
+2015/08/26 15:36:20 [language.go:46] [E] GetLang error key:c 
+2015/08/26 15:36:20 [language.go:46] [E] GetLang error key:ffdd 
+2015/08/26 15:36:20 [language.go:46] [E] GetLang error key:c 
+2015/08/26 15:36:20 [language.go:46] [E] GetLang error key:e 
+2015/08/26 19:31:43 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/26 19:41:39 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/26 19:41:43 [main.go:27] [I] User:admin login as role:role_admin 
+2015/08/26 19:41:47 [language.go:46] [E] GetLang error key:d 
+2015/08/26 19:41:47 [language.go:46] [E] GetLang error key:c 
+2015/08/26 19:41:47 [language.go:46] [E] GetLang error key:ffdd 
+2015/08/26 19:41:47 [language.go:46] [E] GetLang error key:c 
+2015/08/26 19:41:47 [language.go:46] [E] GetLang error key:e 
+2015/08/26 19:41:48 [language.go:46] [E] GetLang error key:d 
+2015/08/26 19:41:48 [language.go:46] [E] GetLang error key:c 
+2015/08/26 19:41:48 [language.go:46] [E] GetLang error key:ffdd 
+2015/08/26 19:41:48 [language.go:46] [E] GetLang error key:c 
+2015/08/26 19:41:48 [language.go:46] [E] GetLang error key:e 
+2015/08/26 19:41:48 [language.go:46] [E] GetLang error key:d 
+2015/08/26 19:41:48 [language.go:46] [E] GetLang error key:c 
+2015/08/26 19:41:48 [language.go:46] [E] GetLang error key:ffdd 
+2015/08/26 19:41:48 [language.go:46] [E] GetLang error key:c 
+2015/08/26 19:41:48 [language.go:46] [E] GetLang error key:e 
+2015/08/26 19:41:53 [language.go:46] [E] GetLang error key:d 
+2015/08/26 19:41:53 [language.go:46] [E] GetLang error key:c 
+2015/08/26 19:41:53 [language.go:46] [E] GetLang error key:ffdd 
+2015/08/26 19:41:53 [language.go:46] [E] GetLang error key:c 
+2015/08/26 19:41:53 [language.go:46] [E] GetLang error key:e 
+2015/08/26 19:47:51 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/26 19:47:55 [main.go:27] [I] User:admin login as role:role_admin 
+2015/08/26 19:48:00 [main.go:50] [I] User:admin login as role:role_admin 
+2015/08/26 19:49:12 [main.go:50] [I] User:admin login as role:role_admin 
+2015/08/26 19:51:54 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/26 19:52:01 [main.go:50] [I] User:admin login as role:role_admin 
+2015/08/26 19:56:33 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/26 19:56:39 [main.go:50] [I] User:admin login as role:role_admin 
+2015/08/26 19:59:34 [main.go:50] [I] User:admin login as role:role_admin 
+2015/08/27 09:04:18 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/27 15:19:51 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/27 15:20:35 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/27 15:53:48 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/27 15:57:48 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/27 15:57:57 [main.go:27] [I] User:admin login as role:role_admin 
+2015/08/27 15:57:58 [main.go:27] [I] User:admin login as role:role_admin 
+2015/08/27 15:58:00 [language.go:46] [E] GetLang error key:d 
+2015/08/27 15:58:00 [language.go:46] [E] GetLang error key:c 
+2015/08/27 15:58:00 [language.go:46] [E] GetLang error key:ffdd 
+2015/08/27 15:58:00 [language.go:46] [E] GetLang error key:c 
+2015/08/27 15:58:00 [language.go:46] [E] GetLang error key:e 
+2015/08/27 15:58:02 [language.go:46] [E] GetLang error key:d 
+2015/08/27 15:58:02 [language.go:46] [E] GetLang error key:c 
+2015/08/27 15:58:02 [language.go:46] [E] GetLang error key:ffdd 
+2015/08/27 15:58:02 [language.go:46] [E] GetLang error key:c 
+2015/08/27 15:58:02 [language.go:46] [E] GetLang error key:e 
+2015/08/27 16:03:22 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/27 16:03:25 [language.go:46] [E] GetLang error key:d 
+2015/08/27 16:03:25 [language.go:46] [E] GetLang error key:c 
+2015/08/27 16:03:25 [language.go:46] [E] GetLang error key:ffdd 
+2015/08/27 16:03:25 [language.go:46] [E] GetLang error key:c 
+2015/08/27 16:03:25 [language.go:46] [E] GetLang error key:e 
+2015/08/27 16:04:19 [language.go:46] [E] GetLang error key:d 
+2015/08/27 16:04:19 [language.go:46] [E] GetLang error key:c 
+2015/08/27 16:04:19 [language.go:46] [E] GetLang error key:ffdd 
+2015/08/27 16:04:19 [language.go:46] [E] GetLang error key:c 
+2015/08/27 16:04:19 [language.go:46] [E] GetLang error key:e 
+2015/08/27 16:04:36 [language.go:46] [E] GetLang error key:d 
+2015/08/27 16:04:36 [language.go:46] [E] GetLang error key:c 
+2015/08/27 16:04:36 [language.go:46] [E] GetLang error key:ffdd 
+2015/08/27 16:04:36 [language.go:46] [E] GetLang error key:c 
+2015/08/27 16:04:36 [language.go:46] [E] GetLang error key:e 
+2015/08/27 16:04:36 [language.go:46] [E] GetLang error key:f 
+2015/08/27 16:04:36 [language.go:46] [E] GetLang error key:g 
+2015/08/27 16:04:36 [language.go:46] [E] GetLang error key:h 
+2015/08/27 16:04:37 [language.go:46] [E] GetLang error key:d 
+2015/08/27 16:04:37 [language.go:46] [E] GetLang error key:c 
+2015/08/27 16:04:37 [language.go:46] [E] GetLang error key:ffdd 
+2015/08/27 16:04:37 [language.go:46] [E] GetLang error key:c 
+2015/08/27 16:04:37 [language.go:46] [E] GetLang error key:e 
+2015/08/27 16:04:49 [language.go:46] [E] GetLang error key:d 
+2015/08/27 16:04:49 [language.go:46] [E] GetLang error key:c 
+2015/08/27 16:04:49 [language.go:46] [E] GetLang error key:ffdd 
+2015/08/27 16:04:49 [language.go:46] [E] GetLang error key:c 
+2015/08/27 16:04:49 [language.go:46] [E] GetLang error key:e 
+2015/08/27 16:05:01 [language.go:46] [E] GetLang error key:d 
+2015/08/27 16:05:01 [language.go:46] [E] GetLang error key:c 
+2015/08/27 16:05:01 [language.go:46] [E] GetLang error key:ffdd 
+2015/08/27 16:05:01 [language.go:46] [E] GetLang error key:c 
+2015/08/27 16:05:01 [language.go:46] [E] GetLang error key:e 
+2015/08/27 16:05:06 [language.go:46] [E] GetLang error key:d 
+2015/08/27 16:05:06 [language.go:46] [E] GetLang error key:c 
+2015/08/27 16:05:06 [language.go:46] [E] GetLang error key:ffdd 
+2015/08/27 16:05:06 [language.go:46] [E] GetLang error key:c 
+2015/08/27 16:05:06 [language.go:46] [E] GetLang error key:e 
+2015/08/27 16:06:06 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/27 16:06:10 [main.go:27] [I] User:admin login as role:role_admin 
+2015/08/27 16:06:11 [language.go:46] [E] GetLang error key:d 
+2015/08/27 16:06:11 [language.go:46] [E] GetLang error key:c 
+2015/08/27 16:06:11 [language.go:46] [E] GetLang error key:ffdd 
+2015/08/27 16:06:11 [language.go:46] [E] GetLang error key:c 
+2015/08/27 16:06:11 [language.go:46] [E] GetLang error key:e 
+2015/08/27 16:06:24 [language.go:46] [E] GetLang error key:d 
+2015/08/27 16:06:24 [language.go:46] [E] GetLang error key:c 
+2015/08/27 16:06:24 [language.go:46] [E] GetLang error key:ffdd 
+2015/08/27 16:06:24 [language.go:46] [E] GetLang error key:c 
+2015/08/27 16:06:24 [language.go:46] [E] GetLang error key:e 
+2015/08/27 16:06:39 [language.go:46] [E] GetLang error key:c 
+2015/08/27 16:06:39 [language.go:46] [E] GetLang error key:ffdd 
+2015/08/27 16:06:39 [language.go:46] [E] GetLang error key:c 
+2015/08/27 16:06:39 [language.go:46] [E] GetLang error key:e 
+2015/08/27 16:06:44 [language.go:46] [E] GetLang error key:ffdd 
+2015/08/27 16:06:44 [language.go:46] [E] GetLang error key:c 
+2015/08/27 16:06:44 [language.go:46] [E] GetLang error key:e 
+2015/08/27 16:06:48 [language.go:46] [E] GetLang error key:c 
+2015/08/27 16:06:48 [language.go:46] [E] GetLang error key:e 
+2015/08/27 16:06:52 [language.go:46] [E] GetLang error key:e 
+2015/08/27 16:07:09 [language.go:46] [E] GetLang error key:h 
+2015/08/27 16:07:09 [language.go:46] [E] GetLang error key:g 
+2015/08/27 16:07:09 [language.go:46] [E] GetLang error key:f 
+2015/08/27 16:07:11 [language.go:46] [E] GetLang error key:f 
+2015/08/27 16:07:11 [language.go:46] [E] GetLang error key:h 
+2015/08/27 16:07:11 [language.go:46] [E] GetLang error key:g 
+2015/08/27 16:07:11 [language.go:46] [E] GetLang error key:f 
+2015/08/27 16:07:12 [language.go:46] [E] GetLang error key:f 
+2015/08/27 16:07:12 [language.go:46] [E] GetLang error key:h 
+2015/08/27 16:07:12 [language.go:46] [E] GetLang error key:g 
+2015/08/27 16:07:12 [language.go:46] [E] GetLang error key:f 
+2015/08/27 16:07:13 [language.go:46] [E] GetLang error key:h 
+2015/08/27 16:07:13 [language.go:46] [E] GetLang error key:g 
+2015/08/27 16:07:13 [language.go:46] [E] GetLang error key:f 
+2015/08/27 16:07:14 [language.go:46] [E] GetLang error key:f 
+2015/08/27 16:15:32 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/27 16:15:39 [main.go:27] [I] User:admin login as role:role_admin 
+2015/08/27 16:44:00 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/27 16:45:38 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/27 16:46:30 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/27 16:46:33 [main.go:27] [I] User:admin login as role:role_admin 
+2015/08/27 16:46:35 [purchase.go:37] [E] UiMyCreate 
+2015/08/27 16:49:17 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/27 16:49:19 [main.go:29] [I] User:admin login as role:role_admin 
+2015/08/27 16:49:19 [router.go:879] [C] the request url is  /main 
+2015/08/27 16:49:19 [router.go:880] [C] Handler crashed with error can't find templatefile in the path:main.html 
+2015/08/27 16:49:19 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:401 
+2015/08/27 16:49:19 [router.go:886] [C] /usr/local/go/src/runtime/panic.go:387 
+2015/08/27 16:49:19 [router.go:886] [C] /Users/rick/go/src/github.com/astaxie/beego/controller.go:253 
+2015/08/27 16:49:19 [router.go:886] [C] /Users/rick/go/src/github.com/astaxie/beego/controller.go:179 
+2015/08/27 16:49:19 [router.go:886] [C] /Users/rick/go/src/github.com/astaxie/beego/router.go:810 
+2015/08/27 16:49:19 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1703 
+2015/08/27 16:49:19 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1204 
+2015/08/27 16:49:19 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:2232 
+2015/08/27 16:50:40 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/27 16:50:43 [main.go:29] [I] User:admin login as role:role_admin 
+2015/08/27 16:50:43 [purchase.go:37] [E] UiMyCreate 
+2015/08/27 16:50:46 [purchase.go:37] [E] UiMyCreate 
+2015/08/27 16:51:11 [main.go:29] [I] User:admin login as role:role_admin 
+2015/08/27 16:51:13 [purchase.go:37] [E] UiMyCreate 
+2015/08/27 16:51:14 [purchase.go:37] [E] UiMyCreate 
+2015/08/27 16:51:55 [main.go:29] [I] User:admin login as role:role_admin 
+2015/08/27 16:51:55 [purchase.go:37] [E] UiMyCreate 
+2015/08/27 16:51:59 [purchase.go:37] [E] UiMyCreate 
+2015/08/27 16:52:31 [main.go:29] [I] User:admin login as role:role_admin 
+2015/08/27 16:52:31 [purchase.go:37] [E] UiMyCreate 
+2015/08/27 16:52:35 [main.go:29] [I] User:admin login as role:role_admin 
+2015/08/27 16:52:35 [purchase.go:37] [E] UiMyCreate 
+2015/08/27 16:53:30 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/27 16:53:36 [main.go:29] [I] User:admin login as role:role_admin 
+2015/08/27 16:53:36 [purchase.go:37] [E] UiMyCreate 
+2015/08/27 16:55:36 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/27 16:55:41 [main.go:29] [I] User:admin login as role:role_admin 
+2015/08/27 16:55:41 [purchase.go:37] [E] UiMyCreate 
+2015/08/27 16:56:50 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/27 16:56:57 [main.go:29] [I] User:admin login as role:role_admin 
+2015/08/27 16:56:57 [purchase.go:37] [E] UiMyCreate 
+2015/08/27 16:58:07 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/27 16:58:11 [main.go:29] [I] User:admin login as role:role_admin 
+2015/08/27 16:58:11 [purchase.go:37] [E] UiMyCreate 
+2015/08/27 17:10:45 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/27 17:10:50 [main.go:29] [I] User:admin login as role:role_admin 
+2015/08/27 17:10:50 [purchase.go:37] [E] UiMyCreate 
+2015/08/27 17:10:50 [router.go:879] [C] the request url is  /ui/add/purchase 
+2015/08/27 17:10:50 [router.go:880] [C] Handler crashed with error interface conversion: interface is int, not int64 
+2015/08/27 17:10:50 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:401 
+2015/08/27 17:10:50 [router.go:886] [C] /usr/local/go/src/runtime/panic.go:387 
+2015/08/27 17:10:50 [router.go:886] [C] /usr/local/go/src/runtime/iface.go:225 
+2015/08/27 17:10:50 [router.go:886] [C] /Users/rick/go/src/webo/models/itemDef/define.go:120 
+2015/08/27 17:10:50 [router.go:886] [C] /Users/rick/go/src/webo/controllers/ui/formbuilder.go:120 
+2015/08/27 17:10:50 [router.go:886] [C] /Users/rick/go/src/webo/controllers/ui/formbuilder.go:69 
+2015/08/27 17:10:50 [router.go:886] [C] /Users/rick/go/src/webo/controllers/ui.go:51 
+2015/08/27 17:10:50 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:401 
+2015/08/27 17:10:50 [router.go:886] [C] /usr/local/go/src/reflect/value.go:419 
+2015/08/27 17:10:50 [router.go:886] [C] /usr/local/go/src/reflect/value.go:296 
+2015/08/27 17:10:50 [router.go:886] [C] /Users/rick/go/src/github.com/astaxie/beego/router.go:803 
+2015/08/27 17:10:50 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1703 
+2015/08/27 17:10:50 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1204 
+2015/08/27 17:10:50 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:2232 
+2015/08/27 17:12:00 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/27 17:12:05 [main.go:29] [I] User:admin login as role:role_admin 
+2015/08/27 17:12:05 [purchase.go:37] [E] UiMyCreate 
+2015/08/27 17:15:24 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/27 17:15:30 [router.go:879] [C] the request url is  /item/add/purchase 
+2015/08/27 17:15:30 [router.go:880] [C] Handler crashed with error interface conversion: interface is nil, not string 
+2015/08/27 17:15:30 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:401 
+2015/08/27 17:15:30 [router.go:886] [C] /usr/local/go/src/runtime/panic.go:387 
+2015/08/27 17:15:30 [router.go:886] [C] /usr/local/go/src/runtime/iface.go:222 
+2015/08/27 17:15:30 [router.go:886] [C] /Users/rick/go/src/webo/controllers/baseController.go:36 
+2015/08/27 17:15:30 [router.go:886] [C] /Users/rick/go/src/webo/controllers/Item.go:88 
+2015/08/27 17:15:30 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:401 
+2015/08/27 17:15:30 [router.go:886] [C] /usr/local/go/src/reflect/value.go:419 
+2015/08/27 17:15:30 [router.go:886] [C] /usr/local/go/src/reflect/value.go:296 
+2015/08/27 17:15:30 [router.go:886] [C] /Users/rick/go/src/github.com/astaxie/beego/router.go:803 
+2015/08/27 17:15:30 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1703 
+2015/08/27 17:15:30 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1204 
+2015/08/27 17:15:30 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:2232 
+2015/08/27 17:16:24 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/27 17:16:50 [router.go:879] [C] the request url is  /item/add/purchase 
+2015/08/27 17:16:50 [router.go:880] [C] Handler crashed with error interface conversion: interface is nil, not string 
+2015/08/27 17:16:50 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:401 
+2015/08/27 17:16:50 [router.go:886] [C] /usr/local/go/src/runtime/panic.go:387 
+2015/08/27 17:16:50 [router.go:886] [C] /usr/local/go/src/runtime/iface.go:222 
+2015/08/27 17:16:50 [router.go:886] [C] /Users/rick/go/src/webo/controllers/baseController.go:36 
+2015/08/27 17:16:50 [router.go:886] [C] /Users/rick/go/src/webo/controllers/Item.go:88 
+2015/08/27 17:16:50 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:401 
+2015/08/27 17:16:50 [router.go:886] [C] /usr/local/go/src/reflect/value.go:419 
+2015/08/27 17:16:50 [router.go:886] [C] /usr/local/go/src/reflect/value.go:296 
+2015/08/27 17:16:50 [router.go:886] [C] /Users/rick/go/src/github.com/astaxie/beego/router.go:803 
+2015/08/27 17:16:50 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1703 
+2015/08/27 17:16:50 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1204 
+2015/08/27 17:16:50 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:2232 
+2015/08/27 17:18:28 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/27 17:19:59 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/27 17:20:03 [crud.go:208] [E] ParseSqlError unknown error table purchase has no column named freight 
+2015/08/27 17:22:37 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/27 17:22:43 [crud.go:148] [E] Add error table purchase has no column named freight 
+2015/08/27 17:22:43 [crud.go:210] [E] ParseSqlError unknown error table purchase has no column named freight 
+2015/08/27 17:23:14 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/27 17:23:46 [crud.go:148] [E] Add error NOT NULL constraint failed: purchase.id 
+2015/08/27 17:23:46 [crud.go:210] [E] ParseSqlError unknown error NOT NULL constraint failed: purchase.id 
+2015/08/27 17:24:44 [router.go:879] [C] the request url is  /ui/update/purchase 
+2015/08/27 17:24:44 [router.go:880] [C] Handler crashed with error interface conversion: interface is string, not int64 
+2015/08/27 17:24:44 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:401 
+2015/08/27 17:24:44 [router.go:886] [C] /usr/local/go/src/runtime/panic.go:387 
+2015/08/27 17:24:44 [router.go:886] [C] /usr/local/go/src/runtime/iface.go:225 
+2015/08/27 17:24:44 [router.go:886] [C] /Users/rick/go/src/webo/models/itemDef/define.go:120 
+2015/08/27 17:24:44 [router.go:886] [C] /Users/rick/go/src/webo/controllers/ui/formbuilder.go:120 
+2015/08/27 17:24:44 [router.go:886] [C] /Users/rick/go/src/webo/controllers/ui/formbuilder.go:109 
+2015/08/27 17:24:44 [router.go:886] [C] /Users/rick/go/src/webo/controllers/ui.go:75 
+2015/08/27 17:24:44 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:401 
+2015/08/27 17:24:44 [router.go:886] [C] /usr/local/go/src/reflect/value.go:419 
+2015/08/27 17:24:44 [router.go:886] [C] /usr/local/go/src/reflect/value.go:296 
+2015/08/27 17:24:44 [router.go:886] [C] /Users/rick/go/src/github.com/astaxie/beego/router.go:803 
+2015/08/27 17:24:44 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1703 
+2015/08/27 17:24:44 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1204 
+2015/08/27 17:24:44 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:2232 
+2015/08/27 17:29:04 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/27 17:29:15 [router.go:879] [C] the request url is  /ui/update/purchase 
+2015/08/27 17:29:15 [router.go:880] [C] Handler crashed with error interface conversion: interface is string, not int64 
+2015/08/27 17:29:15 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:401 
+2015/08/27 17:29:15 [router.go:886] [C] /usr/local/go/src/runtime/panic.go:387 
+2015/08/27 17:29:15 [router.go:886] [C] /usr/local/go/src/runtime/iface.go:225 
+2015/08/27 17:29:15 [router.go:886] [C] /Users/rick/go/src/webo/models/itemDef/define.go:121 
+2015/08/27 17:29:15 [router.go:886] [C] /Users/rick/go/src/webo/controllers/ui/formbuilder.go:120 
+2015/08/27 17:29:15 [router.go:886] [C] /Users/rick/go/src/webo/controllers/ui/formbuilder.go:109 
+2015/08/27 17:29:15 [router.go:886] [C] /Users/rick/go/src/webo/controllers/ui.go:75 
+2015/08/27 17:29:15 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:401 
+2015/08/27 17:29:15 [router.go:886] [C] /usr/local/go/src/reflect/value.go:419 
+2015/08/27 17:29:15 [router.go:886] [C] /usr/local/go/src/reflect/value.go:296 
+2015/08/27 17:29:15 [router.go:886] [C] /Users/rick/go/src/github.com/astaxie/beego/router.go:803 
+2015/08/27 17:29:15 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1703 
+2015/08/27 17:29:15 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1204 
+2015/08/27 17:29:15 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:2232 
+2015/08/27 17:42:24 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/27 17:42:33 [main.go:29] [I] User:admin login as role:role_admin 
+2015/08/27 17:42:33 [purchase.go:37] [E] UiMyCreate 
+2015/08/27 17:42:35 [purchase.go:37] [E] UiMyCreate 
+2015/08/27 17:43:54 [purchase.go:37] [E] UiMyCreate 
+2015/08/27 17:43:55 [router.go:879] [C] the request url is  /ui/update/purchase 
+2015/08/27 17:43:55 [router.go:880] [C] Handler crashed with error interface conversion: interface is string, not int64 
+2015/08/27 17:43:55 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:401 
+2015/08/27 17:43:55 [router.go:886] [C] /usr/local/go/src/runtime/panic.go:387 
+2015/08/27 17:43:55 [router.go:886] [C] /usr/local/go/src/runtime/iface.go:225 
+2015/08/27 17:43:55 [router.go:886] [C] /Users/rick/go/src/webo/models/itemDef/define.go:121 
+2015/08/27 17:43:55 [router.go:886] [C] /Users/rick/go/src/webo/controllers/ui/formbuilder.go:120 
+2015/08/27 17:43:55 [router.go:886] [C] /Users/rick/go/src/webo/controllers/ui/formbuilder.go:109 
+2015/08/27 17:43:55 [router.go:886] [C] /Users/rick/go/src/webo/controllers/ui.go:75 
+2015/08/27 17:43:55 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:401 
+2015/08/27 17:43:55 [router.go:886] [C] /usr/local/go/src/reflect/value.go:419 
+2015/08/27 17:43:55 [router.go:886] [C] /usr/local/go/src/reflect/value.go:296 
+2015/08/27 17:43:55 [router.go:886] [C] /Users/rick/go/src/github.com/astaxie/beego/router.go:803 
+2015/08/27 17:43:55 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1703 
+2015/08/27 17:43:55 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1204 
+2015/08/27 17:43:55 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:2232 
+2015/08/27 17:45:35 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/27 17:45:40 [main.go:29] [I] User:admin login as role:role_admin 
+2015/08/27 17:45:41 [purchase.go:37] [E] UiMyCreate 
+2015/08/27 17:45:43 [purchase.go:37] [E] UiMyCreate 
+2015/08/27 17:45:46 [router.go:879] [C] the request url is  /ui/update/purchase 
+2015/08/27 17:45:46 [router.go:880] [C] Handler crashed with error interface conversion: interface is string, not int64 
+2015/08/27 17:45:46 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:401 
+2015/08/27 17:45:46 [router.go:886] [C] /usr/local/go/src/runtime/panic.go:387 
+2015/08/27 17:45:46 [router.go:886] [C] /usr/local/go/src/runtime/iface.go:225 
+2015/08/27 17:45:46 [router.go:886] [C] /Users/rick/go/src/webo/models/itemDef/define.go:121 
+2015/08/27 17:45:46 [router.go:886] [C] /Users/rick/go/src/webo/controllers/ui/formbuilder.go:120 
+2015/08/27 17:45:46 [router.go:886] [C] /Users/rick/go/src/webo/controllers/ui/formbuilder.go:109 
+2015/08/27 17:45:46 [router.go:886] [C] /Users/rick/go/src/webo/controllers/ui.go:75 
+2015/08/27 17:45:46 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:401 
+2015/08/27 17:45:46 [router.go:886] [C] /usr/local/go/src/reflect/value.go:419 
+2015/08/27 17:45:46 [router.go:886] [C] /usr/local/go/src/reflect/value.go:296 
+2015/08/27 17:45:46 [router.go:886] [C] /Users/rick/go/src/github.com/astaxie/beego/router.go:803 
+2015/08/27 17:45:46 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1703 
+2015/08/27 17:45:46 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1204 
+2015/08/27 17:45:46 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:2232 
+2015/08/27 17:59:39 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/27 17:59:56 [purchase.go:37] [E] UiMyCreate 
+2015/08/27 18:00:42 [main.go:29] [I] User:admin login as role:role_admin 
+2015/08/27 18:00:42 [purchase.go:37] [E] UiMyCreate 
+2015/08/27 18:00:44 [purchase.go:37] [E] UiMyCreate 
+2015/08/27 18:18:59 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/27 18:19:05 [purchase.go:37] [E] UiMyCreate 
+2015/08/27 18:19:07 [main.go:29] [I] User:admin login as role:role_admin 
+2015/08/27 18:19:07 [purchase.go:37] [E] UiMyCreate 
+2015/08/27 18:26:50 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/27 18:26:58 [main.go:29] [I] User:admin login as role:role_admin 
+2015/08/27 18:26:58 [purchase.go:37] [E] UiMyCreate 
+2015/08/27 18:28:14 [main.go:29] [I] User:admin login as role:role_admin 
+2015/08/27 18:28:14 [purchase.go:37] [E] UiMyCreate 
+2015/08/27 18:30:27 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/27 18:30:34 [purchase.go:37] [E] UiMyCreate 
+2015/08/27 18:30:37 [main.go:29] [I] User:admin login as role:role_admin 
+2015/08/27 18:30:37 [purchase.go:37] [E] UiMyCreate 
+2015/08/27 18:33:11 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/27 18:33:17 [main.go:29] [I] User:admin login as role:role_admin 
+2015/08/27 18:33:17 [purchase.go:37] [E] UiMyCreate 
+2015/08/27 18:33:41 [purchase.go:37] [E] UiMyCreate 
+2015/08/27 18:35:30 [main.go:29] [I] User:admin login as role:role_admin 
+2015/08/27 18:35:30 [purchase.go:37] [E] UiMyCreate 

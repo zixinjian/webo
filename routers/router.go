@@ -20,6 +20,7 @@ func init() {
 	beego.Router("/ui/list/:hi:string", &controllers.UiController{}, "*:List")
 	beego.Router("/ui/update/:hi:string", &controllers.UiController{}, "*:Update")
 
-	beego.Router("/ui/list/mycreate", &controllers.OrderController{}, "*:UiMyCreate")
+	beego.Router("/ui/purchase/mycreate", &controllers.PurchaseController{}, "*:UiMyCreate")
+//	beego.Router("/item/list/mycreatepurchase", &controllers.PurchaseController{}, "*:MyCreate")
 	beego.Router("/travel", &controllers.MainController{}, "*:Travel")
 }

@@ -45,6 +45,7 @@ func Query(entity string, queryParams Params, limitParams map[string]int64, orde
 		for idx, oldMap := range resultMaps {
 			var retMap = make(map[string]interface{}, len(oldMap))
 			for key, value := range oldMap {
+//				fmt.Println(value.(string))
 				retMap[strings.ToLower(key)] = value
 			}
 			retList[idx] = retMap
@@ -140,8 +141,12 @@ func Add(entity string, params Params) (string, string) {
 		//		fmt.Println("e", b, c)
 		if i, e := res.LastInsertId(); e == nil && i > 0 {
 			return status.Success, ""
+		}else{
+			fmt.Println("addd,error", e, i)
+//			beego.Error(e, i)
 		}
 	} else {
+		beego.Error("Add error", err)
 		return ParseSqlError(err, oEntityDef)
 	}
 	return status.UnKnownFailed, ""
@@ -164,7 +169,6 @@ func Update(entity string, params Params) (string, string) {
 		if field.Name == s.Sn {
 			continue
 		}
-
 		if value, ok := params[field.Name]; ok {
 			values = append(values, value)
 			names = append(names, field.Name)
@@ -177,12 +181,14 @@ func Update(entity string, params Params) (string, string) {
 
 	query := fmt.Sprintf("UPDATE %s%s%s SET %s%s%s = ? WHERE %s = ?", Q, entity, Q, Q, setColumns, Q, s.Sn)
 	//	fmt.Println("sql", query, values)
+	beego.Debug("Update sql: %s", query)
 	o := orm.NewOrm()
 	if res, err := o.Raw(query, values...).Exec(); err == nil {
 		if i, e := res.RowsAffected(); e == nil && i > 0 {
 			return status.Success, ""
 		}
 	} else {
+		beego.Error("Update error", err)
 		return ParseSqlError(err, oEntityDef)
 	}
 	return status.UnKnownFailed, ""
@@ -202,5 +208,6 @@ func ParseSqlError(err error, oEntityDef itemDef.ItemDef) (string, string) {
 		}
 		return status.DuplicatedValue, itemAndField
 	}
+	beego.Error("ParseSqlError unknown error", errStr)
 	return status.UnKnownFailed, ""
 }

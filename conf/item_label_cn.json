@@ -1,9 +1,0 @@
-{
-  "department_purchase":"采购",
-  "department_sale":"销售",
-  "department_product":"生产",
-  "flag_available":"可用",
-  "flag_delete":"删除",
-  "role_user":"用户",
-  "role_admin":"管理员"
-}

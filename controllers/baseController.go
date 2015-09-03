@@ -5,6 +5,7 @@ import (
 	"webo/models/itemDef"
 	"webo/models/svc"
 	"strings"
+	"fmt"
 )
 
 type BaseController struct {
@@ -18,7 +19,7 @@ func (this *BaseController) GetFormValues(itemD itemDef.ItemDef) map[string]inte
 	formValues := this.Input()
 	for _, field := range itemD.Fields {
 		if _, ok := formValues[field.Name]; ok {
-			if v, fok := field.GetValue(this.GetString(field.Name)); fok {
+			if v, fok := field.GetFormValue(this.GetString(field.Name)); fok {
 				retMap[field.Name] = v
 			}
 		}
@@ -26,11 +27,10 @@ func (this *BaseController) GetFormValues(itemD itemDef.ItemDef) map[string]inte
 	return retMap
 }
 
-func (this *BaseController) GetRequestParams(itemD itemDef.ItemDef)svc.Params{
-	queryParams := this.GetFormValues(itemD)
-//	if()
-	return queryParams
-}
+//func (this *BaseController) GetRequestParams(itemD itemDef.ItemDef)svc.Params{
+//	queryParams := this.GetFormValues(itemD)
+//	return queryParams
+//}
 
 func (this *BaseController) GetSessionString(sessionName string) string {
 	if this.GetSession(sessionName) != nil{
@@ -53,13 +53,25 @@ func (this *BaseController) GetCurDepartment() string{
 	return this.GetSessionString(SessionUserDepartment)
 }
 
-//func getQueryParamFromRequestMap(requestMap map[string]interface{}) map[string]interface{}{
-//	e
-//}
+func (this *BaseController)GetQueryParamFromJsonMap(requestMap map[string]interface{}, oItemDef itemDef.ItemDef) map[string]interface{}{
+	queryParams := make(svc.Params, 0)
+	fieldMap := oItemDef.GetFieldMap()
+	for k, v := range requestMap{
+		if field, ok := fieldMap[k];ok{
+			if fv, fok := field.GetCheckedValue(v);fok{
+				queryParams[k] = fv
+			}else{
+				beego.Error(fmt.Sprintf("Check param[%s]value %v error", k, v))
+			}
+		}else{
+			beego.Error(fmt.Sprintf("Check param[%s]value %v error no such field", k, v))
+		}
+	}
+	return queryParams
+}
 
-func getLimitParamFromRequestMap(requestMap map[string]interface{}) map[string]int64{
+func (this *BaseController)GetLimitParamFromJsonMap(requestMap map[string]interface{}) map[string]int64{
 	limitParams := make(map[string]int64, 0)
-//	beego.Debug("List Item user", requestMap)
 	if k, ok := requestMap["limit"]; ok {
 		limitParams["limit"] = int64(k.(float64))
 	}
@@ -68,7 +80,7 @@ func getLimitParamFromRequestMap(requestMap map[string]interface{}) map[string]i
 	}
 	return limitParams
 }
-func getOrderParamFromRequestMap(requestMap map[string]interface{}) svc.Params{
+func (this *BaseController)GetOrderParamFromJsonMap(requestMap map[string]interface{}) svc.Params{
 	orderByParams := make(svc.Params, 0)
 	if sort, ok := requestMap["sort"]; ok {
 		sortStr := strings.TrimSpace(sort.(string))

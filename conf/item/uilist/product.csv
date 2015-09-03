@@ -1,0 +1,8 @@
+field,showInList,sortable,order,visible
+name,,true,,
+keyword,,true,,
+category,,true,,
+brand,,true,,
+price,,true,,
+supplierkey,,true,,
+detail,,,,

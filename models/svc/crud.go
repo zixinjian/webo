@@ -19,6 +19,11 @@ func Query(entity string, queryParams Params, limitParams map[string]int64, orde
 	//fmt.Println("queryParams", queryParams)
 	for k, v := range queryParams {
 		sqlBuilder.Filter(k, v)
+//		if list, ok := v.([]interface{}); ok{
+//
+//		}else{
+//			sqlBuilder.Filter(k, v)
+//		}
 	}
 	//	fmt.Println("order", orderBy)
 	if limit, ok := limitParams[s.Limit]; ok {
@@ -56,8 +61,7 @@ func Query(entity string, queryParams Params, limitParams map[string]int64, orde
 	}
 	return status.Failed, retList
 }
-
-func List(entity string, queryParams Params, limitParams map[string]int64, orderBy Params) (string, int64, []map[string]interface{}) {
+func List(entity string, queryParams Params, limitParams LimitParams, orderBy Params) (string, int64, []map[string]interface{}) {
 	total := Count(entity, queryParams)
 	code, retMaps := Query(entity, queryParams, limitParams, orderBy)
 	return code, total, retMaps
@@ -120,7 +124,6 @@ func Add(entity string, params Params) (string, string) {
 		if field.Model == s.CurTime {
 			now := time.Now().Unix()
 			values[idx] = now
-			//			fmt.Println("time", time.Unix(now , 0).String())
 			continue
 		}
 
@@ -142,7 +145,7 @@ func Add(entity string, params Params) (string, string) {
 		if i, e := res.LastInsertId(); e == nil && i > 0 {
 			return status.Success, ""
 		}else{
-			fmt.Println("addd,error", e, i)
+			fmt.Println("add,error", e, i)
 //			beego.Error(e, i)
 		}
 	} else {
@@ -211,3 +214,4 @@ func ParseSqlError(err error, oEntityDef itemDef.ItemDef) (string, string) {
 	beego.Error("ParseSqlError unknown error", errStr)
 	return status.UnKnownFailed, ""
 }
+

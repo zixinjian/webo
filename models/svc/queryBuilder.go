@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"strings"
 	"webo/models/itemDef"
+	"github.com/astaxie/beego"
 )
 
 type queryBuilder struct {
@@ -24,14 +25,14 @@ type condition struct {
 func (this *queryBuilder) QueryTable(table string) {
 	oEntityDef, ok := itemDef.EntityDefMap[table]
 	if !ok {
-		panic(fmt.Errorf("<queryBuilder.QueryTable>no such entry table define: %v", table))
+		beego.Error(fmt.Errorf("<queryBuilder.QueryTable>no such entry table define: %v", table))
 	}
 	this.table = table
 	this.oEntityDef = oEntityDef
 }
 
 func (this *queryBuilder) Filter(fieldName string, value interface{}) {
-	fmt.Println("ddd", this.oEntityDef.IsValidField(fieldName), fieldName, value)
+	beego.Debug("Add filter:", fieldName, value)
 	if this.oEntityDef.IsValidField(fieldName) {
 		this.conditions = append(this.conditions, condition{fieldName, value, "="})
 	}

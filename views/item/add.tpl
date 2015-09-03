@@ -27,7 +27,9 @@
             top.hideTopModal()
             refreshContent()
         }else{
-            showError("添加失败!")
+            if(resp.ret == "duplicated_value"){
+                showError("添加失败! 重复的" + resp.result +  "。")
+            }
         }
     }
     var refreshContent

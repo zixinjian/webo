@@ -1,6 +1,7 @@
 package svc
 
 type Params map[string]interface{}
+type LimitParams map[string]int64
 
 type Results struct {
 	Status  string      `json:"status"`

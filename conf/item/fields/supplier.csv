@@ -1,8 +1,8 @@
 item,supplier,,,,,,,,
 title,name,type,label,require,unique,input,model,default,enum
-field,name,string,姓名,true,true,text,text,,
+field,name,string,名称,true,true,text,text,,
 field,keyword,string,关键字,true,true,text,text,,
-field,category,string,类别,true,true,text,text,,
+field,category,string,类别,true,true,select,enum,scate_1,"scate_1, scate_2"
 field,spscope,string,经营内容,false,false,text,text,,
 field,contact,string,联系人1,false,false,text,text,,
 field,jobtitle,string,职位1,false,false,text,text,,

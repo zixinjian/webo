@@ -6,6 +6,7 @@ import (
 	"strings"
 	"webo/models/itemDef"
 	"webo/models/lang"
+	"webo/models/util"
 )
 
 type FormBuilder struct {
@@ -117,9 +118,9 @@ func createFromGroup(field itemDef.Field, value interface{}) string {
 	case "textarea":
 		fromGroup = fmt.Sprintf(textareaFormat, field.Label, field.Require, field.Label, field.Name, field.Name, value)
 	case "text":
-		fromGroup = fmt.Sprintf(textFormat, field.Label, field.Require, field.Label, field.Name, field.Name, field.GetValueStr(value))
+		fromGroup = fmt.Sprintf(textFormat, field.Label, field.Require, field.Label, field.Name, field.Name, util.ToStr(value))
 	case "money":
-		fromGroup = fmt.Sprintf(moneyFormat, field.Label, field.Require, field.Label, field.Name, field.Name, field.GetValueStr(value))
+		fromGroup = fmt.Sprintf(moneyFormat, field.Label, field.Require, field.Label, field.Name, field.Name, util.ToStr(value))
 	case "date", "datetime":
 		//fmt.Println("text", value)
 		fromGroup = fmt.Sprintf(dateFormate, field.Label, field.Require, field.Label, field.Name, field.Name, value)

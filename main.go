@@ -50,10 +50,6 @@ var FilterUser = func(ctx *context.Context) {
 //		ctx.Redirect(302, "/login")
 //	}
 //}
-func hello(in string) (out string) {
-	out = string(in)
-	return
-}
 
 func main() {
 	initDb()

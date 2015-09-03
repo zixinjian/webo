@@ -1,0 +1,121 @@
+2015/08/31 10:33:29 [main.go:29] [I] User:admin login as role:role_admin 
+2015/08/31 10:33:29 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 10:33:32 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 10:33:38 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 10:33:41 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 10:55:47 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/31 10:56:29 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 10:56:30 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 10:56:31 [main.go:29] [I] User:admin login as role:role_admin 
+2015/08/31 10:56:31 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 10:56:34 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 10:56:39 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 10:56:41 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 10:56:42 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 10:56:43 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 10:56:44 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 10:58:42 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 11:13:26 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 11:30:25 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 11:30:35 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 11:30:36 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 11:30:37 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 11:56:24 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/31 11:57:05 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/31 11:57:14 [main.go:29] [I] User:admin login as role:role_admin 
+2015/08/31 11:57:14 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 11:57:16 [purchase.go:51] [I] UiCurList 
+2015/08/31 11:57:19 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 11:57:19 [purchase.go:51] [I] UiCurList 
+2015/08/31 11:57:55 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/31 11:57:58 [main.go:29] [I] User:admin login as role:role_admin 
+2015/08/31 11:57:58 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 11:58:00 [purchase.go:51] [I] UiCurList 
+2015/08/31 11:58:00 [router.go:879] [C] the request url is  /ui/purchase/curlist 
+2015/08/31 11:58:00 [router.go:880] [C] Handler crashed with error can't find templatefile in the path:curlist.html 
+2015/08/31 11:58:00 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:401 
+2015/08/31 11:58:00 [router.go:886] [C] /usr/local/go/src/runtime/panic.go:387 
+2015/08/31 11:58:00 [router.go:886] [C] /Users/rick/go/src/github.com/astaxie/beego/controller.go:253 
+2015/08/31 11:58:00 [router.go:886] [C] /Users/rick/go/src/github.com/astaxie/beego/controller.go:179 
+2015/08/31 11:58:00 [router.go:886] [C] /Users/rick/go/src/github.com/astaxie/beego/router.go:810 
+2015/08/31 11:58:00 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1703 
+2015/08/31 11:58:00 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1204 
+2015/08/31 11:58:00 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:2232 
+2015/08/31 11:58:41 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/31 11:58:44 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 11:58:44 [purchase.go:51] [I] UiCurList 
+2015/08/31 12:01:20 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/31 12:01:23 [purchase.go:51] [I] UiCurList 
+2015/08/31 12:01:24 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 12:01:24 [purchase.go:51] [I] UiCurList 
+2015/08/31 12:01:51 [main.go:29] [I] User:admin login as role:role_admin 
+2015/08/31 12:01:51 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 12:01:52 [purchase.go:51] [I] UiCurList 
+2015/08/31 12:03:01 [purchase.go:51] [I] UiCurList 
+2015/08/31 12:03:02 [purchase.go:51] [I] UiCurList 
+2015/08/31 12:03:02 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 12:03:03 [purchase.go:51] [I] UiCurList 
+2015/08/31 12:03:25 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/31 12:03:28 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 12:03:29 [purchase.go:51] [I] UiCurList 
+2015/08/31 12:04:30 [purchase.go:51] [I] UiCurList 
+2015/08/31 12:06:39 [purchase.go:51] [I] UiCurList 
+2015/08/31 12:06:53 [purchase.go:51] [I] UiCurList 
+2015/08/31 12:08:22 [purchase.go:51] [I] UiCurList 
+2015/08/31 12:08:36 [purchase.go:51] [I] UiCurList 
+2015/08/31 12:08:38 [purchase.go:51] [I] UiCurList 
+2015/08/31 12:08:40 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 12:08:41 [purchase.go:51] [I] UiCurList 
+2015/08/31 12:08:52 [purchase.go:51] [I] UiCurList 
+2015/08/31 12:08:54 [purchase.go:51] [I] UiCurList 
+2015/08/31 12:08:55 [purchase.go:51] [I] UiCurList 
+2015/08/31 12:17:55 [purchase.go:51] [I] UiCurList 
+2015/08/31 12:20:02 [purchase.go:51] [I] UiCurList 
+2015/08/31 12:20:02 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 12:20:05 [main.go:29] [I] User:admin login as role:role_admin 
+2015/08/31 12:20:05 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 12:20:25 [purchase.go:51] [I] UiCurList 
+2015/08/31 12:20:25 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 12:20:27 [purchase.go:51] [I] UiCurList 
+2015/08/31 12:20:28 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 12:20:28 [purchase.go:51] [I] UiCurList 
+2015/08/31 12:20:35 [purchase.go:51] [I] UiCurList 
+2015/08/31 12:20:36 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 12:20:37 [purchase.go:51] [I] UiCurList 
+2015/08/31 12:20:38 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 12:20:38 [purchase.go:51] [I] UiCurList 
+2015/08/31 12:20:39 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 12:20:41 [purchase.go:51] [I] UiCurList 
+2015/08/31 12:20:41 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 12:20:42 [purchase.go:51] [I] UiCurList 
+2015/08/31 12:20:43 [purchase.go:51] [I] UiCurList 
+2015/08/31 12:20:44 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 12:20:44 [purchase.go:51] [I] UiCurList 
+2015/08/31 12:20:45 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 12:20:46 [purchase.go:51] [I] UiCurList 
+2015/08/31 12:21:19 [main.go:29] [I] User:admin login as role:role_admin 
+2015/08/31 12:21:19 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 12:21:20 [purchase.go:51] [I] UiCurList 
+2015/08/31 12:21:36 [main.go:29] [I] User:admin login as role:role_admin 
+2015/08/31 12:21:36 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 12:21:37 [purchase.go:51] [I] UiCurList 
+2015/08/31 16:23:38 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 16:23:39 [purchase.go:51] [I] UiCurList 
+2015/08/31 16:23:58 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 16:24:28 [main.go:29] [I] User:admin login as role:role_admin 
+2015/08/31 16:24:28 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 16:41:50 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/31 16:50:46 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/31 16:50:51 [main.go:29] [I] User:admin login as role:role_admin 
+2015/08/31 16:50:51 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 16:57:23 [purchase.go:51] [I] UiCurList 
+2015/08/31 16:57:42 [purchase.go:51] [I] UiCurList 
+2015/08/31 17:03:18 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/31 17:03:22 [purchase.go:51] [I] UiCurList 
+2015/08/31 17:04:31 [main.go:29] [I] User:admin login as role:role_admin 
+2015/08/31 17:04:31 [purchase.go:37] [E] UiMyCreate 
+2015/08/31 17:04:32 [purchase.go:51] [I] UiCurList 
+2015/08/31 17:05:59 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/31 17:06:01 [purchase.go:51] [I] UiCurList 
+2015/08/31 17:06:35 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/08/31 17:06:37 [purchase.go:51] [I] UiCurList 

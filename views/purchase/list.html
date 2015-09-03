@@ -4,17 +4,24 @@
     <link rel="stylesheet" href="../../asserts/3rd/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../asserts/3rd/bootstrap-table/bootstrap-table.css">
     <link rel="stylesheet" href="../../asserts/3rd/bootstrap-editable/bootstrap3-editable/css/bootstrap-editable.css">
+    <link rel="stylesheet" href="../../asserts/3rd/bootstrap-table/extensions/fixed-column/bootstrap-table-fixed-columns.css">
 </head>
 <body>
 <div style="padding:20px;">
-    <p class="toolbar">
-        <a id="add_item" class="create btn btn-primary">新建</a>
-    </p>
+        <div class="toolbar" style="line-height: 20px">
+            <div class="form-group">
+                <label class="radio-inline">
+                    <input data-model="buyers" type="radio" name = "buyers" id="all" value="all" checked="true"> 全部
+                </label>
+                {{str2html .buyers}}
+            </div>
+        </div>
     <table id="item_table"
            data-show-refresh="true"
            data-show-columns="true"
            data-search="true"
            data-query-params="queryParams"
+           data-row-style="rowStyle"
            data-toolbar=".toolbar">
         <thead>
             <tr>
@@ -34,6 +41,8 @@
 <script src="../../asserts/3rd/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
 <script src="../../asserts/3rd/bootstrap-table/extensions/editable/bootstrap-table-editable.js"></script>
 <script src="../../asserts/3rd/bootstrap-editable/bootstrap3-editable/js/bootstrap-editable.js"></script>
+<script src="../../asserts/3rd/bootstrap-table/extensions/fixed-column/bootstrap-table-fixed-columns.js"></script>
+{{str2html .queryParams}}
 <script>
     var $table = $("#item_table")
     $(function(){
@@ -53,9 +62,7 @@
         $table.bootstrapTable("refresh")
 //        console.log("refreshs")
     }
-    function queryParams(params){
-        return params
-    }
+
     function actionFormatter(value) {
         return [
             '<a class="update" href="javascript:" title="修改" style="margin-right: 5px;"><i class="glyphicon glyphicon-edit"></i></a>',
@@ -83,6 +90,20 @@
                 })
             }
         }
+    }
+    $(function(){
+        $("[data-model='buyers']").on("change", function(){
+            var selectedValue = $("input[name='buyers']:checked").val();
+            if (selectedValue == "all"){
+                $table.bootstrapTable("refresh")
+            }else{
+                $table.bootstrapTable("refresh", {query: {buyer: selectedValue}})
+            }
+        })
+    });
+    function rowStyle(row, index) {
+//        var classes = ['active', 'success', 'info', 'warning', 'danger'];
+        return {classes: "warning"};
     }
     function getHeight() {
         return $(window).height()-50;

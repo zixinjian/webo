@@ -64,7 +64,7 @@ func readUiListCsv(fileName string) map[string]UiListStruct {
 		if filedName == "" {
 			continue
 		}
-		UiList := UiListStruct{}
+		UiList := newUiList()
 
 		if showInList := strings.TrimSpace(row[1]); strings.EqualFold(showInList, "false") {
 			UiList.Shown = false
@@ -72,10 +72,10 @@ func readUiListCsv(fileName string) map[string]UiListStruct {
 			UiList.Shown = true
 		}
 
-		if sorable := strings.TrimSpace(row[2]); strings.EqualFold(sorable, "true") {
-			UiList.Sortable = true
-		} else {
+		if sorable := strings.TrimSpace(row[2]); strings.EqualFold(sorable, "false") {
 			UiList.Sortable = false
+		} else {
+			UiList.Sortable = true
 		}
 
 		if order := strings.TrimSpace(row[3]); strings.EqualFold(order, "desc") {
@@ -183,7 +183,7 @@ func readItemDefCsv(fileName string) ItemDef {
 			}
 		}
 		field.Enum = getEnumValue(strings.Trim(row[9], " "), field.Type)
-		field.UiList = UiListStruct{true, false, "", true}
+		field.UiList = newUiList()
 		oItemDef.Fields = append(oItemDef.Fields, field)
 	}
 	fmt.Println("oItemDef", oItemDef)

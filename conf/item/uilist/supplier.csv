@@ -8,11 +8,11 @@ jobtitle,,,,
 phone,,,,
 webchat,,,,
 qq,,,,
-contact2,,,,
-jobtitle2,,,,
-phone2,,,,
-webchat2,,,,
-qq2,,,,
+contact2,,,,false
+jobtitle2,,,,false
+phone2,,,,false
+webchat2,,,,false
+qq2,,,,false
 contact3,,,,false
 jobtitle3,,,,false
 phone3,,,,false

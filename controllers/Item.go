@@ -14,11 +14,32 @@ import (
 type ItemController struct {
 	BaseController
 }
-
-func (this *ItemController) List() {
+func (this *ItemController) ListWithQuery(oItemDef itemDef.ItemDef, addQueryParam svc.Params) {
 	requestBody := this.Ctx.Input.RequestBody
 	var requestMap map[string]interface{}
 	json.Unmarshal(requestBody, &requestMap)
+	beego.Debug("requestMap", requestMap)
+
+	limitParams := this.GetLimitParamFromJsonMap(requestMap)
+	delete(requestMap, s.Limit)
+	delete(requestMap, s.Offset)
+
+	orderByParams := this.GetOrderParamFromJsonMap(requestMap)
+	delete(requestMap, s.Order)
+	delete(requestMap, s.Sort)
+
+	queryParams := this.GetQueryParamFromJsonMap(requestMap, oItemDef)
+	for k, v := range addQueryParam{
+		queryParams[k]=v
+	}
+
+	result, total, resultMaps := svc.List(oItemDef.Name, queryParams, limitParams, orderByParams)
+	retList := transList(oItemDef, resultMaps)
+	this.Data["json"] = &TableResult{result, int64(total), retList}
+	this.ServeJson()
+}
+
+func (this *ItemController) List() {
 	item, ok := this.Ctx.Input.Params[":hi"]
 	if !ok {
 		this.Data["json"] = TableResult{"false", 0, ""}
@@ -31,20 +52,15 @@ func (this *ItemController) List() {
 		this.ServeJson()
 		return
 	}
-	queryParams := make(svc.Params, 0)
+	addParams := svc.Params{}
 	creater := this.GetString(s.Creater)
-	if creater == "curuser" {
+	if creater == s.CurUser {
 		sn := this.GetCurUserSn()
-		queryParams[s.Creater]= sn
+		addParams[s.Creater]= sn
 	}
-
-	limitParams := getLimitParamFromRequestMap(requestMap)
-	orderByParams := getOrderParamFromRequestMap(requestMap)
-	result, total, resultMaps := svc.List(item, queryParams, limitParams, orderByParams)
-	retList := transList(oItemDef, resultMaps)
-	this.Data["json"] = &TableResult{result, int64(total), retList}
-	this.ServeJson()
+	this.ListWithQuery(oItemDef, addParams)
 }
+
 
 func transList(oItemDef itemDef.ItemDef, resultMaps []map[string]interface{}) []map[string]interface{} {
 	if len(resultMaps) < 0 {
@@ -68,15 +84,6 @@ func transList(oItemDef itemDef.ItemDef, resultMaps []map[string]interface{}) []
 	}
 	return retList
 }
-func (this *ItemController) Get() {
-	//	fmt.Println("requestBosy", this.Ctx.Input.RequestBody)
-	//	fmt.Println("params", this.Ctx.Input.Params)
-	tr := new(TableResult)
-	tr.Rows = []map[string]string{{"id": "1", "user": "user1", "name": "a", "department": "dep1", "role": "admin", "flat": ""}}
-	tr.Total = 1
-	this.Data["json"] = tr
-	this.ServeJson()
-}
 func (this *ItemController) Add() {
 	item, ok := this.Ctx.Input.Params[":hi"]
 	if !ok {
@@ -93,6 +100,7 @@ func (this *ItemController) Add() {
 	this.Data["json"] = &JsonResult{status, reason}
 	this.ServeJson()
 }
+
 func (this *ItemController) Update() {
 	beego.Debug("Update requestBody: ", this.Ctx.Input.RequestBody)
 	beego.Debug("Update params:", this.Ctx.Input.Params)
@@ -107,14 +115,5 @@ func (this *ItemController) Update() {
 	svcParams := this.GetFormValues(oEntityDef)
 	status, reason := svc.Update(item, svcParams)
 	this.Data["json"] = &JsonResult{status, reason}
-	this.ServeJson()
-}
-func (this *ItemController) Delete() {
-	fmt.Println("requestBosy", this.Ctx.Input.RequestBody)
-	fmt.Println("params", this.Ctx.Input.Params)
-	tr := new(TableResult)
-	tr.Rows = []map[string]string{{"id": "1", "user": "user1", "name": "a", "department": "dep1", "role": "admin", "flat": ""}}
-	tr.Total = 1
-	this.Data["json"] = tr
 	this.ServeJson()
 }

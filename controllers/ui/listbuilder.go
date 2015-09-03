@@ -5,6 +5,7 @@ import (
 	"webo/models/itemDef"
 	"strings"
 	"webo/models/lang"
+	"github.com/astaxie/beego"
 )
 
 const thFormat = `                <th data-field="%s" %s %s>%s</th>
@@ -21,9 +22,10 @@ func BuildListThs(itemDef itemDef.ItemDef) string {
 			if field.UiList.Sortable {
 				sortable = `data-sortable="true"`
 				if field.UiList.Order == "desc" {
-					sortable = sortable + `data-order="desc"`
+					sortable = sortable + ` data-order="desc"`
 				}
 			}
+			beego.Debug("BuildListThs", sortable)
 			th = th + fmt.Sprintf(thFormat, field.Name, visible, sortable, field.Label)
 		}
 	}

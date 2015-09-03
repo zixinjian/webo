@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"github.com/astaxie/beego"
 	"strconv"
+	"webo/models/s"
 )
 
 type ItemDef struct {
@@ -32,6 +33,10 @@ type UiListStruct struct {
 	Sortable bool
 	Order    string
 	Visiable bool
+}
+
+func newUiList() UiListStruct{
+	return UiListStruct{true, true, "", true}
 }
 
 var fieldSn = Field{"sn", "string", "string", "none", "false", "false", "sn", nil, "", UiListStruct{false, false, "", false}}
@@ -84,6 +89,7 @@ func (this *ItemDef) GetField(filedName string) (Field, bool) {
 	v, ok := this.fieldMaps[filedName]
 	return v, ok
 }
+
 func (this *ItemDef) initDefault() {
 	nField := len(this.Fields)
 	fields := make([]Field, nField+3)
@@ -96,11 +102,11 @@ func (this *ItemDef) initDefault() {
 	fields[nField+2] = fieldCreateTime
 	this.Fields = fields
 }
-func (field *Field) GetValue(valueString string) (interface{}, bool) {
+func (field *Field) GetFormValue(valueString string) (interface{}, bool) {
 	switch field.Type {
-	case "string":
+	case s.TypeString:
 		return valueString, true
-	case "int":
+	case s.TypeInt:
 		value, err := strconv.ParseInt(valueString, 10, 64)
 		if err == nil {
 			return value, true
@@ -108,7 +114,7 @@ func (field *Field) GetValue(valueString string) (interface{}, bool) {
 			beego.Error(fmt.Sprintf("Get field:%s varlue: %s as %s error:%s", field.Name, valueString, field.Type, err.Error()))
 			return 0, false
 		}
-	case "float":
+	case s.TypeFloat:
 		value, err := strconv.ParseFloat(valueString, 64)
 		if err == nil {
 			return value, true
@@ -121,22 +127,41 @@ func (field *Field) GetValue(valueString string) (interface{}, bool) {
 		return 0, false
 	}
 }
-
-func (field *Field) GetValueStr(value interface{})string{
+func (field *Field)GetCheckedValue(input interface{}) (interface{}, bool) {
 	switch field.Type {
-	case "string":
-		return value.(string)
-	case "int":
-//		fmt.Println("int", field.Name, v)
-		v, ok := value.(int64)
-		if ok{
-			return fmt.Sprintf("%d", v)
-		}
-		return value.(string)
+	case s.TypeString:
+		v, ok := input.(string)
+		return v, ok
+	case s.TypeFloat:
+		v, ok := input.(float64)
+		return v, ok
+	case s.TypeInt:
+		v, ok := input.(int64)
+		return v, ok
 	default:
-		return value.(string)
+		beego.Error("GetCheckedValue: type not support " + field.Type)
+		return input.(string), false
 	}
 }
+//func (field *Field) GetValueStr(value interface{})string{
+//	switch field.Type {
+//	case "string":
+//		return value.(string)
+//	case "int":
+////		fmt.Println("int", field.Name, v)
+//		v, ok := value.(int64)
+//		if ok{
+//			return fmt.Sprintf("%d", v)
+//		}
+//		return value.(string)
+//	default:
+//		return value.(string)
+//	}
+//}
+
+//func (field *Field)GetDefaultValue(){
+//
+//}
 
 func (field *Field) initDefault() {
 	if field.Type == "" {

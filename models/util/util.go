@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"reflect"
 	"time"
+	"github.com/astaxie/beego/orm"
 )
 
 var gId uint32
@@ -59,4 +60,8 @@ func TUId() string {
 func init() {
 	gId = 0
 	gOldTime = time.Now()
+}
+
+func ToStr(v interface{})string{
+	return orm.ToStr(v)
 }

@@ -1,0 +1,231 @@
+2015/09/01 09:25:21 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/01 09:25:21 [purchase.go:37] [E] UiMyCreate 
+2015/09/01 15:54:46 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/01 15:55:04 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/01 15:55:04 [purchase.go:37] [E] UiMyCreate 
+2015/09/01 15:55:45 [purchase.go:51] [I] UiCurList 
+2015/09/01 15:55:45 [purchase.go:37] [E] UiMyCreate 
+2015/09/01 17:06:56 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/01 17:07:00 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/01 17:07:00 [purchase.go:37] [E] UiMyCreate 
+2015/09/01 17:07:01 [purchase.go:51] [I] UiCurList 
+2015/09/01 17:07:02 [purchase.go:51] [I] UiCurList 
+2015/09/01 17:07:02 [purchase.go:37] [E] UiMyCreate 
+2015/09/01 17:07:03 [purchase.go:51] [I] UiCurList 
+2015/09/01 17:07:03 [purchase.go:37] [E] UiMyCreate 
+2015/09/01 17:07:03 [purchase.go:51] [I] UiCurList 
+2015/09/01 17:07:04 [purchase.go:37] [E] UiMyCreate 
+2015/09/01 17:07:04 [purchase.go:51] [I] UiCurList 
+2015/09/01 17:12:15 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/01 17:12:19 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/01 17:12:19 [purchase.go:37] [E] UiMyCreate 
+2015/09/01 17:17:14 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/01 17:17:18 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/01 17:17:18 [purchase.go:37] [E] UiMyCreate 
+2015/09/01 17:17:33 [crud.go:148] [E] Add error UNIQUE constraint failed: product.keyword 
+2015/09/01 17:17:54 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/01 17:17:57 [crud.go:148] [E] Add error UNIQUE constraint failed: product.keyword 
+2015/09/01 17:17:58 [crud.go:148] [E] Add error UNIQUE constraint failed: product.keyword 
+2015/09/01 17:18:14 [crud.go:148] [E] Add error UNIQUE constraint failed: product.keyword 
+2015/09/01 17:18:23 [crud.go:148] [E] Add error UNIQUE constraint failed: product.keyword 
+2015/09/01 17:19:35 [crud.go:148] [E] Add error UNIQUE constraint failed: product.keyword 
+2015/09/01 17:21:09 [crud.go:148] [E] Add error UNIQUE constraint failed: product.keyword 
+2015/09/01 17:21:17 [crud.go:148] [E] Add error UNIQUE constraint failed: product.name 
+2015/09/01 17:22:13 [define.go:118] [E] Get field:price varlue: a as float error:strconv.ParseFloat: parsing "a": invalid syntax 
+2015/09/01 17:22:16 [purchase.go:51] [I] UiCurList 
+2015/09/01 17:22:16 [purchase.go:37] [E] UiMyCreate 
+2015/09/01 17:22:43 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/01 17:24:47 [purchase.go:51] [I] UiCurList 
+2015/09/01 17:24:47 [purchase.go:37] [E] UiMyCreate 
+2015/09/01 17:24:48 [purchase.go:51] [I] UiCurList 
+2015/09/01 17:24:49 [purchase.go:51] [I] UiCurList 
+2015/09/01 17:24:49 [purchase.go:37] [E] UiMyCreate 
+2015/09/01 17:24:50 [purchase.go:51] [I] UiCurList 
+2015/09/01 17:25:06 [purchase.go:37] [E] UiMyCreate 
+2015/09/01 17:25:08 [purchase.go:51] [I] UiCurList 
+2015/09/01 17:25:08 [purchase.go:37] [E] UiMyCreate 
+2015/09/01 17:25:13 [purchase.go:51] [I] UiCurList 
+2015/09/01 17:25:14 [purchase.go:37] [E] UiMyCreate 
+2015/09/01 17:25:21 [purchase.go:51] [I] UiCurList 
+2015/09/01 17:25:22 [purchase.go:51] [I] UiCurList 
+2015/09/01 17:25:22 [purchase.go:37] [E] UiMyCreate 
+2015/09/01 17:25:23 [purchase.go:51] [I] UiCurList 
+2015/09/01 17:25:23 [purchase.go:37] [E] UiMyCreate 
+2015/09/01 17:26:05 [purchase.go:51] [I] UiCurList 
+2015/09/01 17:26:06 [purchase.go:37] [E] UiMyCreate 
+2015/09/01 17:26:06 [purchase.go:51] [I] UiCurList 
+2015/09/01 17:26:06 [purchase.go:37] [E] UiMyCreate 
+2015/09/01 17:26:07 [purchase.go:51] [I] UiCurList 
+2015/09/01 17:26:22 [purchase.go:37] [E] UiMyCreate 
+2015/09/01 17:26:30 [purchase.go:51] [I] UiCurList 
+2015/09/01 17:26:31 [purchase.go:37] [E] UiMyCreate 
+2015/09/01 17:26:32 [purchase.go:51] [I] UiCurList 
+2015/09/01 17:26:34 [purchase.go:51] [I] UiCurList 
+2015/09/01 17:26:46 [purchase.go:51] [I] UiCurList 
+2015/09/01 17:26:48 [purchase.go:51] [I] UiCurList 
+2015/09/01 17:26:50 [purchase.go:51] [I] UiCurList 
+2015/09/01 18:10:55 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/01 18:11:00 [baseController.go:67] [E] Check param[order]value asc error no such field 
+2015/09/01 18:11:00 [baseController.go:67] [E] Check param[limit]value 10 error no such field 
+2015/09/01 18:11:00 [baseController.go:67] [E] Check param[offset]value 0 error no such field 
+2015/09/01 18:11:02 [purchase.go:63] [I] UiCurList 
+2015/09/01 18:11:02 [baseController.go:67] [E] Check param[order]value asc error no such field 
+2015/09/01 18:11:02 [baseController.go:67] [E] Check param[limit]value 10 error no such field 
+2015/09/01 18:11:02 [baseController.go:67] [E] Check param[offset]value 0 error no such field 
+2015/09/01 18:11:03 [baseController.go:67] [E] Check param[limit]value 10 error no such field 
+2015/09/01 18:11:03 [baseController.go:67] [E] Check param[offset]value 0 error no such field 
+2015/09/01 18:11:03 [baseController.go:67] [E] Check param[order]value asc error no such field 
+2015/09/01 18:11:03 [purchase.go:63] [I] UiCurList 
+2015/09/01 18:11:03 [baseController.go:67] [E] Check param[order]value asc error no such field 
+2015/09/01 18:11:03 [baseController.go:67] [E] Check param[limit]value 10 error no such field 
+2015/09/01 18:11:03 [baseController.go:67] [E] Check param[offset]value 0 error no such field 
+2015/09/01 18:11:07 [baseController.go:67] [E] Check param[order]value asc error no such field 
+2015/09/01 18:11:07 [baseController.go:67] [E] Check param[limit]value 10 error no such field 
+2015/09/01 18:11:07 [baseController.go:67] [E] Check param[offset]value 0 error no such field 
+2015/09/01 18:11:08 [baseController.go:67] [E] Check param[order]value asc error no such field 
+2015/09/01 18:11:08 [baseController.go:67] [E] Check param[limit]value 10 error no such field 
+2015/09/01 18:11:08 [baseController.go:67] [E] Check param[offset]value 0 error no such field 
+2015/09/01 18:11:09 [baseController.go:67] [E] Check param[order]value asc error no such field 
+2015/09/01 18:11:09 [baseController.go:67] [E] Check param[limit]value 10 error no such field 
+2015/09/01 18:11:09 [baseController.go:67] [E] Check param[offset]value 0 error no such field 
+2015/09/01 18:11:09 [baseController.go:67] [E] Check param[order]value asc error no such field 
+2015/09/01 18:11:09 [baseController.go:67] [E] Check param[limit]value 10 error no such field 
+2015/09/01 18:11:09 [baseController.go:67] [E] Check param[offset]value 0 error no such field 
+2015/09/01 18:11:11 [purchase.go:63] [I] UiCurList 
+2015/09/01 18:11:11 [baseController.go:67] [E] Check param[order]value asc error no such field 
+2015/09/01 18:11:11 [baseController.go:67] [E] Check param[limit]value 10 error no such field 
+2015/09/01 18:11:11 [baseController.go:67] [E] Check param[offset]value 0 error no such field 
+2015/09/01 18:11:12 [baseController.go:67] [E] Check param[offset]value 0 error no such field 
+2015/09/01 18:11:12 [baseController.go:67] [E] Check param[order]value asc error no such field 
+2015/09/01 18:11:12 [baseController.go:67] [E] Check param[limit]value 10 error no such field 
+2015/09/01 18:14:13 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/01 18:14:16 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/01 18:14:16 [baseController.go:67] [E] Check param[order]value asc error no such field 
+2015/09/01 18:14:16 [baseController.go:67] [E] Check param[limit]value 10 error no such field 
+2015/09/01 18:14:16 [baseController.go:67] [E] Check param[offset]value 0 error no such field 
+2015/09/01 18:14:19 [purchase.go:63] [I] UiCurList 
+2015/09/01 18:14:19 [baseController.go:67] [E] Check param[order]value asc error no such field 
+2015/09/01 18:14:19 [baseController.go:67] [E] Check param[limit]value 10 error no such field 
+2015/09/01 18:14:19 [baseController.go:67] [E] Check param[offset]value 0 error no such field 
+2015/09/01 18:14:20 [baseController.go:67] [E] Check param[order]value asc error no such field 
+2015/09/01 18:14:20 [baseController.go:67] [E] Check param[limit]value 10 error no such field 
+2015/09/01 18:14:20 [baseController.go:67] [E] Check param[offset]value 0 error no such field 
+2015/09/01 18:14:20 [purchase.go:63] [I] UiCurList 
+2015/09/01 18:14:20 [baseController.go:67] [E] Check param[offset]value 0 error no such field 
+2015/09/01 18:14:20 [baseController.go:67] [E] Check param[order]value asc error no such field 
+2015/09/01 18:14:20 [baseController.go:67] [E] Check param[limit]value 10 error no such field 
+2015/09/01 18:14:21 [baseController.go:67] [E] Check param[order]value asc error no such field 
+2015/09/01 18:14:21 [baseController.go:67] [E] Check param[limit]value 10 error no such field 
+2015/09/01 18:14:21 [baseController.go:67] [E] Check param[offset]value 0 error no such field 
+2015/09/01 18:14:36 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/01 18:14:38 [baseController.go:67] [E] Check param[order]value asc error no such field 
+2015/09/01 18:14:38 [baseController.go:67] [E] Check param[limit]value 10 error no such field 
+2015/09/01 18:14:38 [baseController.go:67] [E] Check param[offset]value 0 error no such field 
+2015/09/01 18:14:41 [purchase.go:63] [I] UiCurList 
+2015/09/01 18:14:41 [baseController.go:67] [E] Check param[offset]value 0 error no such field 
+2015/09/01 18:14:41 [baseController.go:67] [E] Check param[order]value asc error no such field 
+2015/09/01 18:14:41 [baseController.go:67] [E] Check param[limit]value 10 error no such field 
+2015/09/01 18:14:41 [baseController.go:67] [E] Check param[order]value asc error no such field 
+2015/09/01 18:14:41 [baseController.go:67] [E] Check param[limit]value 10 error no such field 
+2015/09/01 18:14:41 [baseController.go:67] [E] Check param[offset]value 0 error no such field 
+2015/09/01 18:14:43 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/01 18:14:43 [baseController.go:67] [E] Check param[offset]value 0 error no such field 
+2015/09/01 18:14:43 [baseController.go:67] [E] Check param[order]value asc error no such field 
+2015/09/01 18:14:43 [baseController.go:67] [E] Check param[limit]value 10 error no such field 
+2015/09/01 18:14:44 [purchase.go:63] [I] UiCurList 
+2015/09/01 18:14:44 [baseController.go:67] [E] Check param[order]value asc error no such field 
+2015/09/01 18:14:44 [baseController.go:67] [E] Check param[limit]value 10 error no such field 
+2015/09/01 18:14:44 [baseController.go:67] [E] Check param[offset]value 0 error no such field 
+2015/09/01 18:14:44 [baseController.go:67] [E] Check param[order]value asc error no such field 
+2015/09/01 18:14:44 [baseController.go:67] [E] Check param[limit]value 10 error no such field 
+2015/09/01 18:14:44 [baseController.go:67] [E] Check param[offset]value 0 error no such field 
+2015/09/01 18:15:03 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/01 18:15:07 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/01 18:15:09 [purchase.go:63] [I] UiCurList 
+2015/09/01 18:16:12 [purchase.go:63] [I] UiCurList 
+2015/09/01 18:23:59 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/01 18:24:03 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/01 18:24:03 [purchase.go:55] [I] UiCurList 
+2015/09/01 18:24:44 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/01 18:25:08 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/01 18:25:14 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/01 18:25:28 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/01 18:25:39 [purchase.go:55] [I] UiCurList 
+2015/09/01 18:25:39 [purchase.go:76] [I] UiCurList 
+2015/09/01 18:25:42 [purchase.go:55] [I] UiCurList 
+2015/09/01 18:25:42 [purchase.go:76] [I] UiCurList 
+2015/09/01 18:27:35 [baseController.go:67] [E] Check param[sort]value name error no such field 
+2015/09/01 18:27:35 [language.go:46] [E] GetLang error key:h 
+2015/09/01 18:27:35 [language.go:46] [E] GetLang error key:g 
+2015/09/01 18:27:35 [language.go:46] [E] GetLang error key:f 
+2015/09/01 18:30:50 [baseController.go:67] [E] Check param[sort]value username error no such field 
+2015/09/01 18:30:50 [language.go:46] [E] GetLang error key:h 
+2015/09/01 18:30:50 [language.go:46] [E] GetLang error key:g 
+2015/09/01 18:30:50 [language.go:46] [E] GetLang error key:f 
+2015/09/01 18:30:51 [baseController.go:67] [E] Check param[sort]value username error no such field 
+2015/09/01 18:30:51 [language.go:46] [E] GetLang error key:f 
+2015/09/01 18:30:54 [baseController.go:67] [E] Check param[sort]value username error no such field 
+2015/09/01 18:30:54 [language.go:46] [E] GetLang error key:h 
+2015/09/01 18:30:54 [language.go:46] [E] GetLang error key:g 
+2015/09/01 18:30:54 [language.go:46] [E] GetLang error key:f 
+2015/09/01 18:30:55 [baseController.go:67] [E] Check param[sort]value username error no such field 
+2015/09/01 18:30:55 [language.go:46] [E] GetLang error key:f 
+2015/09/01 18:33:54 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/01 18:34:17 [purchase.go:57] [I] UiCurList 
+2015/09/01 18:34:19 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/01 18:34:20 [purchase.go:79] [I] UiCurList 
+2015/09/01 18:36:58 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/01 18:37:02 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/01 18:37:04 [purchase.go:57] [I] UiCurList 
+2015/09/01 18:37:06 [purchase.go:79] [I] UiCurList 
+2015/09/01 18:37:10 [purchase.go:57] [I] UiCurList 
+2015/09/01 18:37:15 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/01 18:37:18 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/01 18:37:19 [purchase.go:57] [I] UiCurList 
+2015/09/01 18:37:20 [purchase.go:57] [I] UiCurList 
+2015/09/01 18:40:09 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/01 18:40:12 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/01 18:40:14 [purchase.go:57] [I] UiCurList 
+2015/09/01 18:41:06 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/01 18:41:11 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/01 18:42:19 [purchase.go:57] [I] UiCurList 
+2015/09/01 18:42:19 [purchase.go:79] [I] UiCurList 
+2015/09/01 18:42:29 [language.go:46] [E] GetLang error key:f 
+2015/09/01 18:42:29 [language.go:46] [E] GetLang error key:g 
+2015/09/01 18:42:29 [language.go:46] [E] GetLang error key:h 
+2015/09/01 18:42:30 [language.go:46] [E] GetLang error key:h 
+2015/09/01 18:42:30 [language.go:46] [E] GetLang error key:g 
+2015/09/01 18:42:30 [language.go:46] [E] GetLang error key:f 
+2015/09/01 18:42:32 [language.go:46] [E] GetLang error key:h 
+2015/09/01 18:42:32 [language.go:46] [E] GetLang error key:g 
+2015/09/01 18:42:32 [language.go:46] [E] GetLang error key:f 
+2015/09/01 18:42:32 [language.go:46] [E] GetLang error key:f 
+2015/09/01 18:42:33 [language.go:46] [E] GetLang error key:h 
+2015/09/01 18:42:33 [language.go:46] [E] GetLang error key:g 
+2015/09/01 18:42:33 [language.go:46] [E] GetLang error key:f 
+2015/09/01 18:42:33 [language.go:46] [E] GetLang error key:h 
+2015/09/01 18:42:33 [language.go:46] [E] GetLang error key:g 
+2015/09/01 18:42:33 [language.go:46] [E] GetLang error key:f 
+2015/09/01 18:42:34 [language.go:46] [E] GetLang error key:h 
+2015/09/01 18:42:34 [language.go:46] [E] GetLang error key:g 
+2015/09/01 18:42:34 [language.go:46] [E] GetLang error key:f 
+2015/09/01 18:42:34 [language.go:46] [E] GetLang error key:h 
+2015/09/01 18:42:34 [language.go:46] [E] GetLang error key:g 
+2015/09/01 18:42:34 [language.go:46] [E] GetLang error key:f 
+2015/09/01 18:42:34 [language.go:46] [E] GetLang error key:h 
+2015/09/01 18:42:34 [language.go:46] [E] GetLang error key:g 
+2015/09/01 18:42:34 [language.go:46] [E] GetLang error key:f 
+2015/09/01 18:42:39 [purchase.go:57] [I] UiCurList 
+2015/09/01 18:42:41 [purchase.go:57] [I] UiCurList 
+2015/09/01 18:42:42 [purchase.go:79] [I] UiCurList 
+2015/09/01 18:42:43 [purchase.go:79] [I] UiCurList 
+2015/09/01 18:42:45 [purchase.go:79] [I] UiCurList 
+2015/09/01 18:42:46 [purchase.go:57] [I] UiCurList 
+2015/09/01 18:42:47 [purchase.go:57] [I] UiCurList 
+2015/09/01 18:42:48 [purchase.go:57] [I] UiCurList 
+2015/09/01 18:42:54 [purchase.go:57] [I] UiCurList 
+2015/09/01 18:42:57 [purchase.go:57] [I] UiCurList 
+2015/09/01 18:42:58 [purchase.go:57] [I] UiCurList 
+2015/09/01 18:42:59 [purchase.go:79] [I] UiCurList 
+2015/09/01 18:43:01 [purchase.go:79] [I] UiCurList 
+2015/09/01 18:43:01 [purchase.go:57] [I] UiCurList 

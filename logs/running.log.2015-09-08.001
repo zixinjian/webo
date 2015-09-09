@@ -1,0 +1,238 @@
+2015/09/06 09:07:37 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 09:07:42 [purchase.go:39] [I] UiCurList 
+2015/09/06 09:14:46 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/06 09:14:53 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 09:39:07 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 09:40:27 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/06 09:40:51 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 09:45:07 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/06 09:45:12 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 09:45:21 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 09:46:09 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/06 09:46:13 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 09:47:30 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 09:49:30 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/06 09:49:44 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 09:50:08 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 09:55:26 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 09:58:23 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 09:58:40 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 09:59:17 [crud.go:194] [E] Update error UNIQUE constraint failed: product.keyword 
+2015/09/06 09:59:56 [purchase.go:40] [I] UiCurList 
+2015/09/06 09:59:58 [purchase.go:40] [I] UiCurList 
+2015/09/06 10:01:48 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 10:02:36 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 10:03:18 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 10:05:04 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 10:05:49 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 10:06:24 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 10:08:08 [purchase.go:40] [I] UiCurList 
+2015/09/06 11:16:55 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/06 11:17:06 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 11:27:46 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/06 11:27:52 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 11:30:06 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 11:30:13 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/06 11:32:01 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/06 11:32:05 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 11:32:36 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/06 11:32:41 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 11:35:34 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 11:35:39 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/06 11:35:46 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 11:58:57 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/06 11:59:02 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 12:02:07 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/06 12:02:54 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/06 12:03:02 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 12:05:03 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/06 12:05:07 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 16:50:18 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/06 16:50:23 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 16:52:48 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/06 16:52:53 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 16:53:59 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/06 16:54:03 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 16:57:21 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/06 16:57:24 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 16:59:46 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/06 17:00:35 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 17:01:57 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 17:12:11 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/06 17:12:19 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/06 17:12:22 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 17:12:45 [define.go:115] [E] Get field:num varlue: 0dfsd as int error:strconv.ParseInt: parsing "0dfsd": invalid syntax 
+2015/09/06 17:16:53 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/06 17:16:57 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 17:17:00 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 17:19:11 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/06 17:19:16 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 17:21:40 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 17:22:03 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 17:22:43 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/06 17:26:49 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/06 17:26:53 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 17:27:20 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/06 17:27:30 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 17:28:14 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/06 17:28:17 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 17:28:47 [purchase.go:41] [I] UiCurList 
+2015/09/06 17:50:15 [purchase.go:41] [I] UiCurList 
+2015/09/06 18:09:08 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/06 18:09:13 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 18:13:24 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/06 18:27:11 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/06 18:27:35 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/06 18:28:22 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/06 19:38:56 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/06 19:39:02 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/06 19:42:02 [purchase.go:38] [I] UiCurList 
+2015/09/06 19:42:02 [purchase.go:38] [I] UiCurList 
+2015/09/07 11:00:25 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/07 11:00:30 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/07 11:00:31 [language.go:46] [E] GetLang error key:dddd 
+2015/09/07 11:02:19 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/07 11:02:19 [language.go:46] [E] GetLang error key:dddd 
+2015/09/07 11:05:35 [language.go:46] [E] GetLang error key:dddd 
+2015/09/07 11:12:32 [purchase.go:38] [I] UiCurList 
+2015/09/07 11:12:32 [language.go:46] [E] GetLang error key:dddd 
+2015/09/07 11:12:32 [purchase.go:38] [I] UiCurList 
+2015/09/07 11:12:32 [language.go:46] [E] GetLang error key:dddd 
+2015/09/07 11:12:33 [language.go:46] [E] GetLang error key:dddd 
+2015/09/07 11:22:29 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/07 11:22:33 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/07 15:05:14 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/07 15:07:03 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/07 15:07:14 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/07 15:08:36 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/07 15:08:47 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/07 15:08:50 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/07 15:10:39 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/07 15:12:21 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/07 15:12:26 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/07 15:12:31 [router.go:879] [C] the request url is  /ui/purchase/add 
+2015/09/07 15:12:31 [router.go:880] [C] Handler crashed with error createFormGroup input type:  not support  
+2015/09/07 15:12:31 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:401 
+2015/09/07 15:12:31 [router.go:886] [C] /usr/local/go/src/runtime/panic.go:387 
+2015/09/07 15:12:31 [router.go:886] [C] /Users/rick/go/src/webo/controllers/ui/formbuilder.go:189 
+2015/09/07 15:12:31 [router.go:886] [C] /Users/rick/go/src/webo/controllers/ui/formbuilder.go:79 
+2015/09/07 15:12:31 [router.go:886] [C] /Users/rick/go/src/webo/controllers/purchase.go:85 
+2015/09/07 15:12:31 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:401 
+2015/09/07 15:12:31 [router.go:886] [C] /usr/local/go/src/reflect/value.go:419 
+2015/09/07 15:12:31 [router.go:886] [C] /usr/local/go/src/reflect/value.go:296 
+2015/09/07 15:12:31 [router.go:886] [C] /Users/rick/go/src/github.com/astaxie/beego/router.go:803 
+2015/09/07 15:12:31 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1703 
+2015/09/07 15:12:31 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1204 
+2015/09/07 15:12:31 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:2232 
+2015/09/07 15:13:31 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/07 15:13:34 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/07 15:13:36 [router.go:879] [C] the request url is  /ui/purchase/add 
+2015/09/07 15:13:36 [router.go:880] [C] Handler crashed with error createFormGroup input  type:  not support  
+2015/09/07 15:13:36 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:401 
+2015/09/07 15:13:36 [router.go:886] [C] /usr/local/go/src/runtime/panic.go:387 
+2015/09/07 15:13:36 [router.go:886] [C] /Users/rick/go/src/webo/controllers/ui/formbuilder.go:189 
+2015/09/07 15:13:36 [router.go:886] [C] /Users/rick/go/src/webo/controllers/ui/formbuilder.go:79 
+2015/09/07 15:13:36 [router.go:886] [C] /Users/rick/go/src/webo/controllers/purchase.go:85 
+2015/09/07 15:13:36 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:401 
+2015/09/07 15:13:36 [router.go:886] [C] /usr/local/go/src/reflect/value.go:419 
+2015/09/07 15:13:36 [router.go:886] [C] /usr/local/go/src/reflect/value.go:296 
+2015/09/07 15:13:36 [router.go:886] [C] /Users/rick/go/src/github.com/astaxie/beego/router.go:803 
+2015/09/07 15:13:36 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1703 
+2015/09/07 15:13:36 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1204 
+2015/09/07 15:13:36 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:2232 
+2015/09/07 15:14:06 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/07 15:14:09 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/07 15:14:10 [router.go:879] [C] the request url is  /ui/purchase/add 
+2015/09/07 15:14:10 [router.go:880] [C] Handler crashed with error createFormGroup input  type:  not support  
+2015/09/07 15:14:10 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:401 
+2015/09/07 15:14:10 [router.go:886] [C] /usr/local/go/src/runtime/panic.go:387 
+2015/09/07 15:14:10 [router.go:886] [C] /Users/rick/go/src/webo/controllers/ui/formbuilder.go:189 
+2015/09/07 15:14:10 [router.go:886] [C] /Users/rick/go/src/webo/controllers/ui/formbuilder.go:79 
+2015/09/07 15:14:10 [router.go:886] [C] /Users/rick/go/src/webo/controllers/purchase.go:86 
+2015/09/07 15:14:10 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:401 
+2015/09/07 15:14:10 [router.go:886] [C] /usr/local/go/src/reflect/value.go:419 
+2015/09/07 15:14:10 [router.go:886] [C] /usr/local/go/src/reflect/value.go:296 
+2015/09/07 15:14:10 [router.go:886] [C] /Users/rick/go/src/github.com/astaxie/beego/router.go:803 
+2015/09/07 15:14:10 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1703 
+2015/09/07 15:14:10 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1204 
+2015/09/07 15:14:10 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:2232 
+2015/09/07 15:15:52 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/07 15:15:56 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/07 15:16:32 [language.go:46] [E] GetLang error key:20150729203140000 
+2015/09/07 15:19:02 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/07 15:19:07 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/07 15:19:07 [language.go:46] [E] GetLang error key:20150729203140000 
+2015/09/07 15:23:03 [purchase.go:40] [I] UiCurList 
+2015/09/07 15:23:04 [language.go:46] [E] GetLang error key:20150729203140000 
+2015/09/07 15:23:16 [language.go:46] [E] GetLang error key:20150729203140000 
+2015/09/07 15:30:15 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/07 15:30:19 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/07 15:30:19 [language.go:46] [E] GetLang error key:20150729203140000 
+2015/09/07 15:30:51 [define.go:128] [E] Get field:unitprice varlue:  as float error:strconv.ParseFloat: parsing "": invalid syntax 
+2015/09/07 15:30:51 [define.go:128] [E] Get field:totalprice varlue:  as float error:strconv.ParseFloat: parsing "": invalid syntax 
+2015/09/07 15:30:51 [define.go:128] [E] Get field:freightprice varlue:  as float error:strconv.ParseFloat: parsing "": invalid syntax 
+2015/09/07 15:30:51 [language.go:46] [E] GetLang error key:20150827160449000 
+2015/09/07 15:31:39 [define.go:128] [E] Get field:unitprice varlue:  as float error:strconv.ParseFloat: parsing "": invalid syntax 
+2015/09/07 15:31:39 [define.go:128] [E] Get field:totalprice varlue:  as float error:strconv.ParseFloat: parsing "": invalid syntax 
+2015/09/07 15:31:39 [define.go:128] [E] Get field:freightprice varlue:  as float error:strconv.ParseFloat: parsing "": invalid syntax 
+2015/09/07 15:31:39 [language.go:46] [E] GetLang error key:20150827160449000 
+2015/09/07 15:34:02 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/07 15:34:06 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/07 15:34:06 [language.go:46] [E] GetLang error key:20150827160449000 
+2015/09/07 15:37:32 [language.go:46] [E] GetLang error key:20150825194144000 
+2015/09/07 15:49:52 [language.go:46] [E] GetLang error key:20150825194144000 
+2015/09/07 15:50:44 [purchase.go:40] [I] UiCurList 
+2015/09/07 15:50:44 [language.go:46] [E] GetLang error key:20150825194144000 
+2015/09/07 15:51:09 [language.go:46] [E] GetLang error key:20150825194144000 
+2015/09/07 15:51:21 [language.go:46] [E] GetLang error key:20150729203140000 
+2015/09/07 15:51:37 [language.go:46] [E] GetLang error key:20150729203140000 
+2015/09/07 15:51:37 [purchase.go:40] [I] UiCurList 
+2015/09/07 15:51:38 [language.go:46] [E] GetLang error key:20150729203140000 
+2015/09/07 15:53:04 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/07 15:53:07 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/07 15:53:08 [language.go:46] [E] GetLang error key:20150729203140000 
+2015/09/07 15:53:26 [language.go:46] [E] GetLang error key:20150825194144000 
+2015/09/07 15:54:17 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/07 16:58:16 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/07 16:58:22 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/07 16:58:22 [language.go:46] [E] GetLang error key:20150825194144000 
+2015/09/07 16:59:23 [language.go:46] [E] GetLang error key:20150825194144000 
+2015/09/07 16:59:23 [language.go:46] [E] GetLang error key:20150827161549000 
+2015/09/07 16:59:39 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/07 16:59:39 [language.go:46] [E] GetLang error key:20150825194144000 
+2015/09/07 17:30:36 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/07 17:30:43 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/07 17:30:43 [language.go:46] [E] GetLang error key:20150825194144000 
+2015/09/07 18:15:26 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/07 18:16:51 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/07 18:16:56 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/07 18:19:26 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/07 18:19:32 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/07 18:20:40 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/07 18:20:43 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/07 18:22:05 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/07 18:22:09 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/07 18:23:57 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/07 18:24:24 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/07 18:25:00 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/07 18:25:04 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/07 18:31:20 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/07 18:31:27 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/07 18:32:06 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/07 18:32:10 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/07 18:32:10 [model.go:47] [E] query SELECT purchase.*, user.name, user.username, supplier.name, supplier.keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND supplier.sn = purchase.supplier AND purchase.creater = ? LIMIT 10  
+2015/09/07 18:32:13 [model.go:47] [E] query SELECT purchase.*, user.name, user.username, supplier.name, supplier.keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND supplier.sn = purchase.supplier AND purchase.creater = ? LIMIT 10  
+2015/09/07 18:32:14 [model.go:47] [E] query SELECT purchase.*, user.name, user.username, supplier.name, supplier.keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND supplier.sn = purchase.supplier AND purchase.creater = ? LIMIT 10  
+2015/09/07 18:33:02 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/07 18:33:06 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/07 18:33:06 [model.go:47] [E] query SELECT purchase.*, user.name, user.username, supplier.name, supplier.keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND supplier.sn = purchase.supplier AND purchase.creater = ? LIMIT 10  
+2015/09/07 18:34:57 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/07 18:35:02 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/07 18:35:03 [model.go:47] [E] query SELECT purchase.*, user.name as buyername, user.username, supplier.name as suppliername, supplier.keyword as supplierkeyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND supplier.sn = purchase.supplier AND purchase.creater = ? LIMIT 10  
+2015/09/07 18:35:55 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/07 18:35:59 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/07 18:35:59 [model.go:47] [E] query SELECT purchase.*, user.name as buyer_name, user.username as buyer_username, supplier.name as supplier_name, supplier.keyword as supplier_keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND supplier.sn = purchase.supplier AND purchase.creater = ? LIMIT 10  
+2015/09/07 18:37:46 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/07 18:37:49 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/07 18:37:50 [model.go:46] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username, supplier.name as supplier_name, supplier.keyword as supplier_keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND supplier.sn = purchase.supplier AND purchase.creater = ? LIMIT 10  
+2015/09/07 18:37:50 [language.go:46] [E] GetLang error key:f 

@@ -36,7 +36,8 @@
 <script>
     var $table = $("#item_table")
     $(function(){
-        $table.bootstrapTable({url:"{{.listUrl}}", method:"post", sidePagination:"server", pagination:true, height:getHeight(), rowStyle:rowStyle});
+        $table.bootstrapTable({url:"{{.listUrl}}", method:"post", sidePagination:"server", pagination:true,
+            height:getHeight(), rowStyle:rowStyle, sortName:"flag", sortOrder:"asc"});
         $("#add_item").on("click", function(){
             top.showTopModal({url:"{{.addUrl}}", refreshContent:refreshContent});
         })
@@ -53,7 +54,6 @@
     function actionFormatter(value) {
         return [
             '<a class="update" href="javascript:" title="修改" style="margin-right: 5px;"><i class="glyphicon glyphicon-edit"></i></a>',
-//            '<a class="disable" href="javascript:" title="禁用" style="margin-right: 5px;"><i class="glyphicon glyphicon-ban-circle"></i></a>',
         ].join('');
     }
     window.actionEvents = {

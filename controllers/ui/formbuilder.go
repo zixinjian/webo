@@ -5,8 +5,8 @@ import (
 	"github.com/astaxie/beego"
 	"strings"
 	"webo/models/itemDef"
-	"webo/models/lang"
 	"webo/models/util"
+	"webo/models/s"
 )
 
 type FormBuilder struct {
@@ -63,18 +63,58 @@ var selectFormat = `    <div class="form-group">
 			</div>
 		</div>
     	`
+var autocompleteFormat = `    <div class="form-group">
+            <label class="col-sm-3 control-label">%s关键字</label>
+            <div class="col-sm-6">
+                <input type="text" class="input-block-level form-control" id="%s_key" value="%s"/>
+                <label>%s名称</label><input type="text" class="input-block-level form-control" readonly="true" id="%s_name" name="%s_name" data-validate="{required: %s, messages:{required:'请输入正确的%s!'}}" value="%s" readonly="true">
+                <input type="hidden" id="%s" name="%s" value="%s">
+            </div>
+        </div>
+`
 
-func BuildAddForm(oItemDef itemDef.ItemDef) string {
-	var form string
+func BuildAddForm(oItemDef itemDef.ItemDef, sn string) string {
+	form := fmt.Sprintf(`<input type="hidden" id="sn" name="sn" value="%s">`, sn)
 	for _, field := range oItemDef.Fields {
-		form = form + createFromGroup(field, field.Default)
+		form = form + createFromGroup(field, field.Default, "", "")
 	}
 	return form
 }
 
-var initDatePickerFormat = `$(function(){
-        $("#%s").datetimepicker({%sformat:'Y.m.d',lang:'zh',%s})
-    });`
+var initDatePickerFormat = `
+$("#%s").datetimepicker({%sformat:'Y.m.d',lang:'zh',%s})
+`
+var initAutocompleteFormat =`
+	$("#%s_key").autocomplete({
+		source: "%s",
+		autoFocus:true,
+		focus: function( event, ui ) {
+			$( "#%s_key" ).val(ui.item.keyword);
+			$( "#%s_name" ).val(ui.item.name);
+			$( "#%s" ).val(ui.item.sn);
+			return false;
+		},
+		minLength: 2,
+		select: function( event, ui) {
+			$( "#%s_key" ).val(ui.item.keyword);
+			$( "#%s_name" ).val(ui.item.name);
+			$( "#%s" ).val(ui.item.sn);
+			return false;
+		},
+		change: function( event, ui ) {
+			console.log("ui", ui.item)
+			if(!ui.item){
+				$( "#%s_name" ).val("");
+				$( "#%s" ).val("");
+			}
+		}
+	})
+	.autocomplete( "instance" )._renderItem = function( ul, item ) {
+		return $( "<li>" )
+				.append(item.keyword + "(" + item.name + ")")
+				.appendTo( ul );
+	};
+`
 
 func BuildAddOnLoadJs(oItemDef itemDef.ItemDef) string {
 	OnLoadJs := ""
@@ -86,9 +126,12 @@ func BuildAddOnLoadJs(oItemDef itemDef.ItemDef) string {
 				defaultDate = "value:new Date()"
 			}
 			OnLoadJs = OnLoadJs + fmt.Sprintf(initDatePickerFormat, field.Name, "timepicker:false,",defaultDate)
+		case s.Autocomplete:
+			OnLoadJs = OnLoadJs + fmt.Sprintf(initAutocompleteFormat, field.Name, field.Range,
+				field.Name, field.Name, field.Name, field.Name, field.Name, field.Name, field.Name, field.Name)
 		}
 	}
-	return "<script>" + OnLoadJs + "</script>\n"
+	return "<script>$(function(){" + OnLoadJs + "});</script>\n"
 }
 
 func BuildUpdatedForm(oItemDef itemDef.ItemDef, oldValueMap map[string]interface{}) string {
@@ -96,7 +139,7 @@ func BuildUpdatedForm(oItemDef itemDef.ItemDef, oldValueMap map[string]interface
 	if !ok {
 		beego.Error("BuildUPdatedFrom: param sn is none")
 	}
-	form := fmt.Sprintf(`<input type="hidden" name="sn" value="%s"></input>`, sn)
+	form := fmt.Sprintf(`<input type="hidden" id="sn" name="sn" value="%s">`, sn)
 	for _, field := range oItemDef.Fields {
 		var oldValue interface{}
 		//        fmt.Println("old", oldValueMap, field.Name)
@@ -107,12 +150,12 @@ func BuildUpdatedForm(oItemDef itemDef.ItemDef, oldValueMap map[string]interface
 		} else {
 			oldValue = field.Default
 		}
-		form = form + createFromGroup(field, oldValue)
+		form = form + createFromGroup(field, oldValue, "", "")
 	}
 	return form
 }
 
-func createFromGroup(field itemDef.Field, value interface{}) string {
+func createFromGroup(field itemDef.Field, value interface{}, key string, vlabel string) string {
 	var fromGroup string
 	switch field.Input {
 	case "textarea":
@@ -129,17 +172,21 @@ func createFromGroup(field itemDef.Field, value interface{}) string {
 	case "select":
 		var options string
 		for _, option := range field.Enum {
-			if option == value {
-				options = options + fmt.Sprintf(`<option value="%s" selected>%s</option>`, option, lang.GetLabel(option))
+			if option.Sn == value{
+				options = options + fmt.Sprintf(`<option value="%s" selected>%s</option>`, option.Sn, option.Label)
 				continue
 			}
-			options = options + fmt.Sprintf(`<option value="%s" ％s>%s</option>`, option, lang.GetLabel(option))
+			options = options + fmt.Sprintf(`<option value="%s" ％s>%s</option>`, option.Sn, option.Label)
 		}
 		fromGroup = fmt.Sprintf(selectFormat, field.Label, field.Require, field.Label, field.Name, field.Name, field.Default, options)
+	case s.Autocomplete:
+		fromGroup = fmt.Sprintf(autocompleteFormat, field.Label, field.Name, key,
+			field.Label, field.Name, field.Name, field.Require, field.Label, vlabel,
+			field.Name, field.Name, value)
 	case "none":
 		fromGroup = ""
 	default:
-		panic(fmt.Sprintf("createFormGroup input type: %s not support ", field.Input))
+		panic(fmt.Sprintf("createFormGroup input %s type: %s not support ", field.Name, field.Input))
 		fromGroup = ""
 	}
 	return fromGroup

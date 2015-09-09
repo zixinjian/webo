@@ -9,23 +9,19 @@ import (
 	"time"
 	"webo/models/itemDef"
 	"webo/models/s"
-	"webo/models/status"
+	"webo/models/stat"
 	"webo/models/util"
 )
-
+func GetItems(item string, queryParams Params, orderBy Params)(string, []map[string]interface{}){
+	code, retMaps := Query(item, queryParams, LimitParams{}, orderBy)
+	return code, retMaps
+}
 func Query(entity string, queryParams Params, limitParams map[string]int64, orderBy Params) (string, []map[string]interface{}) {
-	sqlBuilder := NewQueryBuilder()
+	sqlBuilder := NewSqlBuilder()
 	sqlBuilder.QueryTable(entity)
-	//fmt.Println("queryParams", queryParams)
 	for k, v := range queryParams {
 		sqlBuilder.Filter(k, v)
-//		if list, ok := v.([]interface{}); ok{
-//
-//		}else{
-//			sqlBuilder.Filter(k, v)
-//		}
 	}
-	//	fmt.Println("order", orderBy)
 	if limit, ok := limitParams[s.Limit]; ok {
 		sqlBuilder.Limit(limit)
 	}
@@ -55,11 +51,11 @@ func Query(entity string, queryParams Params, limitParams map[string]int64, orde
 			}
 			retList[idx] = retMap
 		}
-		return status.Success, retList
+		return stat.Success, retList
 	} else {
 		beego.Error(fmt.Sprintf("Query error:%s for sql:%s", err.Error(), query))
 	}
-	return status.Failed, retList
+	return stat.Failed, retList
 }
 func List(entity string, queryParams Params, limitParams LimitParams, orderBy Params) (string, int64, []map[string]interface{}) {
 	total := Count(entity, queryParams)
@@ -67,7 +63,7 @@ func List(entity string, queryParams Params, limitParams LimitParams, orderBy Pa
 	return code, total, retMaps
 }
 func Count(entity string, params Params) int64 {
-	sqlBuilder := NewQueryBuilder()
+	sqlBuilder := NewSqlBuilder()
 	sqlBuilder.QueryTable(entity)
 	for k, v := range params {
 		sqlBuilder.Filter(k, v)
@@ -93,9 +89,9 @@ func Count(entity string, params Params) int64 {
 func Get(entity string, params Params) (string, map[string]interface{}) {
 	_, retList := Query(entity, params, map[string]int64{}, Params{})
 	if len(retList) > 0 {
-		return status.Success, retList[0]
+		return stat.Success, retList[0]
 	}
-	return status.ItemNotFound, nil
+	return stat.ItemNotFound, nil
 }
 
 func Add(entity string, params Params) (string, string) {
@@ -103,7 +99,7 @@ func Add(entity string, params Params) (string, string) {
 	Q := "'"
 	oEntityDef, ok := itemDef.EntityDefMap[entity]
 	if !ok {
-		return status.ItemNotDefine, ""
+		return stat.ItemNotDefine, ""
 	}
 	nFieldLen := len(oEntityDef.Fields)
 	fields := make([]string, nFieldLen)
@@ -143,7 +139,7 @@ func Add(entity string, params Params) (string, string) {
 		//		b, c := res.LastInsertId()
 		//		fmt.Println("e", b, c)
 		if i, e := res.LastInsertId(); e == nil && i > 0 {
-			return status.Success, ""
+			return stat.Success, ""
 		}else{
 			fmt.Println("add,error", e, i)
 //			beego.Error(e, i)
@@ -152,19 +148,19 @@ func Add(entity string, params Params) (string, string) {
 		beego.Error("Add error", err)
 		return ParseSqlError(err, oEntityDef)
 	}
-	return status.UnKnownFailed, ""
+	return stat.UnKnownFailed, ""
 }
 
 func Update(entity string, params Params) (string, string) {
 	Q := "'"
 	oEntityDef, ok := itemDef.EntityDefMap[entity]
 	if !ok {
-		return status.ItemNotDefine, ""
+		return stat.ItemNotDefine, ""
 	}
 
 	id, ok := params[s.Sn]
 	if !ok {
-		return status.SnNotFound, ""
+		return stat.SnNotFound, ""
 	}
 	var names []string
 	var values []interface{}
@@ -188,13 +184,13 @@ func Update(entity string, params Params) (string, string) {
 	o := orm.NewOrm()
 	if res, err := o.Raw(query, values...).Exec(); err == nil {
 		if i, e := res.RowsAffected(); e == nil && i > 0 {
-			return status.Success, ""
+			return stat.Success, ""
 		}
 	} else {
 		beego.Error("Update error", err)
 		return ParseSqlError(err, oEntityDef)
 	}
-	return status.UnKnownFailed, ""
+	return stat.UnKnownFailed, ""
 }
 
 func ParseSqlError(err error, oEntityDef itemDef.ItemDef) (string, string) {
@@ -203,15 +199,15 @@ func ParseSqlError(err error, oEntityDef itemDef.ItemDef) (string, string) {
 		itemAndField := strings.TrimPrefix(errStr, SqlErrUniqueConstraint)
 		lstStr := strings.Split(itemAndField, ".")
 		if len(lstStr) < 2 {
-			return status.DuplicatedValue, itemAndField
+			return stat.DuplicatedValue, itemAndField
 		}
 		field := strings.TrimSpace(lstStr[1])
 		if v, ok := oEntityDef.GetField(field); ok {
-			return status.DuplicatedValue, v.Label
+			return stat.DuplicatedValue, v.Label
 		}
-		return status.DuplicatedValue, itemAndField
+		return stat.DuplicatedValue, itemAndField
 	}
 	beego.Error("ParseSqlError unknown error", errStr)
-	return status.UnKnownFailed, ""
+	return stat.UnKnownFailed, ""
 }
 

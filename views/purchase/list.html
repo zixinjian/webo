@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../../asserts/3rd/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../asserts/3rd/bootstrap-table/bootstrap-table.css">
-    <link rel="stylesheet" href="../../asserts/3rd/bootstrap-editable/bootstrap3-editable/css/bootstrap-editable.css">
-    <link rel="stylesheet" href="../../asserts/3rd/bootstrap-table/extensions/fixed-column/bootstrap-table-fixed-columns.css">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../../asserts/3rd/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../asserts/3rd/bootstrap-table/bootstrap-table.css">
+<link rel="stylesheet" href="../../asserts/3rd/bootstrap-editable/bootstrap3-editable/css/bootstrap-editable.css">
+<link rel="stylesheet" href="../../asserts/3rd/bootstrap-table/extensions/fixed-column/bootstrap-table-fixed-columns.css">
 </head>
 <body>
 <div style="padding:20px;">
-        <div class="toolbar" style="line-height: 20px">
-            <div class="form-group">
-                <label class="radio-inline">
-                    <input data-model="buyers" type="radio" name = "buyers" id="all" value="all" checked="true"> 全部
-                </label>
-                {{str2html .buyers}}
-            </div>
+    <div class="toolbar" style="line-height: 20px">
+        <div class="form-group">
+            <label class="radio-inline">
+                <input data-model="buyers" type="radio" name = "buyers" id="all" value="all" checked="true"> 全部
+            </label>
+            {{str2html .buyers}}
         </div>
+    </div>
     <table id="item_table"
            data-show-refresh="true"
            data-show-columns="true"
@@ -24,14 +24,14 @@
            data-row-style="rowStyle"
            data-toolbar=".toolbar">
         <thead>
-            <tr>
-                <th data-field="action"
-                    data-align="center"
-                    data-formatter="actionFormatter"
-                    data-events="actionEvents"
-                    data-width="75px">  [ 操作 ]  </th>
-                {{str2html .thlist}}
-            </tr>
+        <tr>
+            <th data-field="action"
+                data-align="center"
+                data-formatter="actionFormatter"
+                data-events="actionEvents"
+                data-width="75px">  [ 操作 ]  </th>
+            {{str2html .thlist}}
+        </tr>
         </thead>
     </table>
 </div>

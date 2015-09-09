@@ -1,0 +1,851 @@
+2015/09/02 08:35:33 [purchase.go:79] [I] UiCurList 
+2015/09/02 08:35:36 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/02 08:43:15 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/02 08:44:38 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/02 08:47:54 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/02 08:47:59 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/02 08:48:20 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/02 08:48:24 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/02 10:54:22 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/02 10:55:03 [purchase.go:57] [I] UiCurList 
+2015/09/02 11:00:39 [purchase.go:57] [I] UiCurList 
+2015/09/02 11:00:50 [purchase.go:79] [I] UiCurList 
+2015/09/02 11:00:51 [purchase.go:79] [I] UiCurList 
+2015/09/02 11:00:58 [purchase.go:57] [I] UiCurList 
+2015/09/02 11:01:05 [language.go:46] [E] GetLang error key:f 
+2015/09/02 11:01:05 [language.go:46] [E] GetLang error key:g 
+2015/09/02 11:01:05 [language.go:46] [E] GetLang error key:h 
+2015/09/02 11:01:06 [language.go:46] [E] GetLang error key:h 
+2015/09/02 11:01:06 [language.go:46] [E] GetLang error key:g 
+2015/09/02 11:01:06 [language.go:46] [E] GetLang error key:f 
+2015/09/02 11:28:33 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/02 11:28:35 [purchase.go:57] [I] UiCurList 
+2015/09/02 11:28:36 [purchase.go:57] [I] UiCurList 
+2015/09/02 11:28:39 [purchase.go:57] [I] UiCurList 
+2015/09/02 11:31:14 [purchase.go:79] [I] UiCurList 
+2015/09/02 11:31:15 [purchase.go:57] [I] UiCurList 
+2015/09/02 11:31:16 [purchase.go:57] [I] UiCurList 
+2015/09/02 11:31:16 [purchase.go:79] [I] UiCurList 
+2015/09/02 11:31:18 [purchase.go:79] [I] UiCurList 
+2015/09/02 11:31:18 [purchase.go:79] [I] UiCurList 
+2015/09/02 11:57:44 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/02 11:57:49 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/02 12:01:47 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/02 12:01:52 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/02 12:02:02 [purchase.go:57] [I] UiCurList 
+2015/09/02 12:02:13 [purchase.go:79] [I] UiCurList 
+2015/09/02 12:04:41 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/02 12:05:18 [purchase.go:57] [I] UiCurList 
+2015/09/02 12:05:22 [purchase.go:79] [I] UiCurList 
+2015/09/02 12:05:22 [purchase.go:57] [I] UiCurList 
+2015/09/02 13:54:29 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/02 13:54:37 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/02 13:54:39 [purchase.go:56] [I] UiCurList 
+2015/09/02 13:54:46 [purchase.go:56] [I] UiCurList 
+2015/09/02 13:57:50 [purchase.go:56] [I] UiCurList 
+2015/09/02 13:59:52 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/02 13:59:58 [purchase.go:56] [I] UiCurList 
+2015/09/02 13:59:59 [purchase.go:56] [I] UiCurList 
+2015/09/02 14:00:04 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/02 14:00:05 [purchase.go:56] [I] UiCurList 
+2015/09/02 14:00:06 [purchase.go:56] [I] UiCurList 
+2015/09/02 14:00:06 [purchase.go:56] [I] UiCurList 
+2015/09/02 14:06:21 [purchase.go:56] [I] UiCurList 
+2015/09/02 14:06:23 [purchase.go:56] [I] UiCurList 
+2015/09/02 14:06:24 [purchase.go:56] [I] UiCurList 
+2015/09/02 14:06:25 [purchase.go:56] [I] UiCurList 
+2015/09/02 14:06:26 [purchase.go:56] [I] UiCurList 
+2015/09/02 14:06:26 [purchase.go:56] [I] UiCurList 
+2015/09/02 14:06:28 [purchase.go:56] [I] UiCurList 
+2015/09/02 15:13:38 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/02 15:16:35 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/02 15:16:37 [purchase.go:60] [I] UiCurList 
+2015/09/02 15:16:40 [purchase.go:60] [I] UiCurList 
+2015/09/02 15:18:38 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/02 15:18:39 [purchase.go:60] [I] UiCurList 
+2015/09/02 15:18:40 [purchase.go:60] [I] UiCurList 
+2015/09/02 15:18:40 [purchase.go:60] [I] UiCurList 
+2015/09/02 15:18:45 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/02 15:18:50 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/02 15:18:51 [purchase.go:60] [I] UiCurList 
+2015/09/02 15:19:04 [purchase.go:60] [I] UiCurList 
+2015/09/02 15:19:20 [purchase.go:60] [I] UiCurList 
+2015/09/02 15:19:22 [purchase.go:60] [I] UiCurList 
+2015/09/02 15:19:23 [purchase.go:60] [I] UiCurList 
+2015/09/02 15:19:25 [purchase.go:60] [I] UiCurList 
+2015/09/02 15:20:05 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/02 15:20:09 [purchase.go:60] [I] UiCurList 
+2015/09/02 15:20:51 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/02 15:20:59 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/02 15:21:00 [purchase.go:60] [I] UiCurList 
+2015/09/02 15:21:29 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/02 15:21:31 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/02 15:21:32 [purchase.go:60] [I] UiCurList 
+2015/09/02 15:22:43 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/02 15:22:44 [purchase.go:60] [I] UiCurList 
+2015/09/02 15:22:44 [purchase.go:60] [I] UiCurList 
+2015/09/02 16:14:49 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/02 16:14:50 [purchase.go:60] [I] UiCurList 
+2015/09/02 16:16:01 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/02 16:16:02 [purchase.go:60] [I] UiCurList 
+2015/09/02 16:16:26 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/02 16:16:27 [purchase.go:60] [I] UiCurList 
+2015/09/02 16:16:35 [purchase.go:60] [I] UiCurList 
+2015/09/02 16:16:37 [purchase.go:60] [I] UiCurList 
+2015/09/02 16:16:39 [purchase.go:60] [I] UiCurList 
+2015/09/02 16:16:49 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/02 16:16:51 [purchase.go:60] [I] UiCurList 
+2015/09/02 16:19:24 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/02 16:19:25 [purchase.go:60] [I] UiCurList 
+2015/09/02 16:20:03 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/02 16:20:07 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/02 16:20:08 [purchase.go:39] [I] UiCurList 
+2015/09/02 16:24:21 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/02 16:24:26 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/02 16:24:27 [purchase.go:39] [I] UiCurList 
+2015/09/02 16:24:46 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/02 16:24:53 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/02 16:24:53 [purchase.go:39] [I] UiCurList 
+2015/09/02 16:24:56 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/02 16:24:57 [purchase.go:39] [I] UiCurList 
+2015/09/02 16:28:00 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/02 16:28:01 [purchase.go:39] [I] UiCurList 
+2015/09/02 16:31:18 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/02 16:31:19 [purchase.go:39] [I] UiCurList 
+2015/09/02 16:31:29 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/02 16:31:31 [purchase.go:39] [I] UiCurList 
+2015/09/02 16:31:33 [purchase.go:39] [I] UiCurList 
+2015/09/02 16:31:43 [purchase.go:39] [I] UiCurList 
+2015/09/02 16:31:46 [purchase.go:39] [I] UiCurList 
+2015/09/02 16:31:49 [purchase.go:39] [I] UiCurList 
+2015/09/02 16:31:51 [purchase.go:39] [I] UiCurList 
+2015/09/02 16:31:55 [purchase.go:39] [I] UiCurList 
+2015/09/02 16:31:59 [purchase.go:39] [I] UiCurList 
+2015/09/02 16:31:59 [purchase.go:39] [I] UiCurList 
+2015/09/02 16:32:00 [purchase.go:39] [I] UiCurList 
+2015/09/02 16:32:01 [purchase.go:39] [I] UiCurList 
+2015/09/02 16:32:01 [purchase.go:39] [I] UiCurList 
+2015/09/02 16:32:02 [purchase.go:39] [I] UiCurList 
+2015/09/02 16:32:02 [purchase.go:39] [I] UiCurList 
+2015/09/02 16:32:03 [purchase.go:39] [I] UiCurList 
+2015/09/02 16:32:03 [purchase.go:39] [I] UiCurList 
+2015/09/02 16:32:04 [purchase.go:39] [I] UiCurList 
+2015/09/02 16:32:04 [purchase.go:39] [I] UiCurList 
+2015/09/02 16:32:05 [purchase.go:39] [I] UiCurList 
+2015/09/02 16:32:05 [purchase.go:39] [I] UiCurList 
+2015/09/02 16:32:06 [purchase.go:39] [I] UiCurList 
+2015/09/02 16:32:06 [purchase.go:39] [I] UiCurList 
+2015/09/02 16:32:07 [purchase.go:39] [I] UiCurList 
+2015/09/02 16:32:08 [purchase.go:39] [I] UiCurList 
+2015/09/02 16:32:08 [purchase.go:39] [I] UiCurList 
+2015/09/02 16:32:09 [purchase.go:39] [I] UiCurList 
+2015/09/03 15:45:44 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/03 15:45:51 [login.go:37] [E] User:%s login error code: %s admin item_not_found 
+2015/09/03 15:45:55 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/03 15:45:58 [purchase.go:39] [I] UiCurList 
+2015/09/03 15:46:16 [purchase.go:39] [I] UiCurList 
+2015/09/03 15:46:19 [purchase.go:39] [I] UiCurList 
+2015/09/03 15:46:22 [purchase.go:39] [I] UiCurList 
+2015/09/03 15:46:23 [purchase.go:39] [I] UiCurList 
+2015/09/03 15:46:25 [purchase.go:39] [I] UiCurList 
+2015/09/03 15:46:25 [purchase.go:39] [I] UiCurList 
+2015/09/03 15:47:46 [purchase.go:39] [I] UiCurList 
+2015/09/03 15:47:50 [purchase.go:39] [I] UiCurList 
+2015/09/03 15:47:50 [purchase.go:39] [I] UiCurList 
+2015/09/03 15:48:35 [purchase.go:39] [I] UiCurList 
+2015/09/03 15:48:35 [purchase.go:39] [I] UiCurList 
+2015/09/03 18:51:32 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/03 18:51:40 [language.go:46] [E] GetLang error key:sdafsdf 
+2015/09/03 18:51:40 [language.go:46] [E] GetLang error key:jjjj 
+2015/09/03 18:51:47 [language.go:46] [E] GetLang error key:jjjj 
+2015/09/03 19:11:53 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/03 19:12:02 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/03 19:12:14 [baseController.go:67] [E] Check param[search]value a a error no such field 
+2015/09/03 19:12:15 [baseController.go:67] [E] Check param[search]value aa error no such field 
+2015/09/03 19:48:27 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/03 19:48:29 [purchase.go:39] [I] UiCurList 
+2015/09/03 19:48:30 [purchase.go:39] [I] UiCurList 
+2015/09/03 19:48:31 [purchase.go:39] [I] UiCurList 
+2015/09/03 19:48:32 [purchase.go:39] [I] UiCurList 
+2015/09/03 19:48:32 [purchase.go:39] [I] UiCurList 
+2015/09/03 19:48:35 [purchase.go:39] [I] UiCurList 
+2015/09/03 19:48:35 [purchase.go:39] [I] UiCurList 
+2015/09/03 19:48:56 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/03 19:52:54 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/03 19:52:54 [language.go:46] [E] GetLang error key:abc 
+2015/09/03 19:52:54 [language.go:46] [E] GetLang error key:a 
+2015/09/03 19:52:54 [language.go:46] [E] GetLang error key:b 
+2015/09/03 19:52:55 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/03 19:52:55 [language.go:46] [E] GetLang error key:abc 
+2015/09/03 19:52:55 [language.go:46] [E] GetLang error key:a 
+2015/09/03 19:52:55 [language.go:46] [E] GetLang error key:b 
+2015/09/03 20:09:31 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/03 20:09:31 [language.go:46] [E] GetLang error key:abc 
+2015/09/03 20:09:31 [language.go:46] [E] GetLang error key:a 
+2015/09/03 20:09:31 [language.go:46] [E] GetLang error key:b 
+2015/09/03 20:09:32 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/03 20:09:32 [language.go:46] [E] GetLang error key:abc 
+2015/09/03 20:09:32 [language.go:46] [E] GetLang error key:a 
+2015/09/03 20:09:32 [language.go:46] [E] GetLang error key:b 
+2015/09/03 20:09:33 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/03 20:09:33 [language.go:46] [E] GetLang error key:abc 
+2015/09/03 20:09:33 [language.go:46] [E] GetLang error key:a 
+2015/09/03 20:09:33 [language.go:46] [E] GetLang error key:b 
+2015/09/03 20:09:33 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/03 20:09:33 [language.go:46] [E] GetLang error key:abc 
+2015/09/03 20:09:33 [language.go:46] [E] GetLang error key:a 
+2015/09/03 20:09:33 [language.go:46] [E] GetLang error key:b 
+2015/09/03 20:09:34 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/03 20:09:34 [language.go:46] [E] GetLang error key:abc 
+2015/09/03 20:09:34 [language.go:46] [E] GetLang error key:a 
+2015/09/03 20:09:34 [language.go:46] [E] GetLang error key:b 
+2015/09/03 20:09:34 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/03 20:09:34 [language.go:46] [E] GetLang error key:abc 
+2015/09/03 20:09:34 [language.go:46] [E] GetLang error key:a 
+2015/09/03 20:09:34 [language.go:46] [E] GetLang error key:b 
+2015/09/03 20:09:35 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/03 20:09:35 [language.go:46] [E] GetLang error key:abc 
+2015/09/03 20:09:35 [language.go:46] [E] GetLang error key:a 
+2015/09/03 20:09:35 [language.go:46] [E] GetLang error key:b 
+2015/09/03 20:09:36 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/03 20:09:36 [language.go:46] [E] GetLang error key:abc 
+2015/09/03 20:09:36 [language.go:46] [E] GetLang error key:a 
+2015/09/03 20:09:36 [language.go:46] [E] GetLang error key:b 
+2015/09/03 20:09:36 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/03 20:09:36 [language.go:46] [E] GetLang error key:abc 
+2015/09/03 20:09:36 [language.go:46] [E] GetLang error key:a 
+2015/09/03 20:09:36 [language.go:46] [E] GetLang error key:b 
+2015/09/03 20:09:36 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/03 20:09:36 [language.go:46] [E] GetLang error key:abc 
+2015/09/03 20:09:36 [language.go:46] [E] GetLang error key:a 
+2015/09/03 20:09:36 [language.go:46] [E] GetLang error key:b 
+2015/09/03 20:09:38 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/03 20:09:38 [language.go:46] [E] GetLang error key:abc 
+2015/09/03 20:09:38 [language.go:46] [E] GetLang error key:a 
+2015/09/03 20:09:38 [language.go:46] [E] GetLang error key:b 
+2015/09/03 20:09:41 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/03 20:09:41 [language.go:46] [E] GetLang error key:abc 
+2015/09/03 20:09:41 [language.go:46] [E] GetLang error key:a 
+2015/09/03 20:09:41 [language.go:46] [E] GetLang error key:b 
+2015/09/03 20:28:11 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/03 20:29:17 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/03 20:31:18 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/03 20:31:28 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/03 20:31:29 [user.go:18] [E] Item param is none 
+2015/09/03 20:31:29 [user.go:22] [E] Item  not support 
+2015/09/03 20:33:55 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/03 20:33:59 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/03 20:34:00 [user.go:18] [E] Item param is none 
+2015/09/03 20:34:00 [user.go:22] [E] Item  not support 
+2015/09/03 20:34:49 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/03 20:34:53 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/03 20:37:33 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/03 20:38:57 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/03 20:54:46 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/03 20:54:53 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/03 20:56:01 [crud.go:194] [E] Update error no such column:  
+2015/09/03 20:56:01 [crud.go:214] [E] ParseSqlError unknown error no such column:  
+2015/09/03 21:00:49 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/03 21:04:51 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/03 21:04:56 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/03 21:05:06 [language.go:46] [E] GetLang error key:flag_disable 
+2015/09/03 21:05:38 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/03 21:05:42 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:role_admin 
+2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:flag_available 
+2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:department_purchase 
+2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:department_purchase 
+2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:role_user 
+2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:flag_available 
+2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:role_user 
+2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:department_purchase 
+2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:flag_available 
+2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:department_purchase 
+2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:flag_available 
+2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:role_manager 
+2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:role_manager 
+2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:department_purchase 
+2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:flag_disable 
+2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:role_user 
+2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:flag_available 
+2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:department_purchase 
+2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:role_user 
+2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:flag_available 
+2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:department_purchase 
+2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:department_purchase 
+2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:role_user 
+2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:flag_available 
+2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:role_user 
+2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:flag_available 
+2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:department_purchase 
+2015/09/03 21:06:37 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/03 21:08:15 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/03 21:08:19 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/03 21:08:24 [user.go:39] [I] Disable user sn: [20150804175012002] 
+2015/09/03 21:08:26 [user.go:39] [I] Disable user sn: [20150804175004000] 
+2015/09/03 21:11:09 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/03 21:11:44 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/03 21:12:53 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/03 21:12:57 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/05 08:24:16 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 08:24:26 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/05 08:27:28 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/05 08:28:54 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 08:33:07 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 08:33:47 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 08:34:01 [baseController.go:67] [E] Check param[search]value abc error no such field 
+2015/09/05 08:42:00 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 08:42:00 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 08:42:00 [language.go:46] [E] GetLang error key:a 
+2015/09/05 08:42:00 [language.go:46] [E] GetLang error key:b 
+2015/09/05 08:42:01 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 08:42:01 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 08:42:01 [language.go:46] [E] GetLang error key:a 
+2015/09/05 08:42:01 [language.go:46] [E] GetLang error key:b 
+2015/09/05 08:42:03 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 08:42:03 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 08:42:03 [language.go:46] [E] GetLang error key:a 
+2015/09/05 08:42:03 [language.go:46] [E] GetLang error key:b 
+2015/09/05 08:42:10 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 08:42:10 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 08:42:10 [language.go:46] [E] GetLang error key:a 
+2015/09/05 08:42:10 [language.go:46] [E] GetLang error key:b 
+2015/09/05 08:42:14 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 08:42:14 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 08:42:14 [language.go:46] [E] GetLang error key:a 
+2015/09/05 08:42:14 [language.go:46] [E] GetLang error key:b 
+2015/09/05 08:42:36 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 08:42:36 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 08:42:36 [language.go:46] [E] GetLang error key:a 
+2015/09/05 08:42:36 [language.go:46] [E] GetLang error key:b 
+2015/09/05 08:48:43 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 08:51:38 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 08:51:38 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 08:51:38 [language.go:46] [E] GetLang error key:a 
+2015/09/05 08:51:38 [language.go:46] [E] GetLang error key:b 
+2015/09/05 08:51:47 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 08:51:47 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 08:51:47 [language.go:46] [E] GetLang error key:a 
+2015/09/05 08:51:47 [language.go:46] [E] GetLang error key:b 
+2015/09/05 08:52:17 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 08:52:17 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 08:52:17 [language.go:46] [E] GetLang error key:a 
+2015/09/05 08:52:17 [language.go:46] [E] GetLang error key:b 
+2015/09/05 10:27:17 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 10:33:12 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 10:33:19 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/05 10:33:21 [baseController.go:20] [E] Item param error:  map[] 
+2015/09/05 10:37:44 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 10:39:27 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 10:41:44 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 10:42:23 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 10:42:30 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/05 10:43:32 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 10:43:40 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/05 10:44:36 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 10:44:39 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 10:44:39 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 10:44:39 [language.go:46] [E] GetLang error key:a 
+2015/09/05 10:44:39 [language.go:46] [E] GetLang error key:b 
+2015/09/05 10:44:45 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 10:44:45 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 10:44:45 [language.go:46] [E] GetLang error key:a 
+2015/09/05 10:44:45 [language.go:46] [E] GetLang error key:b 
+2015/09/05 10:49:37 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 10:49:41 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 10:49:41 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 10:49:41 [language.go:46] [E] GetLang error key:a 
+2015/09/05 10:49:41 [language.go:46] [E] GetLang error key:b 
+2015/09/05 10:49:43 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 10:49:43 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 10:49:43 [language.go:46] [E] GetLang error key:a 
+2015/09/05 10:49:43 [language.go:46] [E] GetLang error key:b 
+2015/09/05 10:51:12 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 10:51:19 [crud.go:152] [E] Add error table product has no column named model 
+2015/09/05 10:51:19 [crud.go:214] [E] ParseSqlError unknown error table product has no column named model 
+2015/09/05 10:53:16 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 10:53:16 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 10:53:16 [language.go:46] [E] GetLang error key:a 
+2015/09/05 10:53:16 [language.go:46] [E] GetLang error key:b 
+2015/09/05 11:06:05 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 11:06:14 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 11:06:14 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 11:06:14 [language.go:46] [E] GetLang error key:a 
+2015/09/05 11:06:14 [language.go:46] [E] GetLang error key:b 
+2015/09/05 12:04:00 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 12:04:07 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 12:04:07 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 12:04:07 [language.go:46] [E] GetLang error key:a 
+2015/09/05 12:04:07 [language.go:46] [E] GetLang error key:b 
+2015/09/05 12:09:56 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 12:09:56 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 12:09:56 [language.go:46] [E] GetLang error key:a 
+2015/09/05 12:09:56 [language.go:46] [E] GetLang error key:b 
+2015/09/05 12:09:57 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 12:09:57 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 12:09:57 [language.go:46] [E] GetLang error key:a 
+2015/09/05 12:09:57 [language.go:46] [E] GetLang error key:b 
+2015/09/05 12:13:24 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 12:13:29 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 12:13:29 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 12:13:29 [language.go:46] [E] GetLang error key:a 
+2015/09/05 12:13:29 [language.go:46] [E] GetLang error key:b 
+2015/09/05 12:15:21 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 12:15:21 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 12:15:21 [language.go:46] [E] GetLang error key:a 
+2015/09/05 12:15:21 [language.go:46] [E] GetLang error key:b 
+2015/09/05 15:38:39 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 15:38:44 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 15:38:44 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 15:38:44 [language.go:46] [E] GetLang error key:a 
+2015/09/05 15:38:44 [language.go:46] [E] GetLang error key:b 
+2015/09/05 15:39:49 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 15:39:52 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 15:39:52 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 15:39:52 [language.go:46] [E] GetLang error key:a 
+2015/09/05 15:39:52 [language.go:46] [E] GetLang error key:b 
+2015/09/05 15:39:55 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 15:39:55 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 15:39:55 [language.go:46] [E] GetLang error key:a 
+2015/09/05 15:39:55 [language.go:46] [E] GetLang error key:b 
+2015/09/05 15:42:16 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 15:42:16 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 15:42:16 [language.go:46] [E] GetLang error key:a 
+2015/09/05 15:42:16 [language.go:46] [E] GetLang error key:b 
+2015/09/05 15:42:20 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 15:42:20 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 15:42:20 [language.go:46] [E] GetLang error key:a 
+2015/09/05 15:42:20 [language.go:46] [E] GetLang error key:b 
+2015/09/05 15:43:01 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 15:43:04 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 15:43:04 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 15:43:04 [language.go:46] [E] GetLang error key:a 
+2015/09/05 15:43:04 [language.go:46] [E] GetLang error key:b 
+2015/09/05 15:43:25 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 15:43:25 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 15:43:25 [language.go:46] [E] GetLang error key:a 
+2015/09/05 15:43:25 [language.go:46] [E] GetLang error key:b 
+2015/09/05 15:43:28 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 15:43:28 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 15:43:28 [language.go:46] [E] GetLang error key:a 
+2015/09/05 15:43:28 [language.go:46] [E] GetLang error key:b 
+2015/09/05 15:43:41 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 15:43:45 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 15:43:45 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 15:43:45 [language.go:46] [E] GetLang error key:a 
+2015/09/05 15:43:45 [language.go:46] [E] GetLang error key:b 
+2015/09/05 15:44:16 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/05 15:44:18 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 15:44:18 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 15:44:18 [language.go:46] [E] GetLang error key:a 
+2015/09/05 15:44:18 [language.go:46] [E] GetLang error key:b 
+2015/09/05 15:45:40 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 15:45:46 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/05 15:45:47 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 15:45:47 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 15:45:47 [language.go:46] [E] GetLang error key:a 
+2015/09/05 15:45:47 [language.go:46] [E] GetLang error key:b 
+2015/09/05 15:46:44 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/05 15:46:45 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 15:46:45 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 15:46:45 [language.go:46] [E] GetLang error key:a 
+2015/09/05 15:46:45 [language.go:46] [E] GetLang error key:b 
+2015/09/05 15:49:34 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 15:49:34 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 15:49:34 [language.go:46] [E] GetLang error key:a 
+2015/09/05 15:49:34 [language.go:46] [E] GetLang error key:b 
+2015/09/05 15:49:35 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 15:49:35 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 15:49:35 [language.go:46] [E] GetLang error key:a 
+2015/09/05 15:49:35 [language.go:46] [E] GetLang error key:b 
+2015/09/05 15:49:42 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 15:49:42 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 15:49:42 [language.go:46] [E] GetLang error key:a 
+2015/09/05 15:49:42 [language.go:46] [E] GetLang error key:b 
+2015/09/05 15:49:47 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 15:49:47 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 15:49:47 [language.go:46] [E] GetLang error key:a 
+2015/09/05 15:49:47 [language.go:46] [E] GetLang error key:b 
+2015/09/05 15:50:01 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 15:50:01 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 15:50:01 [language.go:46] [E] GetLang error key:a 
+2015/09/05 15:50:01 [language.go:46] [E] GetLang error key:b 
+2015/09/05 15:50:10 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 15:50:10 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 15:50:10 [language.go:46] [E] GetLang error key:a 
+2015/09/05 15:50:10 [language.go:46] [E] GetLang error key:b 
+2015/09/05 15:50:29 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 15:50:29 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 15:50:29 [language.go:46] [E] GetLang error key:a 
+2015/09/05 15:50:29 [language.go:46] [E] GetLang error key:b 
+2015/09/05 15:51:22 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/05 15:51:22 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 15:51:22 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 15:51:22 [language.go:46] [E] GetLang error key:a 
+2015/09/05 15:51:22 [language.go:46] [E] GetLang error key:b 
+2015/09/05 15:51:44 [purchase.go:39] [I] UiCurList 
+2015/09/05 15:51:45 [purchase.go:39] [I] UiCurList 
+2015/09/05 15:51:58 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 15:51:58 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 15:51:58 [language.go:46] [E] GetLang error key:a 
+2015/09/05 15:51:58 [language.go:46] [E] GetLang error key:b 
+2015/09/05 15:57:29 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 15:57:29 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 15:57:29 [language.go:46] [E] GetLang error key:a 
+2015/09/05 15:57:29 [language.go:46] [E] GetLang error key:b 
+2015/09/05 16:00:52 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 16:00:52 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 16:00:52 [language.go:46] [E] GetLang error key:a 
+2015/09/05 16:00:52 [language.go:46] [E] GetLang error key:b 
+2015/09/05 16:01:26 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 16:01:26 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 16:01:26 [language.go:46] [E] GetLang error key:a 
+2015/09/05 16:01:26 [language.go:46] [E] GetLang error key:b 
+2015/09/05 16:03:38 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 16:03:38 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 16:03:38 [language.go:46] [E] GetLang error key:a 
+2015/09/05 16:03:38 [language.go:46] [E] GetLang error key:b 
+2015/09/05 16:08:40 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 16:08:40 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 16:08:40 [language.go:46] [E] GetLang error key:a 
+2015/09/05 16:08:40 [language.go:46] [E] GetLang error key:b 
+2015/09/05 16:08:47 [staticfile.go:61] [W] Can't find the file: asserts/3rd/img/uploadify-cancel.png stat asserts/3rd/img/uploadify-cancel.png: no such file or directory 
+2015/09/05 16:22:42 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 16:23:22 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/05 16:23:26 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 16:23:26 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 16:23:26 [language.go:46] [E] GetLang error key:a 
+2015/09/05 16:23:26 [language.go:46] [E] GetLang error key:b 
+2015/09/05 16:23:36 [staticfile.go:61] [W] Can't find the file: asserts/3rd/img/uploadify-cancel.png stat asserts/3rd/img/uploadify-cancel.png: no such file or directory 
+2015/09/05 16:24:09 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/05 16:24:11 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 16:24:11 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 16:24:11 [language.go:46] [E] GetLang error key:a 
+2015/09/05 16:24:11 [language.go:46] [E] GetLang error key:b 
+2015/09/05 16:24:18 [staticfile.go:61] [W] Can't find the file: asserts/3rd/img/uploadify-cancel.png stat asserts/3rd/img/uploadify-cancel.png: no such file or directory 
+2015/09/05 16:24:18 [router.go:879] [C] the request url is  /item/upload/product 
+2015/09/05 16:24:18 [router.go:880] [C] Handler crashed with error reflect: Call of unexported method 
+2015/09/05 16:24:18 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:401 
+2015/09/05 16:24:18 [router.go:886] [C] /usr/local/go/src/runtime/panic.go:387 
+2015/09/05 16:24:18 [router.go:886] [C] /usr/local/go/src/reflect/value.go:550 
+2015/09/05 16:24:18 [router.go:886] [C] /usr/local/go/src/reflect/value.go:324 
+2015/09/05 16:24:18 [router.go:886] [C] /usr/local/go/src/reflect/value.go:296 
+2015/09/05 16:24:18 [router.go:886] [C] /Users/rick/go/src/github.com/astaxie/beego/router.go:803 
+2015/09/05 16:24:18 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1703 
+2015/09/05 16:24:18 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1204 
+2015/09/05 16:24:18 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:2232 
+2015/09/05 16:25:09 [router.go:879] [C] the request url is  /item/upload/product 
+2015/09/05 16:25:09 [router.go:880] [C] Handler crashed with error reflect: Call of unexported method 
+2015/09/05 16:25:09 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:401 
+2015/09/05 16:25:09 [router.go:886] [C] /usr/local/go/src/runtime/panic.go:387 
+2015/09/05 16:25:09 [router.go:886] [C] /usr/local/go/src/reflect/value.go:550 
+2015/09/05 16:25:09 [router.go:886] [C] /usr/local/go/src/reflect/value.go:324 
+2015/09/05 16:25:09 [router.go:886] [C] /usr/local/go/src/reflect/value.go:296 
+2015/09/05 16:25:09 [router.go:886] [C] /Users/rick/go/src/github.com/astaxie/beego/router.go:803 
+2015/09/05 16:25:09 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1703 
+2015/09/05 16:25:09 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1204 
+2015/09/05 16:25:09 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:2232 
+2015/09/05 16:25:37 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 16:25:44 [Item.go:136] [E] Upload error http: no such file 
+2015/09/05 16:25:44 [router.go:879] [C] the request url is  /item/upload/product 
+2015/09/05 16:25:44 [router.go:880] [C] Handler crashed with error runtime error: invalid memory address or nil pointer dereference 
+2015/09/05 16:25:44 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:401 
+2015/09/05 16:25:44 [router.go:886] [C] /usr/local/go/src/runtime/panic.go:387 
+2015/09/05 16:25:44 [router.go:886] [C] /usr/local/go/src/runtime/panic.go:42 
+2015/09/05 16:25:44 [router.go:886] [C] /usr/local/go/src/runtime/sigpanic_unix.go:26 
+2015/09/05 16:25:44 [router.go:886] [C] /Users/rick/go/src/webo/controllers/Item.go:138 
+2015/09/05 16:25:44 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:401 
+2015/09/05 16:25:44 [router.go:886] [C] /usr/local/go/src/reflect/value.go:419 
+2015/09/05 16:25:44 [router.go:886] [C] /usr/local/go/src/reflect/value.go:296 
+2015/09/05 16:25:44 [router.go:886] [C] /Users/rick/go/src/github.com/astaxie/beego/router.go:803 
+2015/09/05 16:25:44 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1703 
+2015/09/05 16:25:44 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1204 
+2015/09/05 16:25:44 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:2232 
+2015/09/05 16:26:47 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 16:26:52 [Item.go:136] [E] Upload error http: no such file 
+2015/09/05 16:26:52 [router.go:879] [C] the request url is  /item/upload/product 
+2015/09/05 16:26:52 [router.go:880] [C] Handler crashed with error runtime error: invalid memory address or nil pointer dereference 
+2015/09/05 16:26:52 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:401 
+2015/09/05 16:26:52 [router.go:886] [C] /usr/local/go/src/runtime/panic.go:387 
+2015/09/05 16:26:52 [router.go:886] [C] /usr/local/go/src/runtime/panic.go:42 
+2015/09/05 16:26:52 [router.go:886] [C] /usr/local/go/src/runtime/sigpanic_unix.go:26 
+2015/09/05 16:26:52 [router.go:886] [C] /Users/rick/go/src/webo/controllers/Item.go:138 
+2015/09/05 16:26:52 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:401 
+2015/09/05 16:26:52 [router.go:886] [C] /usr/local/go/src/reflect/value.go:419 
+2015/09/05 16:26:52 [router.go:886] [C] /usr/local/go/src/reflect/value.go:296 
+2015/09/05 16:26:52 [router.go:886] [C] /Users/rick/go/src/github.com/astaxie/beego/router.go:803 
+2015/09/05 16:26:52 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1703 
+2015/09/05 16:26:52 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1204 
+2015/09/05 16:26:52 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:2232 
+2015/09/05 16:28:27 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/05 16:28:29 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 16:28:29 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 16:28:29 [language.go:46] [E] GetLang error key:a 
+2015/09/05 16:28:29 [language.go:46] [E] GetLang error key:b 
+2015/09/05 16:28:37 [staticfile.go:61] [W] Can't find the file: asserts/3rd/img/uploadify-cancel.png stat asserts/3rd/img/uploadify-cancel.png: no such file or directory 
+2015/09/05 16:28:37 [Item.go:136] [E] Upload error http: no such file 
+2015/09/05 16:28:37 [router.go:879] [C] the request url is  /item/upload/product 
+2015/09/05 16:28:37 [router.go:880] [C] Handler crashed with error runtime error: invalid memory address or nil pointer dereference 
+2015/09/05 16:28:37 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:401 
+2015/09/05 16:28:37 [router.go:886] [C] /usr/local/go/src/runtime/panic.go:387 
+2015/09/05 16:28:37 [router.go:886] [C] /usr/local/go/src/runtime/panic.go:42 
+2015/09/05 16:28:37 [router.go:886] [C] /usr/local/go/src/runtime/sigpanic_unix.go:26 
+2015/09/05 16:28:37 [router.go:886] [C] /Users/rick/go/src/webo/controllers/Item.go:138 
+2015/09/05 16:28:37 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:401 
+2015/09/05 16:28:37 [router.go:886] [C] /usr/local/go/src/reflect/value.go:419 
+2015/09/05 16:28:37 [router.go:886] [C] /usr/local/go/src/reflect/value.go:296 
+2015/09/05 16:28:37 [router.go:886] [C] /Users/rick/go/src/github.com/astaxie/beego/router.go:803 
+2015/09/05 16:28:37 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1703 
+2015/09/05 16:28:37 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1204 
+2015/09/05 16:28:37 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:2232 
+2015/09/05 16:29:59 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/05 16:30:03 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 16:30:03 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 16:30:03 [language.go:46] [E] GetLang error key:a 
+2015/09/05 16:30:03 [language.go:46] [E] GetLang error key:b 
+2015/09/05 16:30:20 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 16:30:20 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 16:30:20 [language.go:46] [E] GetLang error key:a 
+2015/09/05 16:30:20 [language.go:46] [E] GetLang error key:b 
+2015/09/05 16:30:22 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 16:30:22 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 16:30:22 [language.go:46] [E] GetLang error key:a 
+2015/09/05 16:30:22 [language.go:46] [E] GetLang error key:b 
+2015/09/05 16:30:26 [staticfile.go:61] [W] Can't find the file: asserts/3rd/img/uploadify-cancel.png stat asserts/3rd/img/uploadify-cancel.png: no such file or directory 
+2015/09/05 16:30:26 [Item.go:136] [E] Upload error http: no such file 
+2015/09/05 16:30:26 [router.go:879] [C] the request url is  /item/upload/product 
+2015/09/05 16:30:26 [router.go:880] [C] Handler crashed with error runtime error: invalid memory address or nil pointer dereference 
+2015/09/05 16:30:26 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:401 
+2015/09/05 16:30:26 [router.go:886] [C] /usr/local/go/src/runtime/panic.go:387 
+2015/09/05 16:30:26 [router.go:886] [C] /usr/local/go/src/runtime/panic.go:42 
+2015/09/05 16:30:26 [router.go:886] [C] /usr/local/go/src/runtime/sigpanic_unix.go:26 
+2015/09/05 16:30:26 [router.go:886] [C] /Users/rick/go/src/webo/controllers/Item.go:138 
+2015/09/05 16:30:26 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:401 
+2015/09/05 16:30:26 [router.go:886] [C] /usr/local/go/src/reflect/value.go:419 
+2015/09/05 16:30:26 [router.go:886] [C] /usr/local/go/src/reflect/value.go:296 
+2015/09/05 16:30:26 [router.go:886] [C] /Users/rick/go/src/github.com/astaxie/beego/router.go:803 
+2015/09/05 16:30:26 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1703 
+2015/09/05 16:30:26 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1204 
+2015/09/05 16:30:26 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:2232 
+2015/09/05 16:31:18 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 16:31:23 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/05 16:31:25 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 16:31:25 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 16:31:25 [language.go:46] [E] GetLang error key:a 
+2015/09/05 16:31:25 [language.go:46] [E] GetLang error key:b 
+2015/09/05 16:31:30 [staticfile.go:61] [W] Can't find the file: asserts/3rd/img/uploadify-cancel.png stat asserts/3rd/img/uploadify-cancel.png: no such file or directory 
+2015/09/05 16:31:30 [Item.go:136] [E] Upload error http: no such file 
+2015/09/05 16:31:30 [router.go:879] [C] the request url is  /item/upload/product 
+2015/09/05 16:31:30 [router.go:880] [C] Handler crashed with error can't find templatefile in the path:itemcontroller/upload.tpl 
+2015/09/05 16:31:30 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:401 
+2015/09/05 16:31:30 [router.go:886] [C] /usr/local/go/src/runtime/panic.go:387 
+2015/09/05 16:31:30 [router.go:886] [C] /Users/rick/go/src/github.com/astaxie/beego/controller.go:253 
+2015/09/05 16:31:30 [router.go:886] [C] /Users/rick/go/src/github.com/astaxie/beego/controller.go:179 
+2015/09/05 16:31:30 [router.go:886] [C] /Users/rick/go/src/github.com/astaxie/beego/router.go:810 
+2015/09/05 16:31:30 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1703 
+2015/09/05 16:31:30 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1204 
+2015/09/05 16:31:30 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:2232 
+2015/09/05 16:32:37 [Item.go:136] [E] Upload error http: no such file 
+2015/09/05 16:32:37 [router.go:879] [C] the request url is  /item/upload/product 
+2015/09/05 16:32:37 [router.go:880] [C] Handler crashed with error can't find templatefile in the path:itemcontroller/upload.tpl 
+2015/09/05 16:32:37 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:401 
+2015/09/05 16:32:37 [router.go:886] [C] /usr/local/go/src/runtime/panic.go:387 
+2015/09/05 16:32:37 [router.go:886] [C] /Users/rick/go/src/github.com/astaxie/beego/controller.go:253 
+2015/09/05 16:32:37 [router.go:886] [C] /Users/rick/go/src/github.com/astaxie/beego/controller.go:179 
+2015/09/05 16:32:37 [router.go:886] [C] /Users/rick/go/src/github.com/astaxie/beego/router.go:810 
+2015/09/05 16:32:37 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1703 
+2015/09/05 16:32:37 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1204 
+2015/09/05 16:32:37 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:2232 
+2015/09/05 16:34:48 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 16:34:54 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 16:35:01 [Item.go:136] [E] Upload error http: no such file 
+2015/09/05 16:35:01 [router.go:879] [C] the request url is  /item/upload/product 
+2015/09/05 16:35:01 [router.go:880] [C] Handler crashed with error can't find templatefile in the path:itemcontroller/upload.tpl 
+2015/09/05 16:35:01 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:401 
+2015/09/05 16:35:01 [router.go:886] [C] /usr/local/go/src/runtime/panic.go:387 
+2015/09/05 16:35:01 [router.go:886] [C] /Users/rick/go/src/github.com/astaxie/beego/controller.go:253 
+2015/09/05 16:35:01 [router.go:886] [C] /Users/rick/go/src/github.com/astaxie/beego/controller.go:179 
+2015/09/05 16:35:01 [router.go:886] [C] /Users/rick/go/src/github.com/astaxie/beego/router.go:810 
+2015/09/05 16:35:01 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1703 
+2015/09/05 16:35:01 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1204 
+2015/09/05 16:35:01 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:2232 
+2015/09/05 16:35:03 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/05 16:35:05 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 16:35:05 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 16:35:05 [language.go:46] [E] GetLang error key:a 
+2015/09/05 16:35:05 [language.go:46] [E] GetLang error key:b 
+2015/09/05 16:35:10 [staticfile.go:61] [W] Can't find the file: asserts/3rd/img/uploadify-cancel.png stat asserts/3rd/img/uploadify-cancel.png: no such file or directory 
+2015/09/05 16:35:10 [router.go:879] [C] the request url is  /item/upload/product 
+2015/09/05 16:35:10 [router.go:880] [C] Handler crashed with error can't find templatefile in the path:itemcontroller/upload.tpl 
+2015/09/05 16:35:10 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:401 
+2015/09/05 16:35:10 [router.go:886] [C] /usr/local/go/src/runtime/panic.go:387 
+2015/09/05 16:35:10 [router.go:886] [C] /Users/rick/go/src/github.com/astaxie/beego/controller.go:253 
+2015/09/05 16:35:10 [router.go:886] [C] /Users/rick/go/src/github.com/astaxie/beego/controller.go:179 
+2015/09/05 16:35:10 [router.go:886] [C] /Users/rick/go/src/github.com/astaxie/beego/router.go:810 
+2015/09/05 16:35:10 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1703 
+2015/09/05 16:35:10 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1204 
+2015/09/05 16:35:10 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:2232 
+2015/09/05 16:35:53 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 16:35:58 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/05 16:35:59 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 16:35:59 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 16:35:59 [language.go:46] [E] GetLang error key:a 
+2015/09/05 16:35:59 [language.go:46] [E] GetLang error key:b 
+2015/09/05 16:36:05 [staticfile.go:61] [W] Can't find the file: asserts/3rd/img/uploadify-cancel.png stat asserts/3rd/img/uploadify-cancel.png: no such file or directory 
+2015/09/05 16:38:01 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 16:38:04 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/05 16:38:06 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 16:38:06 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 16:38:06 [language.go:46] [E] GetLang error key:a 
+2015/09/05 16:38:06 [language.go:46] [E] GetLang error key:b 
+2015/09/05 16:38:11 [staticfile.go:61] [W] Can't find the file: asserts/3rd/img/uploadify-cancel.png stat asserts/3rd/img/uploadify-cancel.png: no such file or directory 
+2015/09/05 16:39:05 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 16:39:10 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/05 16:39:13 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 16:39:13 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 16:39:13 [language.go:46] [E] GetLang error key:a 
+2015/09/05 16:39:13 [language.go:46] [E] GetLang error key:b 
+2015/09/05 16:39:18 [staticfile.go:61] [W] Can't find the file: asserts/3rd/img/uploadify-cancel.png stat asserts/3rd/img/uploadify-cancel.png: no such file or directory 
+2015/09/05 16:49:44 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 16:51:21 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/05 16:51:32 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 16:51:32 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 16:51:32 [language.go:46] [E] GetLang error key:a 
+2015/09/05 16:51:32 [language.go:46] [E] GetLang error key:b 
+2015/09/05 16:53:10 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 16:53:10 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 16:53:10 [language.go:46] [E] GetLang error key:a 
+2015/09/05 16:53:10 [language.go:46] [E] GetLang error key:b 
+2015/09/05 16:53:27 [staticfile.go:61] [W] Can't find the file: asserts/3rd/uploadify/undefined stat asserts/3rd/uploadify/undefined: no such file or directory 
+2015/09/05 16:53:35 [staticfile.go:61] [W] Can't find the file: asserts/3rd/uploadify/undefined stat asserts/3rd/uploadify/undefined: no such file or directory 
+2015/09/05 16:53:37 [staticfile.go:61] [W] Can't find the file: asserts/3rd/uploadify/undefined stat asserts/3rd/uploadify/undefined: no such file or directory 
+2015/09/05 16:54:32 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 16:54:44 [staticfile.go:61] [W] Can't find the file: asserts/3rd/img/uploadify-cancel.png stat asserts/3rd/img/uploadify-cancel.png: no such file or directory 
+2015/09/05 16:54:54 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 16:54:54 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 16:54:54 [language.go:46] [E] GetLang error key:a 
+2015/09/05 16:54:54 [language.go:46] [E] GetLang error key:b 
+2015/09/05 16:56:31 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 16:56:37 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/05 16:56:39 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 16:56:39 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 16:56:39 [language.go:46] [E] GetLang error key:a 
+2015/09/05 16:56:39 [language.go:46] [E] GetLang error key:b 
+2015/09/05 16:56:43 [staticfile.go:61] [W] Can't find the file: asserts/3rd/img/uploadify-cancel.png stat asserts/3rd/img/uploadify-cancel.png: no such file or directory 
+2015/09/05 16:57:10 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 16:59:41 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 16:59:47 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 16:59:47 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 16:59:47 [language.go:46] [E] GetLang error key:a 
+2015/09/05 16:59:47 [language.go:46] [E] GetLang error key:b 
+2015/09/05 17:00:53 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 17:00:53 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 17:00:53 [language.go:46] [E] GetLang error key:a 
+2015/09/05 17:00:53 [language.go:46] [E] GetLang error key:b 
+2015/09/05 17:03:15 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 17:03:15 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 17:03:15 [language.go:46] [E] GetLang error key:a 
+2015/09/05 17:03:15 [language.go:46] [E] GetLang error key:b 
+2015/09/05 17:04:02 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 17:08:37 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 17:08:43 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/05 17:08:44 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 17:08:44 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 17:08:44 [language.go:46] [E] GetLang error key:a 
+2015/09/05 17:08:44 [language.go:46] [E] GetLang error key:b 
+2015/09/05 17:09:09 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 17:09:09 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 17:09:09 [language.go:46] [E] GetLang error key:a 
+2015/09/05 17:09:09 [language.go:46] [E] GetLang error key:b 
+2015/09/05 17:11:25 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/05 17:11:26 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 17:11:26 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 17:11:26 [language.go:46] [E] GetLang error key:a 
+2015/09/05 17:11:26 [language.go:46] [E] GetLang error key:b 
+2015/09/05 17:15:19 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 17:15:22 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/05 17:15:25 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 17:15:25 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 17:15:25 [language.go:46] [E] GetLang error key:a 
+2015/09/05 17:15:25 [language.go:46] [E] GetLang error key:b 
+2015/09/05 17:15:26 [staticfile.go:61] [W] Can't find the file: static/files/product/20150901172303000 stat static/files/product/20150901172303000: no such file or directory 
+2015/09/05 17:15:38 [staticfile.go:61] [W] Can't find the file: static/files/product/20150901172213008 stat static/files/product/20150901172213008: no such file or directory 
+2015/09/05 17:15:48 [staticfile.go:61] [W] Can't find the file: static/files/product/20150901172303000 stat static/files/product/20150901172303000: no such file or directory 
+2015/09/05 17:15:51 [staticfile.go:61] [W] Can't find the file: static/files/product/20150905165948000 stat static/files/product/20150905165948000: no such file or directory 
+2015/09/05 17:18:31 [staticfile.go:61] [W] Can't find the file: static/files/product/20150901172121007 stat static/files/product/20150901172121007: no such file or directory 
+2015/09/05 17:18:36 [staticfile.go:61] [W] Can't find the file: static/files/product/20150905165948000 stat static/files/product/20150905165948000: no such file or directory 
+2015/09/05 17:20:55 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/05 17:20:58 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 17:20:58 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 17:20:58 [language.go:46] [E] GetLang error key:a 
+2015/09/05 17:20:58 [language.go:46] [E] GetLang error key:b 
+2015/09/05 17:20:59 [staticfile.go:61] [W] Can't find the file: static/files/product/20150901171244000 stat static/files/product/20150901171244000: no such file or directory 
+2015/09/05 17:21:54 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 17:21:58 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/05 17:22:00 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 17:22:00 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 17:22:00 [language.go:46] [E] GetLang error key:a 
+2015/09/05 17:22:00 [language.go:46] [E] GetLang error key:b 
+2015/09/05 17:30:37 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 17:30:44 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/05 17:30:46 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 17:30:46 [language.go:46] [E] GetLang error key:abc 
+2015/09/05 17:30:46 [language.go:46] [E] GetLang error key:a 
+2015/09/05 17:30:46 [language.go:46] [E] GetLang error key:b 
+2015/09/05 17:31:10 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 17:31:10 [language.go:46] [E] GetLang error key:a 
+2015/09/05 17:31:10 [language.go:46] [E] GetLang error key:b 
+2015/09/05 17:31:39 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 17:31:39 [language.go:46] [E] GetLang error key:a 
+2015/09/05 17:31:39 [language.go:46] [E] GetLang error key:b 
+2015/09/05 18:54:36 [purchase.go:39] [I] UiCurList 
+2015/09/05 18:54:37 [purchase.go:39] [I] UiCurList 
+2015/09/05 18:54:39 [purchase.go:39] [I] UiCurList 
+2015/09/05 20:35:18 [purchase.go:39] [I] UiCurList 
+2015/09/05 20:35:20 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 20:35:20 [language.go:46] [E] GetLang error key:a 
+2015/09/05 20:35:20 [language.go:46] [E] GetLang error key:b 
+2015/09/05 20:35:22 [staticfile.go:61] [W] Can't find the file: static/files/product/20150901171244000 stat static/files/product/20150901171244000: no such file or directory 
+2015/09/05 20:35:25 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 20:35:25 [language.go:46] [E] GetLang error key:a 
+2015/09/05 20:35:25 [language.go:46] [E] GetLang error key:b 
+2015/09/05 20:35:46 [purchase.go:39] [I] UiCurList 
+2015/09/05 20:35:46 [purchase.go:39] [I] UiCurList 
+2015/09/05 20:36:01 [purchase.go:39] [I] UiCurList 
+2015/09/05 20:36:16 [purchase.go:39] [I] UiCurList 
+2015/09/05 20:36:17 [purchase.go:39] [I] UiCurList 
+2015/09/05 20:36:18 [purchase.go:39] [I] UiCurList 
+2015/09/05 20:36:23 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 20:36:23 [language.go:46] [E] GetLang error key:a 
+2015/09/05 20:36:23 [language.go:46] [E] GetLang error key:b 
+2015/09/05 20:38:08 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 20:38:23 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/05 20:38:25 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 20:38:25 [language.go:46] [E] GetLang error key:a 
+2015/09/05 20:38:25 [language.go:46] [E] GetLang error key:b 
+2015/09/05 20:38:49 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 20:38:49 [language.go:46] [E] GetLang error key:a 
+2015/09/05 20:38:49 [language.go:46] [E] GetLang error key:b 
+2015/09/05 20:38:51 [purchase.go:39] [I] UiCurList 
+2015/09/05 20:38:51 [purchase.go:39] [I] UiCurList 
+2015/09/05 20:39:09 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 20:39:09 [language.go:46] [E] GetLang error key:a 
+2015/09/05 20:39:09 [language.go:46] [E] GetLang error key:b 
+2015/09/05 20:39:54 [language.go:46] [E] GetLang error key:sadfsdf 
+2015/09/05 20:39:54 [language.go:46] [E] GetLang error key:a 
+2015/09/05 20:39:54 [language.go:46] [E] GetLang error key:b 
+2015/09/05 20:40:11 [purchase.go:39] [I] UiCurList 
+2015/09/05 20:40:13 [purchase.go:39] [I] UiCurList 
+2015/09/05 21:34:14 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 21:34:30 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/05 21:35:29 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 21:38:51 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 21:39:35 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 21:42:13 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 21:45:16 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 21:54:28 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 21:55:09 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 21:57:13 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/05 22:01:32 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 22:01:42 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/05 22:02:09 [asm_amd64.s:2232] [I] http server Running on :8080

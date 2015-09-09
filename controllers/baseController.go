@@ -6,25 +6,56 @@ import (
 	"webo/models/svc"
 	"strings"
 	"fmt"
+	"webo/models/stat"
+	"webo/models/s"
+	"webo/models/lang"
 )
 
 type BaseController struct {
 	beego.Controller
 }
 
+
+func (this *BaseController) GetItemDefFromParamHi() (itemDef.ItemDef, string){
+	item, ok := this.Ctx.Input.Params[":hi"]
+	if !ok {
+		beego.Error(stat.ParamItemIsNone_, this.Ctx.Input.Params)
+		return itemDef.ItemDef{}, stat.ParamItemError
+	}
+	oItemDef, ok := itemDef.EntityDefMap[item]
+	if !ok {
+		beego.Error(stat.ItemNotDefine_, item)
+		return itemDef.ItemDef{}, stat.ItemNotDefine
+	}
+	return oItemDef, stat.Success
+}
+
 func (this *BaseController) GetFormValues(itemD itemDef.ItemDef) map[string]interface{} {
-	//fmt.Println("def", itemD)
 	var retMap map[string]interface{}
 	retMap = make(map[string]interface{})
 	formValues := this.Input()
 	for _, field := range itemD.Fields {
 		if _, ok := formValues[field.Name]; ok {
 			if v, fok := field.GetFormValue(this.GetString(field.Name)); fok {
-				retMap[field.Name] = v
+				retMap[field.Name] = this.ReplaceSpecialValues(v)
 			}
 		}
 	}
 	return retMap
+}
+
+func (this *BaseController) ReplaceSpecialValues(value interface{}) interface{}{
+	if str, ok := value.(string); ok{
+		rValue := strings.TrimSpace(str)
+		switch rValue {
+		case s.CurUser:
+			return this.GetCurUserSn()
+		default:
+			return value
+		}
+	}else{
+		return value
+	}
 }
 
 //func (this *BaseController) GetRequestParams(itemD itemDef.ItemDef)svc.Params{
@@ -97,4 +128,48 @@ func (this *BaseController)GetOrderParamFromJsonMap(requestMap map[string]interf
 	return orderByParams
 }
 
+func TransAutocompleteList(resultMaps []map[string]interface{}, keyField string) []map[string]interface{} {
+	retList := make([]map[string]interface{}, len(resultMaps))
+	if len(resultMaps) <= 0 {
+		return retList
+	}
 
+	for idx, oldMap := range resultMaps {
+		var retMap = make(map[string]interface{}, 3)
+		if sn, sok := oldMap[s.Sn]; sok{
+			retMap[s.Sn] = sn
+			if name, nok := oldMap[s.Name]; nok{
+				retMap[s.Name] = name
+			}else {
+				retMap[s.Name] = ""
+			}
+			if keyword, kok := oldMap[s.Keyword]; kok{
+				retMap[s.Keyword] = keyword
+			}else {
+				retMap[s.Keyword] = ""
+			}
+			retList[idx] = retMap
+		}
+	}
+	return retList
+}
+
+func TransList(oItemDef itemDef.ItemDef, resultMaps []map[string]interface{}) []map[string]interface{} {
+	if len(resultMaps) < 0 {
+		return resultMaps
+	}
+	retList := make([]map[string]interface{}, len(resultMaps))
+	neetTransMap := oItemDef.GetNeedTrans()
+	for idx, oldMap := range resultMaps {
+		var retMap = make(map[string]interface{}, len(oldMap))
+		for key, value := range oldMap {
+			if _, ok := neetTransMap[key]; ok {
+				retMap[key] = lang.GetLabel(value.(string))
+			} else {
+				retMap[key] = value
+			}
+		}
+		retList[idx] = retMap
+	}
+	return retList
+}

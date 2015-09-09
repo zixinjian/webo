@@ -8,7 +8,7 @@ type Results struct {
 	Results interface{} `json:"results"`
 }
 
-var (
-	MaxLimit         int64 = 10000
-	DefaultRowsLimit int64 = 50
+const (
+	LimitDefault     int64 = 100
+	LimitMax         int64 = 10000
 )

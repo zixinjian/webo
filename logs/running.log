@@ -1,289 +1,580 @@
-2015/09/02 08:35:33 [purchase.go:79] [I] UiCurList 
-2015/09/02 08:35:36 [main.go:29] [I] User:admin login as role:role_admin 
-2015/09/02 08:43:15 [asm_amd64.s:2232] [I] http server Running on :8080
-2015/09/02 08:44:38 [main.go:29] [I] User:admin login as role:role_admin 
-2015/09/02 08:47:54 [asm_amd64.s:2232] [I] http server Running on :8080
-2015/09/02 08:47:59 [main.go:29] [I] User:admin login as role:role_admin 
-2015/09/02 08:48:20 [asm_amd64.s:2232] [I] http server Running on :8080
-2015/09/02 08:48:24 [main.go:29] [I] User:admin login as role:role_admin 
-2015/09/02 10:54:22 [main.go:29] [I] User:admin login as role:role_admin 
-2015/09/02 10:55:03 [purchase.go:57] [I] UiCurList 
-2015/09/02 11:00:39 [purchase.go:57] [I] UiCurList 
-2015/09/02 11:00:50 [purchase.go:79] [I] UiCurList 
-2015/09/02 11:00:51 [purchase.go:79] [I] UiCurList 
-2015/09/02 11:00:58 [purchase.go:57] [I] UiCurList 
-2015/09/02 11:01:05 [language.go:46] [E] GetLang error key:f 
-2015/09/02 11:01:05 [language.go:46] [E] GetLang error key:g 
-2015/09/02 11:01:05 [language.go:46] [E] GetLang error key:h 
-2015/09/02 11:01:06 [language.go:46] [E] GetLang error key:h 
-2015/09/02 11:01:06 [language.go:46] [E] GetLang error key:g 
-2015/09/02 11:01:06 [language.go:46] [E] GetLang error key:f 
-2015/09/02 11:28:33 [main.go:29] [I] User:admin login as role:role_admin 
-2015/09/02 11:28:35 [purchase.go:57] [I] UiCurList 
-2015/09/02 11:28:36 [purchase.go:57] [I] UiCurList 
-2015/09/02 11:28:39 [purchase.go:57] [I] UiCurList 
-2015/09/02 11:31:14 [purchase.go:79] [I] UiCurList 
-2015/09/02 11:31:15 [purchase.go:57] [I] UiCurList 
-2015/09/02 11:31:16 [purchase.go:57] [I] UiCurList 
-2015/09/02 11:31:16 [purchase.go:79] [I] UiCurList 
-2015/09/02 11:31:18 [purchase.go:79] [I] UiCurList 
-2015/09/02 11:31:18 [purchase.go:79] [I] UiCurList 
-2015/09/02 11:57:44 [asm_amd64.s:2232] [I] http server Running on :8080
-2015/09/02 11:57:49 [main.go:29] [I] User:admin login as role:role_admin 
-2015/09/02 12:01:47 [asm_amd64.s:2232] [I] http server Running on :8080
-2015/09/02 12:01:52 [main.go:29] [I] User:admin login as role:role_admin 
-2015/09/02 12:02:02 [purchase.go:57] [I] UiCurList 
-2015/09/02 12:02:13 [purchase.go:79] [I] UiCurList 
-2015/09/02 12:04:41 [main.go:29] [I] User:admin login as role:role_admin 
-2015/09/02 12:05:18 [purchase.go:57] [I] UiCurList 
-2015/09/02 12:05:22 [purchase.go:79] [I] UiCurList 
-2015/09/02 12:05:22 [purchase.go:57] [I] UiCurList 
-2015/09/02 13:54:29 [asm_amd64.s:2232] [I] http server Running on :8080
-2015/09/02 13:54:37 [main.go:29] [I] User:admin login as role:role_admin 
-2015/09/02 13:54:39 [purchase.go:56] [I] UiCurList 
-2015/09/02 13:54:46 [purchase.go:56] [I] UiCurList 
-2015/09/02 13:57:50 [purchase.go:56] [I] UiCurList 
-2015/09/02 13:59:52 [asm_amd64.s:2232] [I] http server Running on :8080
-2015/09/02 13:59:58 [purchase.go:56] [I] UiCurList 
-2015/09/02 13:59:59 [purchase.go:56] [I] UiCurList 
-2015/09/02 14:00:04 [main.go:29] [I] User:admin login as role:role_admin 
-2015/09/02 14:00:05 [purchase.go:56] [I] UiCurList 
-2015/09/02 14:00:06 [purchase.go:56] [I] UiCurList 
-2015/09/02 14:00:06 [purchase.go:56] [I] UiCurList 
-2015/09/02 14:06:21 [purchase.go:56] [I] UiCurList 
-2015/09/02 14:06:23 [purchase.go:56] [I] UiCurList 
-2015/09/02 14:06:24 [purchase.go:56] [I] UiCurList 
-2015/09/02 14:06:25 [purchase.go:56] [I] UiCurList 
-2015/09/02 14:06:26 [purchase.go:56] [I] UiCurList 
-2015/09/02 14:06:26 [purchase.go:56] [I] UiCurList 
-2015/09/02 14:06:28 [purchase.go:56] [I] UiCurList 
-2015/09/02 15:13:38 [asm_amd64.s:2232] [I] http server Running on :8080
-2015/09/02 15:16:35 [main.go:29] [I] User:admin login as role:role_admin 
-2015/09/02 15:16:37 [purchase.go:60] [I] UiCurList 
-2015/09/02 15:16:40 [purchase.go:60] [I] UiCurList 
-2015/09/02 15:18:38 [main.go:29] [I] User:admin login as role:role_admin 
-2015/09/02 15:18:39 [purchase.go:60] [I] UiCurList 
-2015/09/02 15:18:40 [purchase.go:60] [I] UiCurList 
-2015/09/02 15:18:40 [purchase.go:60] [I] UiCurList 
-2015/09/02 15:18:45 [asm_amd64.s:2232] [I] http server Running on :8080
-2015/09/02 15:18:50 [main.go:29] [I] User:admin login as role:role_admin 
-2015/09/02 15:18:51 [purchase.go:60] [I] UiCurList 
-2015/09/02 15:19:04 [purchase.go:60] [I] UiCurList 
-2015/09/02 15:19:20 [purchase.go:60] [I] UiCurList 
-2015/09/02 15:19:22 [purchase.go:60] [I] UiCurList 
-2015/09/02 15:19:23 [purchase.go:60] [I] UiCurList 
-2015/09/02 15:19:25 [purchase.go:60] [I] UiCurList 
-2015/09/02 15:20:05 [asm_amd64.s:2232] [I] http server Running on :8080
-2015/09/02 15:20:09 [purchase.go:60] [I] UiCurList 
-2015/09/02 15:20:51 [asm_amd64.s:2232] [I] http server Running on :8080
-2015/09/02 15:20:59 [main.go:29] [I] User:admin login as role:role_admin 
-2015/09/02 15:21:00 [purchase.go:60] [I] UiCurList 
-2015/09/02 15:21:29 [asm_amd64.s:2232] [I] http server Running on :8080
-2015/09/02 15:21:31 [main.go:29] [I] User:admin login as role:role_admin 
-2015/09/02 15:21:32 [purchase.go:60] [I] UiCurList 
-2015/09/02 15:22:43 [main.go:29] [I] User:admin login as role:role_admin 
-2015/09/02 15:22:44 [purchase.go:60] [I] UiCurList 
-2015/09/02 15:22:44 [purchase.go:60] [I] UiCurList 
-2015/09/02 16:14:49 [main.go:29] [I] User:admin login as role:role_admin 
-2015/09/02 16:14:50 [purchase.go:60] [I] UiCurList 
-2015/09/02 16:16:01 [main.go:29] [I] User:admin login as role:role_admin 
-2015/09/02 16:16:02 [purchase.go:60] [I] UiCurList 
-2015/09/02 16:16:26 [main.go:29] [I] User:admin login as role:role_admin 
-2015/09/02 16:16:27 [purchase.go:60] [I] UiCurList 
-2015/09/02 16:16:35 [purchase.go:60] [I] UiCurList 
-2015/09/02 16:16:37 [purchase.go:60] [I] UiCurList 
-2015/09/02 16:16:39 [purchase.go:60] [I] UiCurList 
-2015/09/02 16:16:49 [main.go:29] [I] User:admin login as role:role_admin 
-2015/09/02 16:16:51 [purchase.go:60] [I] UiCurList 
-2015/09/02 16:19:24 [main.go:29] [I] User:admin login as role:role_admin 
-2015/09/02 16:19:25 [purchase.go:60] [I] UiCurList 
-2015/09/02 16:20:03 [asm_amd64.s:2232] [I] http server Running on :8080
-2015/09/02 16:20:07 [main.go:29] [I] User:admin login as role:role_admin 
-2015/09/02 16:20:08 [purchase.go:39] [I] UiCurList 
-2015/09/02 16:24:21 [asm_amd64.s:2232] [I] http server Running on :8080
-2015/09/02 16:24:26 [main.go:29] [I] User:admin login as role:role_admin 
-2015/09/02 16:24:27 [purchase.go:39] [I] UiCurList 
-2015/09/02 16:24:46 [asm_amd64.s:2232] [I] http server Running on :8080
-2015/09/02 16:24:53 [main.go:29] [I] User:admin login as role:role_admin 
-2015/09/02 16:24:53 [purchase.go:39] [I] UiCurList 
-2015/09/02 16:24:56 [main.go:29] [I] User:admin login as role:role_admin 
-2015/09/02 16:24:57 [purchase.go:39] [I] UiCurList 
-2015/09/02 16:28:00 [main.go:29] [I] User:admin login as role:role_admin 
-2015/09/02 16:28:01 [purchase.go:39] [I] UiCurList 
-2015/09/02 16:31:18 [main.go:29] [I] User:admin login as role:role_admin 
-2015/09/02 16:31:19 [purchase.go:39] [I] UiCurList 
-2015/09/02 16:31:29 [main.go:29] [I] User:admin login as role:role_admin 
-2015/09/02 16:31:31 [purchase.go:39] [I] UiCurList 
-2015/09/02 16:31:33 [purchase.go:39] [I] UiCurList 
-2015/09/02 16:31:43 [purchase.go:39] [I] UiCurList 
-2015/09/02 16:31:46 [purchase.go:39] [I] UiCurList 
-2015/09/02 16:31:49 [purchase.go:39] [I] UiCurList 
-2015/09/02 16:31:51 [purchase.go:39] [I] UiCurList 
-2015/09/02 16:31:55 [purchase.go:39] [I] UiCurList 
-2015/09/02 16:31:59 [purchase.go:39] [I] UiCurList 
-2015/09/02 16:31:59 [purchase.go:39] [I] UiCurList 
-2015/09/02 16:32:00 [purchase.go:39] [I] UiCurList 
-2015/09/02 16:32:01 [purchase.go:39] [I] UiCurList 
-2015/09/02 16:32:01 [purchase.go:39] [I] UiCurList 
-2015/09/02 16:32:02 [purchase.go:39] [I] UiCurList 
-2015/09/02 16:32:02 [purchase.go:39] [I] UiCurList 
-2015/09/02 16:32:03 [purchase.go:39] [I] UiCurList 
-2015/09/02 16:32:03 [purchase.go:39] [I] UiCurList 
-2015/09/02 16:32:04 [purchase.go:39] [I] UiCurList 
-2015/09/02 16:32:04 [purchase.go:39] [I] UiCurList 
-2015/09/02 16:32:05 [purchase.go:39] [I] UiCurList 
-2015/09/02 16:32:05 [purchase.go:39] [I] UiCurList 
-2015/09/02 16:32:06 [purchase.go:39] [I] UiCurList 
-2015/09/02 16:32:06 [purchase.go:39] [I] UiCurList 
-2015/09/02 16:32:07 [purchase.go:39] [I] UiCurList 
-2015/09/02 16:32:08 [purchase.go:39] [I] UiCurList 
-2015/09/02 16:32:08 [purchase.go:39] [I] UiCurList 
-2015/09/02 16:32:09 [purchase.go:39] [I] UiCurList 
-2015/09/03 15:45:44 [asm_amd64.s:2232] [I] http server Running on :8080
-2015/09/03 15:45:51 [login.go:37] [E] User:%s login error code: %s admin item_not_found 
-2015/09/03 15:45:55 [main.go:29] [I] User:admin login as role:role_admin 
-2015/09/03 15:45:58 [purchase.go:39] [I] UiCurList 
-2015/09/03 15:46:16 [purchase.go:39] [I] UiCurList 
-2015/09/03 15:46:19 [purchase.go:39] [I] UiCurList 
-2015/09/03 15:46:22 [purchase.go:39] [I] UiCurList 
-2015/09/03 15:46:23 [purchase.go:39] [I] UiCurList 
-2015/09/03 15:46:25 [purchase.go:39] [I] UiCurList 
-2015/09/03 15:46:25 [purchase.go:39] [I] UiCurList 
-2015/09/03 15:47:46 [purchase.go:39] [I] UiCurList 
-2015/09/03 15:47:50 [purchase.go:39] [I] UiCurList 
-2015/09/03 15:47:50 [purchase.go:39] [I] UiCurList 
-2015/09/03 15:48:35 [purchase.go:39] [I] UiCurList 
-2015/09/03 15:48:35 [purchase.go:39] [I] UiCurList 
-2015/09/03 18:51:32 [asm_amd64.s:2232] [I] http server Running on :8080
-2015/09/03 18:51:40 [language.go:46] [E] GetLang error key:sdafsdf 
-2015/09/03 18:51:40 [language.go:46] [E] GetLang error key:jjjj 
-2015/09/03 18:51:47 [language.go:46] [E] GetLang error key:jjjj 
-2015/09/03 19:11:53 [asm_amd64.s:2232] [I] http server Running on :8080
-2015/09/03 19:12:02 [main.go:29] [I] User:admin login as role:role_admin 
-2015/09/03 19:12:14 [baseController.go:67] [E] Check param[search]value a a error no such field 
-2015/09/03 19:12:15 [baseController.go:67] [E] Check param[search]value aa error no such field 
-2015/09/03 19:48:27 [main.go:29] [I] User:admin login as role:role_admin 
-2015/09/03 19:48:29 [purchase.go:39] [I] UiCurList 
-2015/09/03 19:48:30 [purchase.go:39] [I] UiCurList 
-2015/09/03 19:48:31 [purchase.go:39] [I] UiCurList 
-2015/09/03 19:48:32 [purchase.go:39] [I] UiCurList 
-2015/09/03 19:48:32 [purchase.go:39] [I] UiCurList 
-2015/09/03 19:48:35 [purchase.go:39] [I] UiCurList 
-2015/09/03 19:48:35 [purchase.go:39] [I] UiCurList 
-2015/09/03 19:48:56 [asm_amd64.s:2232] [I] http server Running on :8080
-2015/09/03 19:52:54 [language.go:46] [E] GetLang error key:sadfsdf 
-2015/09/03 19:52:54 [language.go:46] [E] GetLang error key:abc 
-2015/09/03 19:52:54 [language.go:46] [E] GetLang error key:a 
-2015/09/03 19:52:54 [language.go:46] [E] GetLang error key:b 
-2015/09/03 19:52:55 [language.go:46] [E] GetLang error key:sadfsdf 
-2015/09/03 19:52:55 [language.go:46] [E] GetLang error key:abc 
-2015/09/03 19:52:55 [language.go:46] [E] GetLang error key:a 
-2015/09/03 19:52:55 [language.go:46] [E] GetLang error key:b 
-2015/09/03 20:09:31 [language.go:46] [E] GetLang error key:sadfsdf 
-2015/09/03 20:09:31 [language.go:46] [E] GetLang error key:abc 
-2015/09/03 20:09:31 [language.go:46] [E] GetLang error key:a 
-2015/09/03 20:09:31 [language.go:46] [E] GetLang error key:b 
-2015/09/03 20:09:32 [language.go:46] [E] GetLang error key:sadfsdf 
-2015/09/03 20:09:32 [language.go:46] [E] GetLang error key:abc 
-2015/09/03 20:09:32 [language.go:46] [E] GetLang error key:a 
-2015/09/03 20:09:32 [language.go:46] [E] GetLang error key:b 
-2015/09/03 20:09:33 [language.go:46] [E] GetLang error key:sadfsdf 
-2015/09/03 20:09:33 [language.go:46] [E] GetLang error key:abc 
-2015/09/03 20:09:33 [language.go:46] [E] GetLang error key:a 
-2015/09/03 20:09:33 [language.go:46] [E] GetLang error key:b 
-2015/09/03 20:09:33 [language.go:46] [E] GetLang error key:sadfsdf 
-2015/09/03 20:09:33 [language.go:46] [E] GetLang error key:abc 
-2015/09/03 20:09:33 [language.go:46] [E] GetLang error key:a 
-2015/09/03 20:09:33 [language.go:46] [E] GetLang error key:b 
-2015/09/03 20:09:34 [language.go:46] [E] GetLang error key:sadfsdf 
-2015/09/03 20:09:34 [language.go:46] [E] GetLang error key:abc 
-2015/09/03 20:09:34 [language.go:46] [E] GetLang error key:a 
-2015/09/03 20:09:34 [language.go:46] [E] GetLang error key:b 
-2015/09/03 20:09:34 [language.go:46] [E] GetLang error key:sadfsdf 
-2015/09/03 20:09:34 [language.go:46] [E] GetLang error key:abc 
-2015/09/03 20:09:34 [language.go:46] [E] GetLang error key:a 
-2015/09/03 20:09:34 [language.go:46] [E] GetLang error key:b 
-2015/09/03 20:09:35 [language.go:46] [E] GetLang error key:sadfsdf 
-2015/09/03 20:09:35 [language.go:46] [E] GetLang error key:abc 
-2015/09/03 20:09:35 [language.go:46] [E] GetLang error key:a 
-2015/09/03 20:09:35 [language.go:46] [E] GetLang error key:b 
-2015/09/03 20:09:36 [language.go:46] [E] GetLang error key:sadfsdf 
-2015/09/03 20:09:36 [language.go:46] [E] GetLang error key:abc 
-2015/09/03 20:09:36 [language.go:46] [E] GetLang error key:a 
-2015/09/03 20:09:36 [language.go:46] [E] GetLang error key:b 
-2015/09/03 20:09:36 [language.go:46] [E] GetLang error key:sadfsdf 
-2015/09/03 20:09:36 [language.go:46] [E] GetLang error key:abc 
-2015/09/03 20:09:36 [language.go:46] [E] GetLang error key:a 
-2015/09/03 20:09:36 [language.go:46] [E] GetLang error key:b 
-2015/09/03 20:09:36 [language.go:46] [E] GetLang error key:sadfsdf 
-2015/09/03 20:09:36 [language.go:46] [E] GetLang error key:abc 
-2015/09/03 20:09:36 [language.go:46] [E] GetLang error key:a 
-2015/09/03 20:09:36 [language.go:46] [E] GetLang error key:b 
-2015/09/03 20:09:38 [language.go:46] [E] GetLang error key:sadfsdf 
-2015/09/03 20:09:38 [language.go:46] [E] GetLang error key:abc 
-2015/09/03 20:09:38 [language.go:46] [E] GetLang error key:a 
-2015/09/03 20:09:38 [language.go:46] [E] GetLang error key:b 
-2015/09/03 20:09:41 [language.go:46] [E] GetLang error key:sadfsdf 
-2015/09/03 20:09:41 [language.go:46] [E] GetLang error key:abc 
-2015/09/03 20:09:41 [language.go:46] [E] GetLang error key:a 
-2015/09/03 20:09:41 [language.go:46] [E] GetLang error key:b 
-2015/09/03 20:28:11 [asm_amd64.s:2232] [I] http server Running on :8080
-2015/09/03 20:29:17 [asm_amd64.s:2232] [I] http server Running on :8080
-2015/09/03 20:31:18 [asm_amd64.s:2232] [I] http server Running on :8080
-2015/09/03 20:31:28 [main.go:29] [I] User:admin login as role:role_admin 
-2015/09/03 20:31:29 [user.go:18] [E] Item param is none 
-2015/09/03 20:31:29 [user.go:22] [E] Item  not support 
-2015/09/03 20:33:55 [asm_amd64.s:2232] [I] http server Running on :8080
-2015/09/03 20:33:59 [main.go:29] [I] User:admin login as role:role_admin 
-2015/09/03 20:34:00 [user.go:18] [E] Item param is none 
-2015/09/03 20:34:00 [user.go:22] [E] Item  not support 
-2015/09/03 20:34:49 [asm_amd64.s:2232] [I] http server Running on :8080
-2015/09/03 20:34:53 [main.go:29] [I] User:admin login as role:role_admin 
-2015/09/03 20:37:33 [asm_amd64.s:2232] [I] http server Running on :8080
-2015/09/03 20:38:57 [asm_amd64.s:2232] [I] http server Running on :8080
-2015/09/03 20:54:46 [asm_amd64.s:2232] [I] http server Running on :8080
-2015/09/03 20:54:53 [main.go:29] [I] User:admin login as role:role_admin 
-2015/09/03 20:56:01 [crud.go:194] [E] Update error no such column:  
-2015/09/03 20:56:01 [crud.go:214] [E] ParseSqlError unknown error no such column:  
-2015/09/03 21:00:49 [asm_amd64.s:2232] [I] http server Running on :8080
-2015/09/03 21:04:51 [asm_amd64.s:2232] [I] http server Running on :8080
-2015/09/03 21:04:56 [main.go:29] [I] User:admin login as role:role_admin 
-2015/09/03 21:05:06 [language.go:46] [E] GetLang error key:flag_disable 
-2015/09/03 21:05:38 [asm_amd64.s:2232] [I] http server Running on :8080
-2015/09/03 21:05:42 [main.go:29] [I] User:admin login as role:role_admin 
-2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:role_admin 
-2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:flag_available 
-2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:department_purchase 
-2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:department_purchase 
-2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:role_user 
-2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:flag_available 
-2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:role_user 
-2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:department_purchase 
-2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:flag_available 
-2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:department_purchase 
-2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:flag_available 
-2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:role_manager 
-2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:role_manager 
-2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:department_purchase 
-2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:flag_disable 
-2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:role_user 
-2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:flag_available 
-2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:department_purchase 
-2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:role_user 
-2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:flag_available 
-2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:department_purchase 
-2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:department_purchase 
-2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:role_user 
-2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:flag_available 
-2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:role_user 
-2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:flag_available 
-2015/09/03 21:05:43 [language.go:46] [E] GetLang error key:department_purchase 
-2015/09/03 21:06:37 [asm_amd64.s:2232] [I] http server Running on :8080
-2015/09/03 21:08:15 [asm_amd64.s:2232] [I] http server Running on :8080
-2015/09/03 21:08:19 [main.go:29] [I] User:admin login as role:role_admin 
-2015/09/03 21:08:24 [user.go:39] [I] Disable user sn: [20150804175012002] 
-2015/09/03 21:08:26 [user.go:39] [I] Disable user sn: [20150804175004000] 
-2015/09/03 21:11:09 [asm_amd64.s:2232] [I] http server Running on :8080
-2015/09/03 21:11:44 [asm_amd64.s:2232] [I] http server Running on :8080
-2015/09/03 21:12:53 [asm_amd64.s:2232] [I] http server Running on :8080
-2015/09/03 21:12:57 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/08 12:53:49 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/08 12:53:49 [model.go:46] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username, supplier.name as supplier_name, supplier.keyword as supplier_keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND supplier.sn = purchase.supplier AND purchase.creater = ? LIMIT 10  
+2015/09/08 12:53:49 [language.go:46] [E] GetLang error key:f 
+2015/09/08 12:53:51 [purchase.go:42] [I] UiCurList 
+2015/09/08 12:53:51 [model.go:46] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username, supplier.name as supplier_name, supplier.keyword as supplier_keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND supplier.sn = purchase.supplier AND purchase.godowndate = ? LIMIT 10  
+2015/09/08 12:53:51 [language.go:46] [E] GetLang error key:f 
+2015/09/08 12:53:52 [purchase.go:42] [I] UiCurList 
+2015/09/08 12:53:52 [model.go:46] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username, supplier.name as supplier_name, supplier.keyword as supplier_keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND supplier.sn = purchase.supplier AND purchase.godowndate = ? LIMIT 10  
+2015/09/08 12:53:52 [language.go:46] [E] GetLang error key:f 
+2015/09/08 12:53:53 [model.go:46] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username, supplier.name as supplier_name, supplier.keyword as supplier_keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND supplier.sn = purchase.supplier AND purchase.creater = ? LIMIT 10  
+2015/09/08 12:53:53 [language.go:46] [E] GetLang error key:f 
+2015/09/08 12:53:53 [purchase.go:42] [I] UiCurList 
+2015/09/08 12:53:53 [model.go:46] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username, supplier.name as supplier_name, supplier.keyword as supplier_keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND supplier.sn = purchase.supplier AND purchase.godowndate = ? LIMIT 10  
+2015/09/08 12:53:53 [language.go:46] [E] GetLang error key:f 
+2015/09/08 12:53:53 [purchase.go:42] [I] UiCurList 
+2015/09/08 12:53:54 [model.go:46] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username, supplier.name as supplier_name, supplier.keyword as supplier_keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND supplier.sn = purchase.supplier LIMIT 10  
+2015/09/08 12:53:54 [language.go:46] [E] GetLang error key:f 
+2015/09/08 12:53:56 [purchase.go:42] [I] UiCurList 
+2015/09/08 12:53:56 [model.go:46] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username, supplier.name as supplier_name, supplier.keyword as supplier_keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND supplier.sn = purchase.supplier AND purchase.godowndate = ? LIMIT 10  
+2015/09/08 12:53:56 [language.go:46] [E] GetLang error key:f 
+2015/09/08 12:53:56 [purchase.go:42] [I] UiCurList 
+2015/09/08 12:53:57 [model.go:46] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username, supplier.name as supplier_name, supplier.keyword as supplier_keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND supplier.sn = purchase.supplier AND purchase.godowndate = ? LIMIT 10  
+2015/09/08 12:53:57 [language.go:46] [E] GetLang error key:f 
+2015/09/08 12:53:57 [model.go:46] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username, supplier.name as supplier_name, supplier.keyword as supplier_keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND supplier.sn = purchase.supplier AND purchase.creater = ? LIMIT 10  
+2015/09/08 12:53:57 [language.go:46] [E] GetLang error key:f 
+2015/09/08 12:54:13 [staticfile.go:61] [W] Can't find the file: static/files/product/20150905215744001 stat static/files/product/20150905215744001: no such file or directory 
+2015/09/08 12:54:16 [model.go:46] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username, supplier.name as supplier_name, supplier.keyword as supplier_keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND supplier.sn = purchase.supplier AND purchase.creater = ? LIMIT 10  
+2015/09/08 12:54:16 [language.go:46] [E] GetLang error key:f 
+2015/09/08 18:07:25 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/08 18:07:25 [model.go:46] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username, supplier.name as supplier_name, supplier.keyword as supplier_keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND supplier.sn = purchase.supplier AND purchase.creater = ? LIMIT 10  
+2015/09/08 18:07:25 [language.go:46] [E] GetLang error key:f 
+2015/09/08 18:07:50 [purchase.go:42] [I] UiCurList 
+2015/09/08 18:07:50 [model.go:46] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username, supplier.name as supplier_name, supplier.keyword as supplier_keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND supplier.sn = purchase.supplier AND purchase.godowndate = ? LIMIT 10  
+2015/09/08 18:07:50 [language.go:46] [E] GetLang error key:f 
+2015/09/08 18:07:52 [model.go:46] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username, supplier.name as supplier_name, supplier.keyword as supplier_keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND supplier.sn = purchase.supplier AND purchase.buyer = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/08 18:07:53 [model.go:46] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username, supplier.name as supplier_name, supplier.keyword as supplier_keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND supplier.sn = purchase.supplier AND purchase.buyer = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/08 18:07:53 [model.go:46] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username, supplier.name as supplier_name, supplier.keyword as supplier_keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND supplier.sn = purchase.supplier AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/08 18:07:54 [model.go:46] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username, supplier.name as supplier_name, supplier.keyword as supplier_keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND supplier.sn = purchase.supplier AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/08 18:07:54 [model.go:46] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username, supplier.name as supplier_name, supplier.keyword as supplier_keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND supplier.sn = purchase.supplier AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/08 18:07:55 [model.go:46] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username, supplier.name as supplier_name, supplier.keyword as supplier_keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND supplier.sn = purchase.supplier AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/08 18:07:56 [model.go:46] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username, supplier.name as supplier_name, supplier.keyword as supplier_keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND supplier.sn = purchase.supplier AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/08 18:07:56 [language.go:46] [E] GetLang error key:f 
+2015/09/08 18:07:56 [model.go:46] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username, supplier.name as supplier_name, supplier.keyword as supplier_keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND supplier.sn = purchase.supplier AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/08 18:07:56 [model.go:46] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username, supplier.name as supplier_name, supplier.keyword as supplier_keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND supplier.sn = purchase.supplier AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/08 18:07:57 [model.go:46] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username, supplier.name as supplier_name, supplier.keyword as supplier_keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND supplier.sn = purchase.supplier AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/08 18:07:57 [model.go:46] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username, supplier.name as supplier_name, supplier.keyword as supplier_keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND supplier.sn = purchase.supplier AND purchase.godowndate = ? LIMIT 10  
+2015/09/08 18:07:57 [language.go:46] [E] GetLang error key:f 
+2015/09/08 18:08:12 [model.go:46] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username, supplier.name as supplier_name, supplier.keyword as supplier_keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND supplier.sn = purchase.supplier AND purchase.creater = ? LIMIT 10  
+2015/09/08 18:08:12 [language.go:46] [E] GetLang error key:f 
+2015/09/08 18:08:45 [model.go:46] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username, supplier.name as supplier_name, supplier.keyword as supplier_keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND supplier.sn = purchase.supplier AND purchase.creater = ? LIMIT 10  
+2015/09/08 18:08:45 [language.go:46] [E] GetLang error key:f 
+2015/09/08 18:08:52 [model.go:46] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username, supplier.name as supplier_name, supplier.keyword as supplier_keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND supplier.sn = purchase.supplier AND purchase.creater = ? LIMIT 10  
+2015/09/08 18:08:52 [language.go:46] [E] GetLang error key:f 
+2015/09/08 18:09:02 [model.go:46] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username, supplier.name as supplier_name, supplier.keyword as supplier_keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND supplier.sn = purchase.supplier AND purchase.creater = ? LIMIT 10  
+2015/09/08 18:09:02 [language.go:46] [E] GetLang error key:f 
+2015/09/08 18:09:05 [model.go:46] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username, supplier.name as supplier_name, supplier.keyword as supplier_keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND supplier.sn = purchase.supplier AND purchase.creater = ? LIMIT 10  
+2015/09/08 18:09:05 [language.go:46] [E] GetLang error key:f 
+2015/09/08 18:09:06 [purchase.go:42] [I] UiCurList 
+2015/09/08 18:09:06 [model.go:46] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username, supplier.name as supplier_name, supplier.keyword as supplier_keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND supplier.sn = purchase.supplier AND purchase.godowndate = ? LIMIT 10  
+2015/09/08 18:09:06 [language.go:46] [E] GetLang error key:f 
+2015/09/08 18:09:06 [model.go:46] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username, supplier.name as supplier_name, supplier.keyword as supplier_keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND supplier.sn = purchase.supplier AND purchase.creater = ? LIMIT 10  
+2015/09/08 18:09:06 [language.go:46] [E] GetLang error key:f 
+2015/09/08 18:09:57 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/08 18:09:57 [model.go:46] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username, supplier.name as supplier_name, supplier.keyword as supplier_keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND supplier.sn = purchase.supplier AND purchase.creater = ? LIMIT 10  
+2015/09/08 18:09:57 [language.go:46] [E] GetLang error key:f 
+2015/09/08 18:11:01 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/08 18:11:01 [model.go:46] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username, supplier.name as supplier_name, supplier.keyword as supplier_keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND supplier.sn = purchase.supplier AND purchase.creater = ? LIMIT 10  
+2015/09/08 18:11:01 [language.go:46] [E] GetLang error key:f 
+2015/09/08 18:11:01 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 18:11:01 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 18:11:15 [model.go:46] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username, supplier.name as supplier_name, supplier.keyword as supplier_keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND supplier.sn = purchase.supplier AND purchase.creater = ? LIMIT 10  
+2015/09/08 18:11:15 [language.go:46] [E] GetLang error key:f 
+2015/09/08 18:11:15 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 18:11:15 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 18:16:39 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/08 18:16:44 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/08 18:16:44 [model.go:46] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username, supplier.name as supplier_name, supplier.keyword as supplier_keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND (supplier.sn = '' OR supplier.sn = purchase.supplier) AND purchase.creater = ? LIMIT 10  
+2015/09/08 18:16:44 [language.go:46] [E] GetLang error key:f 
+2015/09/08 18:16:44 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 18:16:44 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 18:16:55 [model.go:46] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username, supplier.name as supplier_name, supplier.keyword as supplier_keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND (supplier.sn = '' OR supplier.sn = purchase.supplier) AND purchase.creater = ? LIMIT 10  
+2015/09/08 18:16:55 [language.go:46] [E] GetLang error key:f 
+2015/09/08 18:16:55 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 18:16:55 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 18:21:00 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/08 18:21:04 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/08 18:21:04 [model.go:46] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username, supplier.name as supplier_name, supplier.keyword as supplier_keyword FROM purchase, user, supplier WHERE user.sn = purchase.buyer AND (purchase.supplier = '' OR supplier.sn = purchase.supplier) AND purchase.creater = ? LIMIT 10  
+2015/09/08 18:21:04 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 18:21:04 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 18:21:04 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 18:21:04 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 18:21:04 [language.go:46] [E] GetLang error key:f 
+2015/09/08 18:21:04 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 18:21:04 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 18:21:04 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 18:21:04 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 18:21:04 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 18:38:14 [router.go:879] [C] the request url is  /ui/purchase/list 
+2015/09/08 18:38:14 [router.go:880] [C] Handler crashed with error runtime error: index out of range 
+2015/09/08 18:38:14 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:401 
+2015/09/08 18:38:14 [router.go:886] [C] /usr/local/go/src/runtime/panic.go:387 
+2015/09/08 18:38:14 [router.go:886] [C] /usr/local/go/src/runtime/panic.go:12 
+2015/09/08 18:38:14 [router.go:886] [C] /Users/rick/go/src/webo/models/purchase/model.go:80 
+2015/09/08 18:38:14 [router.go:886] [C] /Users/rick/go/src/webo/models/purchase/model.go:32 
+2015/09/08 18:38:14 [router.go:886] [C] /Users/rick/go/src/webo/controllers/purchase.go:208 
+2015/09/08 18:38:14 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:401 
+2015/09/08 18:38:14 [router.go:886] [C] /usr/local/go/src/reflect/value.go:419 
+2015/09/08 18:38:14 [router.go:886] [C] /usr/local/go/src/reflect/value.go:296 
+2015/09/08 18:38:14 [router.go:886] [C] /Users/rick/go/src/github.com/astaxie/beego/router.go:803 
+2015/09/08 18:38:14 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1703 
+2015/09/08 18:38:14 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1204 
+2015/09/08 18:38:14 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:2232 
+2015/09/08 18:43:08 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/08 18:43:13 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/08 18:43:13 [model.go:46] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/08 18:43:13 [language.go:46] [E] GetLang error key:f 
+2015/09/08 18:43:13 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 18:43:13 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 18:43:13 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 18:43:13 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:22:12 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/08 19:22:17 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/08 19:22:17 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/08 19:22:17 [language.go:46] [E] GetLang error key:f 
+2015/09/08 19:22:17 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 19:22:17 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:22:17 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:22:17 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:23 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/08 19:23:23 [language.go:46] [E] GetLang error key:f 
+2015/09/08 19:23:23 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 19:23:23 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:23 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:23 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:26 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/08 19:23:26 [language.go:46] [E] GetLang error key:f 
+2015/09/08 19:23:26 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 19:23:26 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:26 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:26 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:27 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/08 19:23:27 [language.go:46] [E] GetLang error key:f 
+2015/09/08 19:23:27 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 19:23:27 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:27 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:27 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:28 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/08 19:23:28 [language.go:46] [E] GetLang error key:f 
+2015/09/08 19:23:28 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 19:23:28 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:28 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:28 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:29 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/08 19:23:29 [language.go:46] [E] GetLang error key:f 
+2015/09/08 19:23:29 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 19:23:29 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:29 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:29 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:29 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/08 19:23:29 [language.go:46] [E] GetLang error key:f 
+2015/09/08 19:23:29 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 19:23:29 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:29 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:29 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:30 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/08 19:23:30 [language.go:46] [E] GetLang error key:f 
+2015/09/08 19:23:30 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 19:23:30 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:30 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:30 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:31 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/08 19:23:31 [language.go:46] [E] GetLang error key:f 
+2015/09/08 19:23:31 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 19:23:31 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:31 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:31 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:32 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/08 19:23:32 [language.go:46] [E] GetLang error key:f 
+2015/09/08 19:23:32 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 19:23:32 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:32 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:32 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:34 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/08 19:23:34 [language.go:46] [E] GetLang error key:f 
+2015/09/08 19:23:34 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 19:23:34 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:34 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:34 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:35 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/08 19:23:35 [language.go:46] [E] GetLang error key:f 
+2015/09/08 19:23:35 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 19:23:35 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:35 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:35 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:36 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/08 19:23:36 [language.go:46] [E] GetLang error key:f 
+2015/09/08 19:23:36 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 19:23:36 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:36 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:36 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:37 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/08 19:23:37 [language.go:46] [E] GetLang error key:f 
+2015/09/08 19:23:37 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 19:23:37 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:37 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:37 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:38 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/08 19:23:38 [language.go:46] [E] GetLang error key:f 
+2015/09/08 19:23:38 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 19:23:38 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:38 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:38 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:39 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/08 19:23:39 [language.go:46] [E] GetLang error key:f 
+2015/09/08 19:23:39 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 19:23:39 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:39 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:39 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:40 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/08 19:23:40 [language.go:46] [E] GetLang error key:f 
+2015/09/08 19:23:40 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 19:23:40 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:40 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:40 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:40 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/08 19:23:40 [language.go:46] [E] GetLang error key:f 
+2015/09/08 19:23:40 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 19:23:40 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:40 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:23:40 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:31 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/08 19:25:36 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/08 19:25:37 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/08 19:25:37 [language.go:46] [E] GetLang error key:f 
+2015/09/08 19:25:37 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 19:25:37 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:37 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:37 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:38 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? ORDER BY purchase.freightprice DESC LIMIT 10  
+2015/09/08 19:25:38 [language.go:46] [E] GetLang error key:f 
+2015/09/08 19:25:38 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 19:25:38 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:38 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:38 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:39 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? ORDER BY purchase.placedate DESC LIMIT 10  
+2015/09/08 19:25:39 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 19:25:39 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:39 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:39 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:39 [language.go:46] [E] GetLang error key:f 
+2015/09/08 19:25:39 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? ORDER BY purchase.placedate ASC LIMIT 10  
+2015/09/08 19:25:39 [language.go:46] [E] GetLang error key:f 
+2015/09/08 19:25:39 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 19:25:39 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:39 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:39 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:40 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? ORDER BY purchase.requireddate DESC LIMIT 10  
+2015/09/08 19:25:40 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:40 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:40 [language.go:46] [E] GetLang error key:f 
+2015/09/08 19:25:40 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:40 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 19:25:41 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? ORDER BY purchase.requireddate ASC LIMIT 10  
+2015/09/08 19:25:41 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 19:25:41 [language.go:46] [E] GetLang error key:f 
+2015/09/08 19:25:41 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:41 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:41 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:41 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? ORDER BY purchase.requireddepartment DESC LIMIT 10  
+2015/09/08 19:25:41 [language.go:46] [E] GetLang error key:f 
+2015/09/08 19:25:41 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:41 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 19:25:41 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:41 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:42 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? ORDER BY purchase.requireddepartment ASC LIMIT 10  
+2015/09/08 19:25:42 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 19:25:42 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:42 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:42 [language.go:46] [E] GetLang error key:f 
+2015/09/08 19:25:42 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:42 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? ORDER BY purchase.orderdate ASC LIMIT 10  
+2015/09/08 19:25:42 [language.go:46] [E] GetLang error key:f 
+2015/09/08 19:25:42 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 19:25:42 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:42 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:42 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:43 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? ORDER BY purchase.orderdate DESC LIMIT 10  
+2015/09/08 19:25:43 [language.go:46] [E] GetLang error key:f 
+2015/09/08 19:25:43 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 19:25:43 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:43 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:43 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:43 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? ORDER BY purchase.predictdeliverydate DESC LIMIT 10  
+2015/09/08 19:25:43 [language.go:46] [E] GetLang error key:f 
+2015/09/08 19:25:43 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 19:25:43 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:43 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:43 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:45 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? ORDER BY purchase.name DESC LIMIT 10  
+2015/09/08 19:25:45 [language.go:46] [E] GetLang error key:f 
+2015/09/08 19:25:45 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 19:25:45 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:45 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:45 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:45 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? ORDER BY purchase.name ASC LIMIT 10  
+2015/09/08 19:25:45 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:45 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:45 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:45 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 19:25:45 [language.go:46] [E] GetLang error key:f 
+2015/09/08 19:25:46 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? ORDER BY purchase.category DESC LIMIT 10  
+2015/09/08 19:25:46 [language.go:46] [E] GetLang error key:f 
+2015/09/08 19:25:46 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 19:25:46 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:46 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:46 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:46 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? ORDER BY purchase.category ASC LIMIT 10  
+2015/09/08 19:25:46 [language.go:46] [E] GetLang error key:f 
+2015/09/08 19:25:46 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 19:25:46 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:46 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 19:25:46 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:18:46 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/08 20:18:46 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/08 20:18:46 [language.go:46] [E] GetLang error key:f 
+2015/09/08 20:18:46 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 20:18:46 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:18:46 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:18:46 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:20:42 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/08 20:20:42 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/08 20:20:42 [language.go:46] [E] GetLang error key:f 
+2015/09/08 20:20:42 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 20:20:42 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:20:42 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:20:42 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:20:54 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/08 20:20:54 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/08 20:20:54 [language.go:46] [E] GetLang error key:f 
+2015/09/08 20:20:54 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 20:20:54 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:20:54 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:20:54 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:22:34 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/08 20:22:38 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/08 20:22:38 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/08 20:22:38 [language.go:46] [E] GetLang error key:f 
+2015/09/08 20:22:38 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 20:22:38 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:22:38 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:22:38 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:23:17 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/08 20:23:17 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/08 20:23:17 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 20:23:17 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:23:17 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:23:17 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:23:47 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/08 20:23:47 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/08 20:23:47 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 20:23:47 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:23:47 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:23:47 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:24:05 [purchase.go:42] [I] UiCurList 
+2015/09/08 20:24:05 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer LIMIT 10  
+2015/09/08 20:24:05 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/08 20:24:05 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:24:05 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 20:24:05 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:24:05 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:24:05 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:26:56 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/08 20:27:00 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/08 20:27:00 [router.go:879] [C] the request url is  /ui/purchase/mycreate 
+2015/09/08 20:27:00 [router.go:880] [C] Handler crashed with error template: purchase/list.html:16:23: executing "purchase/list.html" at <.buyers>: invalid value; expected string 
+2015/09/08 20:27:00 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:401 
+2015/09/08 20:27:00 [router.go:886] [C] /usr/local/go/src/runtime/panic.go:387 
+2015/09/08 20:27:00 [router.go:886] [C] /Users/rick/go/src/github.com/astaxie/beego/router.go:811 
+2015/09/08 20:27:00 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1703 
+2015/09/08 20:27:00 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1204 
+2015/09/08 20:27:00 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:2232 
+2015/09/08 20:27:29 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/08 20:27:33 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/08 20:27:33 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/08 20:27:33 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/08 20:27:33 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 20:27:33 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:27:33 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:27:33 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:27:35 [purchase.go:42] [I] UiCurList 
+2015/09/08 20:27:35 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/08 20:27:35 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:27:35 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 20:27:35 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:27:35 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:27:35 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:27:36 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/08 20:27:36 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/08 20:27:37 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/08 20:27:38 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/08 20:27:38 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:27:38 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 20:27:38 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:27:38 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:27:38 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:27:38 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/08 20:27:39 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/08 20:27:39 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/08 20:27:40 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/08 20:27:40 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.buyer = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/08 20:27:41 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.buyer = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/08 20:27:41 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 20:27:42 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/08 20:27:42 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:27:42 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:27:42 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:27:42 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:27:42 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.buyer = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/08 20:27:42 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.buyer = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/08 20:27:43 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/08 20:27:43 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.buyer = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/08 20:27:43 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/08 20:27:44 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/08 20:27:45 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/08 20:27:45 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:27:45 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 20:27:45 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:27:45 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:27:45 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:27:45 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/08 20:27:45 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/08 20:27:46 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/08 20:27:46 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/08 20:27:47 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.buyer = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/08 20:27:47 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 20:27:47 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/08 20:27:48 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.buyer = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/08 20:27:48 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:27:48 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:27:48 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:27:48 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:27:50 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/08 20:27:50 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:27:50 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 20:27:50 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:27:50 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:27:50 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:27:51 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/08 20:27:51 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/08 20:27:51 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 20:27:51 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:27:51 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:27:51 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:49:37 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/08 20:49:42 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/08 20:49:42 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/08 20:49:42 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/08 20:49:42 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 20:49:42 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:49:42 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:49:42 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:52:08 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/08 20:52:12 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/08 20:52:12 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/08 20:52:12 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/08 20:52:12 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 20:52:12 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:52:12 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:52:12 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:52:14 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer LIMIT 10  
+2015/09/08 20:52:14 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/08 20:52:14 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:52:14 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 20:52:14 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:52:14 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:52:14 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:56:55 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/08 20:56:59 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/08 20:56:59 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/08 20:56:59 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/08 20:56:59 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 20:56:59 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:56:59 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:56:59 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:57:02 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer LIMIT 10  
+2015/09/08 20:57:02 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/08 20:57:02 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:57:02 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 20:57:02 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:57:02 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:57:02 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:58:17 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/08 20:58:20 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/08 20:58:21 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/08 20:58:21 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/08 20:58:21 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 20:58:21 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:58:21 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:58:21 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:58:29 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer LIMIT 10  
+2015/09/08 20:58:29 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/08 20:58:29 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:58:29 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 20:58:29 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:58:29 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:58:29 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:59:31 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/08 20:59:35 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/08 20:59:35 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/08 20:59:35 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/08 20:59:35 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 20:59:35 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:59:35 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:59:35 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:59:39 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer LIMIT 10  
+2015/09/08 20:59:39 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/08 20:59:39 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:59:39 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 20:59:39 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:59:39 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 20:59:39 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 21:00:33 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/08 21:00:37 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/08 21:00:37 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/08 21:00:37 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/08 21:00:37 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 21:00:37 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 21:00:37 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 21:00:37 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 21:01:18 [purchase.go:42] [I] UiCurList 
+2015/09/08 21:01:18 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/08 21:01:18 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 21:01:18 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 21:01:18 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 21:01:18 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 21:01:18 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 21:01:20 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/08 21:01:20 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/08 21:01:20 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 21:01:20 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 21:01:20 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 21:01:20 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 21:01:31 [purchase.go:42] [I] UiCurList 
+2015/09/08 21:01:31 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/08 21:01:31 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 21:01:31 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 21:01:31 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 21:01:31 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 21:01:31 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 21:01:31 [purchase.go:42] [I] UiCurList 
+2015/09/08 21:01:32 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer LIMIT 10  
+2015/09/08 21:01:32 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/08 21:01:32 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 21:01:32 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 21:01:32 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 21:01:32 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 21:01:32 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 21:01:33 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.buyer = ? LIMIT 10  
+2015/09/08 21:01:34 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.buyer = ? LIMIT 10  
+2015/09/08 21:01:35 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.buyer = ? LIMIT 10  
+2015/09/08 21:01:35 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer LIMIT 10  
+2015/09/08 21:01:35 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/08 21:01:35 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 21:01:35 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 21:01:35 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 21:01:35 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 21:01:35 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 21:01:36 [purchase.go:42] [I] UiCurList 
+2015/09/08 21:01:36 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/08 21:01:36 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 21:01:36 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 21:01:36 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 21:01:36 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 21:01:36 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 21:34:22 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/08 21:34:22 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/08 21:34:22 [language.go:46] [E] GetLang error key:fff 
+2015/09/08 21:34:22 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 21:34:22 [language.go:46] [E] GetLang error key:abc 
+2015/09/08 21:34:22 [language.go:46] [E] GetLang error key:abc 

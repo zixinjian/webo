@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"webo/controllers/ui"
 	"webo/models/svc"
-	//	"webo/models/itemDef"
 	"github.com/astaxie/beego"
 	"webo/models/itemDef"
+	"webo/models/util"
 )
 
 type UiController struct {
@@ -48,7 +48,7 @@ func (this *UiController) Add() {
 		beego.Error(fmt.Sprintf("Item %s not support", item))
 	}
 	this.Data["Service"] = "/item/add/" + item
-	this.Data["Form"] = ui.BuildAddForm(oItemDef)
+	this.Data["Form"] = ui.BuildAddForm(oItemDef, util.TUId())
 	this.Data["Onload"] = ui.BuildAddOnLoadJs(oItemDef)
 	this.TplNames = "item/add.tpl"
 }

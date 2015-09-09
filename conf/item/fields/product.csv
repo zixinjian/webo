@@ -6,6 +6,5 @@ field,category,string,类别,true,false,select,enum,pcate_1,"pcate_1,pcate_2,pca
 field,model,string,型号,true,false,text,text,,,
 field,brand,string,品牌,true,false,text,text,,,
 field,price,float,价格,true,false,money,text,,,
-field,supplierkey,string,供应商关键词,true,false,text,text,,,
+field,supplier,string,供应商,flase,false,autocomplete,text,,/item/autocomplete/supplier,
 field,detail,string,产品详情,false,false,text,text,,,
-field,doc,string,资料,false,false,text,text,,,

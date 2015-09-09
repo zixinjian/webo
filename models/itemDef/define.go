@@ -8,12 +8,19 @@ import (
 	"github.com/astaxie/beego"
 	"strconv"
 	"webo/models/s"
+	"strings"
 )
 
 type ItemDef struct {
 	Name      string  `json:name`
 	Fields    []Field `json:fields`
 	fieldMaps map[string]Field
+}
+
+type EnumValue struct {
+	Sn 		string
+	Name 	string
+	Label 	string
 }
 
 type Field struct {
@@ -24,7 +31,8 @@ type Field struct {
 	Require string      `json:require`
 	Unique  string      `json:unique`
 	Model   string      `json:model`
-	Enum    []string    `json:enum`
+	Enum    []EnumValue `json:enum`
+	Range   string      `json:range`
 	Default interface{} `json:default`
 	UiList  UiListStruct
 }
@@ -39,9 +47,9 @@ func newUiList() UiListStruct{
 	return UiListStruct{true, true, "", true}
 }
 
-var fieldSn = Field{"sn", "string", "string", "none", "false", "false", "sn", nil, "", UiListStruct{false, false, "", false}}
-var fieldCreater = Field{"creater", "string", "创建人", "none", "false", "false", "curuser", nil, "", UiListStruct{false, false, "", false}}
-var fieldCreateTime = Field{"createtime", "time", "创建时间", "none", "false", "false", "curtime", nil, "", UiListStruct{false, false, "", false}}
+var fieldSn = Field{"sn", "string", "string", "none", "false", "false", "sn", nil, "","", UiListStruct{false, false, "", false}}
+var fieldCreater = Field{"creater", "string", "创建人", "none", "false", "false", "curuser", nil, "", "", UiListStruct{false, false, "", false}}
+var fieldCreateTime = Field{"createtime", "time", "创建时间", "none", "false", "false", "curtime", nil, "", "", UiListStruct{false, false, "", false}}
 
 func (this *ItemDef) initAccDate() map[string]Field {
 	fieldMap := make(map[string]Field, len(this.Fields))
@@ -115,6 +123,9 @@ func (field *Field) GetFormValue(valueString string) (interface{}, bool) {
 			return 0, false
 		}
 	case s.TypeFloat:
+		if strings.EqualFold(strings.TrimSpace(valueString), ""){
+			return 0, false
+		}
 		value, err := strconv.ParseFloat(valueString, 64)
 		if err == nil {
 			return value, true
@@ -216,9 +227,9 @@ func init() {
 		oItemDef.initAccDate()
 		EntityDefMap[k] = oItemDef
 	}
-	//	odefd, ok := EntityDefMap["user"]
-	//	if ok {
-	//		fmt.Println("ddd", odefd.Name, odefd.GetFieldMap())
-	//	}
-	//	fmt.Println(EntityDefMap)
+	odefd, ok := EntityDefMap["product"]
+	if ok {
+		fmt.Println("ddd", odefd.Name, odefd.GetFieldMap())
+	}
+	fmt.Println(EntityDefMap)
 }

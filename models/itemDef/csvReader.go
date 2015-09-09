@@ -8,6 +8,8 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
+	"webo/models/s"
+	"webo/models/lang"
 )
 
 func ReadDefFromCsv() map[string]ItemDef {
@@ -161,6 +163,9 @@ func readItemDefCsv(fileName string) ItemDef {
 			field.Input = "text"
 		case "text", "select", "password", "date", "time", "none", "textarea", "datetime", "money":
 			field.Input = input
+		case s.Autocomplete:
+			field.Input = input
+			field.Range = strings.TrimSpace(row[9])
 		default:
 			panic(fmt.Sprintf("File:%s, row:%d input :[%s] is not vaild", fileName, ridx, input))
 		}
@@ -168,8 +173,11 @@ func readItemDefCsv(fileName string) ItemDef {
 		switch model {
 		case "":
 			field.Model = "text"
-		case "sn", "text", "password", "enum", "curtime", "curuser", "time", "date", "int":
+		case "sn", "text", "password", "curtime", "curuser", "time", "date", "int":
 			field.Model = model
+		case s.Enum:
+			field.Model = model
+			field.Enum = getEnumValue(strings.Trim(row[9], " "), field.Type)
 		default:
 			panic(fmt.Sprintf("File:%s, row:%d model :[%s] is not vaild", fileName, ridx, model))
 		}
@@ -182,7 +190,7 @@ func readItemDefCsv(fileName string) ItemDef {
 				field.Default = nil
 			}
 		}
-		field.Enum = getEnumValue(strings.Trim(row[9], " "), field.Type)
+
 		field.UiList = newUiList()
 		oItemDef.Fields = append(oItemDef.Fields, field)
 	}
@@ -190,14 +198,15 @@ func readItemDefCsv(fileName string) ItemDef {
 	return oItemDef
 }
 
-func getEnumValue(enumStr string, t string) []string {
+func getEnumValue(enumStr string, t string) []EnumValue {
 	if enumStr == "" {
 		return nil
 	}
 	enumList := strings.Split(enumStr, ",")
-	var retList []string
+	var retList []EnumValue
 	for _, v := range enumList {
-		retList = append(retList, strings.Trim(v, " "))
+		value := strings.TrimSpace(v)
+		retList = append(retList, EnumValue{value, value, lang.GetLabel(value)})
 	}
 	return retList
 }

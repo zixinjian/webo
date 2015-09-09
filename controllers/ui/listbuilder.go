@@ -4,8 +4,6 @@ import (
 	"fmt"
 	"webo/models/itemDef"
 	"strings"
-	"webo/models/lang"
-	"github.com/astaxie/beego"
 )
 
 const thFormat = `                <th data-field="%s" %s %s>%s</th>
@@ -25,18 +23,12 @@ func BuildListThs(itemDef itemDef.ItemDef) string {
 					sortable = sortable + ` data-order="desc"`
 				}
 			}
-			beego.Debug("BuildListThs", sortable)
 			th = th + fmt.Sprintf(thFormat, field.Name, visible, sortable, field.Label)
 		}
 	}
 	return th
 }
 
-//type columStruct struct {
-//	Name string
-//	Label string
-//
-//}
 const columnFormat = `	field:"%s",
 	title:"%s"`
 const optFormat = `	{field:"action",
@@ -70,7 +62,7 @@ func BuildColums(itemDef itemDef.ItemDef) string {
 			case "select":
 				srcs := []string{}
 				for _, v:= range field.Enum{
-					srcs = append(srcs, fmt.Sprintf(`{value: "%s",text: "%s"}`, v, lang.GetLabel(v)))
+					srcs = append(srcs, fmt.Sprintf(`{value: "%s",text: "%s"}`, v.Sn, v.Label))
 				}
 				column = column + fmt.Sprintf(`,editable:{type:"%s",source:[%s]}`, field.Input, strings.Join(srcs, ",\n"))
 			}

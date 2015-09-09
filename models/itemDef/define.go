@@ -35,6 +35,7 @@ type Field struct {
 	Range   string      `json:range`
 	Default interface{} `json:default`
 	UiList  UiListStruct
+	Editable bool
 }
 type UiListStruct struct {
 	Shown    bool
@@ -47,9 +48,9 @@ func newUiList() UiListStruct{
 	return UiListStruct{true, true, "", true}
 }
 
-var fieldSn = Field{"sn", "string", "string", "none", "false", "false", "sn", nil, "","", UiListStruct{false, false, "", false}}
-var fieldCreater = Field{"creater", "string", "创建人", "none", "false", "false", "curuser", nil, "", "", UiListStruct{false, false, "", false}}
-var fieldCreateTime = Field{"createtime", "time", "创建时间", "none", "false", "false", "curtime", nil, "", "", UiListStruct{false, false, "", false}}
+var fieldSn = Field{"sn", "string", "string", "none", "false", "false", "sn", nil, "","", UiListStruct{false, false, "", false}, false}
+var fieldCreater = Field{"creater", "string", "创建人", "none", "false", "false", "curuser", nil, "", "", UiListStruct{false, false, "", false}, false}
+var fieldCreateTime = Field{"createtime", "time", "创建时间", "none", "false", "false", "curtime", nil, "", "", UiListStruct{false, false, "", false}, false}
 
 func (this *ItemDef) initAccDate() map[string]Field {
 	fieldMap := make(map[string]Field, len(this.Fields))
@@ -62,7 +63,6 @@ func (this *ItemDef) initAccDate() map[string]Field {
 
 func (this *ItemDef) IsValidField(fieldName string) bool {
 	_, ok := this.fieldMaps[fieldName]
-	//	fmt.Println("ok", ok, this.fieldMaps)
 	return ok
 }
 
@@ -109,6 +109,9 @@ func (this *ItemDef) initDefault() {
 	fields[nField+1] = fieldCreater
 	fields[nField+2] = fieldCreateTime
 	this.Fields = fields
+}
+func (field *Field) IsEditable()bool{
+	return field.Editable
 }
 func (field *Field) GetFormValue(valueString string) (interface{}, bool) {
 	switch field.Type {
@@ -200,10 +203,6 @@ func (field *Field) initDefault() {
 			field.Default = ""
 		}
 	}
-}
-
-func (field * Field) IsEditable() bool{
-	return true
 }
 
 var EntityDefMap = make(map[string]ItemDef)

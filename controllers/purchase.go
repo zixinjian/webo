@@ -6,12 +6,14 @@ import (
 	"github.com/astaxie/beego"
 	"webo/models/itemDef"
 	"webo/models/svc"
-	"webo/models/util"
+	"webo/models/u"
 	"webo/models/stat"
 	"webo/models/s"
 	"strings"
-	"encoding/json"
-	"webo/models/purchase"
+	"webo/models/purchaseMgr"
+	"webo/models/t"
+	"webo/models/supplierMgr"
+	"webo/models/productMgr"
 )
 
 type PurchaseController struct {
@@ -21,7 +23,7 @@ type PurchaseController struct {
 func (this *PurchaseController) UiMyCreate() {
 	item:="purchase"
 	oItemDef, _ := itemDef.EntityDefMap[item]
-	this.Data["listUrl"] = "/ui/purchase/list?creater=curuser"
+	this.Data["listUrl"] = "/item/list/purchase?creater=curuser&godowndate"
 	this.Data["addUrl"] = "/ui/purchase/add"
 	this.Data["updateUrl"] = "/ui/purchase/update"
 	this.Data["thlist"] = ui.BuildListThs(oItemDef)
@@ -35,8 +37,12 @@ const CurListQueryParamsJs = `<script>
 </script>
 `
 const buyerHtmlFormat =`<label class="radio-inline">
-<input data-model="buyers" type="radio" name = "buyers" id="%s" value="%s"> %s
+<input data-model="buyers" type="radio" name = "buyers" id="%s" value="%s" %s> %s
 </label>
+`
+const AdminUserFormat =`<label class="radio-inline">
+                <input data-model="buyers" type="radio" name = "buyers" id="all" value="all" %s> 全部
+            </label>
 `
 func (this *PurchaseController) UiCurList() {
 	beego.Info("UiCurList")
@@ -45,24 +51,38 @@ func (this *PurchaseController) UiCurList() {
 	if !ok {
 		beego.Error(fmt.Sprintf("Item %s not support", item))
 	}
-	queryParam := svc.Params{
+	queryParam := t.Params{
 		"department":"department_purchase",
 	}
-	_, _, retMaps := svc.List("user", queryParam, svc.LimitParams{}, svc.Params{})
-	userHtml := ""
+	_, _, retMaps := svc.List(s.User, queryParam, t.LimitParams{}, t.Params{})
+
+	var allCheked string
+	role := this.GetCurRole()
+	switch role {
+	case s.RoleManager, s.RoleAdmin:
+		allCheked = "checked"
+	default:
+		allCheked = ""
+	}
+	userHtml := fmt.Sprintf(AdminUserFormat, allCheked)
+	curUserSn := this.GetCurUserSn()
 	for _, userMap := range retMaps{
 		sn, sok := userMap["sn"]
 		name, nok := userMap["name"]
 		if !(sok && nok){
 			continue
 		}
-		userHtml = userHtml + fmt.Sprintf(buyerHtmlFormat, sn, sn, name)
+		checked := ""
+		if u.IsNullStr(allCheked) && strings.EqualFold(curUserSn, sn.(string)){
+			checked = "checked"
+		}
+		userHtml = userHtml + fmt.Sprintf(buyerHtmlFormat, sn, sn, checked, name)
 	}
 	this.Data["buyers"] = userHtml
 	this.Data["queryParams"] = CurListQueryParamsJs
-	this.Data["listUrl"] = "/ui/purchase/list"
-	this.Data["addUrl"] = fmt.Sprintf("/ui/add/%s", item)
-	this.Data["updateUrl"] = "/ui/purchase/update"
+	this.Data["listUrl"] = "/item/list/purchase?godowndate"
+	this.Data["addUrl"] = ""
+	this.Data["updateUrl"] = "/ui/purchase/userupdate"
 	this.Data["thlist"] = ui.BuildListThs(oItemDef)
 	this.TplNames = "purchase/list.html"
 }
@@ -76,6 +96,8 @@ const HistoryListQueryParamsJs = `<script>
 
 func (this *PurchaseController) UiHistoryList() {
 	this.UiCurList()
+	this.Data["listUrl"] = "/item/list/purchase"
+	this.Data["updateUrl"] = "/ui/purchase/show"
 	this.Data["queryParams"] = HistoryListQueryParamsJs
 }
 
@@ -84,7 +106,7 @@ func (this *PurchaseController) UiAdd() {
 	oItemDef, _ := itemDef.EntityDefMap[item]
 	addItemDef := fillBuyerEnum(getAddPurchaseDef(oItemDef))
 	this.Data["Service"] = "/item/add/" + item
-	this.Data["Form"] = ui.BuildAddForm(addItemDef, util.TUId())
+	this.Data["Form"] = ui.BuildAddForm(addItemDef, u.TUId())
 	this.Data["Onload"] = ui.BuildAddOnLoadJs(addItemDef)
 	this.TplNames = "purchase/add.tpl"
 }
@@ -116,10 +138,10 @@ func fillBuyerEnum(oItemDef itemDef.ItemDef) itemDef.ItemDef{
 }
 
 func getBuyerEnum()[]itemDef.EnumValue{
-	queryParams := svc.Params{
+	queryParams := t.Params{
 		s.Department:"department_purchase",
 	}
-	orderParams := svc.Params{
+	orderParams := t.Params{
 		s.Name : s.Asc,
 	}
 	if code, userMaps := svc.GetItems(s.User, queryParams, orderParams); strings.EqualFold(code, stat.Success){
@@ -137,76 +159,86 @@ func getBuyerEnum()[]itemDef.EnumValue{
 }
 
 func (this *PurchaseController) UiUpdate() {
-	item:="purchase"
+	statusMap := map[string]string{}
+	this.UiUpdateWithStatus(statusMap)
+}
+func (this *PurchaseController) UiUserUpdate() {
+	statusMap := map[string]string{
+		s.Category:s.Disabled,
+		s.Product:s.Disabled,
+		s.Model:s.Disabled,
+		s.PlaceDate:s.Disabled,
+		s.Requireddate:s.Disabled,
+		s.Requireddepartment:s.Disabled,
+	}
+	this.UiUpdateWithStatus(statusMap)
+}
+func (this *PurchaseController) UiHistoryUpdate() {
+	item:=s.Purchase
 	oItemDef, _ := itemDef.EntityDefMap[item]
-	sn := this.GetString("sn")
+	statusMap := make(map[string]string, len(oItemDef.Fields))
+	for _, field := range oItemDef.Fields{
+		statusMap[field.Name] = s.Disabled
+	}
+	this.UiUpdateWithStatus(statusMap)
+}
+
+func (this *PurchaseController) UiUpdateWithStatus(statusMap map[string]string) {
+	item:=s.Purchase
+	oItemDef, _ := itemDef.EntityDefMap[item]
+	sn := this.GetString(s.Sn)
 	if sn == "" {
 		this.Ctx.WriteString(stat.ParamSnIsNone)
 		return
 	}
-	params := svc.Params{"sn": sn}
+	params := t.Params{s.Sn: sn}
 	code, oldValueMap := svc.Get(item, params)
-	if code == "success" {
+	oldValueMap = expandPurchaseMap(oldValueMap)
+	if code == stat.Success {
 		this.Data["Service"] = "/item/update/" + item
 		oItemDef = fillBuyerEnum(oItemDef)
-		this.Data["Form"] = ui.BuildUpdatedForm(oItemDef, oldValueMap)
-		this.Data["Onload"] = ui.BuildAddOnLoadJs(oItemDef)
+		this.Data["Form"] = ui.BuildUpdatedFormWithStatus(oItemDef, oldValueMap, statusMap)
+		this.Data["Onload"] = ui.BuildUpdateOnLoadJs(oItemDef)
 		this.TplNames = "purchase/update.html"
 	} else {
 		this.Ctx.WriteString(stat.ItemNotFound)
 	}
 }
 
-func (this *PurchaseController) ListWithQuery(oItemDef itemDef.ItemDef, addQueryParam svc.Params) {
-	requestBody := this.Ctx.Input.RequestBody
-	var requestMap map[string]interface{}
-	json.Unmarshal(requestBody, &requestMap)
-	beego.Debug("ListWithQuery requestMap: ", requestMap)
-
-	limitParams := this.GetLimitParamFromJsonMap(requestMap)
-	delete(requestMap, s.Limit)
-	delete(requestMap, s.Offset)
-
-	orderByParams := this.GetOrderParamFromJsonMap(requestMap)
-	delete(requestMap, s.Order)
-	delete(requestMap, s.Sort)
-
-	queryParams := this.GetQueryParamFromJsonMap(requestMap, oItemDef)
-	for k, v := range addQueryParam{
-		queryParams[k]=v
-	}
-
-	result, total, resultMaps := svc.List(oItemDef.Name, queryParams, limitParams, orderByParams)
-	retList := TransList(oItemDef, resultMaps)
-	this.Data["json"] = &TableResult{result, int64(total), retList}
+func (this *PurchaseController) List() {
+	item := s.Purchase
+	oItemDef, _ := itemDef.EntityDefMap[item]
+	queryParams, limitParams, orderByParams := this.GetParams(oItemDef)
+	result, total, resultMaps := purchaseMgr.GetPurchases(queryParams, limitParams, orderByParams)
+	this.Data["json"] = &TableResult{result, int64(total), resultMaps}
 	this.ServeJson()
 }
 
-func (this *PurchaseController) List() {
-	item := s.Purchase
-
-	requestBody := this.Ctx.Input.RequestBody
-	var requestMap map[string]interface{}
-	json.Unmarshal(requestBody, &requestMap)
-	beego.Debug("PurchaseController.List requestMap: ", requestMap)
-
-	limitParams := this.GetLimitParamFromJsonMap(requestMap)
-	delete(requestMap, s.Limit)
-	delete(requestMap, s.Offset)
-
-	orderByParams := this.GetOrderParamFromJsonMap(requestMap)
-	delete(requestMap, s.Order)
-	delete(requestMap, s.Sort)
-
-	oItemDef, _ := itemDef.EntityDefMap[item]
-	queryParams := this.GetQueryParamFromJsonMap(requestMap, oItemDef)
-	addParams := this.GetFormValues(oItemDef)
-	for k, v := range addParams{
-		queryParams[k]=v
+func expandPurchaseMap(oldMap t.ItemMap)t.ItemMap{
+	var retMap = make(t.ItemMap, 0)
+	for key, value := range oldMap {
+		retMap[strings.ToLower(key)] = value
 	}
-
-	result, total, resultMaps := purchase.GetPurchases(queryParams, limitParams, orderByParams)
-	retList := TransList(oItemDef, resultMaps)
-	this.Data["json"] = &TableResult{result, int64(total), retList}
-	this.ServeJson()
+	if userName, ok := oldMap["user_name"]; ok {
+		retMap["buyer"] = userName
+	}
+	if supplierSn, ok := retMap[s.Supplier];ok && !u.IsNullStr(supplierSn){
+		if supplierMap, sok := supplierMgr.Get(supplierSn.(string)); sok {
+			supplierKey, _ := supplierMap[s.Keyword]
+			supplierName, _:= supplierMap[s.Name]
+			retMap[s.Supplier+ s.EKey] = supplierKey.(string)
+			retMap[s.Supplier+ s.EName] = supplierName.(string)
+			retMap[s.Supplier] = supplierSn
+		}
+	}
+	if productSn, ok := retMap[s.Product];ok && !u.IsNullStr(productSn){
+		if productMap, sok := productMgr.Get(productSn.(string));sok{
+			productKey, _ := productMap[s.Keyword]
+			productName, _:= productMap[s.Name]
+			retMap[s.Product+ s.EKey] = productKey.(string)
+			retMap[s.Product+ s.EName] = productName.(string)
+			retMap[s.Product] = productSn
+		}
+	}
+	return retMap
 }

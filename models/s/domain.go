@@ -27,6 +27,9 @@ const (
 	Flag        = "flag"
 	Mark        = "mark"
 	Department  = "department"
+	PlaceDate   = "placedate"
+	Requireddate= "requireddate"
+	Requireddepartment = "requireddepartment"
 )
 
 // Field的Type定义目前支持这几种类型
@@ -37,7 +40,9 @@ const (
 )
 
 const (
-	RoleAdmin = "role_admin"
+	RoleAdmin 	= "role_admin"
+	RoleManager = "role_manager"
+	RoleUser	= "role_user"
 )
 
 const (
@@ -52,4 +57,13 @@ const (
 	Supplier = "supplier"
 	Purchase = "purchase"
 	Travel   = "travel"
+)
+
+const (
+	EKey	= "_key"
+	EName	= "_Name"
+)
+
+const (
+	Disabled = "Disabled"
 )

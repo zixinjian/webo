@@ -9,12 +9,13 @@
 <div style="padding:20px;">
     <p class="toolbar">
         <a id="add_item" class="create btn btn-primary">新建</a>
+        <!--<label class="checkbox-inline-inline"><input data-model="buyers" type="checkbox" name = "showAll" id="show_all"> 显示已入库</label>-->
     </p>
     <table id="item_table"
            data-show-refresh="true"
            data-show-columns="true"
            data-search="true"
-           data-query-params="queryParams"
+           data-row-style="rowStyle"
            data-toolbar=".toolbar">
         <thead>
             <tr>
@@ -34,12 +35,13 @@
 <script src="../../asserts/3rd/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
 <script src="../../asserts/3rd/bootstrap-table/extensions/editable/bootstrap-table-editable.js"></script>
 <script src="../../asserts/3rd/bootstrap-editable/bootstrap3-editable/js/bootstrap-editable.js"></script>
+<script src="../../asserts/3rd/moment/moment.js"></script>
+<script src="../../asserts/webo/util.js"></script>
 <script>
     var $table = $("#item_table")
     $(function(){
         $table.bootstrapTable({url:"{{.listUrl}}", method:"post", sidePagination:"server", pagination:true, height:getHeight()});
         $("#add_item").on("click", function(){
-            //console.log("click add user")
             top.showTopModal({url:"{{.addUrl}}", refreshContent:refreshContent});
         })
         $(window).resize(function () {
@@ -51,19 +53,28 @@
     function refreshContent(options){
         top.hideTopModal()
         $table.bootstrapTable("refresh")
-//        console.log("refreshs")
     }
-    function queryParams(params){
-        return params
+    function rowStyle(row, index) {
+        if(row.godowndate == ""){
+            now = moment()
+            requiredDate = moment(row.requireddate, "YYYY.MM.DD")
+            if (requiredDate.diff(now, "days") < 0){
+                return {classes: "danger"};
+            }
+            if (requiredDate.diff(now, "days") < 2 ){
+                return {classes: "warning"};
+            }
+        }
+        return {}
     }
-    function actionFormatter(value) {
+    function actionFormatter(value, row) {
         return [
             '<a class="update" href="javascript:" title="修改" style="margin-right: 5px;"><i class="glyphicon glyphicon-edit"></i></a>',
+            wbSprintf('<a class="file" href="/static/files/purchase/%s" target="_blank" title="附件" data-toggle="poplayer" data-placement="bottom" data-url="/static"><i class="glyphicon glyphicon-file"></i></a>', row.sn),
         ].join('');
     }
     window.actionEvents = {
         'click .update': function (e, value, row) {
-            console.log("value", value, row)
             top.showTopModal({url:"{{.updateUrl}}?sn=" + row.sn, refreshContent:refreshContent});
         }
     }

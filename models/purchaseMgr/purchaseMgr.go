@@ -1,4 +1,4 @@
-package purchase
+package purchaseMgr
 import (
 	"webo/models/s"
 	"webo/models/svc"
@@ -9,12 +9,15 @@ import (
 	"fmt"
 	"strconv"
 	"webo/models/supplierMgr"
+	"webo/models/t"
+	"webo/models/u"
+	"webo/models/productMgr"
 )
 
 
 const purchaseListSql  = "SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer"
 const purchaseCountSql = "SELECT COUNT(purchase.id) as count FROM purchase, user WHERE user.sn = purchase.buyer"
-func GetPurchases(queryParams svc.Params, limitParams map[string]int64, orderBy svc.Params) (string, int64, []map[string]interface{}) {
+func GetPurchases(queryParams t.Params, limitParams t.LimitParams, orderBy t.Params) (string, int64, []map[string]interface{}) {
 	beego.Debug("purchase.GetPurchases:", queryParams, limitParams, orderBy)
 	surface := s.Purchase
 	sqlBuilder := svc.NewSqlBuilder()
@@ -53,20 +56,7 @@ func GetPurchaseList(sqlBuilder *svc.SqlBuilder)(string, []map[string]interface{
 	if err == nil {
 		retList = make([]map[string]interface{}, len(resultMaps))
 		for idx, oldMap := range resultMaps {
-			var retMap = make(map[string]interface{}, 0)
-			for key, value := range oldMap {
-				retMap[strings.ToLower(key)] = value
-			}
-			if userName, ok := oldMap["user_name"]; ok {
-				retMap["buyer"] = userName
-			}
-			if supplierSn, ok := retMap[s.Supplier];ok && !strings.EqualFold(supplierSn.(string), ""){
-				if supplierMap, sok := supplierMgr.Get(supplierSn.(string));sok{
-					supplier, _ := supplierMap[s.Name]
-					retMap[s.Supplier] = supplier.(string)
-				}
-			}
-			retList[idx] = retMap
+			retList[idx] = transPurchaseMap(oldMap)
 		}
 		return stat.Success, retList
 	}
@@ -90,4 +80,27 @@ func GetPurchaseCount(sqlBuilder *svc.SqlBuilder) int64{
 		}
 	}
 	return -1
+}
+
+func transPurchaseMap(oldMap orm.Params)t.ItemMap{
+	var retMap = make(t.ItemMap, 0)
+	for key, value := range oldMap {
+		retMap[strings.ToLower(key)] = value
+	}
+	if userName, ok := oldMap["user_name"]; ok {
+		retMap["buyer"] = userName
+	}
+	if supplierSn, ok := retMap[s.Supplier];ok && !u.IsNullStr(supplierSn){
+		if supplierMap, sok := supplierMgr.Get(supplierSn.(string));sok{
+			supplier, _ := supplierMap[s.Name]
+			retMap[s.Supplier] = supplier.(string)
+		}
+	}
+	if productSn, ok := retMap[s.Product];ok && !u.IsNullStr(productSn){
+		if productMap, sok := productMgr.Get(productSn.(string));sok{
+			product, _ := productMap[s.Name]
+			retMap[s.Product] = product.(string)
+		}
+	}
+	return retMap
 }

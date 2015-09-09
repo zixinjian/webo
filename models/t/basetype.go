@@ -1,4 +1,6 @@
-package svc
+package t
+
+type ItemMap map[string]interface{}
 
 type Params map[string]interface{}
 type LimitParams map[string]int64

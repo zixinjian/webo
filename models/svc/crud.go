@@ -10,14 +10,15 @@ import (
 	"webo/models/itemDef"
 	"webo/models/s"
 	"webo/models/stat"
-	"webo/models/util"
+	"webo/models/u"
+	"webo/models/t"
 )
 
-func GetItems(item string, queryParams Params, orderBy Params) (string, []map[string]interface{}) {
-	code, retMaps := Query(item, queryParams, LimitParams{}, orderBy)
+func GetItems(item string, queryParams t.Params, orderBy t.Params) (string, []map[string]interface{}) {
+	code, retMaps := Query(item, queryParams, t.LimitParams{}, orderBy)
 	return code, retMaps
 }
-func Query(entity string, queryParams Params, limitParams map[string]int64, orderBy Params) (string, []map[string]interface{}) {
+func Query(entity string, queryParams t.Params, limitParams map[string]int64, orderBy t.Params) (string, []map[string]interface{}) {
 	sqlBuilder := NewSqlBuilder()
 	sqlBuilder.QueryTable(entity)
 	for k, v := range queryParams {
@@ -58,12 +59,12 @@ func Query(entity string, queryParams Params, limitParams map[string]int64, orde
 	}
 	return stat.Failed, retList
 }
-func List(entity string, queryParams Params, limitParams LimitParams, orderBy Params) (string, int64, []map[string]interface{}) {
+func List(entity string, queryParams t.Params, limitParams t.LimitParams, orderBy t.Params) (string, int64, []map[string]interface{}) {
 	total := Count(entity, queryParams)
 	code, retMaps := Query(entity, queryParams, limitParams, orderBy)
 	return code, total, retMaps
 }
-func Count(entity string, params Params) int64 {
+func Count(entity string, params t.Params) int64 {
 	sqlBuilder := NewSqlBuilder()
 	sqlBuilder.QueryTable(entity)
 	for k, v := range params {
@@ -87,15 +88,15 @@ func Count(entity string, params Params) int64 {
 	return -1
 }
 
-func Get(entity string, params Params) (string, map[string]interface{}) {
-	_, retList := Query(entity, params, map[string]int64{}, Params{})
+func Get(entity string, params t.Params) (string, map[string]interface{}) {
+	_, retList := Query(entity, params, map[string]int64{}, t.Params{})
 	if len(retList) > 0 {
 		return stat.Success, retList[0]
 	}
 	return stat.ItemNotFound, nil
 }
 
-func Add(entity string, params Params) (string, string) {
+func Add(entity string, params t.Params) (string, string) {
 
 	Q := "'"
 	oEntityDef, ok := itemDef.EntityDefMap[entity]
@@ -117,7 +118,7 @@ func Add(entity string, params Params) (string, string) {
 			continue
 		}
 		if field.Model == s.Sn {
-			values = append(values, util.TUId())
+			values = append(values, u.TUId())
 			continue
 		}
 		if field.Model == s.CurTime {
@@ -150,7 +151,7 @@ func Add(entity string, params Params) (string, string) {
 	return stat.UnKnownFailed, ""
 }
 
-func Update(entity string, params Params) (string, string) {
+func Update(entity string, params t.Params) (string, string) {
 	Q := "'"
 	oEntityDef, ok := itemDef.EntityDefMap[entity]
 	if !ok {

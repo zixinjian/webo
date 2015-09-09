@@ -1,4 +1,5 @@
-package util
+package u
+import "strings"
 
 
 func StrJoin(strs []string, joint string)string{
@@ -10,4 +11,8 @@ func StrJoin(strs []string, joint string)string{
 		ret = ret + s
 	}
 	return ret
+}
+
+func IsNullStr(str interface{}) bool{
+	return strings.EqualFold(str.(string), "")
 }

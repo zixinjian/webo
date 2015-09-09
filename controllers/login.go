@@ -5,6 +5,7 @@ import (
 	"github.com/astaxie/beego"
 	"webo/models/rpc"
 	"webo/models/svc"
+	"webo/models/t"
 )
 
 type LoginController struct {
@@ -27,7 +28,7 @@ func (this *LoginController) Post() {
 	if username == "" || password == "" {
 		loginRet.Result = "请输入用户名和密码！"
 	}
-	params := svc.Params{
+	params := t.Params{
 		"username":username,
 		"password":password,
 	}

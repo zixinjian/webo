@@ -6,7 +6,10 @@ import (
 	"webo/controllers/ui"
 	"webo/models/itemDef"
 	"webo/models/svc"
-	"webo/models/util"
+	"webo/models/u"
+	"webo/models/t"
+	"webo/models/stat"
+	"webo/models/s"
 )
 
 type UiController struct {
@@ -16,11 +19,15 @@ type UiController struct {
 func (this *UiController) List() {
 	item, ok := this.Ctx.Input.Params[":hi"]
 	if !ok {
-		beego.Error("Item param is none")
+		beego.Error(stat.ParamItemError)
+		this.Ctx.WriteString(stat.ParamItemError)
+		return
 	}
 	oItemDef, ok := itemDef.EntityDefMap[item]
 	if !ok {
-		beego.Error(fmt.Sprintf("Item %s not support", item))
+		beego.Error(fmt.Sprintf("Item %s not define", item))
+		this.Ctx.WriteString(stat.ItemNotDefine)
+		return
 	}
 	this.Data["item"] = item
 	this.Data["listUrl"] = fmt.Sprintf("/item/list/%s", item)
@@ -31,19 +38,20 @@ func (this *UiController) List() {
 }
 
 func (this *UiController) Add() {
-	//	fmt.Println("requestBosy", this.Ctx.Input.RequestBody)
-	//	fmt.Println("params", this.Ctx.Input.Params)
-	//	fmt.Println("requestBosy", this.Input()["id"])
 	item, ok := this.Ctx.Input.Params[":hi"]
 	if !ok {
-		beego.Error("Item param is none")
+		beego.Error(stat.ParamItemError)
+		this.Ctx.WriteString(stat.ParamItemError)
+		return
 	}
 	oItemDef, ok := itemDef.EntityDefMap[item]
 	if !ok {
-		beego.Error(fmt.Sprintf("Item %s not support", item))
+		beego.Error(fmt.Sprintf("Item %s not define", item))
+		this.Ctx.WriteString(stat.ItemNotDefine)
+		return
 	}
 	this.Data["Service"] = "/item/add/" + item
-	this.Data["Form"] = ui.BuildAddForm(oItemDef, util.TUId())
+	this.Data["Form"] = ui.BuildAddForm(oItemDef, u.TUId())
 	this.Data["Onload"] = ui.BuildAddOnLoadJs(oItemDef)
 	this.TplNames = "item/add.tpl"
 }
@@ -51,26 +59,31 @@ func (this *UiController) Add() {
 func (this *UiController) Update() {
 	item, ok := this.Ctx.Input.Params[":hi"]
 	if !ok {
-		beego.Error("Item param is none")
+		beego.Error(stat.ParamItemError)
+		this.Ctx.WriteString(stat.ParamItemError)
+		return
 	}
 	oItemDef, ok := itemDef.EntityDefMap[item]
 	if !ok {
-		beego.Error(fmt.Sprintf("Item %s not support", item))
+		beego.Error(fmt.Sprintf("Item %s not define", item))
+		this.Ctx.WriteString(stat.ItemNotDefine)
+		return
 	}
-	sn := this.GetString("sn")
+	sn := this.GetString(s.Sn)
 	if sn == "" {
-		fmt.Println("sn is none")
+		beego.Error("ui.Update", stat.ParamSnIsNone)
+		this.Ctx.WriteString(stat.ParamSnIsNone)
+		return
 	}
-	//	fmt.Println("sn", sn)
-	params := svc.Params{"sn": sn}
+	params := t.Params{s.Sn: sn}
 	code, oldValueMap := svc.Get(item, params)
 	if code == "success" {
 		//		fmt.Println("oldValue", oldValueMap)
 		this.Data["Service"] = "/item/update/" + item
 		this.Data["Form"] = ui.BuildUpdatedForm(oItemDef, oldValueMap)
-		this.Data["Onload"] = ui.BuildAddOnLoadJs(oItemDef)
+		this.Data["Onload"] = ui.BuildUpdateOnLoadJs(oItemDef)
 		this.TplNames = "item/update.html"
 	} else {
-		this.Ctx.WriteString("Id not found")
+		this.Ctx.WriteString(stat.ItemNotFound)
 	}
 }

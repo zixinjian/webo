@@ -10,13 +10,14 @@ import (
 	"webo/models/s"
 	"webo/models/stat"
 	"webo/models/svc"
+	"webo/models/t"
 )
 
 type ItemController struct {
 	BaseController
 }
 
-func (this *ItemController) ListWithQuery(oItemDef itemDef.ItemDef, addQueryParam svc.Params) {
+func (this *ItemController) ListWithQuery(oItemDef itemDef.ItemDef, addQueryParam t.Params) {
 	requestBody := this.Ctx.Input.RequestBody
 	var requestMap map[string]interface{}
 	json.Unmarshal(requestBody, &requestMap)
@@ -170,15 +171,15 @@ func (this *ItemController) BaseAutocomplete(item string, keyword string) {
 		this.ServeJson()
 		return
 	}
-	limitParams := svc.LimitParams{
-		s.Limit: svc.LimitDefault,
+	limitParams := t.LimitParams{
+		s.Limit: t.LimitDefault,
 	}
 
-	orderByParams := svc.Params{
+	orderByParams := t.Params{
 		s.Keyword: s.Asc,
 	}
 
-	queryParams := svc.Params{
+	queryParams := t.Params{
 		"%" + s.Keyword: term,
 	}
 	_, _, resultMaps := svc.List(oItemDef.Name, queryParams, limitParams, orderByParams)

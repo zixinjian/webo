@@ -2,10 +2,8 @@ package controllers
 
 import (
 	"github.com/astaxie/beego"
-	//    "encoding/json"
 	"fmt"
-//	"webo/models/rpc"
-	"webo/models/svc"
+	"webo/models/t"
 )
 
 type ServiceController struct {
@@ -34,19 +32,15 @@ func (this *ServiceController) Post() {
 	}
 	service, ok := inputMap["service"]
 	if !ok {
-		this.Data["json"] = &svc.Results{"no_service_param", ""}
+		this.Data["json"] = &t.Results{"no_service_param", ""}
 	}
 	fmt.Println("service", service)
 	method, ok := inputMap["method"]
 	if !ok {
-		this.Data["json"] = &svc.Results{"no_method_param", ""}
+		this.Data["json"] = &t.Results{"no_method_param", ""}
 	}
 	fmt.Println("method", method)
 	this.Data["json"] = "{\"ObjectId\":\"abcdID\"}"
 	this.ServeJson()
 }
 
-//func list(entity string, params svc.SvcParams) svc.SvcResults {
-//	result, total, retList := svc.List(entity, params, nil)
-//	return svc.SvcResults{result, rpc.TableResult{total, retList}}
-//}

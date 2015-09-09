@@ -35,8 +35,7 @@ func init() {
 	beego.Router("/ui/product/add", &controllers.ProductController{}, "*:UiAdd")
 	beego.Router("/ui/product/list", &controllers.ProductController{}, "*:UiList")
 	beego.Router("/ui/product/update", &controllers.ProductController{}, "*:UiUpdate")
-	beego.Router("/product/list", &controllers.ProductController{}, "*:List")
-	//	beego.Router("ui/product/Autocomplete", &controllers.ProductController{}, "*:AutocompleteList")
+	beego.Router("/item/product/list", &controllers.ProductController{}, "*:List")
 
 	//采购管理
 	beego.Router("/ui/purchase/mycreate", &controllers.PurchaseController{}, "*:UiMyCreate")
@@ -44,7 +43,9 @@ func init() {
 	beego.Router("/ui/purchase/history", &controllers.PurchaseController{}, "*:UiHistoryList")
 	beego.Router("/ui/purchase/add", &controllers.PurchaseController{}, "*:UiAdd")
 	beego.Router("/ui/purchase/update", &controllers.PurchaseController{}, "*:UiUpdate")
-	beego.Router("/ui/purchase/list", &controllers.PurchaseController{}, "*:List")
+	beego.Router("/ui/purchase/userupdate", &controllers.PurchaseController{}, "*:UiUserUpdate")
+	beego.Router("/ui/purchase/show", &controllers.PurchaseController{}, "*:UiHistoryUpdate")
+	beego.Router("/item/list/purchase", &controllers.PurchaseController{}, "*:List")
 
 	//出差管理
 	beego.Router("/travel", &controllers.MainController{}, "*:Travel")

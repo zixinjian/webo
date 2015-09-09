@@ -6,7 +6,7 @@ import (
 	"webo/models/itemDef"
 	"github.com/astaxie/beego"
 	"webo/models/s"
-	"webo/models/util"
+	"webo/models/u"
 )
 
 type SqlBuilder struct {
@@ -111,7 +111,7 @@ func (this *SqlBuilder) GetCountSql() string {
 	return sql
 }
 func (this *SqlBuilder) GetSql() string {
-	tableStr := util.StrJoin(this.table, ",")
+	tableStr := u.StrJoin(this.table, ",")
 	sql := fmt.Sprintf("SELECT * FROM %s ", tableStr)
 
 	return this.GetCustomerSql(sql)
@@ -146,7 +146,7 @@ func (this *SqlBuilder) GetCustomerSql(sql string) string {
 }
 
 func (this *SqlBuilder) GetFrom() string{
-	tableStr := util.StrJoin(this.table, ",")
+	tableStr := u.StrJoin(this.table, ",")
 	return fmt.Sprintf("FROM %s ", tableStr)
 }
 

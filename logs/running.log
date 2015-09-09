@@ -702,3 +702,1046 @@
 2015/09/09 10:56:02 [language.go:46] [E] GetLang error key:abc 
 2015/09/09 10:56:02 [language.go:46] [E] GetLang error key:abc 
 2015/09/09 10:56:02 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:03:01 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 11:03:02 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/09 11:03:02 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/09 11:03:02 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 11:03:02 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:03:02 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:03:02 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:04:30 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 11:04:30 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/09 11:04:30 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/09 11:04:30 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 11:04:30 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:04:30 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:04:30 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:05:19 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 11:05:19 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/09 11:05:19 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/09 11:05:19 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 11:05:19 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:05:19 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:05:19 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:09:02 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 11:09:06 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 11:09:06 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/09 11:09:06 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/09 11:09:06 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 11:09:06 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:09:06 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:09:06 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:11:19 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 11:11:22 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/09 11:11:28 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 11:11:29 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/09 11:11:29 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/09 11:11:29 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 11:11:29 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:11:29 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:11:29 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:12:28 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 11:12:31 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 11:12:32 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/09 11:12:32 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/09 11:12:32 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 11:12:32 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:12:32 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:12:32 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:15:12 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 11:15:16 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 11:15:16 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/09 11:15:16 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/09 11:15:16 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 11:15:16 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:15:16 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:15:16 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:15:32 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 11:15:36 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 11:15:36 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/09 11:15:36 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/09 11:15:36 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 11:15:36 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:15:36 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:15:36 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:17:06 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 11:17:09 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 11:17:10 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/09 11:17:10 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/09 11:17:10 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 11:17:10 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:17:10 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:17:10 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:17:29 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 11:17:33 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 11:17:33 [baseController.go:41] [E] BaseController.GetFormValues: value = none creater 
+2015/09/09 11:17:33 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/09 11:17:33 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/09 11:17:33 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 11:17:33 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:17:33 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:17:33 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:18:41 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 11:18:44 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 11:18:44 [baseController.go:39] [E] BaseController.GetFormValues: value = none sn 
+2015/09/09 11:18:44 [baseController.go:39] [E] BaseController.GetFormValues: value = none category 
+2015/09/09 11:18:44 [baseController.go:39] [E] BaseController.GetFormValues: value = none name 
+2015/09/09 11:18:44 [baseController.go:39] [E] BaseController.GetFormValues: value = none model 
+2015/09/09 11:18:44 [baseController.go:39] [E] BaseController.GetFormValues: value = none supplier 
+2015/09/09 11:18:44 [baseController.go:39] [E] BaseController.GetFormValues: value = none buyer 
+2015/09/09 11:18:44 [baseController.go:39] [E] BaseController.GetFormValues: value = none num 
+2015/09/09 11:18:44 [baseController.go:39] [E] BaseController.GetFormValues: value = none unitprice 
+2015/09/09 11:18:44 [baseController.go:39] [E] BaseController.GetFormValues: value = none totalprice 
+2015/09/09 11:18:44 [baseController.go:39] [E] BaseController.GetFormValues: value = none freightprice 
+2015/09/09 11:18:44 [baseController.go:39] [E] BaseController.GetFormValues: value = none placedate 
+2015/09/09 11:18:44 [baseController.go:39] [E] BaseController.GetFormValues: value = none requireddate 
+2015/09/09 11:18:44 [baseController.go:39] [E] BaseController.GetFormValues: value = none requireddepartment 
+2015/09/09 11:18:44 [baseController.go:39] [E] BaseController.GetFormValues: value = none orderdate 
+2015/09/09 11:18:44 [baseController.go:39] [E] BaseController.GetFormValues: value = none predictdeliverydate 
+2015/09/09 11:18:44 [baseController.go:39] [E] BaseController.GetFormValues: value = none actualdeliverydate 
+2015/09/09 11:18:44 [baseController.go:39] [E] BaseController.GetFormValues: value = none appointmentarrivaldate 
+2015/09/09 11:18:44 [baseController.go:39] [E] BaseController.GetFormValues: value = none godowndate 
+2015/09/09 11:18:44 [baseController.go:39] [E] BaseController.GetFormValues: value = none changelog 
+2015/09/09 11:18:44 [baseController.go:39] [E] BaseController.GetFormValues: value = none mark 
+2015/09/09 11:18:44 [baseController.go:39] [E] BaseController.GetFormValues: value = none creater 
+2015/09/09 11:18:44 [baseController.go:39] [E] BaseController.GetFormValues: value = none createtime 
+2015/09/09 11:18:44 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/09 11:18:44 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/09 11:18:44 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 11:18:44 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:18:44 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:18:44 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:21:25 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 11:21:30 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 11:21:30 [baseController.go:39] [E] BaseController.GetFormValues: value sn 
+2015/09/09 11:21:30 [baseController.go:39] [E] BaseController.GetFormValues: value category 
+2015/09/09 11:21:30 [baseController.go:39] [E] BaseController.GetFormValues: value name 
+2015/09/09 11:21:30 [baseController.go:39] [E] BaseController.GetFormValues: value model 
+2015/09/09 11:21:30 [baseController.go:39] [E] BaseController.GetFormValues: value supplier 
+2015/09/09 11:21:30 [baseController.go:39] [E] BaseController.GetFormValues: value buyer 
+2015/09/09 11:21:30 [baseController.go:39] [E] BaseController.GetFormValues: value num 
+2015/09/09 11:21:30 [baseController.go:39] [E] BaseController.GetFormValues: value unitprice 
+2015/09/09 11:21:30 [baseController.go:39] [E] BaseController.GetFormValues: value totalprice 
+2015/09/09 11:21:30 [baseController.go:39] [E] BaseController.GetFormValues: value freightprice 
+2015/09/09 11:21:30 [baseController.go:39] [E] BaseController.GetFormValues: value placedate 
+2015/09/09 11:21:30 [baseController.go:39] [E] BaseController.GetFormValues: value requireddate 
+2015/09/09 11:21:30 [baseController.go:39] [E] BaseController.GetFormValues: value requireddepartment 
+2015/09/09 11:21:30 [baseController.go:39] [E] BaseController.GetFormValues: value orderdate 
+2015/09/09 11:21:30 [baseController.go:39] [E] BaseController.GetFormValues: value predictdeliverydate 
+2015/09/09 11:21:30 [baseController.go:39] [E] BaseController.GetFormValues: value actualdeliverydate 
+2015/09/09 11:21:30 [baseController.go:39] [E] BaseController.GetFormValues: value appointmentarrivaldate 
+2015/09/09 11:21:30 [baseController.go:39] [E] BaseController.GetFormValues: value godowndate 
+2015/09/09 11:21:30 [baseController.go:39] [E] BaseController.GetFormValues: value changelog 
+2015/09/09 11:21:30 [baseController.go:39] [E] BaseController.GetFormValues: value mark 
+2015/09/09 11:21:30 [baseController.go:39] [E] BaseController.GetFormValues: value creater 
+2015/09/09 11:21:30 [baseController.go:41] [E] BaseController.GetFormValues: d = none creater 
+2015/09/09 11:21:30 [baseController.go:39] [E] BaseController.GetFormValues: value createtime 
+2015/09/09 11:21:30 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/09 11:21:30 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/09 11:21:30 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 11:21:30 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:21:30 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:21:30 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:23:00 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 11:23:03 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 11:23:03 [baseController.go:42] [E] BaseController.GetFormValues: value sn 
+2015/09/09 11:23:03 [baseController.go:42] [E] BaseController.GetFormValues: value category 
+2015/09/09 11:23:03 [baseController.go:42] [E] BaseController.GetFormValues: value name 
+2015/09/09 11:23:03 [baseController.go:42] [E] BaseController.GetFormValues: value model 
+2015/09/09 11:23:03 [baseController.go:42] [E] BaseController.GetFormValues: value supplier 
+2015/09/09 11:23:03 [baseController.go:42] [E] BaseController.GetFormValues: value buyer 
+2015/09/09 11:23:03 [baseController.go:42] [E] BaseController.GetFormValues: value num 
+2015/09/09 11:23:03 [baseController.go:42] [E] BaseController.GetFormValues: value unitprice 
+2015/09/09 11:23:03 [baseController.go:42] [E] BaseController.GetFormValues: value totalprice 
+2015/09/09 11:23:03 [baseController.go:42] [E] BaseController.GetFormValues: value freightprice 
+2015/09/09 11:23:03 [baseController.go:42] [E] BaseController.GetFormValues: value placedate 
+2015/09/09 11:23:03 [baseController.go:42] [E] BaseController.GetFormValues: value requireddate 
+2015/09/09 11:23:03 [baseController.go:42] [E] BaseController.GetFormValues: value requireddepartment 
+2015/09/09 11:23:03 [baseController.go:42] [E] BaseController.GetFormValues: value orderdate 
+2015/09/09 11:23:03 [baseController.go:42] [E] BaseController.GetFormValues: value predictdeliverydate 
+2015/09/09 11:23:03 [baseController.go:42] [E] BaseController.GetFormValues: value actualdeliverydate 
+2015/09/09 11:23:03 [baseController.go:42] [E] BaseController.GetFormValues: value appointmentarrivaldate 
+2015/09/09 11:23:03 [baseController.go:42] [E] BaseController.GetFormValues: value godowndate 
+2015/09/09 11:23:03 [baseController.go:42] [E] BaseController.GetFormValues: value changelog 
+2015/09/09 11:23:03 [baseController.go:42] [E] BaseController.GetFormValues: value mark 
+2015/09/09 11:23:03 [baseController.go:42] [E] BaseController.GetFormValues: value creater 
+2015/09/09 11:23:03 [baseController.go:44] [E] BaseController.GetFormValues: d = none creater 
+2015/09/09 11:23:03 [baseController.go:42] [E] BaseController.GetFormValues: value createtime 
+2015/09/09 11:23:03 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/09 11:23:03 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/09 11:23:03 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 11:23:03 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:23:03 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:23:03 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:23:49 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 11:23:53 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 11:23:53 [baseController.go:42] [E] BaseController.GetFormValues: value sn 
+2015/09/09 11:23:53 [baseController.go:42] [E] BaseController.GetFormValues: value category 
+2015/09/09 11:23:53 [baseController.go:42] [E] BaseController.GetFormValues: value name 
+2015/09/09 11:23:53 [baseController.go:42] [E] BaseController.GetFormValues: value model 
+2015/09/09 11:23:53 [baseController.go:42] [E] BaseController.GetFormValues: value supplier 
+2015/09/09 11:23:53 [baseController.go:42] [E] BaseController.GetFormValues: value buyer 
+2015/09/09 11:23:53 [baseController.go:42] [E] BaseController.GetFormValues: value num 
+2015/09/09 11:23:53 [baseController.go:42] [E] BaseController.GetFormValues: value unitprice 
+2015/09/09 11:23:53 [baseController.go:42] [E] BaseController.GetFormValues: value totalprice 
+2015/09/09 11:23:53 [baseController.go:42] [E] BaseController.GetFormValues: value freightprice 
+2015/09/09 11:23:53 [baseController.go:42] [E] BaseController.GetFormValues: value placedate 
+2015/09/09 11:23:53 [baseController.go:42] [E] BaseController.GetFormValues: value requireddate 
+2015/09/09 11:23:53 [baseController.go:42] [E] BaseController.GetFormValues: value requireddepartment 
+2015/09/09 11:23:53 [baseController.go:42] [E] BaseController.GetFormValues: value orderdate 
+2015/09/09 11:23:53 [baseController.go:42] [E] BaseController.GetFormValues: value predictdeliverydate 
+2015/09/09 11:23:53 [baseController.go:42] [E] BaseController.GetFormValues: value actualdeliverydate 
+2015/09/09 11:23:53 [baseController.go:42] [E] BaseController.GetFormValues: value appointmentarrivaldate 
+2015/09/09 11:23:53 [baseController.go:42] [E] BaseController.GetFormValues: value godowndate 
+2015/09/09 11:23:53 [baseController.go:42] [E] BaseController.GetFormValues: value changelog 
+2015/09/09 11:23:53 [baseController.go:42] [E] BaseController.GetFormValues: value mark 
+2015/09/09 11:23:53 [baseController.go:42] [E] BaseController.GetFormValues: value creater 
+2015/09/09 11:23:53 [baseController.go:44] [E] BaseController.GetFormValues: d = none creater 
+2015/09/09 11:23:53 [baseController.go:42] [E] BaseController.GetFormValues: value createtime 
+2015/09/09 11:23:53 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/09 11:23:53 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/09 11:23:53 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 11:23:53 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:23:53 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:23:53 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:24:09 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 11:24:12 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 11:24:12 [baseController.go:43] [E] BaseController.GetFormValues: value sn 
+2015/09/09 11:24:12 [baseController.go:43] [E] BaseController.GetFormValues: value category 
+2015/09/09 11:24:12 [baseController.go:43] [E] BaseController.GetFormValues: value name 
+2015/09/09 11:24:12 [baseController.go:43] [E] BaseController.GetFormValues: value model 
+2015/09/09 11:24:12 [baseController.go:43] [E] BaseController.GetFormValues: value supplier 
+2015/09/09 11:24:12 [baseController.go:43] [E] BaseController.GetFormValues: value buyer 
+2015/09/09 11:24:12 [baseController.go:43] [E] BaseController.GetFormValues: value num 
+2015/09/09 11:24:12 [baseController.go:43] [E] BaseController.GetFormValues: value unitprice 
+2015/09/09 11:24:12 [baseController.go:43] [E] BaseController.GetFormValues: value totalprice 
+2015/09/09 11:24:12 [baseController.go:43] [E] BaseController.GetFormValues: value freightprice 
+2015/09/09 11:24:12 [baseController.go:43] [E] BaseController.GetFormValues: value placedate 
+2015/09/09 11:24:12 [baseController.go:43] [E] BaseController.GetFormValues: value requireddate 
+2015/09/09 11:24:12 [baseController.go:43] [E] BaseController.GetFormValues: value requireddepartment 
+2015/09/09 11:24:12 [baseController.go:43] [E] BaseController.GetFormValues: value orderdate 
+2015/09/09 11:24:12 [baseController.go:43] [E] BaseController.GetFormValues: value predictdeliverydate 
+2015/09/09 11:24:12 [baseController.go:43] [E] BaseController.GetFormValues: value actualdeliverydate 
+2015/09/09 11:24:12 [baseController.go:43] [E] BaseController.GetFormValues: value appointmentarrivaldate 
+2015/09/09 11:24:12 [baseController.go:43] [E] BaseController.GetFormValues: value godowndate 
+2015/09/09 11:24:12 [baseController.go:43] [E] BaseController.GetFormValues: value changelog 
+2015/09/09 11:24:12 [baseController.go:43] [E] BaseController.GetFormValues: value mark 
+2015/09/09 11:24:12 [baseController.go:43] [E] BaseController.GetFormValues: value creater 
+2015/09/09 11:24:12 [baseController.go:45] [E] BaseController.GetFormValues: d = none creater 
+2015/09/09 11:24:12 [baseController.go:43] [E] BaseController.GetFormValues: value createtime 
+2015/09/09 11:24:12 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/09 11:24:12 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/09 11:24:12 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 11:24:12 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:24:12 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:24:12 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:24:55 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 11:24:58 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 11:24:59 [baseController.go:43] [E] BaseController.GetFormValues: value sn 
+2015/09/09 11:24:59 [baseController.go:43] [E] BaseController.GetFormValues: value category 
+2015/09/09 11:24:59 [baseController.go:43] [E] BaseController.GetFormValues: value name 
+2015/09/09 11:24:59 [baseController.go:43] [E] BaseController.GetFormValues: value model 
+2015/09/09 11:24:59 [baseController.go:43] [E] BaseController.GetFormValues: value supplier 
+2015/09/09 11:24:59 [baseController.go:43] [E] BaseController.GetFormValues: value buyer 
+2015/09/09 11:24:59 [baseController.go:43] [E] BaseController.GetFormValues: value num 
+2015/09/09 11:24:59 [baseController.go:43] [E] BaseController.GetFormValues: value unitprice 
+2015/09/09 11:24:59 [baseController.go:43] [E] BaseController.GetFormValues: value totalprice 
+2015/09/09 11:24:59 [baseController.go:43] [E] BaseController.GetFormValues: value freightprice 
+2015/09/09 11:24:59 [baseController.go:43] [E] BaseController.GetFormValues: value placedate 
+2015/09/09 11:24:59 [baseController.go:43] [E] BaseController.GetFormValues: value requireddate 
+2015/09/09 11:24:59 [baseController.go:43] [E] BaseController.GetFormValues: value requireddepartment 
+2015/09/09 11:24:59 [baseController.go:43] [E] BaseController.GetFormValues: value orderdate 
+2015/09/09 11:24:59 [baseController.go:43] [E] BaseController.GetFormValues: value predictdeliverydate 
+2015/09/09 11:24:59 [baseController.go:43] [E] BaseController.GetFormValues: value actualdeliverydate 
+2015/09/09 11:24:59 [baseController.go:43] [E] BaseController.GetFormValues: value appointmentarrivaldate 
+2015/09/09 11:24:59 [baseController.go:43] [E] BaseController.GetFormValues: value godowndate 
+2015/09/09 11:24:59 [baseController.go:43] [E] BaseController.GetFormValues: value changelog 
+2015/09/09 11:24:59 [baseController.go:43] [E] BaseController.GetFormValues: value mark 
+2015/09/09 11:24:59 [baseController.go:43] [E] BaseController.GetFormValues: value creater 
+2015/09/09 11:24:59 [baseController.go:45] [E] BaseController.GetFormValues: d = none creater 
+2015/09/09 11:24:59 [baseController.go:43] [E] BaseController.GetFormValues: value createtime 
+2015/09/09 11:24:59 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/09 11:24:59 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/09 11:24:59 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 11:24:59 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:24:59 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:24:59 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:28:34 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 11:28:38 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 11:28:38 [baseController.go:41] [E] BaseController.GetFormValues: value creater 
+2015/09/09 11:28:38 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/09 11:28:38 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/09 11:28:38 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 11:28:38 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:28:38 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:28:38 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:30:05 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 11:30:08 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 11:30:09 [baseController.go:41] [E] BaseController.GetFormValues: value creater 
+2015/09/09 11:30:09 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/09 11:30:09 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/09 11:30:09 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 11:30:09 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:30:09 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:30:09 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:31:29 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 11:31:33 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 11:31:33 [baseController.go:42] [E] BaseController.GetFormValues: value creater 
+2015/09/09 11:31:33 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/09 11:31:33 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/09 11:31:33 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 11:31:33 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:31:33 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:31:33 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:33:06 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 11:33:09 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 11:33:09 [baseController.go:42] [E] BaseController.GetFormValues: value godowndate 
+2015/09/09 11:33:09 [baseController.go:42] [E] BaseController.GetFormValues: value creater 
+2015/09/09 11:33:09 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.creater = ? LIMIT 10  
+2015/09/09 11:33:09 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 11:33:09 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:33:09 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:33:09 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:42:08 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 11:42:12 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 11:42:12 [baseController.go:66] [E] BaseController.GetFormValues: value godowndate 
+2015/09/09 11:42:12 [baseController.go:66] [E] BaseController.GetFormValues: value creater 
+2015/09/09 11:42:12 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.creater = ?  
+2015/09/09 11:42:12 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 11:42:12 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:42:12 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 11:42:12 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:18:01 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 14:18:01 [baseController.go:66] [E] BaseController.GetFormValues: value creater 
+2015/09/09 14:18:01 [baseController.go:66] [E] BaseController.GetFormValues: value godowndate 
+2015/09/09 14:18:01 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ?  
+2015/09/09 14:18:01 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 14:18:01 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:18:01 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:18:01 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:20:51 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 14:20:52 [baseController.go:66] [E] BaseController.GetFormValues: value creater 
+2015/09/09 14:20:52 [baseController.go:66] [E] BaseController.GetFormValues: value godowndate 
+2015/09/09 14:20:52 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ?  
+2015/09/09 14:20:52 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 14:20:52 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:20:52 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:20:52 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:21:26 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 14:21:26 [baseController.go:66] [E] BaseController.GetFormValues: value creater 
+2015/09/09 14:21:26 [baseController.go:66] [E] BaseController.GetFormValues: value godowndate 
+2015/09/09 14:21:26 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.creater = ?  
+2015/09/09 14:21:26 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 14:21:26 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:21:26 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:21:26 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:22:08 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 14:22:09 [baseController.go:66] [E] BaseController.GetFormValues: value creater 
+2015/09/09 14:22:09 [baseController.go:66] [E] BaseController.GetFormValues: value godowndate 
+2015/09/09 14:22:09 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ?  
+2015/09/09 14:22:09 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 14:22:09 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:22:09 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:22:09 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:23:57 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 14:23:57 [baseController.go:66] [E] BaseController.GetFormValues: value creater 
+2015/09/09 14:23:57 [baseController.go:66] [E] BaseController.GetFormValues: value godowndate 
+2015/09/09 14:23:57 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ?  
+2015/09/09 14:23:57 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 14:23:57 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:23:57 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:23:57 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:24:03 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 14:24:03 [baseController.go:66] [E] BaseController.GetFormValues: value godowndate 
+2015/09/09 14:24:03 [baseController.go:66] [E] BaseController.GetFormValues: value creater 
+2015/09/09 14:24:03 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ?  
+2015/09/09 14:24:03 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 14:24:03 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:24:03 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:24:03 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:24:32 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 14:24:32 [baseController.go:66] [E] BaseController.GetFormValues: value creater 
+2015/09/09 14:24:32 [baseController.go:66] [E] BaseController.GetFormValues: value godowndate 
+2015/09/09 14:24:32 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ?  
+2015/09/09 14:24:32 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 14:24:32 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:24:32 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:24:32 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:24:57 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 14:24:57 [baseController.go:66] [E] BaseController.GetFormValues: value creater 
+2015/09/09 14:24:57 [baseController.go:66] [E] BaseController.GetFormValues: value godowndate 
+2015/09/09 14:24:57 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ?  
+2015/09/09 14:24:57 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 14:24:57 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:24:57 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:24:57 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:25:36 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 14:25:36 [baseController.go:66] [E] BaseController.GetFormValues: value creater 
+2015/09/09 14:25:36 [baseController.go:66] [E] BaseController.GetFormValues: value godowndate 
+2015/09/09 14:25:36 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ?  
+2015/09/09 14:25:36 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 14:25:36 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:25:36 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:25:36 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:27:44 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 14:27:44 [baseController.go:66] [E] BaseController.GetFormValues: value creater 
+2015/09/09 14:27:44 [baseController.go:66] [E] BaseController.GetFormValues: value godowndate 
+2015/09/09 14:27:44 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ?  
+2015/09/09 14:27:44 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 14:27:44 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:27:44 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:27:44 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:30:45 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 14:30:45 [baseController.go:66] [E] BaseController.GetFormValues: value creater 
+2015/09/09 14:30:45 [baseController.go:66] [E] BaseController.GetFormValues: value godowndate 
+2015/09/09 14:30:45 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.creater = ?  
+2015/09/09 14:30:45 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 14:30:45 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:30:45 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:30:45 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:30:59 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 14:31:00 [baseController.go:66] [E] BaseController.GetFormValues: value creater 
+2015/09/09 14:31:00 [baseController.go:66] [E] BaseController.GetFormValues: value godowndate 
+2015/09/09 14:31:00 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ?  
+2015/09/09 14:31:00 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 14:31:00 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:31:00 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:31:00 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:31:42 [baseController.go:66] [E] BaseController.GetFormValues: value category 
+2015/09/09 14:31:42 [baseController.go:66] [E] BaseController.GetFormValues: value unitprice 
+2015/09/09 14:31:42 [baseController.go:66] [E] BaseController.GetFormValues: value requireddepartment 
+2015/09/09 14:31:42 [baseController.go:66] [E] BaseController.GetFormValues: value requireddate 
+2015/09/09 14:31:42 [baseController.go:66] [E] BaseController.GetFormValues: value orderdate 
+2015/09/09 14:31:42 [baseController.go:66] [E] BaseController.GetFormValues: value sn 
+2015/09/09 14:31:42 [baseController.go:66] [E] BaseController.GetFormValues: value model 
+2015/09/09 14:31:42 [baseController.go:66] [E] BaseController.GetFormValues: value supplier 
+2015/09/09 14:31:42 [baseController.go:66] [E] BaseController.GetFormValues: value godowndate 
+2015/09/09 14:31:42 [baseController.go:66] [E] BaseController.GetFormValues: value name 
+2015/09/09 14:31:42 [baseController.go:66] [E] BaseController.GetFormValues: value num 
+2015/09/09 14:31:42 [baseController.go:66] [E] BaseController.GetFormValues: value predictdeliverydate 
+2015/09/09 14:31:42 [baseController.go:66] [E] BaseController.GetFormValues: value totalprice 
+2015/09/09 14:31:42 [baseController.go:66] [E] BaseController.GetFormValues: value actualdeliverydate 
+2015/09/09 14:31:42 [baseController.go:66] [E] BaseController.GetFormValues: value appointmentarrivaldate 
+2015/09/09 14:31:42 [baseController.go:66] [E] BaseController.GetFormValues: value mark 
+2015/09/09 14:31:42 [baseController.go:66] [E] BaseController.GetFormValues: value freightprice 
+2015/09/09 14:31:42 [baseController.go:66] [E] BaseController.GetFormValues: value buyer 
+2015/09/09 14:31:42 [baseController.go:66] [E] BaseController.GetFormValues: value changelog 
+2015/09/09 14:31:42 [baseController.go:66] [E] BaseController.GetFormValues: value placedate 
+2015/09/09 14:31:42 [baseController.go:66] [E] BaseController.GetFormValues: value godowndate 
+2015/09/09 14:31:42 [baseController.go:66] [E] BaseController.GetFormValues: value creater 
+2015/09/09 14:31:42 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ?  
+2015/09/09 14:31:42 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 14:31:42 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:31:42 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:31:42 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:32:16 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 14:32:16 [baseController.go:66] [E] BaseController.GetFormValues: value creater 
+2015/09/09 14:32:16 [baseController.go:66] [E] BaseController.GetFormValues: value godowndate 
+2015/09/09 14:32:16 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ?  
+2015/09/09 14:32:16 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 14:32:16 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:32:16 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 14:32:16 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 15:04:36 [purchase.go:42] [I] UiCurList 
+2015/09/09 15:04:36 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer  
+2015/09/09 15:04:36 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/09 15:04:36 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 15:04:36 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 15:04:36 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 15:04:36 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 15:04:36 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 15:05:31 [baseController.go:66] [E] BaseController.GetFormValues: value creater 
+2015/09/09 15:05:31 [baseController.go:66] [E] BaseController.GetFormValues: value godowndate 
+2015/09/09 15:05:31 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ?  
+2015/09/09 15:05:31 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 15:05:31 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 15:05:31 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 15:05:31 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 15:05:33 [purchase.go:42] [I] UiCurList 
+2015/09/09 15:05:33 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer  
+2015/09/09 15:05:33 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/09 15:05:33 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 15:05:33 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 15:05:33 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 15:05:33 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 15:05:33 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 15:05:33 [baseController.go:66] [E] BaseController.GetFormValues: value creater 
+2015/09/09 15:05:33 [baseController.go:66] [E] BaseController.GetFormValues: value godowndate 
+2015/09/09 15:05:33 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ?  
+2015/09/09 15:05:33 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 15:05:33 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 15:05:33 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 15:05:33 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 15:06:04 [purchase.go:42] [I] UiCurList 
+2015/09/09 15:06:04 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer  
+2015/09/09 15:06:04 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/09 15:06:04 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 15:06:04 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 15:06:04 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 15:06:04 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 15:06:04 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 15:06:28 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 15:06:28 [baseController.go:66] [E] BaseController.GetFormValues: value creater 
+2015/09/09 15:06:28 [baseController.go:66] [E] BaseController.GetFormValues: value godowndate 
+2015/09/09 15:06:28 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ?  
+2015/09/09 15:06:28 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 15:06:28 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 15:06:28 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 15:06:28 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 15:14:38 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 15:14:42 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 15:14:42 [baseController.go:65] [E] BaseController.GetFormValues: value creater 
+2015/09/09 15:14:42 [baseController.go:65] [E] BaseController.GetFormValues: value godowndate 
+2015/09/09 15:14:42 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ?  
+2015/09/09 15:14:42 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 15:14:42 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 15:14:42 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 15:14:42 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 15:35:21 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 15:36:04 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 15:36:09 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 15:36:10 [baseController.go:65] [E] BaseController.GetFormValues: value creater 
+2015/09/09 15:36:10 [baseController.go:65] [E] BaseController.GetFormValues: value godowndate 
+2015/09/09 15:36:10 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ?  
+2015/09/09 15:36:10 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 15:36:10 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 15:36:10 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 15:36:10 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 15:37:33 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 15:37:33 [baseController.go:65] [E] BaseController.GetFormValues: value creater 
+2015/09/09 15:37:33 [baseController.go:65] [E] BaseController.GetFormValues: value godowndate 
+2015/09/09 15:37:33 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.creater = ?  
+2015/09/09 15:37:33 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 15:37:33 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 15:37:33 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 15:37:33 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 15:37:43 [baseController.go:65] [E] BaseController.GetFormValues: value supplier 
+2015/09/09 15:37:43 [baseController.go:65] [E] BaseController.GetFormValues: value sn 
+2015/09/09 15:37:43 [baseController.go:65] [E] BaseController.GetFormValues: value category 
+2015/09/09 15:37:43 [baseController.go:65] [E] BaseController.GetFormValues: value model 
+2015/09/09 15:37:43 [baseController.go:65] [E] BaseController.GetFormValues: value name 
+2015/09/09 15:37:43 [baseController.go:65] [E] BaseController.GetFormValues: value price 
+2015/09/09 15:37:43 [baseController.go:65] [E] BaseController.GetFormValues: value brand 
+2015/09/09 15:37:43 [baseController.go:65] [E] BaseController.GetFormValues: value detail 
+2015/09/09 15:37:43 [baseController.go:65] [E] BaseController.GetFormValues: value keyword 
+2015/09/09 15:37:49 [baseController.go:65] [E] BaseController.GetFormValues: value godowndate 
+2015/09/09 15:37:49 [baseController.go:65] [E] BaseController.GetFormValues: value creater 
+2015/09/09 15:37:49 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.creater = ?  
+2015/09/09 15:37:49 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 15:37:49 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 15:37:49 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 15:37:49 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 15:38:06 [baseController.go:65] [E] BaseController.GetFormValues: value creater 
+2015/09/09 15:38:06 [baseController.go:65] [E] BaseController.GetFormValues: value godowndate 
+2015/09/09 15:38:06 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ?  
+2015/09/09 15:38:06 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 15:38:06 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 15:38:06 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 15:38:06 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 16:03:17 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 16:03:21 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 16:03:22 [baseController.go:65] [E] BaseController.GetFormValues: value creater 
+2015/09/09 16:03:22 [baseController.go:65] [E] BaseController.GetFormValues: value godowndate 
+2015/09/09 16:03:22 [model.go:48] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ?  
+2015/09/09 16:03:22 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 16:03:22 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 16:03:22 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 16:03:22 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 16:03:31 [baseController.go:65] [E] BaseController.GetFormValues: value model 
+2015/09/09 16:03:31 [baseController.go:65] [E] BaseController.GetFormValues: value price 
+2015/09/09 16:03:31 [baseController.go:65] [E] BaseController.GetFormValues: value brand 
+2015/09/09 16:03:31 [baseController.go:65] [E] BaseController.GetFormValues: value keyword 
+2015/09/09 16:03:31 [baseController.go:65] [E] BaseController.GetFormValues: value supplier 
+2015/09/09 16:03:31 [baseController.go:65] [E] BaseController.GetFormValues: value name 
+2015/09/09 16:03:31 [baseController.go:65] [E] BaseController.GetFormValues: value category 
+2015/09/09 16:03:31 [baseController.go:65] [E] BaseController.GetFormValues: value detail 
+2015/09/09 16:03:31 [baseController.go:65] [E] BaseController.GetFormValues: value sn 
+2015/09/09 16:04:24 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 16:05:01 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 16:05:04 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 16:05:04 [model.go:48] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.creater = ?  
+2015/09/09 16:05:04 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 16:05:04 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 16:05:04 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 16:05:04 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 16:06:28 [model.go:48] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ?  
+2015/09/09 16:06:28 [language.go:46] [E] GetLang error key:test 
+2015/09/09 16:06:28 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 16:06:28 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 16:06:28 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 16:08:06 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 16:18:52 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 16:18:52 [model.go:48] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.creater = ?  
+2015/09/09 16:18:52 [language.go:46] [E] GetLang error key:test 
+2015/09/09 16:18:52 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 16:18:52 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 16:18:52 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 16:19:15 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 16:19:19 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 16:19:19 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ?  
+2015/09/09 16:20:34 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 16:20:38 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 16:20:38 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.creater = ?  
+2015/09/09 16:21:28 [purchase.go:43] [I] UiCurList 
+2015/09/09 16:21:28 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer  
+2015/09/09 16:23:16 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 16:23:20 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ?  
+2015/09/09 16:23:20 [purchase.go:43] [I] UiCurList 
+2015/09/09 16:23:20 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ?  
+2015/09/09 16:23:22 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 16:23:23 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.creater = ?  
+2015/09/09 16:23:24 [purchase.go:43] [I] UiCurList 
+2015/09/09 16:23:24 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ?  
+2015/09/09 16:23:27 [purchase.go:43] [I] UiCurList 
+2015/09/09 16:23:27 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ?  
+2015/09/09 16:23:29 [purchase.go:43] [I] UiCurList 
+2015/09/09 16:23:29 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ?  
+2015/09/09 16:23:30 [purchase.go:43] [I] UiCurList 
+2015/09/09 16:23:30 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ?  
+2015/09/09 16:23:32 [purchase.go:43] [I] UiCurList 
+2015/09/09 16:23:32 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ?  
+2015/09/09 16:23:48 [purchase.go:43] [I] UiCurList 
+2015/09/09 16:23:49 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ?  
+2015/09/09 16:25:00 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 16:25:04 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 16:25:04 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.creater = ?  
+2015/09/09 16:25:07 [purchase.go:43] [I] UiCurList 
+2015/09/09 16:25:07 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ?  
+2015/09/09 16:25:07 [purchase.go:43] [I] UiCurList 
+2015/09/09 16:25:07 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer  
+2015/09/09 16:26:57 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 16:27:00 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 16:27:00 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ?  
+2015/09/09 16:27:02 [purchase.go:43] [I] UiCurList 
+2015/09/09 16:27:02 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ?  
+2015/09/09 16:27:03 [purchase.go:43] [I] UiCurList 
+2015/09/09 16:27:03 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer  
+2015/09/09 16:27:21 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 16:27:37 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 16:27:40 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 16:27:40 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ?  
+2015/09/09 16:27:48 [purchase.go:43] [I] UiCurList 
+2015/09/09 16:27:48 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ?  
+2015/09/09 16:27:49 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.creater = ?  
+2015/09/09 16:27:50 [purchase.go:43] [I] UiCurList 
+2015/09/09 16:27:50 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ?  
+2015/09/09 16:27:50 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.creater = ?  
+2015/09/09 16:27:51 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ?  
+2015/09/09 16:27:52 [purchase.go:43] [I] UiCurList 
+2015/09/09 16:27:52 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ?  
+2015/09/09 16:27:53 [purchase.go:43] [I] UiCurList 
+2015/09/09 16:27:53 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer  
+2015/09/09 16:27:56 [staticfile.go:61] [W] Can't find the file: static/files/purchase/20150907151558000 stat static/files/purchase/20150907151558000: no such file or directory 
+2015/09/09 16:28:00 [purchase.go:43] [I] UiCurList 
+2015/09/09 16:28:00 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ?  
+2015/09/09 16:28:01 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ?  
+2015/09/09 16:28:02 [purchase.go:43] [I] UiCurList 
+2015/09/09 16:28:02 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ?  
+2015/09/09 16:28:04 [staticfile.go:61] [W] Can't find the file: static/files/purchase/20150908180812000 stat static/files/purchase/20150908180812000: no such file or directory 
+2015/09/09 16:29:14 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 16:29:18 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 16:29:18 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.creater = ?  
+2015/09/09 16:29:19 [purchase.go:43] [I] UiCurList 
+2015/09/09 16:29:19 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ?  
+2015/09/09 16:29:20 [purchase.go:43] [I] UiCurList 
+2015/09/09 16:29:20 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer  
+2015/09/09 16:29:21 [purchase.go:43] [I] UiCurList 
+2015/09/09 16:29:22 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ?  
+2015/09/09 16:29:22 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.creater = ?  
+2015/09/09 16:32:48 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 16:32:49 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ?  
+2015/09/09 16:33:03 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.creater = ?  
+2015/09/09 16:33:05 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 16:33:05 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ?  
+2015/09/09 16:33:08 [staticfile.go:61] [W] Can't find the file: static/files/purchase/20150908180812000 stat static/files/purchase/20150908180812000: no such file or directory 
+2015/09/09 16:33:16 [purchase.go:43] [I] UiCurList 
+2015/09/09 16:33:16 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ?  
+2015/09/09 16:33:36 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.creater = ?  
+2015/09/09 16:33:37 [purchase.go:43] [I] UiCurList 
+2015/09/09 16:33:37 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ?  
+2015/09/09 16:34:03 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 16:34:04 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ?  
+2015/09/09 16:34:05 [purchase.go:43] [I] UiCurList 
+2015/09/09 16:34:05 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ?  
+2015/09/09 16:34:05 [purchase.go:43] [I] UiCurList 
+2015/09/09 16:34:05 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer  
+2015/09/09 16:34:06 [purchase.go:43] [I] UiCurList 
+2015/09/09 16:34:06 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ?  
+2015/09/09 16:34:06 [purchase.go:43] [I] UiCurList 
+2015/09/09 16:34:07 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ?  
+2015/09/09 16:34:07 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.creater = ?  
+2015/09/09 16:34:08 [purchase.go:43] [I] UiCurList 
+2015/09/09 16:34:08 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ?  
+2015/09/09 16:34:08 [purchase.go:43] [I] UiCurList 
+2015/09/09 16:34:08 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer  
+2015/09/09 16:34:09 [purchase.go:43] [I] UiCurList 
+2015/09/09 16:34:09 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ?  
+2015/09/09 16:34:10 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ?  
+2015/09/09 16:34:10 [purchase.go:43] [I] UiCurList 
+2015/09/09 16:34:10 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ?  
+2015/09/09 16:34:11 [purchase.go:43] [I] UiCurList 
+2015/09/09 16:34:11 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer  
+2015/09/09 16:34:12 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer  
+2015/09/09 16:34:12 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer  
+2015/09/09 16:34:13 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer  
+2015/09/09 16:34:13 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer  
+2015/09/09 16:34:13 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer  
+2015/09/09 16:34:14 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer  
+2015/09/09 16:34:15 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer  
+2015/09/09 16:34:16 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer  
+2015/09/09 16:34:16 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer  
+2015/09/09 16:34:17 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer  
+2015/09/09 16:34:17 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer  
+2015/09/09 16:34:19 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer  
+2015/09/09 16:34:20 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer  
+2015/09/09 16:34:20 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer  
+2015/09/09 16:34:21 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer  
+2015/09/09 16:34:21 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer  
+2015/09/09 16:34:22 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer  
+2015/09/09 16:34:23 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer  
+2015/09/09 16:34:23 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer  
+2015/09/09 16:34:24 [purchase.go:43] [I] UiCurList 
+2015/09/09 16:34:24 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ?  
+2015/09/09 16:34:25 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ?  
+2015/09/09 16:34:26 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ?  
+2015/09/09 16:34:26 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ?  
+2015/09/09 16:34:26 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ?  
+2015/09/09 16:34:27 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ?  
+2015/09/09 16:34:27 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ?  
+2015/09/09 16:34:27 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ?  
+2015/09/09 16:34:28 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ?  
+2015/09/09 16:34:29 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ?  
+2015/09/09 16:35:05 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ?  
+2015/09/09 16:36:55 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ?  
+2015/09/09 16:38:21 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 16:38:25 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 16:38:26 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.creater = ? LIMIT 10  
+2015/09/09 16:38:27 [purchase.go:43] [I] UiCurList 
+2015/09/09 16:38:27 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 16:38:28 [purchase.go:43] [I] UiCurList 
+2015/09/09 16:38:28 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer LIMIT 10  
+2015/09/09 16:38:30 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.buyer = ? LIMIT 10  
+2015/09/09 16:38:31 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.buyer = ? LIMIT 10  
+2015/09/09 16:38:31 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.buyer = ? LIMIT 10  
+2015/09/09 16:38:32 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.buyer = ? LIMIT 10  
+2015/09/09 16:38:33 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.buyer = ? LIMIT 10  
+2015/09/09 16:38:34 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.buyer = ? LIMIT 10  
+2015/09/09 16:38:34 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.buyer = ? LIMIT 10  
+2015/09/09 16:38:35 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.buyer = ? LIMIT 10  
+2015/09/09 16:38:35 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.buyer = ? LIMIT 10  
+2015/09/09 16:38:37 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.buyer = ? LIMIT 10  
+2015/09/09 16:38:38 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.buyer = ? LIMIT 10  
+2015/09/09 16:38:39 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.buyer = ? LIMIT 10  
+2015/09/09 16:38:40 [purchase.go:43] [I] UiCurList 
+2015/09/09 16:38:40 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 16:38:42 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/09 16:38:42 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/09 16:38:44 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/09 16:38:44 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/09 16:38:46 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/09 16:38:46 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/09 16:38:47 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/09 16:38:48 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/09 16:38:49 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.buyer = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 16:38:49 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/09 16:52:41 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 16:52:46 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 16:52:46 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 16:52:48 [purchase.go:47] [I] UiCurList 
+2015/09/09 16:52:48 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 16:52:50 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 16:52:51 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.buyer = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 16:52:52 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/09 16:52:53 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/09 16:52:53 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 16:52:56 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 16:52:56 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 16:52:58 [purchase.go:47] [I] UiCurList 
+2015/09/09 16:52:58 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 16:52:59 [purchase.go:47] [I] UiCurList 
+2015/09/09 16:52:59 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer LIMIT 10  
+2015/09/09 16:53:00 [purchase.go:47] [I] UiCurList 
+2015/09/09 16:53:00 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 16:53:01 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.creater = ? LIMIT 10  
+2015/09/09 16:53:02 [purchase.go:47] [I] UiCurList 
+2015/09/09 16:53:02 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 16:53:04 [purchase.go:47] [I] UiCurList 
+2015/09/09 16:53:05 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer LIMIT 10  
+2015/09/09 16:53:05 [purchase.go:47] [I] UiCurList 
+2015/09/09 16:53:05 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 16:53:06 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.creater = ? LIMIT 10  
+2015/09/09 16:53:06 [purchase.go:47] [I] UiCurList 
+2015/09/09 16:53:06 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 16:53:07 [purchase.go:47] [I] UiCurList 
+2015/09/09 16:53:07 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer LIMIT 10  
+2015/09/09 16:53:43 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 16:53:43 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 16:53:44 [purchase.go:47] [I] UiCurList 
+2015/09/09 16:53:44 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 16:54:11 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 16:54:11 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.creater = ? LIMIT 10  
+2015/09/09 16:54:14 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 16:54:14 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 16:54:19 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 16:54:22 [main.go:30] [I] User:admin login as role:role_admin 
+2015/09/09 16:54:22 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.creater = ? LIMIT 10  
+2015/09/09 16:55:04 [main.go:30] [I] User:admin login as role:role_admin 
+2015/09/09 16:55:05 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 16:55:09 [purchase.go:47] [I] UiCurList 
+2015/09/09 16:55:09 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 16:55:11 [purchase.go:47] [I] UiCurList 
+2015/09/09 16:55:11 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer LIMIT 10  
+2015/09/09 16:55:13 [purchase.go:47] [I] UiCurList 
+2015/09/09 16:55:13 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer LIMIT 10  
+2015/09/09 16:55:14 [purchase.go:47] [I] UiCurList 
+2015/09/09 16:55:14 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 16:55:14 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 16:55:15 [purchase.go:47] [I] UiCurList 
+2015/09/09 16:55:15 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 16:55:16 [purchase.go:47] [I] UiCurList 
+2015/09/09 16:55:16 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer LIMIT 10  
+2015/09/09 16:55:17 [purchase.go:47] [I] UiCurList 
+2015/09/09 16:55:17 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer LIMIT 10  
+2015/09/09 16:55:17 [purchase.go:47] [I] UiCurList 
+2015/09/09 16:55:17 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 16:56:07 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 16:56:10 [main.go:30] [I] User:admin login as role:role_admin 
+2015/09/09 16:56:10 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 16:56:13 [purchase.go:47] [I] UiCurList 
+2015/09/09 16:56:13 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 16:56:49 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 16:56:58 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 16:57:01 [main.go:30] [I] User:admin login as role:role_admin 
+2015/09/09 16:57:02 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.creater = ? LIMIT 10  
+2015/09/09 16:57:03 [purchase.go:47] [I] UiCurList 
+2015/09/09 16:57:03 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 16:57:04 [purchase.go:47] [I] UiCurList 
+2015/09/09 16:57:04 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer LIMIT 10  
+2015/09/09 16:57:05 [purchase.go:47] [I] UiCurList 
+2015/09/09 16:57:05 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 16:57:06 [purchase.go:47] [I] UiCurList 
+2015/09/09 16:57:06 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer LIMIT 10  
+2015/09/09 16:57:07 [purchase.go:47] [I] UiCurList 
+2015/09/09 16:57:07 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 16:57:07 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 16:57:08 [purchase.go:47] [I] UiCurList 
+2015/09/09 16:57:08 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 16:57:08 [purchase.go:47] [I] UiCurList 
+2015/09/09 16:57:08 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer LIMIT 10  
+2015/09/09 16:57:22 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 16:57:25 [main.go:30] [I] User:admin login as role:role_admin 
+2015/09/09 16:57:25 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 16:57:27 [purchase.go:47] [I] UiCurList 
+2015/09/09 16:57:27 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 16:57:28 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 16:57:28 [purchase.go:47] [I] UiCurList 
+2015/09/09 16:57:28 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 16:57:28 [purchase.go:47] [I] UiCurList 
+2015/09/09 16:57:29 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer LIMIT 10  
+2015/09/09 16:57:31 [purchase.go:47] [I] UiCurList 
+2015/09/09 16:57:31 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer LIMIT 10  
+2015/09/09 16:57:31 [purchase.go:47] [I] UiCurList 
+2015/09/09 16:57:31 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 16:57:31 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.creater = ? LIMIT 10  
+2015/09/09 16:57:32 [purchase.go:47] [I] UiCurList 
+2015/09/09 16:57:32 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 16:57:59 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 16:58:02 [purchase.go:47] [I] UiCurList 
+2015/09/09 16:58:02 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer LIMIT 10  
+2015/09/09 16:58:30 [purchase.go:47] [I] UiCurList 
+2015/09/09 16:58:30 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 16:58:55 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 16:59:05 [purchase.go:47] [I] UiCurList 
+2015/09/09 16:59:05 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer LIMIT 10  
+2015/09/09 16:59:10 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.creater = ? LIMIT 10  
+2015/09/09 17:00:10 [purchase.go:47] [I] UiCurList 
+2015/09/09 17:00:10 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:00:11 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:00:12 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:00:13 [purchase.go:47] [I] UiCurList 
+2015/09/09 17:00:13 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:00:13 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:00:16 [purchase.go:47] [I] UiCurList 
+2015/09/09 17:00:16 [purchase.go:47] [I] UiCurList 
+2015/09/09 17:00:16 [purchase.go:47] [I] UiCurList 
+2015/09/09 17:00:16 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer LIMIT 10  
+2015/09/09 17:00:17 [purchase.go:47] [I] UiCurList 
+2015/09/09 17:00:17 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:00:18 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:00:18 [purchase.go:47] [I] UiCurList 
+2015/09/09 17:00:18 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:00:18 [purchase.go:47] [I] UiCurList 
+2015/09/09 17:00:19 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer LIMIT 10  
+2015/09/09 17:00:19 [purchase.go:47] [I] UiCurList 
+2015/09/09 17:00:19 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:00:19 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.creater = ? LIMIT 10  
+2015/09/09 17:00:19 [purchase.go:47] [I] UiCurList 
+2015/09/09 17:00:20 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:00:20 [purchase.go:47] [I] UiCurList 
+2015/09/09 17:00:20 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer LIMIT 10  
+2015/09/09 17:01:38 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.creater = ? LIMIT 10  
+2015/09/09 17:09:00 [main.go:30] [I] User:admin login as role:role_admin 
+2015/09/09 17:09:00 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:09:02 [purchase.go:47] [I] UiCurList 
+2015/09/09 17:09:02 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:09:50 [main.go:30] [I] User:admin login as role:role_admin 
+2015/09/09 17:09:51 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:09:57 [purchase.go:47] [I] UiCurList 
+2015/09/09 17:09:57 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:10:42 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 17:10:45 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:10:46 [purchase.go:47] [I] UiCurList 
+2015/09/09 17:10:46 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:10:47 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.creater = ? LIMIT 10  
+2015/09/09 17:10:48 [main.go:30] [I] User:admin login as role:role_admin 
+2015/09/09 17:10:48 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:13:12 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 17:13:19 [main.go:30] [I] User:admin login as role:role_admin 
+2015/09/09 17:13:19 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:13:42 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:17:03 [main.go:30] [I] User:admin login as role:role_admin 
+2015/09/09 17:17:04 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:17:16 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 17:17:20 [main.go:30] [I] User:admin login as role:role_admin 
+2015/09/09 17:17:20 [model.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:21:02 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 17:26:24 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 17:26:28 [main.go:30] [I] User:admin login as role:role_admin 
+2015/09/09 17:26:28 [purchaseMgr.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:26:35 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 17:26:38 [main.go:30] [I] User:admin login as role:role_admin 
+2015/09/09 17:26:38 [purchaseMgr.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:26:43 [purchase.go:47] [I] UiCurList 
+2015/09/09 17:26:43 [purchaseMgr.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:26:45 [purchaseMgr.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.creater = ? LIMIT 10  
+2015/09/09 17:26:45 [purchase.go:47] [I] UiCurList 
+2015/09/09 17:26:45 [purchaseMgr.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:26:46 [purchaseMgr.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.creater = ? LIMIT 10  
+2015/09/09 17:27:26 [purchaseMgr.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.creater = ? LIMIT 10  
+2015/09/09 17:27:47 [purchaseMgr.go:49] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:28:30 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 17:28:34 [main.go:30] [I] User:admin login as role:role_admin 
+2015/09/09 17:28:34 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.creater = ? LIMIT 10  
+2015/09/09 17:30:36 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 17:30:40 [main.go:30] [I] User:admin login as role:role_admin 
+2015/09/09 17:30:40 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:31:14 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:32:06 [purchase.go:48] [I] UiCurList 
+2015/09/09 17:32:06 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:32:12 [purchase.go:48] [I] UiCurList 
+2015/09/09 17:32:12 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer LIMIT 10  
+2015/09/09 17:33:25 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 17:33:28 [main.go:30] [I] User:admin login as role:role_admin 
+2015/09/09 17:33:28 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:33:30 [purchase.go:48] [I] UiCurList 
+2015/09/09 17:33:30 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer LIMIT 10  
+2015/09/09 17:33:32 [staticfile.go:61] [W] Can't find the file: static/files/purchase/20150907151558000 stat static/files/purchase/20150907151558000: no such file or directory 
+2015/09/09 17:33:58 [main.go:30] [I] User:admin login as role:role_admin 
+2015/09/09 17:33:59 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.creater = ? LIMIT 10  
+2015/09/09 17:34:00 [purchase.go:48] [I] UiCurList 
+2015/09/09 17:34:00 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:34:00 [purchase.go:48] [I] UiCurList 
+2015/09/09 17:34:00 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:34:01 [purchase.go:48] [I] UiCurList 
+2015/09/09 17:34:01 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer LIMIT 10  
+2015/09/09 17:34:01 [purchase.go:48] [I] UiCurList 
+2015/09/09 17:34:01 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:34:01 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:34:02 [purchase.go:48] [I] UiCurList 
+2015/09/09 17:34:02 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:34:02 [purchase.go:48] [I] UiCurList 
+2015/09/09 17:34:02 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer LIMIT 10  
+2015/09/09 17:34:03 [purchase.go:48] [I] UiCurList 
+2015/09/09 17:34:03 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:34:03 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:34:04 [purchase.go:48] [I] UiCurList 
+2015/09/09 17:34:04 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:34:05 [purchase.go:48] [I] UiCurList 
+2015/09/09 17:34:05 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer LIMIT 10  
+2015/09/09 17:34:05 [purchase.go:48] [I] UiCurList 
+2015/09/09 17:34:06 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:34:06 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:34:07 [purchase.go:48] [I] UiCurList 
+2015/09/09 17:34:07 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:38:21 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:38:24 [purchase.go:48] [I] UiCurList 
+2015/09/09 17:38:24 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:38:24 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.creater = ? LIMIT 10  
+2015/09/09 17:38:25 [purchase.go:48] [I] UiCurList 
+2015/09/09 17:38:25 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:38:28 [purchase.go:48] [I] UiCurList 
+2015/09/09 17:38:28 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer LIMIT 10  
+2015/09/09 17:38:28 [purchase.go:48] [I] UiCurList 
+2015/09/09 17:38:28 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:38:29 [purchase.go:48] [I] UiCurList 
+2015/09/09 17:38:29 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer LIMIT 10  
+2015/09/09 17:38:30 [purchase.go:48] [I] UiCurList 
+2015/09/09 17:38:30 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:38:30 [purchase.go:48] [I] UiCurList 
+2015/09/09 17:38:30 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:38:31 [purchase.go:48] [I] UiCurList 
+2015/09/09 17:38:31 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer LIMIT 10  
+2015/09/09 17:38:32 [purchase.go:48] [I] UiCurList 
+2015/09/09 17:38:32 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:38:33 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/09 17:38:34 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/09 17:38:35 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/09 17:38:36 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/09 17:38:37 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/09 17:38:37 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/09 17:38:38 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/09 17:38:39 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/09 17:38:39 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.buyer = ? LIMIT 10  
+2015/09/09 17:38:41 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.creater = ? LIMIT 10  
+2015/09/09 17:38:42 [purchase.go:48] [I] UiCurList 
+2015/09/09 17:38:42 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:39:14 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? ORDER BY purchase.requireddate DESC LIMIT 10  
+2015/09/09 17:39:15 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? ORDER BY purchase.requireddate ASC LIMIT 10  
+2015/09/09 17:39:17 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? ORDER BY purchase.requireddate DESC LIMIT 10  
+2015/09/09 17:39:17 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? ORDER BY purchase.requireddate ASC LIMIT 10  
+2015/09/09 17:39:18 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? ORDER BY purchase.requireddate DESC LIMIT 10  
+2015/09/09 17:39:19 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? ORDER BY purchase.requireddate ASC LIMIT 10  
+2015/09/09 17:39:24 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.creater = ? LIMIT 10  
+2015/09/09 17:40:18 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 17:40:23 [main.go:30] [I] User:admin login as role:role_admin 
+2015/09/09 17:40:24 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:40:25 [purchase.go:174] [E] ol map[creater:20150729203140000 predictdeliverydate: buyer:20150804175004000 num:0 changelog: category:pcate_1 product_key:abc requireddepartment:department_purchase freightprice: model:dfgfdgdfg unitprice: product:20150905215756002 mark:sh f f godowndate: supplier_key:abcdef supplier_Name:sdfg product_Name:444444 id:3 createtime:1441706925 totalprice: requireddate:2012.08.11 orderdate: appointmentarrivaldate: sn:20150908180812000 supplier:20150906194206004 actualdeliverydate: placedate:2015.09.09] 
+2015/09/09 17:44:16 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:44:18 [purchase.go:174] [E] ol map[num:0 appointmentarrivaldate: sn:20150908180812000 placedate:2015.09.06 product_Name:444444 godowndate: predictdeliverydate: id:3 buyer:20150804175004000 changelog: freightprice: requireddepartment:department_purchase createtime:1441706925 supplier_Name:sdfg supplier:20150906194206004 unitprice: requireddate:2012.08.11 product_key:abc product:20150905215756002 totalprice: category:pcate_1 orderdate: mark:sh f f creater:20150729203140000 model:dfgfdgdfg actualdeliverydate: supplier_key:abcdef] 
+2015/09/09 17:44:25 [purchase.go:174] [E] ol map[buyer:20150804175004000 product_key:abc godowndate: product_Name:444444 changelog: num:0 orderdate: actualdeliverydate: model:dfgfdgdfg supplier:20150906194206004 createtime:1441706925 mark:sh f f sn:20150908180812000 creater:20150729203140000 freightprice: product:20150905215756002 appointmentarrivaldate: requireddate:2012.08.11 category:pcate_1 unitprice: totalprice: supplier_key:abcdef predictdeliverydate: id:3 supplier_Name:sdfg placedate:2015.09.06 requireddepartment:department_purchase] 
+2015/09/09 17:45:06 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 17:45:10 [purchase.go:174] [E] ol map[appointmentarrivaldate: category:pcate_1 num:0 freightprice: product_key:abc actualdeliverydate: changelog: placedate:2015.09.06 orderdate: supplier:20150906194206004 supplier_key:abcdef supplier_Name:sdfg model:dfgfdgdfg predictdeliverydate: requireddate:2012.08.11 buyer:20150804175004000 mark:sh f f requireddepartment:department_purchase product:20150905215756002 createtime:1441706925 product_Name:444444 sn:20150908180812000 unitprice: godowndate: totalprice: creater:20150729203140000 id:3] 
+2015/09/09 17:52:02 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 17:52:06 [main.go:30] [I] User:admin login as role:role_admin 
+2015/09/09 17:52:06 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 17:52:07 [purchase.go:174] [E] ol map[placedate:2015.09.06 actualdeliverydate: supplier:20150906194206004 supplier_key:abcdef unitprice: requireddate:2012.08.11 orderdate: num:0 predictdeliverydate: changelog: appointmentarrivaldate: category:pcate_1 sn:20150908180812000 freightprice: mark:sh f f product_key:abc createtime:1441706925 creater:20150729203140000 id:3 model:dfgfdgdfg requireddepartment:department_purchase totalprice: supplier_Name:sdfg buyer:20150804175004000 godowndate: product:20150905215756002 product_Name:444444] 
+2015/09/09 18:35:48 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 18:35:52 [main.go:30] [I] User:admin login as role:role_admin 
+2015/09/09 18:35:53 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 18:35:54 [purchase.go:122] [E] Field not found name 
+2015/09/09 18:35:54 [formbuilder.go:247] [E] FromBuilder.createFormGroup input  type:  not support  
+2015/09/09 18:35:57 [purchase.go:48] [I] UiCurList 
+2015/09/09 18:35:57 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 18:38:29 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 18:38:32 [main.go:30] [I] User:admin login as role:role_admin 
+2015/09/09 18:38:32 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 18:38:38 [purchase.go:48] [I] UiCurList 
+2015/09/09 18:38:38 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 18:40:03 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 18:40:08 [main.go:30] [I] User:admin login as role:role_admin 
+2015/09/09 18:40:08 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 18:40:10 [purchase.go:48] [I] UiCurList 
+2015/09/09 18:40:10 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 18:43:13 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 18:43:16 [purchase.go:48] [I] UiCurList 
+2015/09/09 18:43:16 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer LIMIT 10  
+2015/09/09 18:43:19 [purchase.go:48] [I] UiCurList 
+2015/09/09 18:43:19 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 18:43:20 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? AND purchase.creater = ? LIMIT 10  
+2015/09/09 18:43:20 [purchase.go:48] [I] UiCurList 
+2015/09/09 18:43:21 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 18:43:21 [purchase.go:48] [I] UiCurList 
+2015/09/09 18:43:21 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer LIMIT 10  
+2015/09/09 18:51:11 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 18:51:14 [purchase.go:48] [I] UiCurList 
+2015/09/09 18:51:14 [purchaseMgr.go:50] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer LIMIT 10  

@@ -3,6 +3,7 @@ package controllers
 import (
 	"github.com/astaxie/beego"
 	"fmt"
+	"webo/models/s"
 )
 
 type MainController struct {
@@ -21,8 +22,8 @@ const activeUrlFormat = `<iframe name = "frame-content" src="%s" layout-auto-hei
 `
 func (this *MainController) Get() {
 	this.SetSession(SessionUserName, "admin")
-	this.SetSession(SessionUserRole, "role_admin")
-	this.SetSession(SessionUserSn, "snlsnsldn")
+	this.SetSession(SessionUserRole, s.RoleAdmin)
+	this.SetSession(SessionUserSn, "20150729203140000")
 	this.SetSession(SessionUserDepartment, "department")
 	userName := this.GetCurUser()
 	userRole := this.GetCurRole()

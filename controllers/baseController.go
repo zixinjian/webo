@@ -3,12 +3,13 @@ package controllers
 import (
 	"github.com/astaxie/beego"
 	"webo/models/itemDef"
-	"webo/models/svc"
 	"strings"
 	"fmt"
 	"webo/models/stat"
 	"webo/models/s"
 	"webo/models/lang"
+	"encoding/json"
+	"webo/models/t"
 )
 
 type BaseController struct {
@@ -30,12 +31,35 @@ func (this *BaseController) GetItemDefFromParamHi() (itemDef.ItemDef, string){
 	return oItemDef, stat.Success
 }
 
+func (this *BaseController) GetParams(oItemDef itemDef.ItemDef)(queryParams t.Params, limitParams t.LimitParams, orderByParams t.Params) {
+	requestBody := this.Ctx.Input.RequestBody
+	var requestMap map[string]interface{}
+	json.Unmarshal(requestBody, &requestMap)
+	beego.Debug("PurchaseController.List requestMap: ", requestMap)
+
+	limitParams = this.GetLimitParamFromJsonMap(requestMap)
+	delete(requestMap, s.Limit)
+	delete(requestMap, s.Offset)
+
+	orderByParams = this.GetOrderParamFromJsonMap(requestMap)
+	delete(requestMap, s.Order)
+	delete(requestMap, s.Sort)
+
+	queryParams = this.GetQueryParamFromJsonMap(requestMap, oItemDef)
+	addParams := this.GetFormValues(oItemDef)
+	for k, v := range addParams {
+		queryParams[k]=v
+	}
+	return queryParams, limitParams, orderByParams
+}
+
 func (this *BaseController) GetFormValues(itemD itemDef.ItemDef) map[string]interface{} {
 	var retMap map[string]interface{}
 	retMap = make(map[string]interface{})
 	formValues := this.Input()
-	for _, field := range itemD.Fields {
-		if _, ok := formValues[field.Name]; ok {
+	beego.Debug("BaseController.GetFormValues from values: ", formValues)
+	for k, _ := range formValues{
+		if field, ok := itemD.GetField(k);ok{
 			if v, fok := field.GetFormValue(this.GetString(field.Name)); fok {
 				retMap[field.Name] = this.ReplaceSpecialValues(v)
 			}
@@ -58,17 +82,12 @@ func (this *BaseController) ReplaceSpecialValues(value interface{}) interface{}{
 	}
 }
 
-//func (this *BaseController) GetRequestParams(itemD itemDef.ItemDef)svc.Params{
-//	queryParams := this.GetFormValues(itemD)
-//	return queryParams
-//}
-
 func (this *BaseController) GetSessionString(sessionName string) string {
 	if this.GetSession(sessionName) != nil{
 		return this.GetSession(sessionName).(string)
 	}
 	// TODO
-	return "d"
+	return ""
 }
 
 func (this *BaseController) GetCurUserSn() string {
@@ -85,7 +104,7 @@ func (this *BaseController) GetCurDepartment() string{
 }
 
 func (this *BaseController)GetQueryParamFromJsonMap(requestMap map[string]interface{}, oItemDef itemDef.ItemDef) map[string]interface{}{
-	queryParams := make(svc.Params, 0)
+	queryParams := make(t.Params, 0)
 	fieldMap := oItemDef.GetFieldMap()
 	for k, v := range requestMap{
 		if field, ok := fieldMap[k];ok{
@@ -111,8 +130,8 @@ func (this *BaseController)GetLimitParamFromJsonMap(requestMap map[string]interf
 	}
 	return limitParams
 }
-func (this *BaseController)GetOrderParamFromJsonMap(requestMap map[string]interface{}) svc.Params{
-	orderByParams := make(svc.Params, 0)
+func (this *BaseController)GetOrderParamFromJsonMap(requestMap map[string]interface{}) t.Params{
+	orderByParams := make(t.Params, 0)
 	if sort, ok := requestMap["sort"]; ok {
 		sortStr := strings.TrimSpace(sort.(string))
 		if sortStr != "" {

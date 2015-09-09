@@ -2,10 +2,10 @@ package controllers
 
 import (
 	"fmt"
-	"webo/controllers/ui"
-	"webo/models/svc"
 	"github.com/astaxie/beego"
+	"webo/controllers/ui"
 	"webo/models/itemDef"
+	"webo/models/svc"
 	"webo/models/util"
 )
 
@@ -14,9 +14,6 @@ type UiController struct {
 }
 
 func (this *UiController) List() {
-	//	fmt.Println("requestBosy", this.Ctx.Input.RequestBody)
-	//	fmt.Println("params", this.Ctx.Input.Params)
-	//	fmt.Println("requestBosy", this.Input()["id"])
 	item, ok := this.Ctx.Input.Params[":hi"]
 	if !ok {
 		beego.Error("Item param is none")
@@ -25,9 +22,7 @@ func (this *UiController) List() {
 	if !ok {
 		beego.Error(fmt.Sprintf("Item %s not support", item))
 	}
-	//	oEntityDef, ok := itemDef.EntityDefMap[item]
-	//	fmt.Println("form", this.GetFormValues(oEntityDef))
-	//	this.Data["/ui/add/{{.item}}"] = item
+	this.Data["item"] = item
 	this.Data["listUrl"] = fmt.Sprintf("/item/list/%s", item)
 	this.Data["addUrl"] = fmt.Sprintf("/ui/add/%s", item)
 	this.Data["updateUrl"] = fmt.Sprintf("/ui/update/%s", item)
@@ -66,11 +61,11 @@ func (this *UiController) Update() {
 	if sn == "" {
 		fmt.Println("sn is none")
 	}
-//	fmt.Println("sn", sn)
+	//	fmt.Println("sn", sn)
 	params := svc.Params{"sn": sn}
 	code, oldValueMap := svc.Get(item, params)
 	if code == "success" {
-//		fmt.Println("oldValue", oldValueMap)
+		//		fmt.Println("oldValue", oldValueMap)
 		this.Data["Service"] = "/item/update/" + item
 		this.Data["Form"] = ui.BuildUpdatedForm(oItemDef, oldValueMap)
 		this.Data["Onload"] = ui.BuildAddOnLoadJs(oItemDef)

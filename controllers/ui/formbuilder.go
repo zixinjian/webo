@@ -5,8 +5,8 @@ import (
 	"github.com/astaxie/beego"
 	"strings"
 	"webo/models/itemDef"
-	"webo/models/util"
 	"webo/models/s"
+	"webo/models/util"
 )
 
 type FormBuilder struct {
@@ -63,6 +63,13 @@ var selectFormat = `    <div class="form-group">
 			</div>
 		</div>
     	`
+var uploadFormat = `    <div class="form-group">
+        <label class="col-sm-3 control-label">%s</label>
+        <div class="col-sm-6">
+            <input type="file" name="%sUpload" id="%s_upload" />
+        </div>
+    </div>
+`
 var autocompleteFormat = `    <div class="form-group">
             <label class="col-sm-3 control-label">%s关键字</label>
             <div class="col-sm-6">
@@ -84,7 +91,7 @@ func BuildAddForm(oItemDef itemDef.ItemDef, sn string) string {
 var initDatePickerFormat = `
 $("#%s").datetimepicker({%sformat:'Y.m.d',lang:'zh',%s})
 `
-var initAutocompleteFormat =`
+var initAutocompleteFormat = `
 	$("#%s_key").autocomplete({
 		source: "%s",
 		autoFocus:true,
@@ -115,6 +122,13 @@ var initAutocompleteFormat =`
 				.appendTo( ul );
 	};
 `
+var initFileUploadJs = `$('#%s_upload').uploadify({
+            'swf'      : '../../asserts/3rd/uploadify/uploadify.swf',
+            'uploader' : '/item/upload/%s?sn=' + $("#sn").val(),
+            'cancelImg': '../../asserts/3rd/uploadify/uploadify-cancel.png',
+            'fileObjName':'uploadFile'
+        });
+`
 
 func BuildAddOnLoadJs(oItemDef itemDef.ItemDef) string {
 	OnLoadJs := ""
@@ -125,10 +139,12 @@ func BuildAddOnLoadJs(oItemDef itemDef.ItemDef) string {
 			if strings.EqualFold(field.Default.(string), "curtime") {
 				defaultDate = "value:new Date()"
 			}
-			OnLoadJs = OnLoadJs + fmt.Sprintf(initDatePickerFormat, field.Name, "timepicker:false,",defaultDate)
+			OnLoadJs = OnLoadJs + fmt.Sprintf(initDatePickerFormat, field.Name, "timepicker:false,", defaultDate)
 		case s.Autocomplete:
 			OnLoadJs = OnLoadJs + fmt.Sprintf(initAutocompleteFormat, field.Name, field.Range,
 				field.Name, field.Name, field.Name, field.Name, field.Name, field.Name, field.Name, field.Name)
+		case s.Upload:
+			OnLoadJs = OnLoadJs + fmt.Sprintf(initFileUploadJs, field.Name, oItemDef.Name)
 		}
 	}
 	return "<script>$(function(){" + OnLoadJs + "});</script>\n"
@@ -172,17 +188,19 @@ func createFromGroup(field itemDef.Field, value interface{}, key string, vlabel 
 	case "select":
 		var options string
 		for _, option := range field.Enum {
-			if option.Sn == value{
+			if option.Sn == value {
 				options = options + fmt.Sprintf(`<option value="%s" selected>%s</option>`, option.Sn, option.Label)
 				continue
 			}
-			options = options + fmt.Sprintf(`<option value="%s" ％s>%s</option>`, option.Sn, option.Label)
+			options = options + fmt.Sprintf(`<option value="%s">%s</option>`, option.Sn, option.Label)
 		}
 		fromGroup = fmt.Sprintf(selectFormat, field.Label, field.Require, field.Label, field.Name, field.Name, field.Default, options)
 	case s.Autocomplete:
 		fromGroup = fmt.Sprintf(autocompleteFormat, field.Label, field.Name, key,
 			field.Label, field.Name, field.Name, field.Require, field.Label, vlabel,
 			field.Name, field.Name, value)
+	case s.Upload:
+		fromGroup = fmt.Sprintf(uploadFormat, field.Label, field.Name, field.Name)
 	case "none":
 		fromGroup = ""
 	default:

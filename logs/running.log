@@ -578,3 +578,127 @@
 2015/09/08 21:34:22 [language.go:46] [E] GetLang error key:abc 
 2015/09/08 21:34:22 [language.go:46] [E] GetLang error key:abc 
 2015/09/08 21:34:22 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 09:50:40 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 09:50:47 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 09:50:47 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/09 09:50:47 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/09 09:50:47 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 09:50:47 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 09:50:47 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 09:50:47 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 09:56:28 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 09:56:31 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 09:56:32 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/09 09:56:32 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/09 09:56:32 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 09:56:32 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 09:56:32 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 09:56:32 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 10:04:07 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 10:04:07 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/09 10:04:07 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/09 10:04:07 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 10:04:07 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 10:04:07 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 10:04:07 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 10:05:29 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 10:05:29 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/09 10:05:29 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/09 10:05:29 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 10:05:29 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 10:05:29 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 10:05:29 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 10:05:55 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 10:05:55 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/09 10:05:55 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/09 10:05:55 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 10:05:55 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 10:05:55 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 10:05:55 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 10:05:59 [staticfile.go:61] [W] Can't find the file: static/files/user/20150825194154001 stat static/files/user/20150825194154001: no such file or directory 
+2015/09/09 10:06:40 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 10:06:40 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/09 10:06:40 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/09 10:06:40 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 10:06:40 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 10:06:40 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 10:06:40 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 10:14:47 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 10:14:51 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 10:14:51 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/09 10:14:51 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/09 10:14:51 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 10:14:51 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 10:14:51 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 10:14:51 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 10:15:03 [staticfile.go:61] [W] Can't find the file: static/files/supplier/20150906194206004 stat static/files/supplier/20150906194206004: no such file or directory 
+2015/09/09 10:21:26 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 10:27:55 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 10:28:02 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 10:28:02 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/09 10:28:02 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/09 10:28:02 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 10:28:02 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 10:28:02 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 10:28:02 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 10:30:42 [crud.go:148] [E] Add error table supplier has no column named file 
+2015/09/09 10:30:42 [crud.go:210] [E] ParseSqlError unknown error table supplier has no column named file 
+2015/09/09 10:30:43 [crud.go:148] [E] Add error table supplier has no column named file 
+2015/09/09 10:30:43 [crud.go:210] [E] ParseSqlError unknown error table supplier has no column named file 
+2015/09/09 10:30:56 [crud.go:148] [E] Add error table supplier has no column named file 
+2015/09/09 10:30:56 [crud.go:210] [E] ParseSqlError unknown error table supplier has no column named file 
+2015/09/09 10:30:57 [crud.go:148] [E] Add error table supplier has no column named file 
+2015/09/09 10:30:57 [crud.go:210] [E] ParseSqlError unknown error table supplier has no column named file 
+2015/09/09 10:31:01 [crud.go:148] [E] Add error table supplier has no column named file 
+2015/09/09 10:31:01 [crud.go:210] [E] ParseSqlError unknown error table supplier has no column named file 
+2015/09/09 10:34:44 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 10:34:48 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 10:34:48 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/09 10:34:48 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/09 10:34:48 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 10:34:48 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 10:34:48 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 10:34:48 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 10:35:08 [crud.go:148] [E] Add error table supplier has no column named file 
+2015/09/09 10:35:08 [crud.go:210] [E] ParseSqlError unknown error table supplier has no column named file 
+2015/09/09 10:43:06 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 10:43:37 [staticfile.go:61] [W] Can't find the file: static/files/supplier/20150906194206004 stat static/files/supplier/20150906194206004: no such file or directory 
+2015/09/09 10:44:46 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 10:44:50 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 10:44:50 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/09 10:44:50 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/09 10:44:50 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 10:44:50 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 10:44:50 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 10:44:50 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 10:48:28 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 10:48:33 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 10:48:33 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/09 10:48:33 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/09 10:48:33 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 10:48:33 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 10:48:33 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 10:48:33 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 10:50:32 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/09 10:51:47 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/09 10:51:49 [purchase.go:42] [I] UiCurList 
+2015/09/09 10:51:49 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.godowndate = ? LIMIT 10  
+2015/09/09 10:51:49 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 10:51:49 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 10:51:49 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 10:51:49 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 10:51:49 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 10:51:50 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/09 10:51:51 [main.go:29] [I] User:admin login as role:role_admin 
+2015/09/09 10:51:52 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/09 10:51:52 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/09 10:51:52 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 10:51:52 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 10:51:52 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 10:51:52 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 10:56:02 [model.go:47] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.creater = ? LIMIT 10  
+2015/09/09 10:56:02 [language.go:46] [E] GetLang error key:ddddddd 
+2015/09/09 10:56:02 [language.go:46] [E] GetLang error key:fff 
+2015/09/09 10:56:02 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 10:56:02 [language.go:46] [E] GetLang error key:abc 
+2015/09/09 10:56:02 [language.go:46] [E] GetLang error key:abc 

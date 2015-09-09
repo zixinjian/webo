@@ -8,8 +8,8 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
-	"webo/models/s"
 	"webo/models/lang"
+	"webo/models/s"
 )
 
 func ReadDefFromCsv() map[string]ItemDef {
@@ -161,7 +161,7 @@ func readItemDefCsv(fileName string) ItemDef {
 		switch input {
 		case "":
 			field.Input = "text"
-		case "text", "select", "password", "date", "time", "none", "textarea", "datetime", "money":
+		case "text", "select", "password", "date", "time", "none", "textarea", "datetime", "money", s.Upload:
 			field.Input = input
 		case s.Autocomplete:
 			field.Input = input
@@ -173,7 +173,7 @@ func readItemDefCsv(fileName string) ItemDef {
 		switch model {
 		case "":
 			field.Model = "text"
-		case "sn", "text", "password", "curtime", "curuser", "time", "date", "int":
+		case "sn", "text", "password", "curtime", "curuser", "time", "date", "int", s.Upload:
 			field.Model = model
 		case s.Enum:
 			field.Model = model

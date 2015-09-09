@@ -1,18 +1,17 @@
 package controllers
 
 import (
+	"encoding/json"
+	"github.com/astaxie/beego"
+	"strings"
 	"webo/controllers/ui"
 	"webo/models/itemDef"
-	"webo/models/util"
-	"github.com/astaxie/beego"
-	"webo/models/svc"
-	"webo/models/stat"
-	"webo/models/s"
-	"encoding/json"
 	"webo/models/lang"
-	"strings"
+	"webo/models/s"
+	"webo/models/stat"
 	"webo/models/supplierMgr"
-	"fmt"
+	"webo/models/svc"
+	"webo/models/util"
 )
 
 type ProductController struct {
@@ -59,7 +58,7 @@ func (this *ProductController) UiUpdate() {
 	}
 }
 
-func (this *ProductController)List(){
+func (this *ProductController) List() {
 	item := s.Product
 	oItemDef, _ := itemDef.EntityDefMap[item]
 	requestBody := this.Ctx.Input.RequestBody
@@ -77,8 +76,8 @@ func (this *ProductController)List(){
 
 	queryParams := this.GetQueryParamFromJsonMap(requestMap, oItemDef)
 	addQueryParam := this.GetFormValues(oItemDef)
-	for k, v := range addQueryParam{
-		queryParams[k]=v
+	for k, v := range addQueryParam {
+		queryParams[k] = v
 	}
 
 	result, total, resultMaps := svc.List(oItemDef.Name, queryParams, limitParams, orderByParams)
@@ -100,8 +99,8 @@ func TransProductList(oItemDef itemDef.ItemDef, resultMaps []map[string]interfac
 			case s.Category:
 				retMap[key] = lang.GetLabel(value.(string))
 			case s.Supplier:
-				if !strings.EqualFold(value.(string), ""){
-					if supplierMap, sok := supplierMgr.Get(value.(string));sok{
+				if !strings.EqualFold(value.(string), "") {
+					if supplierMap, sok := supplierMgr.Get(value.(string)); sok {
 						supplier, _ := supplierMap[s.Name]
 						retMap[s.Supplier] = supplier.(string)
 					}

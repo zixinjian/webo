@@ -31,7 +31,6 @@
 <script src="../../asserts/3rd/jquery-ui/jquery-ui.min.js"></script>
 <script src="../../static/js/validateExtend.js"></script>
 <script src="../../static/js/ui.js"></script>
-
 <script>
     function showResponse(resp) {
         if(resp.ret == "success"){

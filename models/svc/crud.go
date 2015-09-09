@@ -12,7 +12,8 @@ import (
 	"webo/models/stat"
 	"webo/models/util"
 )
-func GetItems(item string, queryParams Params, orderBy Params)(string, []map[string]interface{}){
+
+func GetItems(item string, queryParams Params, orderBy Params) (string, []map[string]interface{}) {
 	code, retMaps := Query(item, queryParams, LimitParams{}, orderBy)
 	return code, retMaps
 }
@@ -46,7 +47,7 @@ func Query(entity string, queryParams Params, limitParams map[string]int64, orde
 		for idx, oldMap := range resultMaps {
 			var retMap = make(map[string]interface{}, len(oldMap))
 			for key, value := range oldMap {
-//				fmt.Println(value.(string))
+				//				fmt.Println(value.(string))
 				retMap[strings.ToLower(key)] = value
 			}
 			retList[idx] = retMap
@@ -101,32 +102,30 @@ func Add(entity string, params Params) (string, string) {
 	if !ok {
 		return stat.ItemNotDefine, ""
 	}
-	nFieldLen := len(oEntityDef.Fields)
-	fields := make([]string, nFieldLen)
-	marks := make([]string, nFieldLen)
-	values := make([]interface{}, nFieldLen)
-	for idx, field := range oEntityDef.Fields {
-		fields[idx] = field.Name
-		marks[idx] = "?"
+	fields := make([]string, 0)
+	marks := make([]string, 0)
+	values := make([]interface{}, 0)
+	for _, field := range oEntityDef.Fields {
+		if strings.EqualFold(field.Model, s.Upload) {
+			continue
+		}
+		fields = append(fields, field.Name)
+		marks = append(marks, "?")
 		value, ok := params[field.Name]
 		if ok {
-			values[idx] = value
+			values = append(values, value)
 			continue
 		}
 		if field.Model == s.Sn {
-			values[idx] = util.TUId()
+			values = append(values, util.TUId())
 			continue
 		}
 		if field.Model == s.CurTime {
-			now := time.Now().Unix()
-			values[idx] = now
+			values = append(values, time.Now().Unix())
 			continue
 		}
-
-		values[idx] = field.Default
+		values = append(values, field.Default)
 	}
-	//	fmt.Println("values", values)
-	//	fmt.Println(marks)
 
 	sep := fmt.Sprintf("%s, %s", Q, Q)
 	qmarks := strings.Join(marks, ", ")
@@ -140,9 +139,9 @@ func Add(entity string, params Params) (string, string) {
 		//		fmt.Println("e", b, c)
 		if i, e := res.LastInsertId(); e == nil && i > 0 {
 			return stat.Success, ""
-		}else{
+		} else {
 			fmt.Println("add,error", e, i)
-//			beego.Error(e, i)
+			//			beego.Error(e, i)
 		}
 	} else {
 		beego.Error("Add error", err)
@@ -210,4 +209,3 @@ func ParseSqlError(err error, oEntityDef itemDef.ItemDef) (string, string) {
 	beego.Error("ParseSqlError unknown error", errStr)
 	return stat.UnKnownFailed, ""
 }
-

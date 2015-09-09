@@ -3,18 +3,19 @@ package controllers
 import (
 	"encoding/json"
 	"fmt"
-	"webo/models/itemDef"
-	"webo/models/stat"
-	"webo/models/svc"
-	"webo/models/s"
 	"github.com/astaxie/beego"
 	"os"
 	"strings"
+	"webo/models/itemDef"
+	"webo/models/s"
+	"webo/models/stat"
+	"webo/models/svc"
 )
 
 type ItemController struct {
 	BaseController
 }
+
 func (this *ItemController) ListWithQuery(oItemDef itemDef.ItemDef, addQueryParam svc.Params) {
 	requestBody := this.Ctx.Input.RequestBody
 	var requestMap map[string]interface{}
@@ -30,8 +31,8 @@ func (this *ItemController) ListWithQuery(oItemDef itemDef.ItemDef, addQueryPara
 	delete(requestMap, s.Sort)
 
 	queryParams := this.GetQueryParamFromJsonMap(requestMap, oItemDef)
-	for k, v := range addQueryParam{
-		queryParams[k]=v
+	for k, v := range addQueryParam {
+		queryParams[k] = v
 	}
 
 	result, total, resultMaps := svc.List(oItemDef.Name, queryParams, limitParams, orderByParams)
@@ -55,14 +56,13 @@ func (this *ItemController) List() {
 		return
 	}
 	addParams := this.GetFormValues(oItemDef)
-//	creater := this.GetString(s.Creater)
-//	if creater == s.CurUser {
-//		sn := this.GetCurUserSn()
-//		addParams[s.Creater]= sn
-//	}
+	//	creater := this.GetString(s.Creater)
+	//	if creater == s.CurUser {
+	//		sn := this.GetCurUserSn()
+	//		addParams[s.Creater]= sn
+	//	}
 	this.ListWithQuery(oItemDef, addParams)
 }
-
 
 func (this *ItemController) Add() {
 	beego.Debug("BaseController.GetFormValues form values: ", this.Input())
@@ -77,6 +77,11 @@ func (this *ItemController) Add() {
 	curUserSn := this.GetSessionString(SessionUserSn)
 	svcParams := this.GetFormValues(oEntityDef)
 	svcParams[s.Creater] = curUserSn
+	for _, field := range oEntityDef.Fields {
+		if strings.EqualFold(field.Model, s.Upload) {
+			delete(svcParams, field.Name)
+		}
+	}
 	beego.Debug("ItemController.Add:", svcParams)
 	status, reason := svc.Add(item, svcParams)
 	this.Data["json"] = &JsonResult{status, reason}
@@ -114,9 +119,9 @@ func (this *ItemController) Upload() {
 		beego.Error("ItemController.Upload error: ", stat.SnNotFound)
 		this.Ctx.WriteString(stat.SnNotFound)
 	}
-	f,h,e := this.GetFile("uploadFile")
+	f, h, e := this.GetFile("uploadFile")
 	fmt.Println(f, h, e)
-	if e != nil{
+	if e != nil {
 		beego.Error("Upload error", e.Error())
 		return
 	}
@@ -128,11 +133,11 @@ func (this *ItemController) Upload() {
 		this.Ctx.WriteString(stat.UploadErrorCreateDir)
 		return
 	}
-	this.SaveToFile("uploadFile", saveDir + h.Filename)
+	this.SaveToFile("uploadFile", saveDir+h.Filename)
 	this.Ctx.WriteString("ok")
 }
 
-func (this *ItemController) Autocomplete(){
+func (this *ItemController) Autocomplete() {
 	item, ok := this.Ctx.Input.Params[":hi"]
 	if !ok {
 		beego.Error("ItemController.Autocomplete: ", stat.ParamItemError)
@@ -157,24 +162,24 @@ func (this *ItemController) Autocomplete(){
 	this.BaseAutocomplete(item, keyword)
 }
 
-func (this *ItemController) BaseAutocomplete(item string, keyword string){
+func (this *ItemController) BaseAutocomplete(item string, keyword string) {
 	oItemDef, _ := itemDef.EntityDefMap[item]
 	term := this.GetString(s.Term)
-	if strings.EqualFold(term, ""){
+	if strings.EqualFold(term, "") {
 		this.Data["json"] = "[]"
 		this.ServeJson()
 		return
 	}
 	limitParams := svc.LimitParams{
-		s.Limit : svc.LimitDefault,
+		s.Limit: svc.LimitDefault,
 	}
 
 	orderByParams := svc.Params{
-		s.Keyword : s.Asc,
+		s.Keyword: s.Asc,
 	}
 
 	queryParams := svc.Params{
-		"%" + s.Keyword : term,
+		"%" + s.Keyword: term,
 	}
 	_, _, resultMaps := svc.List(oItemDef.Name, queryParams, limitParams, orderByParams)
 	retList := TransAutocompleteList(resultMaps, keyword)

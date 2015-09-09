@@ -29,15 +29,14 @@ func init() {
 
 	//用户管理
 	beego.Router("/ui/user/list", &controllers.UserController{}, "*:UiList")
-//	beego.Router("/user/disable", &controllers.UserController{}, "*:Disable")
+	beego.Router("/item/update/user", &controllers.UserController{}, "*:Update")
 
 	//产品管理
 	beego.Router("/ui/product/add", &controllers.ProductController{}, "*:UiAdd")
 	beego.Router("/ui/product/list", &controllers.ProductController{}, "*:UiList")
 	beego.Router("/ui/product/update", &controllers.ProductController{}, "*:UiUpdate")
 	beego.Router("/product/list", &controllers.ProductController{}, "*:List")
-//	beego.Router("ui/product/Autocomplete", &controllers.ProductController{}, "*:AutocompleteList")
-
+	//	beego.Router("ui/product/Autocomplete", &controllers.ProductController{}, "*:AutocompleteList")
 
 	//采购管理
 	beego.Router("/ui/purchase/mycreate", &controllers.PurchaseController{}, "*:UiMyCreate")

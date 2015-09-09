@@ -2,8 +2,11 @@ package controllers
 
 import (
 	"fmt"
+	"strings"
 	"webo/controllers/ui"
 	"webo/models/itemDef"
+	"webo/models/s"
+	"webo/models/svc"
 )
 
 type UserController struct {
@@ -20,7 +23,19 @@ func (this *UserController) UiList() {
 	this.TplNames = "user/list.html"
 }
 
-
+func (this *UserController) Update() {
+	item := s.User
+	oEntityDef, _ := itemDef.EntityDefMap[item]
+	svcParams := this.GetFormValues(oEntityDef)
+	if pwd, ok := svcParams[s.Password]; ok {
+		if strings.EqualFold(pwd.(string), "*****") {
+			delete(svcParams, s.Password)
+		}
+	}
+	status, reason := svc.Update(item, svcParams)
+	this.Data["json"] = &JsonResult{status, reason}
+	this.ServeJson()
+}
 
 //func (this *UserController) Disable() {
 //	role := this.GetSessionString(SessionUserRole)

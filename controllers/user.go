@@ -35,8 +35,8 @@ func (this *UserController) Update() {
 	status, reason := svc.Update(item, svcParams)
 	this.Data["json"] = &JsonResult{status, reason}
 	this.ServeJson()
-}
 
+}
 //func (this *UserController) Disable() {
 //	role := this.GetSessionString(SessionUserRole)
 //	if role != s.RoleAdmin{

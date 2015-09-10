@@ -27,6 +27,7 @@ func (this *BaseController) GetItemDefFromParamHi() (itemDef.ItemDef, string) {
 		beego.Error(stat.ItemNotDefine_, item)
 		return itemDef.ItemDef{}, stat.ItemNotDefine
 	}
+	this.ServeJson()
 	return oItemDef, stat.Success
 }
 

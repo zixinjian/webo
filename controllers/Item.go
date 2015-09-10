@@ -37,7 +37,7 @@ func (this *ItemController) ListWithQuery(oItemDef itemDef.ItemDef, addQueryPara
 	}
 
 	result, total, resultMaps := svc.List(oItemDef.Name, queryParams, limitParams, orderByParams)
-	retList := TransList(oItemDef, resultMaps)
+	retList := transList(oItemDef, resultMaps)
 	this.Data["json"] = &TableResult{result, int64(total), retList}
 	this.ServeJson()
 }

@@ -2292,3 +2292,5 @@
 2015/09/10 20:20:58 [purchaseMgr.go:51] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer ORDER BY purchase.requireddate DESC LIMIT 10  
 2015/09/10 20:21:12 [purchaseMgr.go:51] [E] query SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.product = ? AND purchase.model = ?  
 2015/09/10 20:33:04 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/10 20:48:05 [asm_amd64.s:2232] [I] http server Running on :8080
+2015/09/10 20:48:31 [asm_amd64.s:2232] [I] http server Running on :8080

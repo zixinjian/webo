@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../../asserts/3rd/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../asserts/3rd/bootstrap-table/bootstrap-table.css">
+<link rel="stylesheet" href="../../asserts/3rd/bootstrap-editable/bootstrap3-editable/css/bootstrap-editable.css">
+</head>
+<body>
+<div style="padding:20px;">
+    <div class="toolbar" style="line-height: 20px">
+        <div class="form-group">
+            {{str2html .buyers}}
+        </div>
+    </div>
+    <table id="item_table"
+           data-show-refresh="true"
+           data-show-columns="true"
+           data-search="true"
+           data-query-params="queryParams"
+           data-row-style="rowStyle"
+           data-toolbar=".toolbar">
+        <thead>
+        <tr>
+            <th data-field="action"
+                data-align="center"
+                data-formatter="actionFormatter"
+                data-events="actionEvents"
+                data-width="75px">  [ 操作 ]  </th>
+            {{str2html .thlist}}
+        </tr>
+        </thead>
+    </table>
+</div>
+<script src="../../asserts/3rd/jquery/jquery.js"></script>
+<script src="../../asserts/3rd/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../asserts/3rd/bootstrap-table/bootstrap-table.js"></script>
+<script src="../../asserts/3rd/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
+<script src="../../asserts/3rd/bootstrap-table/extensions/editable/bootstrap-table-editable.js"></script>
+<script src="../../asserts/3rd/bootstrap-editable/bootstrap3-editable/js/bootstrap-editable.js"></script>
+<script src="../../asserts/3rd/moment/moment.js"></script>
+<script src="../../asserts/webo/util.js"></script>
+{{str2html .queryParams}}
+<script>
+    var $table = $("#item_table")
+    $(function(){
+        $table.bootstrapTable({url:"{{.listUrl}}", method:"post", sidePagination:"server", pagination:true,
+            height:getHeight(), sortName:"requireddate", sortOrder:"{{.sortOrder}}"});
+        $("#add_item").on("click", function(){
+            top.showTopModal({url:"{{.addUrl}}", refreshContent:refreshContent});
+        })
+        $(window).resize(function () {
+            $table.bootstrapTable('resetView', {
+                height: getHeight()
+            });
+        });
+    });
+    function refreshContent(options){
+        top.hideTopModal()
+        $table.bootstrapTable("refresh")
+    }
+
+    function actionFormatter(value, row) {
+        return [
+            '<a class="update" href="javascript:" title="修改" style="margin-right: 5px;"><i class="glyphicon glyphicon-edit"></i></a>',
+            wbSprintf('<a class="file" href="/static/files/purchase/%s" target="_blank" title="附件" data-toggle="poplayer" data-placement="bottom" data-url="/static"><i class="glyphicon glyphicon-file"></i></a>', row.sn),
+        ].join('');
+    }
+    window.actionEvents = {
+        'click .update': function (e, value, row) {
+            top.showTopModal({url:"{{.updateUrl}}?sn=" + row.sn, refreshContent:refreshContent});
+        }
+    }
+    $(function(){
+        $("[data-model='buyers']").on("change", function(){
+            var selectedValue = $("input[name='buyers']:checked").val();
+            if (selectedValue == "all"){
+                $table.bootstrapTable("refresh")
+            }else{
+                $table.bootstrapTable("refresh", {query: {buyer: selectedValue}})
+            }
+        })
+    });
+    function rowStyle(row, index) {
+        if(row.godowndate == ""){
+            now = moment()
+            requiredDate = moment(row.requireddate, "YYYY.MM.DD")
+            if (requiredDate.diff(now, "days") < 0){
+                return {classes: "danger"};
+            }
+            if (requiredDate.diff(now, "days") < 2 ){
+                return {classes: "warning"};
+            }
+        }
+        return {}
+    }
+    function getHeight() {
+        return $(window).height()-50;
+    }
+</script>
+</body>
+</html>

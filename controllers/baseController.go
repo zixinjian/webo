@@ -164,7 +164,7 @@ func TransAutocompleteList(resultMaps []map[string]interface{}, keyField string)
 	return resultMaps
 }
 
-func TransList(oItemDef itemDef.ItemDef, resultMaps []map[string]interface{}) []map[string]interface{} {
+func transList(oItemDef itemDef.ItemDef, resultMaps []map[string]interface{}) []map[string]interface{} {
 	if len(resultMaps) < 0 {
 		return resultMaps
 	}
@@ -182,4 +182,19 @@ func TransList(oItemDef itemDef.ItemDef, resultMaps []map[string]interface{}) []
 		retList[idx] = retMap
 	}
 	return retList
+}
+
+func makeFields(oItemDef itemDef.ItemDef, names []string)itemDef.ItemDef{
+	fields := make([]itemDef.Field, len(names))
+
+	fieldMap := oItemDef.GetFieldMap()
+	for idx, name := range names {
+		if field, ok := fieldMap[name]; ok {
+			fields[idx] = field
+		} else {
+			beego.Error("Field not found", name, idx)
+		}
+	}
+	oItemDef.Fields = fields
+	return oItemDef
 }

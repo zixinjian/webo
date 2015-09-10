@@ -81,21 +81,6 @@ func (this *PurchaseController) UiAdd() {
 	this.TplNames = "purchase/add.tpl"
 }
 
-func getAddPurchaseDef(oItemDef itemDef.ItemDef) itemDef.ItemDef {
-	names := []string{s.Sn, s.Category, s.Product, s.Model, s.ProductPrice, s.Buyer, s.Num, s.PlaceDate, s.Requireddate, s.Requireddepartment, s.Mark}
-	fields := make([]itemDef.Field, len(names))
-
-	fieldMap := oItemDef.GetFieldMap()
-	for idx, name := range names {
-		if field, ok := fieldMap[name]; ok {
-			fields[idx] = field
-		} else {
-			beego.Error("Field not found", name, idx)
-		}
-	}
-	oItemDef.Fields = fields
-	return oItemDef
-}
 
 func fillBuyerEnum(oItemDef itemDef.ItemDef) itemDef.ItemDef {
 	for idx, field := range oItemDef.Fields {
@@ -193,16 +178,12 @@ func (this *PurchaseController) PriceAnalyze() {
 
 func (this *PurchaseController) ExpenseList() {
 	beego.Info("ExpenseList")
+	this.UiCurList()
 	item := s.Purchase
 	oItemDef, _ := itemDef.EntityDefMap[item]
-	this.Data["buyers"] = this.createBuyerList()
-	this.Data["queryParams"] = CurListQueryParamsJs
-	this.Data["listUrl"] = "/item/list/purchase?godowndate"
-	this.Data["addUrl"] = ""
-	this.Data["updateUrl"] = "/ui/purchase/userupdate"
+
 	this.Data["thlist"] = ui.BuildListThs(oItemDef)
-	this.Data["sortOrder"] = s.Asc
-	this.TplNames = "purchase/list.html"
+	this.TplNames = "purchase/expand.html"
 }
 
 func (this *PurchaseController) createBuyerList() string {
@@ -275,3 +256,14 @@ func expandPurchaseMap(oldMap t.ItemMap) t.ItemMap {
 	}
 	return retMap
 }
+
+func getAddPurchaseDef(oItemDef itemDef.ItemDef) itemDef.ItemDef {
+	names := []string{s.Sn, s.Category, s.Product, s.Model, s.ProductPrice, s.Buyer, s.Num, s.PlaceDate, s.Requireddate, s.Requireddepartment, s.Mark}
+	return makeFields(oItemDef, names)
+}
+
+func getExpandListDef(oItemDef itemDef.ItemDef) itemDef.ItemDef{
+	names := []string{s.Sn, s.Category, s.Product, s.Model, s.ProductPrice, s.Buyer, s.Num, s.PlaceDate, s.Requireddate, s.Requireddepartment, s.Mark}
+	return makeFields(oItemDef, names)
+}
+

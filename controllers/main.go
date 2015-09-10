@@ -1,15 +1,16 @@
 package controllers
 
 import (
-	"github.com/astaxie/beego"
 	"fmt"
+	"github.com/astaxie/beego"
 	"webo/models/s"
 )
 
 type MainController struct {
 	BaseController
 }
-const userMgrHtml  = `<ul class="nav nav-sidebar">
+
+const userMgrHtml = `<ul class="nav nav-sidebar">
 	<li><a href="/ui/user/list" target="frame-content">用户管理</a></li>
 </ul>
 `
@@ -20,6 +21,7 @@ const userNavHtml = `<li class="active"><a href="/ui/purchase/curlist" target="f
 `
 const activeUrlFormat = `<iframe name = "frame-content" src="%s" layout-auto-height="-20" style="width:100%%;border:none"></iframe>
 `
+
 func (this *MainController) Get() {
 	this.SetSession(SessionUserName, "admin")
 	this.SetSession(SessionUserRole, s.RoleAdmin)
@@ -43,7 +45,6 @@ func (this *MainController) Get() {
 	}
 	this.TplNames = "main.html"
 }
-
 
 func (this *MainController) Travel() {
 	this.SetSession(SessionUserName, "admin")

@@ -5,11 +5,11 @@ import (
 	"github.com/astaxie/beego"
 	"webo/controllers/ui"
 	"webo/models/itemDef"
-	"webo/models/svc"
-	"webo/models/u"
-	"webo/models/t"
-	"webo/models/stat"
 	"webo/models/s"
+	"webo/models/stat"
+	"webo/models/svc"
+	"webo/models/t"
+	"webo/models/u"
 )
 
 type UiController struct {

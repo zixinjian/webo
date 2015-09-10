@@ -2,21 +2,21 @@ package svc
 
 import (
 	"fmt"
+	"github.com/astaxie/beego"
 	"strings"
 	"webo/models/itemDef"
-	"github.com/astaxie/beego"
 	"webo/models/s"
 	"webo/models/u"
 )
 
 type SqlBuilder struct {
 	oEntityDef itemDef.ItemDef
-	table      		[]string
-	limit      		int64
-	offset     		int64
-	orders     		[]string
-	conditions 		[]condition
-//	relations       []relation
+	table      []string
+	limit      int64
+	offset     int64
+	orders     []string
+	conditions []condition
+	//	relations       []relation
 }
 
 //type relation struct {
@@ -42,19 +42,19 @@ func (this *SqlBuilder) QueryTable(table string) {
 	this.oEntityDef = oEntityDef
 }
 
-func (this *SqlBuilder)QueryTables(tables ...string){
-	for _, table := range tables{
+func (this *SqlBuilder) QueryTables(tables ...string) {
+	for _, table := range tables {
 		this.QueryTable(table)
 	}
 }
 
 func (this *SqlBuilder) Filter(key string, value interface{}) {
-//	beego.Debug(fmt.Sprintf("Filter : %s:%v", key,  value))
+	//	beego.Debug(fmt.Sprintf("Filter : %s:%v", key,  value))
 	switch key[:1] {
 	case "%":
-		if v, ok := value.(string); ok{
+		if v, ok := value.(string); ok {
 			this.addCondition(key[1:], v+"%", s.Like)
-		}else {
+		} else {
 			beego.Error("Add filter error startswith not string")
 		}
 	default:
@@ -63,9 +63,9 @@ func (this *SqlBuilder) Filter(key string, value interface{}) {
 }
 
 func (this *SqlBuilder) addCondition(fieldName string, value interface{}, opt string) {
-//	beego.Debug("AddCondition:", fieldName, value, opt)
+	//	beego.Debug("AddCondition:", fieldName, value, opt)
 	this.conditions = append(this.conditions, condition{fieldName, value, opt})
-//	}
+	//	}
 }
 func (this *SqlBuilder) Limit(limit int64) {
 	if limit > 0 {
@@ -120,9 +120,9 @@ func (this *SqlBuilder) GetSql() string {
 func (this *SqlBuilder) GetCustomerSql(sql string) string {
 	sql = sql + " "
 	if len(this.conditions) > 0 {
-		if strings.Contains(strings.ToUpper(sql), "WHERE"){
+		if strings.Contains(strings.ToUpper(sql), "WHERE") {
 			sql = sql + "AND "
-		}else {
+		} else {
 			sql = sql + "WHERE "
 		}
 		sql = sql + this.GetConditonSql()
@@ -145,7 +145,7 @@ func (this *SqlBuilder) GetCustomerSql(sql string) string {
 	return sql
 }
 
-func (this *SqlBuilder) GetFrom() string{
+func (this *SqlBuilder) GetFrom() string {
 	tableStr := u.StrJoin(this.table, ",")
 	return fmt.Sprintf("FROM %s ", tableStr)
 }

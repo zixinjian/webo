@@ -10,8 +10,8 @@ import (
 	"webo/models/stat"
 	"webo/models/supplierMgr"
 	"webo/models/svc"
-	"webo/models/u"
 	"webo/models/t"
+	"webo/models/u"
 )
 
 type ProductController struct {
@@ -80,7 +80,7 @@ func transProductList(oItemDef itemDef.ItemDef, resultMaps []map[string]interfac
 	return retList
 }
 
-func transProductMap(oldMap map[string]interface{}) map[string]interface{}{
+func transProductMap(oldMap map[string]interface{}) map[string]interface{} {
 	var retMap = make(map[string]interface{}, len(oldMap))
 	for key, value := range oldMap {
 		switch key {
@@ -100,8 +100,8 @@ func transProductMap(oldMap map[string]interface{}) map[string]interface{}{
 	return retMap
 }
 
-func expandProductMap(oldMap map[string]interface{}) map[string]interface{}{
-	var retMap = make(map[string]interface{}, len(oldMap) + 2)
+func expandProductMap(oldMap map[string]interface{}) map[string]interface{} {
+	var retMap = make(map[string]interface{}, len(oldMap)+2)
 	for key, value := range oldMap {
 		switch key {
 		case s.Category:
@@ -110,9 +110,9 @@ func expandProductMap(oldMap map[string]interface{}) map[string]interface{}{
 			if !strings.EqualFold(value.(string), "") {
 				if supplierMap, sok := supplierMgr.Get(value.(string)); sok {
 					supplierKey, _ := supplierMap[s.Keyword]
-					supplierName, _:= supplierMap[s.Name]
-					retMap[s.Supplier+ s.EKey] = supplierKey.(string)
-					retMap[s.Supplier+ s.EName] = supplierName.(string)
+					supplierName, _ := supplierMap[s.Name]
+					retMap[s.Supplier+s.EKey] = supplierKey.(string)
+					retMap[s.Supplier+s.EName] = supplierName.(string)
 					retMap[s.Supplier] = value
 				}
 			}

@@ -11,6 +11,6 @@ type Results struct {
 }
 
 const (
-	LimitDefault     int64 = 100
-	LimitMax         int64 = 10000
+	LimitDefault int64 = 100
+	LimitMax     int64 = 10000
 )

@@ -21,10 +21,12 @@ func ReadDefFromCsv() map[string]ItemDef {
 		}
 		return nil
 	})
+	return lEntityDefMap
+}
+func LoadUiListFromCsv(lEntityDefMap map[string]ItemDef) map[string]ItemDef {
 	filepath.Walk("conf/item/uilist", func(filePath string, f os.FileInfo, err error) error {
 		if strings.HasSuffix(filePath, ".csv") {
 			itemName := strings.TrimSuffix(f.Name(), ".csv")
-			//			fmt.Println("itemName", itemName)
 			oItemDef, ok := lEntityDefMap[itemName]
 			if !ok {
 				return nil
@@ -33,7 +35,6 @@ func ReadDefFromCsv() map[string]ItemDef {
 			for idx, field := range oItemDef.Fields {
 				if u, ok := uiListMap[field.Name]; ok {
 					field.UiList = u
-					//					fmt.Println("uiList", field.UiList)
 					oItemDef.Fields[idx] = field
 				}
 			}
@@ -41,10 +42,9 @@ func ReadDefFromCsv() map[string]ItemDef {
 		}
 		return nil
 	})
-
-	//	fmt.Println("entity", lEntityDefMap)
 	return lEntityDefMap
 }
+
 func readUiListCsv(fileName string) map[string]UiListStruct {
 	cntb, err := ioutil.ReadFile(fileName)
 	beego.Debug(fmt.Sprintf("start parse uiList File:%s", fileName))

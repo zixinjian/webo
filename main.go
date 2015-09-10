@@ -6,9 +6,9 @@ import (
 	"github.com/astaxie/beego/context"
 	"github.com/astaxie/beego/orm"
 	_ "github.com/mattn/go-sqlite3"
+	"webo/controllers"
 	_ "webo/models/lang"
 	_ "webo/routers"
-	"webo/controllers"
 )
 
 func initDb() {
@@ -54,7 +54,7 @@ var FilterUser = func(ctx *context.Context) {
 func main() {
 	initDb()
 	//	beego.InsertFilter("/*", beego.BeforeStatic, FilterStatic)
-//		beego.InsertFilter("/*", beego.BeforeRouter, FilterUser)
+	//		beego.InsertFilter("/*", beego.BeforeRouter, FilterUser)
 	//	params := svc.SvcParams{
 	//		"username": "a",
 	//		"password": "a",

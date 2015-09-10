@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"github.com/astaxie/beego"
 	"strconv"
-	"webo/models/s"
 	"strings"
+	"webo/models/s"
 )
 
 type ItemDef struct {
@@ -18,23 +18,23 @@ type ItemDef struct {
 }
 
 type EnumValue struct {
-	Sn 		string
-	Name 	string
-	Label 	string
+	Sn    string
+	Name  string
+	Label string
 }
 
 type Field struct {
-	Name    string      `json:name`
-	Type    string      `json:type`
-	Label   string      `json:label`
-	Input   string      `json:input`
-	Require string      `json:require`
-	Unique  string      `json:unique`
-	Model   string      `json:model`
-	Enum    []EnumValue `json:enum`
-	Range   string      `json:range`
-	Default interface{} `json:default`
-	UiList  UiListStruct
+	Name     string      `json:name`
+	Type     string      `json:type`
+	Label    string      `json:label`
+	Input    string      `json:input`
+	Require  string      `json:require`
+	Unique   string      `json:unique`
+	Model    string      `json:model`
+	Enum     []EnumValue `json:enum`
+	Range    string      `json:range`
+	Default  interface{} `json:default`
+	UiList   UiListStruct
 	Editable bool
 }
 type UiListStruct struct {
@@ -44,11 +44,11 @@ type UiListStruct struct {
 	Visiable bool
 }
 
-func newUiList() UiListStruct{
+func newUiList() UiListStruct {
 	return UiListStruct{true, true, "", true}
 }
 
-var fieldSn = Field{"sn", "string", "string", "none", "false", "false", "sn", nil, "","", UiListStruct{false, false, "", false}, false}
+var fieldSn = Field{"sn", "string", "编号", "none", "false", "false", "sn", nil, "", "", UiListStruct{true, false, "", false}, false}
 var fieldCreater = Field{"creater", "string", "创建人", "none", "false", "false", "curuser", nil, "", "", UiListStruct{false, false, "", false}, false}
 var fieldCreateTime = Field{"createtime", "time", "创建时间", "none", "false", "false", "curtime", nil, "", "", UiListStruct{false, false, "", false}, false}
 
@@ -98,7 +98,7 @@ func (this *ItemDef) GetField(filedName string) (Field, bool) {
 	return v, ok
 }
 
-func (this *ItemDef) initDefault() {
+func (this *ItemDef) addDefaultFields() {
 	nField := len(this.Fields)
 	fields := make([]Field, nField+3)
 	fields[0] = fieldSn
@@ -110,7 +110,7 @@ func (this *ItemDef) initDefault() {
 	fields[nField+2] = fieldCreateTime
 	this.Fields = fields
 }
-func (field *Field) IsEditable()bool{
+func (field *Field) IsEditable() bool {
 	return field.Editable
 }
 func (field *Field) GetFormValue(valueString string) (interface{}, bool) {
@@ -126,7 +126,7 @@ func (field *Field) GetFormValue(valueString string) (interface{}, bool) {
 			return 0, false
 		}
 	case s.TypeFloat:
-		if strings.EqualFold(strings.TrimSpace(valueString), ""){
+		if strings.EqualFold(strings.TrimSpace(valueString), "") {
 			return 0, false
 		}
 		value, err := strconv.ParseFloat(valueString, 64)
@@ -141,7 +141,7 @@ func (field *Field) GetFormValue(valueString string) (interface{}, bool) {
 		return 0, false
 	}
 }
-func (field *Field)GetCheckedValue(input interface{}) (interface{}, bool) {
+func (field *Field) GetCheckedValue(input interface{}) (interface{}, bool) {
 	switch field.Type {
 	case s.TypeString:
 		v, ok := input.(string)
@@ -157,25 +157,6 @@ func (field *Field)GetCheckedValue(input interface{}) (interface{}, bool) {
 		return input.(string), false
 	}
 }
-//func (field *Field) GetValueStr(value interface{})string{
-//	switch field.Type {
-//	case "string":
-//		return value.(string)
-//	case "int":
-////		fmt.Println("int", field.Name, v)
-//		v, ok := value.(int64)
-//		if ok{
-//			return fmt.Sprintf("%d", v)
-//		}
-//		return value.(string)
-//	default:
-//		return value.(string)
-//	}
-//}
-
-//func (field *Field)GetDefaultValue(){
-//
-//}
 
 func (field *Field) initDefault() {
 	if field.Type == "" {
@@ -208,27 +189,20 @@ func (field *Field) initDefault() {
 var EntityDefMap = make(map[string]ItemDef)
 
 func init() {
-	beego.Info("Init itemDef")
-		fmt.Println("initItemDefMap")
-	//	bytes, err := ioutil.ReadFile("conf/item.json")
-	//	if err != nil {
-	//		fmt.Println("ReadFile: ", err.Error())
-	//	}
-	//	//    fmt.Println("readFile", bytes)
-	//	var lEntityDefMap = make(map[string]ItemDef)
-	//	if err := json.Unmarshal(bytes, &lEntityDefMap); err != nil {
-	//		fmt.Println("Unmarshal: ", err.Error())
-	//	}
+	beego.Info("Load itemDef from csv")
 	lEntityDefMap := ReadDefFromCsv()
-	//fmt.Println("itemde", EntityDefMap)
 	for k, oItemDef := range lEntityDefMap {
-		oItemDef.initDefault()
+		oItemDef.addDefaultFields()
+		lEntityDefMap[k] = oItemDef
+	}
+	lEntityDefMap = LoadUiListFromCsv(lEntityDefMap)
+	for k, oItemDef := range lEntityDefMap {
 		oItemDef.initAccDate()
 		EntityDefMap[k] = oItemDef
 	}
-	odefd, ok := EntityDefMap["product"]
-	if ok {
-		fmt.Println("ddd", odefd.Name, odefd.GetFieldMap())
-	}
-	fmt.Println(EntityDefMap)
+	//	odefd, ok := EntityDefMap["product"]
+	//	if ok {
+	//		fmt.Println("ddd", odefd.Name, odefd.GetFieldMap())
+	//	}
+	//	fmt.Println(EntityDefMap)
 }

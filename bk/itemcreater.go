@@ -48,7 +48,7 @@ func createsql() {
 			}
 			switch field.Model {
 			case "sn", "text", "password", "enum":
-//				fieldsql = fieldsql + " DEFAULT " + field.Default.(string)
+				//				fieldsql = fieldsql + " DEFAULT " + field.Default.(string)
 			case "integer":
 				fieldsql = fieldsql + " DEFAULT " + fmt.Sprintf("%d", field.Default.(int64))
 			default:

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../../asserts/3rd/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="../../asserts/3rd/datetimepicker/jquery.datetimepicker.css">
+    <link rel="stylesheet" href="../../asserts/3rd/uploadify/uploadify.css" />
     <link rel="stylesheet" href="../../asserts/3rd/jquery-ui/jquery-ui.min.css">
     <style>
         .ui-autocomplete-loading {
@@ -24,8 +25,10 @@
 <script src="../../asserts/3rd/jquery/jquery.form.js"></script>
 <script src="../../asserts/3rd/jquery/validate/jquery.metadata.js"></script>
 <script src="../../asserts/3rd/jquery/validate/jquery.validate.js"></script>
+<script src="../../asserts/3rd/uploadify/jquery.uploadify.js"></script>
 <script src="../../asserts/3rd/datetimepicker/jquery.datetimepicker.js"></script>
 <script src="../../asserts/3rd/jquery-ui/jquery-ui.min.js"></script>
+<script src="../../static/js/validateExtend.js"></script>
 <script src="../../static/js/ui.js"></script>
 <script>
     function showResponse(resp) {
@@ -50,38 +53,45 @@
             success: showResponse
         });
     }
+    function setProductValues(item){
+//        console.log(item)
+        $("#product_key" ).val(item.keyword);
+        $("#product_name" ).val(item.name);
+        $("#product" ).val(item.sn);
+        $("#productprice").val(item.price)
+    }
+    function clearProductValues(){
+        $( "#product_name" ).val("");
+        $( "#product" ).val("");
+        $("#productprice").val("")
+    }
     $(function () {
-        $("#supplier_key").autocomplete({
-            source: "/item/autocomplete/supplier",
+        $("#product_key").autocomplete({
+            source: "/item/autocomplete/product",
             autoFocus:true,
             focus: function( event, ui ) {
-                $( "#supplier_key" ).val(ui.item.keyword);
-                $( "#supplier_name" ).val(ui.item.name);
-                $( "#supplier" ).val(ui.item.sn);
+                setProductValues(ui.item)
                 return false;
             },
-            minLength: 2,
+            minLength: 1,
             select: function( event, ui) {
-                $( "#supplier_key" ).val(ui.item.keyword);
-                $( "#supplier_name" ).val(ui.item.name);
-                $( "#supplier" ).val(ui.item.sn);
+                setProductValues(ui.item)
                 return false;
             },
             change: function( event, ui ) {
-                console.log("ui", ui.item)
                 if(!ui.item){
-                    $( "#supplier_name" ).val("");
-                    $( "#supplier" ).val("");
+                    clearProductValues()
                 }
             }
-        })
-                .autocomplete( "instance" )._renderItem = function( ul, item ) {
+        }).autocomplete( "instance" )._renderItem = function( ul, item ) {
             return $( "<li>" )
                     .append(item.keyword + "(" + item.name + ")")
                     .appendTo( ul );
         };
-    })
+
+        $("#placedate").datetimepicker({timepicker:false,format:'Y.m.d',lang:'zh',value:new Date()})
+        $("#requireddate").datetimepicker({timepicker:false,format:'Y.m.d',lang:'zh'})
+    });
 </script>
-{{str2html .Onload}}
 </body>
 </html>

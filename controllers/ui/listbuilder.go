@@ -2,12 +2,13 @@ package ui
 
 import (
 	"fmt"
-	"webo/models/itemDef"
 	"strings"
+	"webo/models/itemDef"
 )
 
 const thFormat = `                <th data-field="%s" %s %s>%s</th>
 `
+
 func BuildListThs(itemDef itemDef.ItemDef) string {
 	th := ""
 	for _, field := range itemDef.Fields {
@@ -37,6 +38,7 @@ const optFormat = `	{field:"action",
 	events:"actionEvents",
 	width:"75px"}
 	`
+
 func BuildColums(itemDef itemDef.ItemDef) string {
 	var columns = []string{}
 	for _, field := range itemDef.Fields {
@@ -48,20 +50,20 @@ func BuildColums(itemDef itemDef.ItemDef) string {
 			column = column + ",visible:false\n"
 		}
 		if field.UiList.Sortable {
-			column = column +  ",sortable:\"true\""
+			column = column + ",sortable:\"true\""
 			if field.UiList.Order == "desc" {
-				column = column +",order:\"desc\""
+				column = column + ",order:\"desc\""
 			}
 		}
-		if field.IsEditable(){
-//			column = column + ",editable: {"
+		if field.IsEditable() {
+			//			column = column + ",editable: {"
 			switch field.Input {
 			case "text", "textarea":
 				column = column + fmt.Sprintf(",editable:{type:\"%s\"}\n", field.Input)
 				fmt.Println()
 			case "select":
 				srcs := []string{}
-				for _, v:= range field.Enum{
+				for _, v := range field.Enum {
 					srcs = append(srcs, fmt.Sprintf(`{value: "%s",text: "%s"}`, v.Sn, v.Label))
 				}
 				column = column + fmt.Sprintf(`,editable:{type:"%s",source:[%s]}`, field.Input, strings.Join(srcs, ",\n"))

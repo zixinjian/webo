@@ -1,14 +1,14 @@
 package controllers
 
 import (
-	"github.com/astaxie/beego"
-	"webo/models/itemDef"
-	"strings"
-	"fmt"
-	"webo/models/stat"
-	"webo/models/s"
-	"webo/models/lang"
 	"encoding/json"
+	"fmt"
+	"github.com/astaxie/beego"
+	"strings"
+	"webo/models/itemDef"
+	"webo/models/lang"
+	"webo/models/s"
+	"webo/models/stat"
 	"webo/models/t"
 )
 
@@ -16,8 +16,7 @@ type BaseController struct {
 	beego.Controller
 }
 
-
-func (this *BaseController) GetItemDefFromParamHi() (itemDef.ItemDef, string){
+func (this *BaseController) GetItemDefFromParamHi() (itemDef.ItemDef, string) {
 	item, ok := this.Ctx.Input.Params[":hi"]
 	if !ok {
 		beego.Error(stat.ParamItemIsNone_, this.Ctx.Input.Params)
@@ -31,7 +30,7 @@ func (this *BaseController) GetItemDefFromParamHi() (itemDef.ItemDef, string){
 	return oItemDef, stat.Success
 }
 
-func (this *BaseController) GetParams(oItemDef itemDef.ItemDef)(queryParams t.Params, limitParams t.LimitParams, orderByParams t.Params) {
+func (this *BaseController) GetParams(oItemDef itemDef.ItemDef) (queryParams t.Params, limitParams t.LimitParams, orderByParams t.Params) {
 	requestBody := this.Ctx.Input.RequestBody
 	var requestMap map[string]interface{}
 	json.Unmarshal(requestBody, &requestMap)
@@ -48,7 +47,7 @@ func (this *BaseController) GetParams(oItemDef itemDef.ItemDef)(queryParams t.Pa
 	queryParams = this.GetQueryParamFromJsonMap(requestMap, oItemDef)
 	addParams := this.GetFormValues(oItemDef)
 	for k, v := range addParams {
-		queryParams[k]=v
+		queryParams[k] = v
 	}
 	return queryParams, limitParams, orderByParams
 }
@@ -58,8 +57,8 @@ func (this *BaseController) GetFormValues(itemD itemDef.ItemDef) map[string]inte
 	retMap = make(map[string]interface{})
 	formValues := this.Input()
 	beego.Debug("BaseController.GetFormValues from values: ", formValues)
-	for k, _ := range formValues{
-		if field, ok := itemD.GetField(k);ok{
+	for k, _ := range formValues {
+		if field, ok := itemD.GetField(k); ok {
 			if v, fok := field.GetFormValue(this.GetString(field.Name)); fok {
 				retMap[field.Name] = this.ReplaceSpecialValues(v)
 			}
@@ -68,8 +67,8 @@ func (this *BaseController) GetFormValues(itemD itemDef.ItemDef) map[string]inte
 	return retMap
 }
 
-func (this *BaseController) ReplaceSpecialValues(value interface{}) interface{}{
-	if str, ok := value.(string); ok{
+func (this *BaseController) ReplaceSpecialValues(value interface{}) interface{} {
+	if str, ok := value.(string); ok {
 		rValue := strings.TrimSpace(str)
 		switch rValue {
 		case s.CurUser:
@@ -77,13 +76,13 @@ func (this *BaseController) ReplaceSpecialValues(value interface{}) interface{}{
 		default:
 			return value
 		}
-	}else{
+	} else {
 		return value
 	}
 }
 
 func (this *BaseController) GetSessionString(sessionName string) string {
-	if this.GetSession(sessionName) != nil{
+	if this.GetSession(sessionName) != nil {
 		return this.GetSession(sessionName).(string)
 	}
 	// TODO
@@ -96,31 +95,31 @@ func (this *BaseController) GetCurUserSn() string {
 func (this *BaseController) GetCurUser() string {
 	return this.GetSessionString(SessionUserName)
 }
-func (this *BaseController) GetCurRole() string{
+func (this *BaseController) GetCurRole() string {
 	return this.GetSessionString(SessionUserRole)
 }
-func (this *BaseController) GetCurDepartment() string{
+func (this *BaseController) GetCurDepartment() string {
 	return this.GetSessionString(SessionUserDepartment)
 }
 
-func (this *BaseController)GetQueryParamFromJsonMap(requestMap map[string]interface{}, oItemDef itemDef.ItemDef) map[string]interface{}{
+func (this *BaseController) GetQueryParamFromJsonMap(requestMap map[string]interface{}, oItemDef itemDef.ItemDef) map[string]interface{} {
 	queryParams := make(t.Params, 0)
 	fieldMap := oItemDef.GetFieldMap()
-	for k, v := range requestMap{
-		if field, ok := fieldMap[k];ok{
-			if fv, fok := field.GetCheckedValue(v);fok{
+	for k, v := range requestMap {
+		if field, ok := fieldMap[k]; ok {
+			if fv, fok := field.GetCheckedValue(v); fok {
 				queryParams[k] = fv
-			}else{
+			} else {
 				beego.Error(fmt.Sprintf("Check param[%s]value %v error", k, v))
 			}
-		}else{
+		} else {
 			beego.Error(fmt.Sprintf("Check param[%s]value %v error no such field", k, v))
 		}
 	}
 	return queryParams
 }
 
-func (this *BaseController)GetLimitParamFromJsonMap(requestMap map[string]interface{}) map[string]int64{
+func (this *BaseController) GetLimitParamFromJsonMap(requestMap map[string]interface{}) map[string]int64 {
 	limitParams := make(map[string]int64, 0)
 	if k, ok := requestMap["limit"]; ok {
 		limitParams["limit"] = int64(k.(float64))
@@ -130,7 +129,7 @@ func (this *BaseController)GetLimitParamFromJsonMap(requestMap map[string]interf
 	}
 	return limitParams
 }
-func (this *BaseController)GetOrderParamFromJsonMap(requestMap map[string]interface{}) t.Params{
+func (this *BaseController) GetOrderParamFromJsonMap(requestMap map[string]interface{}) t.Params {
 	orderByParams := make(t.Params, 0)
 	if sort, ok := requestMap["sort"]; ok {
 		sortStr := strings.TrimSpace(sort.(string))
@@ -148,29 +147,21 @@ func (this *BaseController)GetOrderParamFromJsonMap(requestMap map[string]interf
 }
 
 func TransAutocompleteList(resultMaps []map[string]interface{}, keyField string) []map[string]interface{} {
-	retList := make([]map[string]interface{}, len(resultMaps))
 	if len(resultMaps) <= 0 {
-		return retList
+		return resultMaps
 	}
-
+	if keyField == s.Keyword {
+		return resultMaps
+	}
 	for idx, oldMap := range resultMaps {
-		var retMap = make(map[string]interface{}, 3)
-		if sn, sok := oldMap[s.Sn]; sok{
-			retMap[s.Sn] = sn
-			if name, nok := oldMap[s.Name]; nok{
-				retMap[s.Name] = name
-			}else {
-				retMap[s.Name] = ""
+		for k, v := range oldMap {
+			if keyField == k {
+				oldMap[s.Keyword] = v
 			}
-			if keyword, kok := oldMap[s.Keyword]; kok{
-				retMap[s.Keyword] = keyword
-			}else {
-				retMap[s.Keyword] = ""
-			}
-			retList[idx] = retMap
 		}
+		resultMaps[idx] = oldMap
 	}
-	return retList
+	return resultMaps
 }
 
 func TransList(oItemDef itemDef.ItemDef, resultMaps []map[string]interface{}) []map[string]interface{} {

@@ -19,6 +19,15 @@ var textFormat = `    <div class="form-group">
 			</div>
 		</div>
     	`
+
+const staticFormat = `<div class="form-group">
+    <label class="col-sm-3 control-label">%s</label>
+    <div class="col-sm-6">
+      <p class="form-control-static">%s</p>
+    </div>
+  </div>
+`
+
 var moneyFormat = `    <div class="form-group">
 			<label class="col-sm-3 control-label">%s</label>
 			<div class="col-sm-6">
@@ -74,12 +83,11 @@ var autocompleteFormat = `    <div class="form-group">
             <label class="col-sm-3 control-label">%s关键字</label>
             <div class="col-sm-6">
                 <input type="text" class="input-block-level form-control" id="%s_key" value="%s" %s/>
-                <label>%s名称</label><input type="text" class="input-block-level form-control" readonly="true" id="%s_name" name="%s_name" data-validate="{required: %s, messages:{required:'请输入正确的%s!'}}" value="%s" readonly="true">
+                <label>%s名称</label><input type="text" class="input-block-level form-control" readonly="true" id="%s_name" name="%s_name" data-validate="{required: %s, messages:{required:'请输入正确的%s!'}}" value="%s" readonly="true" placeholder="自动联想">
                 <input type="hidden" id="%s" name="%s" value="%s">
             </div>
         </div>
 `
-
 
 var initDatePickerFormat = `
 $("#%s").datetimepicker({%sformat:'Y.m.d',lang:'zh',%s})
@@ -94,7 +102,7 @@ var initAutocompleteFormat = `
 			$( "#%s" ).val(ui.item.sn);
 			return false;
 		},
-		minLength: 2,
+		minLength: 1,
 		select: function( event, ui) {
 			$( "#%s_key" ).val(ui.item.keyword);
 			$( "#%s_name" ).val(ui.item.name);
@@ -172,36 +180,33 @@ func BuildUpdatedFormWithStatus(oItemDef itemDef.ItemDef, oldValueMap map[string
 	}
 	form := fmt.Sprintf(`<input type="hidden" id="sn" name="sn" value="%s">`, sn)
 	for _, field := range oItemDef.Fields {
-		if _, ok := oldValueMap[field.Name];!ok{
+		if _, ok := oldValueMap[field.Name]; !ok {
 			oldValueMap[field.Name] = field.Default
 		}
 	}
-	for _, field := range oItemDef.Fields{
+	for _, field := range oItemDef.Fields {
 		form = form + createFromGroup(field, oldValueMap, statusMap)
 	}
 	return form
 }
 
-
 func BuildAddForm(oItemDef itemDef.ItemDef, sn string) string {
-	form := fmt.Sprintf(`<input type="hidden" id="sn" name="sn" value="%s">`, sn)
+	return BuildAddFormWithStatus(oItemDef, sn, make(map[string]string))
+}
+
+func BuildAddFormWithStatus(oItemDef itemDef.ItemDef, sn string, statusMap map[string]string) string {
 	oldValueMap := make(map[string]interface{})
-	for _, field := range oItemDef.Fields {
-		oldValueMap[field.Name] = field.Default
-	}
-	for _, field := range oItemDef.Fields{
-		form = form + createFromGroup(field, oldValueMap, make(map[string]string))
-	}
-	return form
+	oldValueMap[s.Sn] = sn
+	return BuildUpdatedFormWithStatus(oItemDef, oldValueMap, statusMap)
 }
 
 func createFromGroup(field itemDef.Field, valueMap map[string]interface{}, statusMap map[string]string) string {
 	value, ok := valueMap[field.Name]
-	if !ok{
+	if !ok {
 		return ""
 	}
 	status, sok := statusMap[field.Name]
-	if !sok{
+	if !sok {
 		status = ""
 	}
 	var fromGroup string
@@ -210,10 +215,12 @@ func createFromGroup(field itemDef.Field, valueMap map[string]interface{}, statu
 		fromGroup = fmt.Sprintf(textareaFormat, field.Label, field.Require, field.Label, field.Name, field.Name, status, value)
 	case "text":
 		fromGroup = fmt.Sprintf(textFormat, field.Label, field.Require, field.Label, field.Name, field.Name, u.ToStr(value), status)
+	case "static":
+		fromGroup = fmt.Sprintf(staticFormat, field.Label, value)
 	case "money":
 		fromGroup = fmt.Sprintf(moneyFormat, field.Label, field.Require, field.Label, field.Name, field.Name, u.ToStr(value), status)
 	case "date", "datetime":
-		fmt.Println("date", field.Name,value)
+		fmt.Println("date", field.Name, value)
 		fromGroup = fmt.Sprintf(dateFormate, field.Label, field.Require, field.Label, field.Name, field.Name, value, status)
 	case "password":
 		fromGroup = fmt.Sprintf(passwordFormat, field.Label, field.Require, field.Label, field.Name, field.Name, "*****", status)
@@ -228,12 +235,12 @@ func createFromGroup(field itemDef.Field, valueMap map[string]interface{}, statu
 		}
 		fromGroup = fmt.Sprintf(selectFormat, field.Label, field.Require, field.Label, field.Name, field.Name, field.Default, status, options)
 	case s.Autocomplete:
-		key, kok := valueMap[field.Name + s.EKey]
-		if !kok{
+		key, kok := valueMap[field.Name+s.EKey]
+		if !kok {
 			key = ""
 		}
-		name, nok := valueMap[field.Name + s.EName]
-		if !nok{
+		name, nok := valueMap[field.Name+s.EName]
+		if !nok {
 			name = ""
 		}
 		fromGroup = fmt.Sprintf(autocompleteFormat, field.Label, field.Name, key, status,

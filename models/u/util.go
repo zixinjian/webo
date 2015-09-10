@@ -2,9 +2,9 @@ package u
 
 import (
 	"fmt"
+	"github.com/astaxie/beego/orm"
 	"reflect"
 	"time"
-	"github.com/astaxie/beego/orm"
 )
 
 var gId uint32
@@ -62,6 +62,6 @@ func init() {
 	gOldTime = time.Now()
 }
 
-func ToStr(v interface{})string{
+func ToStr(v interface{}) string {
 	return orm.ToStr(v)
 }

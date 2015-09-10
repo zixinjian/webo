@@ -11,24 +11,27 @@ const (
 )
 
 const (
-	Sn          = "sn"
-	Name        = "name"
-	UserName    = "username"
-	Category    = "category"
-	Model       = "model"
-	Num         = "num"
-	Keyword     = "keyword"
-	Password    = "password"
-	CurTime     = "curtime"
-	Creater     = "creater"
-	Term        = "term"
-	CreaterTime = "createtime"
-	CurUser     = "curuser"
-	Flag        = "flag"
-	Mark        = "mark"
-	Department  = "department"
-	PlaceDate   = "placedate"
-	Requireddate= "requireddate"
+	Sn                 = "sn"
+	Name               = "name"
+	UserName           = "username"
+	Category           = "category"
+	Model              = "model"
+	Num                = "num"
+	Keyword            = "keyword"
+	Password           = "password"
+	CurTime            = "curtime"
+	Creater            = "creater"
+	Price              = "price"
+	Buyer              = "buyer"
+	Term               = "term"
+	CreaterTime        = "createtime"
+	CurUser            = "curuser"
+	Flag               = "flag"
+	Mark               = "mark"
+	Department         = "department"
+	PlaceDate          = "placedate"
+	Requireddate       = "requireddate"
+	ProductPrice       = "productprice"
 	Requireddepartment = "requireddepartment"
 )
 
@@ -40,9 +43,9 @@ const (
 )
 
 const (
-	RoleAdmin 	= "role_admin"
+	RoleAdmin   = "role_admin"
 	RoleManager = "role_manager"
-	RoleUser	= "role_user"
+	RoleUser    = "role_user"
 )
 
 const (
@@ -60,10 +63,13 @@ const (
 )
 
 const (
-	EKey	= "_key"
-	EName	= "_Name"
+	EKey   = "_key"
+	EName  = "_Name"
+	EPrice = "_price"
 )
 
 const (
-	Disabled = "Disabled"
+	Disabled = "disabled"
+	ReadOnly = "readonly='true'"
+	Checked  = "checked"
 )

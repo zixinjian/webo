@@ -40,7 +40,8 @@
 <script>
     var $table = $("#item_table")
     $(function(){
-        $table.bootstrapTable({url:"{{.listUrl}}", method:"post", sidePagination:"server", pagination:true, height:getHeight()});
+        $table.bootstrapTable({url:"{{.listUrl}}", method:"post", sidePagination:"server", pagination:true,
+            height:getHeight(), sortName:"requireddate", sortOrder:"asc"});
         $("#add_item").on("click", function(){
             top.showTopModal({url:"{{.addUrl}}", refreshContent:refreshContent});
         })

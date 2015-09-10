@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"github.com/astaxie/beego"
 	"fmt"
+	"github.com/astaxie/beego"
 	"webo/models/t"
 )
 
@@ -43,4 +43,3 @@ func (this *ServiceController) Post() {
 	this.Data["json"] = "{\"ObjectId\":\"abcdID\"}"
 	this.ServeJson()
 }
-

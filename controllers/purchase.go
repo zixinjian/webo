@@ -20,6 +20,29 @@ type PurchaseController struct {
 	ItemController
 }
 
+const buyerHtmlFormat = `<label class="radio-inline">
+<input data-model="buyers" type="radio" name = "buyers" id="%s" value="%s" %s> %s
+</label>
+`
+const AdminUserFormat = `<label class="radio-inline">
+                <input data-model="buyers" type="radio" name = "buyers" id="all" value="all" %s> 全部
+            </label>
+`
+const CurListQueryParamsJs = `<script>
+    function queryParams(params){
+        params["godowndate"]=""
+        return params
+    }
+</script>
+`
+const HistoryListQueryParamsJs = `<script>
+    function queryParams(params){
+        return params
+    }
+</script>
+`
+
+// 我创建的订单列表
 func (this *PurchaseController) UiMyCreate() {
 	item := "purchase"
 	oItemDef, _ := itemDef.EntityDefMap[item]
@@ -29,22 +52,6 @@ func (this *PurchaseController) UiMyCreate() {
 	this.Data["thlist"] = ui.BuildListThs(oItemDef)
 	this.TplNames = "purchase/mycreates.html"
 }
-
-const CurListQueryParamsJs = `<script>
-    function queryParams(params){
-        params["godowndate"]=""
-        return params
-    }
-</script>
-`
-const buyerHtmlFormat = `<label class="radio-inline">
-<input data-model="buyers" type="radio" name = "buyers" id="%s" value="%s" %s> %s
-</label>
-`
-const AdminUserFormat = `<label class="radio-inline">
-                <input data-model="buyers" type="radio" name = "buyers" id="all" value="all" %s> 全部
-            </label>
-`
 
 //待处理的订单列表
 func (this *PurchaseController) UiCurList() {
@@ -61,13 +68,22 @@ func (this *PurchaseController) UiCurList() {
 	this.TplNames = "purchase/list.html"
 }
 
-const HistoryListQueryParamsJs = `<script>
-    function queryParams(params){
-        return params
-    }
-</script>
-`
+//历史订单列表
+func (this *PurchaseController) UiHistoryList() {
+	this.UiCurList()
+	this.Data["listUrl"] = "/item/list/purchase"
+	this.Data["updateUrl"] = "/ui/purchase/show"
+	this.Data["sortOrder"] = s.Desc
+	this.Data["queryParams"] = HistoryListQueryParamsJs
+}
 
+//历史价格分析
+func (this *PurchaseController) PriceAnalyze() {
+	this.Data["updateUrl"] = "/ui/purchase/show"
+	this.TplNames = "purchase/priceanalyze.tpl"
+}
+
+// 添加
 func (this *PurchaseController) UiAdd() {
 	item := s.Purchase
 	oItemDef, _ := itemDef.EntityDefMap[item]
@@ -81,42 +97,13 @@ func (this *PurchaseController) UiAdd() {
 	this.TplNames = "purchase/add.tpl"
 }
 
-
-func fillBuyerEnum(oItemDef itemDef.ItemDef) itemDef.ItemDef {
-	for idx, field := range oItemDef.Fields {
-		if strings.EqualFold("buyer", field.Name) {
-			field.Enum = getBuyerEnum()
-		}
-		oItemDef.Fields[idx] = field
-	}
-	return oItemDef
-}
-
-func getBuyerEnum() []itemDef.EnumValue {
-	queryParams := t.Params{
-		s.Department: "department_purchase",
-	}
-	orderParams := t.Params{
-		s.Name: s.Asc,
-	}
-	if code, userMaps := svc.GetItems(s.User, queryParams, orderParams); strings.EqualFold(code, stat.Success) {
-		EnumList := make([]itemDef.EnumValue, len(userMaps))
-		for idx, user := range userMaps {
-			v, _ := user[s.Sn]
-			u, _ := user[s.UserName]
-			l, _ := user[s.Name]
-			EnumList[idx] = itemDef.EnumValue{v.(string), u.(string), l.(string)}
-		}
-		return EnumList
-	} else {
-		return make([]itemDef.EnumValue, 0)
-	}
-}
-
+//管理者修改
 func (this *PurchaseController) UiUpdate() {
 	statusMap := map[string]string{}
 	this.UiUpdateWithStatus(statusMap)
 }
+
+//用户修改
 func (this *PurchaseController) UiUserUpdate() {
 	statusMap := map[string]string{
 		s.Sn:                 s.Disabled,
@@ -130,6 +117,8 @@ func (this *PurchaseController) UiUserUpdate() {
 	}
 	this.UiUpdateWithStatus(statusMap)
 }
+
+//历史中修改
 func (this *PurchaseController) UiHistoryUpdate() {
 	item := s.Purchase
 	oItemDef, _ := itemDef.EntityDefMap[item]
@@ -140,6 +129,7 @@ func (this *PurchaseController) UiHistoryUpdate() {
 	this.UiUpdateWithStatus(statusMap)
 }
 
+//修改基本方法
 func (this *PurchaseController) UiUpdateWithStatus(statusMap map[string]string) {
 	item := s.Purchase
 	oItemDef, _ := itemDef.EntityDefMap[item]
@@ -162,27 +152,12 @@ func (this *PurchaseController) UiUpdateWithStatus(statusMap map[string]string) 
 	}
 }
 
-//历史订单列表
-func (this *PurchaseController) UiHistoryList() {
-	this.UiCurList()
-	this.Data["listUrl"] = "/item/list/purchase"
-	this.Data["updateUrl"] = "/ui/purchase/show"
-	this.Data["sortOrder"] = s.Desc
-	this.Data["queryParams"] = HistoryListQueryParamsJs
-}
-
-//历史价格分析
-func (this *PurchaseController) PriceAnalyze() {
-	this.TplNames = "purchase/priceanalyze.tpl"
-}
-
 func (this *PurchaseController) ExpenseList() {
 	beego.Info("ExpenseList")
 	this.UiCurList()
 	item := s.Purchase
 	oItemDef, _ := itemDef.EntityDefMap[item]
-
-	this.Data["thlist"] = ui.BuildListThs(oItemDef)
+	this.Data["thlist"] = ui.BuildListThs(getExpandListDef(oItemDef))
 	this.TplNames = "purchase/expand.html"
 }
 
@@ -257,13 +232,43 @@ func expandPurchaseMap(oldMap t.ItemMap) t.ItemMap {
 	return retMap
 }
 
+func fillBuyerEnum(oItemDef itemDef.ItemDef) itemDef.ItemDef {
+	for idx, field := range oItemDef.Fields {
+		if strings.EqualFold("buyer", field.Name) {
+			field.Enum = getBuyerEnum()
+		}
+		oItemDef.Fields[idx] = field
+	}
+	return oItemDef
+}
+
+func getBuyerEnum() []itemDef.EnumValue {
+	queryParams := t.Params{
+		s.Department: "department_purchase",
+	}
+	orderParams := t.Params{
+		s.Name: s.Asc,
+	}
+	if code, userMaps := svc.GetItems(s.User, queryParams, orderParams); strings.EqualFold(code, stat.Success) {
+		EnumList := make([]itemDef.EnumValue, len(userMaps))
+		for idx, user := range userMaps {
+			v, _ := user[s.Sn]
+			u, _ := user[s.UserName]
+			l, _ := user[s.Name]
+			EnumList[idx] = itemDef.EnumValue{v.(string), u.(string), l.(string)}
+		}
+		return EnumList
+	} else {
+		return make([]itemDef.EnumValue, 0)
+	}
+}
+
 func getAddPurchaseDef(oItemDef itemDef.ItemDef) itemDef.ItemDef {
 	names := []string{s.Sn, s.Category, s.Product, s.Model, s.ProductPrice, s.Buyer, s.Num, s.PlaceDate, s.Requireddate, s.Requireddepartment, s.Mark}
 	return makeFields(oItemDef, names)
 }
 
-func getExpandListDef(oItemDef itemDef.ItemDef) itemDef.ItemDef{
-	names := []string{s.Sn, s.Category, s.Product, s.Model, s.ProductPrice, s.Buyer, s.Num, s.PlaceDate, s.Requireddate, s.Requireddepartment, s.Mark}
+func getExpandListDef(oItemDef itemDef.ItemDef) itemDef.ItemDef {
+	names := []string{s.Sn, s.Category, s.Product, s.Model, s.Num, s.UintPrice, s.ProductPrice, s.TotalPrice, s.Buyer, s.Mark}
 	return makeFields(oItemDef, names)
 }
-

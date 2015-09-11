@@ -17,6 +17,8 @@ const (
 	Category           = "category"
 	Model              = "model"
 	Num                = "num"
+	UintPrice          = "unitprice"
+	TotalPrice         = "totalprice"
 	Keyword            = "keyword"
 	Password           = "password"
 	CurTime            = "curtime"

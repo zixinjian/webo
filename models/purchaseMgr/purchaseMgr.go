@@ -1,7 +1,6 @@
 package purchaseMgr
 
 import (
-	"fmt"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
 	"strconv"
@@ -26,6 +25,10 @@ func GetPurchases(queryParams t.Params, limitParams t.LimitParams, orderBy t.Par
 	for k, v := range queryParams {
 		sqlBuilder.Filter(surface+"."+k, v)
 	}
+	count := GetPurchaseTotal(sqlBuilder)
+	if count == -1 {
+		return stat.Failed, 0, make([]map[string]interface{}, 0)
+	}
 	if limit, ok := limitParams[s.Limit]; ok {
 		sqlBuilder.Limit(limit)
 	}
@@ -35,11 +38,6 @@ func GetPurchases(queryParams t.Params, limitParams t.LimitParams, orderBy t.Par
 	for k, v := range orderBy {
 		sqlBuilder.OrderBy(surface+"."+k, v)
 	}
-	count := GetPurchaseCount(sqlBuilder)
-	if count == -1 {
-		return stat.Failed, 0, make([]map[string]interface{}, 0)
-	}
-
 	if code, retMaps := GetPurchaseList(sqlBuilder); strings.EqualFold(code, stat.Success) {
 		return stat.Success, count, retMaps
 	} else {
@@ -49,8 +47,9 @@ func GetPurchases(queryParams t.Params, limitParams t.LimitParams, orderBy t.Par
 
 func GetPurchaseList(sqlBuilder *svc.SqlBuilder) (string, []map[string]interface{}) {
 	query := sqlBuilder.GetCustomerSql(purchaseListSql)
-	beego.Error("query", query)
 	values := sqlBuilder.GetValues()
+	beego.Debug("GetPurchaseList: ", query, values)
+
 	o := orm.NewOrm()
 	var resultMaps []orm.Params
 	retList := make([]map[string]interface{}, 0)
@@ -62,26 +61,30 @@ func GetPurchaseList(sqlBuilder *svc.SqlBuilder) (string, []map[string]interface
 		}
 		return stat.Success, retList
 	}
-	beego.Error(fmt.Sprintf("Query error:%s for sql:%s", err.Error(), query))
+	beego.Error("GetPurchaseList Query error:", err)
 	return stat.Failed, retList
 }
 
-func GetPurchaseCount(sqlBuilder *svc.SqlBuilder) int64 {
+func GetPurchaseTotal(sqlBuilder *svc.SqlBuilder) int64 {
 	query := sqlBuilder.GetCustomerSql(purchaseCountSql)
 	values := sqlBuilder.GetValues()
-	beego.Debug("purchase.GetPurchaseCount params:", query, ":", values)
+	beego.Debug("GetPurchaseTotal: ", query, ":", values)
 	o := orm.NewOrm()
 	var maps []orm.Params
 	if _, err := o.Raw(query, values...).Values(&maps); err == nil {
+		if len(maps) <= 0 {
+			return 0
+		}
 		if total, ok := maps[0]["count"]; ok {
 			total64, err := strconv.ParseInt(total.(string), 10, 64)
 			if err != nil {
-				panic(err)
+				beego.Error("GetPurchaseTotal error: ", err)
+				return 0
 			}
 			return total64
 		}
 	}
-	return -1
+	return 0
 }
 
 func transPurchaseMap(oldMap orm.Params) t.ItemMap {

@@ -18,15 +18,28 @@
            data-search="true"
            data-query-params="queryParams"
            data-row-style="rowStyle"
+           data-show-footer="true"
            data-toolbar=".toolbar">
         <thead>
         <tr>
+            <th data-field="check" data-checkbox = "true" data-align="center"></th>
             <th data-field="action"
                 data-align="center"
                 data-formatter="actionFormatter"
                 data-events="actionEvents"
-                data-width="75px">  [ 操作 ]  </th>
-            {{str2html .thlist}}
+                data-width="75px" data-footer-formatter="optFootFormat">  [ 操作 ]  </th>
+            <th data-field="sn"  data-sortable="true" data-footer-formatter="snFootFormat">编号</th>
+            <th data-field="category"  data-sortable="true">类别</th>
+            <th data-field="product"  data-sortable="true">商品</th>
+            <th data-field="model"  data-sortable="true">型号</th>
+            <th data-field="num"  data-sortable="true" data-footer-formatter="numFootFormat">数量</th>
+            <th data-field="unitprice"  data-sortable="true">单价</th>
+            <th data-field="productprice"  data-sortable="true">参考价</th>
+            <th data-field="totalprice"  data-sortable="true"  data-footer-formatter="totalPriceFootFormat">金额</th>
+            <th data-field="pricedifference"  data-sortable="true" data-formatter="priceDifferenceFormat"
+                data-footer-formatter="priceDifferenceFootFormat">总差价</th>
+            <th data-field="buyer"  data-sortable="true">采购人</th>
+            <th data-field="mark"  data-sortable="true">备注</th>
         </tr>
         </thead>
     </table>
@@ -65,9 +78,49 @@
             wbSprintf('<a class="file" href="/static/files/purchase/%s" target="_blank" title="附件" data-toggle="poplayer" data-placement="bottom" data-url="/static"><i class="glyphicon glyphicon-file"></i></a>', row.sn),
         ].join('');
     }
+
+    function priceDifferenceFormat(value, row){
+        if (row.productprice == "" || row.totalprice == "" || row.num == ""){
+            return ""
+        }
+        return row.totalprice - (row.productprice * row.num)
+    }
+    function optFootFormat(data){
+        return '<a href="javascript:" onclick="print()" id="add_item" class="print btn btn-primary btn-sm">打印</a>'
+    }
+    function snFootFormat(data){
+        return "总计: " + data.length
+    }
+    function numFootFormat(data){
+        var total = 0;
+        $.each(data, function (i, row) {
+            total += +(row.num);
+        });
+        return total;
+    }
+    function totalPriceFootFormat(data){
+        var total = 0;
+        $.each(data, function (i, row) {
+            total += +(row.totalprice);
+        });
+        return total;
+    }
+    function priceDifferenceFootFormat(data){
+        var total = 0;
+        $.each(data, function (i, row) {
+            total += +(row.pricedifference);
+        });
+        return total;
+    }
+    function print(){
+        console.log("abcdeeff")
+    }
     window.actionEvents = {
         'click .update': function (e, value, row) {
             top.showTopModal({url:"{{.updateUrl}}?sn=" + row.sn, refreshContent:refreshContent});
+        },
+        'click .print': function (e, value, row) {
+            console.log(row)
         }
     }
     $(function(){
@@ -81,15 +134,8 @@
         })
     });
     function rowStyle(row, index) {
-        if(row.godowndate == ""){
-            now = moment()
-            requiredDate = moment(row.requireddate, "YYYY.MM.DD")
-            if (requiredDate.diff(now, "days") < 0){
-                return {classes: "danger"};
-            }
-            if (requiredDate.diff(now, "days") < 2 ){
-                return {classes: "warning"};
-            }
+        if(priceDifferenceFormat("", row) > 0){
+            return {classes: "warning"};
         }
         return {}
     }

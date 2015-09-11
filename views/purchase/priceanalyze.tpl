@@ -72,6 +72,9 @@
         console.log("setChartData", rows)
         for (i in rows){
             row = rows[i]
+            if(row.unitprice == 0){
+                continue
+            }
             option.xAxis[0].data.push(row.sn)
             option.series[0].data.push(row.unitprice)
             option.series[1].data.push(row.productprice)

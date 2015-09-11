@@ -46,13 +46,13 @@ func TUId() string {
 	if gOldTime.After(now) {
 		now = gOldTime
 	}
-	if gId > 999 {
+	if gId > 99 {
 		gId = 0
 		now.Add(time.Second)
 	}
 	gOldTime = now
 	//    fmt.Println(now.Format("20060102150405"))
-	ret := fmt.Sprintf("%s%03d", now.Format("20060102150405"), gId)
+	ret := fmt.Sprintf("%s%02d", now.Format("20060102150405"), gId)
 	gId = gId + 1
 	return ret
 }

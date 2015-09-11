@@ -2317,3 +2317,12 @@
 2015/09/10 23:16:43 [asm_amd64.s:1696] [I] http server Running on :8080
 2015/09/10 23:17:38 [asm_amd64.s:1696] [I] http server Running on :8080
 2015/09/10 23:18:10 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/10 23:19:07 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/10 23:19:07 [asm_amd64.s:1696] [C] ListenAndServe: %!(EXTRA *net.OpError=listen tcp :8080: bind: address already in use)
+2015/09/11 07:36:34 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/11 07:37:06 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/11 08:06:38 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/11 08:20:57 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/11 08:23:15 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/11 08:24:12 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/11 08:24:20 [asm_amd64.s:1696] [I] http server Running on :8080

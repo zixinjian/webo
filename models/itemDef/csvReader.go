@@ -194,7 +194,7 @@ func readItemDefCsv(fileName string) ItemDef {
 		field.UiList = newUiList()
 		oItemDef.Fields = append(oItemDef.Fields, field)
 	}
-	fmt.Println("oItemDef", oItemDef)
+	//	fmt.Println("oItemDef", oItemDef)
 	return oItemDef
 }
 

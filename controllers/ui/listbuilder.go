@@ -60,7 +60,7 @@ func BuildColums(itemDef itemDef.ItemDef) string {
 			switch field.Input {
 			case "text", "textarea":
 				column = column + fmt.Sprintf(",editable:{type:\"%s\"}\n", field.Input)
-				fmt.Println()
+				//				fmt.Println()
 			case "select":
 				srcs := []string{}
 				for _, v := range field.Enum {

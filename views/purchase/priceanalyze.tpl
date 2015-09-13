@@ -12,7 +12,7 @@
         <div class="form-group">
             <label for="product_key">产品关键字</label>
             <input type="text" class="form-control" id="product_key" placeholder="请输入关键字">
-            <label for="product_key">名称</label>
+            <label for="product_name">名称</label>
             <input type="text" class="form-control" id="product_name" placeholder="自动联想" readonly>
             <input type="hidden" id="product">
         </div>

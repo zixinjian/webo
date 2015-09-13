@@ -44,7 +44,7 @@ func (this *ItemController) ListWithQuery(oItemDef itemDef.ItemDef, addQueryPara
 
 func (this *ItemController) List() {
 	item, ok := this.Ctx.Input.Params[":hi"]
-	fmt.Println("params", this.Ctx.Input.Params, this.Ctx.Input)
+	beego.Debug("params", this.Ctx.Input.Params, this.Ctx.Input)
 	if !ok {
 		this.Data["json"] = TableResult{"false", 0, ""}
 		this.ServeJson()
@@ -57,23 +57,24 @@ func (this *ItemController) List() {
 		return
 	}
 	addParams := this.GetFormValues(oItemDef)
-	//	creater := this.GetString(s.Creater)
-	//	if creater == s.CurUser {
-	//		sn := this.GetCurUserSn()
-	//		addParams[s.Creater]= sn
-	//	}
 	this.ListWithQuery(oItemDef, addParams)
 }
 
 func (this *ItemController) Add() {
-	beego.Debug("BaseController.GetFormValues form values: ", this.Input())
 	item, ok := this.Ctx.Input.Params[":hi"]
+	beego.Debug("params", this.Ctx.Input.Params, this.Ctx.Input)
 	if !ok {
-		fmt.Println("hi", item)
+		beego.Error(stat.ParamItemError)
+		this.Data["json"] = JsonResult{stat.ParamItemError, stat.ParamItemError}
+		this.ServeJson()
+		return
 	}
 	oEntityDef, ok := itemDef.EntityDefMap[item]
 	if !ok {
-		fmt.Println(stat.ItemNotDefine)
+		beego.Error(fmt.Sprintf("Item %s not define", item))
+		this.Data["json"] = JsonResult{stat.ItemNotDefine, stat.ItemNotDefine}
+		this.ServeJson()
+		return
 	}
 	curUserSn := this.GetSessionString(SessionUserSn)
 	svcParams := this.GetFormValues(oEntityDef)
@@ -94,11 +95,17 @@ func (this *ItemController) Update() {
 	beego.Debug("Update params:", this.Ctx.Input.Params)
 	item, ok := this.Ctx.Input.Params[":hi"]
 	if !ok {
-		fmt.Println("hi", item)
+		beego.Error(stat.ParamItemError)
+		this.Data["json"] = JsonResult{stat.ParamItemError, stat.ParamItemError}
+		this.ServeJson()
+		return
 	}
 	oEntityDef, ok := itemDef.EntityDefMap[item]
 	if !ok {
-		fmt.Println(stat.ItemNotDefine)
+		beego.Error(fmt.Sprintf("Item %s not define", item))
+		this.Data["json"] = JsonResult{stat.ItemNotDefine, stat.ItemNotDefine}
+		this.ServeJson()
+		return
 	}
 	svcParams := this.GetFormValues(oEntityDef)
 	status, reason := svc.Update(item, svcParams)
@@ -109,13 +116,16 @@ func (this *ItemController) Update() {
 func (this *ItemController) Upload() {
 	item, ok := this.Ctx.Input.Params[":hi"]
 	if !ok {
-		fmt.Println("hi", item)
+		beego.Error(stat.ParamItemError)
+		this.Ctx.WriteString(stat.ParamItemError)
+		return
 	}
-	_, vok := itemDef.EntityDefMap[item]
-	if !vok {
-		fmt.Println(stat.ItemNotDefine)
+	if _, ok := itemDef.EntityDefMap[item]; !ok {
+		beego.Error(fmt.Sprintf("Item %s not define", item))
+		this.Ctx.WriteString(stat.ItemNotDefine)
+		return
 	}
-	sn := this.GetString("sn")
+	sn := this.GetString(s.Sn)
 	if sn == "" {
 		beego.Error("ItemController.Upload error: ", stat.SnNotFound)
 		this.Ctx.WriteString(stat.SnNotFound)

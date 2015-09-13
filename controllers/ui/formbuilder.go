@@ -220,7 +220,7 @@ func createFromGroup(field itemDef.Field, valueMap map[string]interface{}, statu
 	case "money":
 		fromGroup = fmt.Sprintf(moneyFormat, field.Label, field.Require, field.Label, field.Name, field.Name, u.ToStr(value), status)
 	case "date", "datetime":
-		fmt.Println("date", field.Name, value)
+		//		fmt.Println("date", field.Name, value)
 		fromGroup = fmt.Sprintf(dateFormate, field.Label, field.Require, field.Label, field.Name, field.Name, value, status)
 	case "password":
 		fromGroup = fmt.Sprintf(passwordFormat, field.Label, field.Require, field.Label, field.Name, field.Name, "*****", status)

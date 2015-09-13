@@ -30,10 +30,13 @@ const (
 	CurUser            = "curuser"
 	Flag               = "flag"
 	Mark               = "mark"
+	AccountCurrent     = "accountcurrent"
 	Department         = "department"
 	PlaceDate          = "placedate"
 	Requireddate       = "requireddate"
 	ProductPrice       = "productprice"
+	Paymentamount      = "paymentamount"
+	Paymentdate        = "paymentdate"
 	Requireddepartment = "requireddepartment"
 )
 

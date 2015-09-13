@@ -49,7 +49,8 @@ func init() {
 
 	//分析
 	beego.Router("/ui/purchase/priceAnalyze", &controllers.PurchaseController{}, "*:PriceAnalyze")
-	beego.Router("/ui/expense/List", &controllers.PurchaseController{}, "*:ExpenseList")
+	beego.Router("/ui/expense/list", &controllers.PurchaseController{}, "*:ExpenseList")
+	beego.Router("/ui/expense/accountcurrentlist", &controllers.PurchaseController{}, "*:AccountCurrentList")
 
 	//出差管理
 	beego.Router("/travel", &controllers.MainController{}, "*:Travel")

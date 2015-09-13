@@ -141,8 +141,8 @@ func Add(entity string, params t.Params) (string, string) {
 		if i, e := res.LastInsertId(); e == nil && i > 0 {
 			return stat.Success, ""
 		} else {
-			fmt.Println("add,error", e, i)
-			//			beego.Error(e, i)
+			beego.Error(e, i)
+			return ParseSqlError(err, oEntityDef)
 		}
 	} else {
 		beego.Error("Add error", err)

@@ -153,12 +153,21 @@ func (this *PurchaseController) UiUpdateWithStatus(statusMap map[string]string) 
 }
 
 func (this *PurchaseController) ExpenseList() {
-	beego.Info("ExpenseList")
 	this.UiCurList()
 	item := s.Purchase
 	oItemDef, _ := itemDef.EntityDefMap[item]
 	this.Data["thlist"] = ui.BuildListThs(getExpandListDef(oItemDef))
+	this.Data["updateUrl"] = "/ui/purchase/show"
 	this.TplNames = "purchase/expand.html"
+}
+
+func (this *PurchaseController) AccountCurrentList() {
+	this.UiCurList()
+	item := s.Purchase
+	oItemDef, _ := itemDef.EntityDefMap[item]
+	this.Data["thlist"] = ui.BuildListThs(getExpandListDef(oItemDef))
+	this.Data["updateUrl"] = "/ui/purchase/show"
+	this.TplNames = "purchase/accountcurrent.html"
 }
 
 func (this *PurchaseController) createBuyerList() string {

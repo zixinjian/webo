@@ -212,3 +212,22 @@
 2015/09/12 19:51:10 [purchase.go:58] [I] UiCurList 
 2015/09/12 19:51:11 [purchase.go:58] [I] UiCurList 
 2015/09/12 19:51:12 [purchase.go:58] [I] UiCurList 
+2015/09/13 08:38:03 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/13 08:38:06 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/13 08:38:06 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/13 08:38:06 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/13 08:38:06 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/13 08:38:08 [login.go:38] [E] User:%s login error code: %s admin item_not_found 
+2015/09/13 08:38:19 [main.go:32] [I] User:admin login as role:role_admin 
+2015/09/13 08:38:38 [purchase.go:58] [I] UiCurList 
+2015/09/13 08:38:57 [purchase.go:58] [I] UiCurList 
+2015/09/13 08:38:58 [purchase.go:58] [I] UiCurList 
+2015/09/13 08:38:59 [purchase.go:58] [I] UiCurList 
+2015/09/13 08:39:01 [purchase.go:58] [I] UiCurList 
+2015/09/13 08:39:02 [purchase.go:58] [I] UiCurList 
+2015/09/13 08:39:03 [purchase.go:58] [I] UiCurList 
+2015/09/13 08:39:16 [purchase.go:58] [I] UiCurList 
+2015/09/13 08:43:29 [purchase.go:58] [I] UiCurList 
+2015/09/13 08:48:48 [purchase.go:58] [I] UiCurList 
+2015/09/13 08:49:23 [purchase.go:58] [I] UiCurList 
+2015/09/13 08:59:53 [main.go:32] [I] User:admin login as role:role_admin 

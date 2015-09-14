@@ -49,8 +49,14 @@ func (this *SqlBuilder) QueryTables(tables ...string) {
 }
 
 func (this *SqlBuilder) Filter(key string, value interface{}) {
-	//	beego.Debug(fmt.Sprintf("Filter : %s:%v", key,  value))
+
 	switch key[:1] {
+	case "-":
+		if v, ok := value.(string); ok {
+			this.addCondition(key[1:], v, s.Like)
+		} else {
+			beego.Error("Add filter error startswith not string")
+		}
 	case "%":
 		if v, ok := value.(string); ok {
 			this.addCondition(key[1:], v+"%", s.Like)
@@ -111,7 +117,7 @@ func (this *SqlBuilder) GetCountSql() string {
 	return sql
 }
 func (this *SqlBuilder) GetSql() string {
-	tableStr := u.StrJoin(this.table, ",")
+	tableStr := strings.Join(this.table, ",")
 	sql := fmt.Sprintf("SELECT * FROM %s ", tableStr)
 
 	return this.GetCustomerSql(sql)
@@ -146,7 +152,7 @@ func (this *SqlBuilder) GetCustomerSql(sql string) string {
 }
 
 func (this *SqlBuilder) GetFrom() string {
-	tableStr := u.StrJoin(this.table, ",")
+	tableStr := strings.Join(this.table, ",")
 	return fmt.Sprintf("FROM %s ", tableStr)
 }
 

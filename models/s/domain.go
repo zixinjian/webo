@@ -1,13 +1,14 @@
 package s
 
 const (
-	Limit  = "limit"
-	Offset = "offset"
-	Order  = "order"
-	Sort   = "sort"
-	Asc    = "asc"
-	Desc   = "desc"
-	Like   = "LIKE"
+	Limit  			= "limit"
+	Offset 			= "offset"
+	Order  			= "order"
+	Sort   			= "sort"
+	Asc    			= "asc"
+	Desc   			= "desc"
+	Like   			= "LIKE"
+
 )
 
 const (

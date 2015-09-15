@@ -55,4 +55,6 @@ func init() {
 	//出差管理
 	beego.Router("/travel", &controllers.MainController{}, "*:Travel")
 	beego.Router("/travel/ui/list", &controllers.TravelController{}, "*:UiList")
+	beego.Router("/travel/ui/update", &controllers.TravelController{}, "*:UiUpdate")
+	beego.Router("/travel/ui/add", &controllers.TravelController{}, "*:UiAdd")
 }

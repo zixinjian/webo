@@ -17,3 +17,9 @@ var wbSprintf = function (str) {
     });
     return str;
 };
+
+var wbToMoney = function (str){
+    a = parseFloat(str)
+    a = a.toFixed(2)
+    return parseFloat(a)
+}

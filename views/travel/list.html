@@ -35,7 +35,7 @@
             <th data-field="actualexpenses"  data-sortable="true">实际费用</th>
             <th data-formatter="diffexpenseFormat">节约/超支</th>
             <th data-field="diffrate" data-formatter="diffrateFormat">节约/超支报销比例</th>
-            <th data-field="payment" data-sortable="true" data-formatter="paymentFormat">实报费用</th>
+            <th data-field="payment" data-sortable="true">实报费用</th>
             <th data-field="approver"  data-sortable="true">审批人</th>
         </tr>
         </thead>
@@ -76,29 +76,19 @@
         ].join('');
     }
     function diffexpenseFormat(value, row){
-        if (row.actualexpenses == "" || row.expenses == ""){
+        if (row.actualexpenses == 0 && row.expenses == 0){
+            return 0
+        }
+        if (!row.actualexpenses || !row.expenses){
             return ""
         }
-        return getDiffexpense(row)
-    }
-    function paymentFormat(value, row){
-        if (row.actualexpenses == "" || row.expenses == ""){
-            return ""
-        }
-        diff = getDiffexpense(row)
-        if (diff == 0){
-            return row.expenses
-        }
-        if (diff > 0){
-            return parseFloat(row.expenses) + diff * 0.3
-        }
-        return row.actualexpenses - diff * 0.3
+        return getDiffexpenese(row)
     }
     function diffrateFormat(value, row){
         return "30%"
     }
-    function getDiffexpense(row){
-        return row.actualexpenses - row.expenses
+    function getDiffexpenese(row){
+        return wbToMoney(parseFloat(row.actualexpenses) - parseFloat(row.expenses))
     }
     window.actionEvents = {
         'click .update': function (e, value, row) {

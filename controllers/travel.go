@@ -2,7 +2,14 @@ package controllers
 
 import (
 	"fmt"
+	"github.com/astaxie/beego"
+	"webo/controllers/ui"
+	"webo/models/itemDef"
 	"webo/models/s"
+	"webo/models/stat"
+	"webo/models/svc"
+	"webo/models/t"
+	"webo/models/u"
 )
 
 type TravelController struct {
@@ -13,9 +20,38 @@ func (this *TravelController) UiList() {
 	item := s.Travel
 	this.Data["item"] = item
 	this.Data["listUrl"] = fmt.Sprintf("/item/list/%s", item)
-	this.Data["addUrl"] = fmt.Sprintf("/ui/add/%s", item)
-	this.Data["updateUrl"] = fmt.Sprintf("/ui/update/%s", item)
+	this.Data["addUrl"] = "/travel/ui/add"
+	this.Data["updateUrl"] = "/travel/ui/update"
 	this.TplNames = "travel/list.html"
+}
+
+func (this *TravelController) UiAdd() {
+	item := s.Travel
+	oItemDef, _ := itemDef.EntityDefMap[item]
+	this.Data["Service"] = "/item/add/" + item
+	this.Data["Form"] = ui.BuildAddForm(oItemDef, u.TUId())
+	this.Data["Onload"] = ui.BuildAddOnLoadJs(oItemDef)
+	this.TplNames = "travel/add.tpl"
+}
+func (this *TravelController) UiUpdate() {
+	item := s.Travel
+	oItemDef, _ := itemDef.EntityDefMap[item]
+	sn := this.GetString(s.Sn)
+	if sn == "" {
+		beego.Error("TravelController.UiUpdate", stat.ParamSnIsNone)
+		this.Ctx.WriteString(stat.ParamSnIsNone)
+		return
+	}
+	params := t.Params{s.Sn: sn}
+	code, oldValueMap := svc.Get(item, params)
+	if code == "success" {
+		this.Data["Service"] = "/item/update/" + item
+		this.Data["Form"] = ui.BuildUpdatedForm(oItemDef, oldValueMap)
+		this.Data["Onload"] = ui.BuildUpdateOnLoadJs(oItemDef)
+		this.TplNames = "travel/update.html"
+	} else {
+		this.Ctx.WriteString(stat.ItemNotFound)
+	}
 }
 
 //func (this *TravelController) Update() {

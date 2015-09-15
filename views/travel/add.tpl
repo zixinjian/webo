@@ -14,7 +14,6 @@
     {{str2html .Form}}
     </form>
 </div>
-
 <script src="../../asserts/3rd/jquery/jquery.js"></script>
 <script src="../../asserts/3rd/bootstrap/js/bootstrap.min.js"></script>
 <script src="../../asserts/3rd/jquery/jquery.form.js"></script>
@@ -25,6 +24,8 @@
 <script src="../../asserts/3rd/jquery-ui/jquery-ui.min.js"></script>
 <script src="../../static/js/validateExtend.js"></script>
 <script src="../../static/js/ui.js"></script>
+<script src="../../asserts/webo/util.js"></script>
+<script src="../../static/js/travel.js"></script>
 <script>
     function showResponse(resp) {
         if(resp.ret == "success"){
@@ -41,8 +42,6 @@
         if(options.refreshContent){
             refreshContent = options.refreshContent
         }
-//        console.log("onTopModalOk")
-//        console.log("valid", $("#item_form").valid());
         if (! $("#item_form").valid()){
             return
         }
@@ -52,6 +51,12 @@
             success: showResponse
         });
     }
+    $(function(){
+        $("#expenses").blur(calPayment)
+        $("#expenses").keyup(calPayment)
+        $("#actualexpenses").blur(calPayment)
+        $("#actualexpenses").keyup(calPayment)
+    });
 </script>
 {{str2html .Onload}}
 </body>

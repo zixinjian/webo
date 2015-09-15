@@ -231,3 +231,62 @@
 2015/09/13 08:48:48 [purchase.go:58] [I] UiCurList 
 2015/09/13 08:49:23 [purchase.go:58] [I] UiCurList 
 2015/09/13 08:59:53 [main.go:32] [I] User:admin login as role:role_admin 
+2015/09/14 11:23:20 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/14 11:27:54 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/14 11:27:54 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/14 11:27:54 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/14 11:27:54 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/14 11:27:59 [main.go:32] [I] User:admin login as role:role_admin 
+2015/09/14 11:28:02 [purchase.go:58] [I] UiCurList 
+2015/09/14 11:43:07 [main.go:32] [I] User:admin login as role:role_admin 
+2015/09/14 11:43:08 [purchase.go:58] [I] UiCurList 
+2015/09/14 11:45:25 [purchase.go:58] [I] UiCurList 
+2015/09/14 11:46:40 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/14 11:46:44 [main.go:32] [I] User:admin login as role:role_admin 
+2015/09/14 11:46:46 [purchase.go:58] [I] UiCurList 
+2015/09/14 11:46:46 [staticfile.go:61] [W] Can't find the file: asserts/webo/ui.js stat asserts/webo/ui.js: no such file or directory 
+2015/09/14 11:47:09 [purchase.go:58] [I] UiCurList 
+2015/09/14 11:47:20 [purchase.go:58] [I] UiCurList 
+2015/09/14 11:47:22 [main.go:32] [I] User:admin login as role:role_admin 
+2015/09/14 11:47:24 [purchase.go:58] [I] UiCurList 
+2015/09/14 11:53:35 [purchase.go:58] [I] UiCurList 
+2015/09/15 10:02:08 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/15 10:02:16 [main.go:32] [I] User:admin login as role:role_admin 
+2015/09/15 10:02:19 [purchase.go:58] [I] UiCurList 
+2015/09/15 10:02:20 [purchase.go:58] [I] UiCurList 
+2015/09/15 10:02:22 [purchase.go:58] [I] UiCurList 
+2015/09/15 10:02:23 [purchase.go:58] [I] UiCurList 
+2015/09/15 10:09:01 [purchase.go:58] [I] UiCurList 
+2015/09/15 10:09:01 [purchase.go:58] [I] UiCurList 
+2015/09/15 10:09:02 [purchase.go:58] [I] UiCurList 
+2015/09/15 10:09:02 [purchase.go:58] [I] UiCurList 
+2015/09/15 10:09:06 [purchase.go:58] [I] UiCurList 
+2015/09/15 10:09:07 [purchase.go:58] [I] UiCurList 
+2015/09/15 10:09:09 [purchase.go:58] [I] UiCurList 
+2015/09/15 10:09:10 [purchase.go:58] [I] UiCurList 
+2015/09/15 10:09:12 [purchase.go:58] [I] UiCurList 
+2015/09/15 10:09:13 [purchase.go:58] [I] UiCurList 
+2015/09/15 10:09:13 [purchase.go:58] [I] UiCurList 
+2015/09/15 10:10:51 [main.go:56] [I] User:admin login as role:role_admin 
+2015/09/15 10:11:23 [staticfile.go:61] [W] Can't find the file: static/files/travel/20150821163636000 stat static/files/travel/20150821163636000: no such file or directory 
+2015/09/15 10:17:20 [staticfile.go:61] [W] Can't find the file: static/files/travel/20150819175809000 stat static/files/travel/20150819175809000: no such file or directory 
+2015/09/15 10:34:01 [main.go:56] [I] User:admin login as role:role_admin 
+2015/09/15 10:38:19 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/15 10:38:23 [main.go:56] [I] User:admin login as role:role_admin 
+2015/09/15 10:46:48 [main.go:56] [I] User:admin login as role:role_admin 
+2015/09/15 10:49:08 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/15 10:49:13 [main.go:56] [I] User:admin login as role:role_admin 
+2015/09/15 10:51:08 [staticfile.go:61] [W] Can't find the file: static/files/travel/20150819175809000 stat static/files/travel/20150819175809000: no such file or directory 
+2015/09/15 11:17:44 [main.go:56] [I] User:admin login as role:role_admin 
+2015/09/15 11:17:52 [main.go:56] [I] User:admin login as role:role_admin 
+2015/09/15 11:20:21 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/15 11:20:27 [main.go:56] [I] User:admin login as role:role_admin 
+2015/09/15 11:22:18 [main.go:56] [I] User:admin login as role:role_admin 
+2015/09/15 11:22:24 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/15 11:22:40 [main.go:56] [I] User:admin login as role:role_admin 
+2015/09/15 11:29:42 [main.go:56] [I] User:admin login as role:role_admin 
+2015/09/15 14:42:33 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/15 14:42:39 [main.go:56] [I] User:admin login as role:role_admin 
+2015/09/15 14:45:11 [main.go:56] [I] User:admin login as role:role_admin 
+2015/09/15 14:46:05 [main.go:56] [I] User:admin login as role:role_admin 
+2015/09/15 15:52:14 [asm_amd64.s:1696] [I] http server Running on :8080

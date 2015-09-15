@@ -8,6 +8,7 @@
 </head>
 <body>
 <div style="padding:20px;">
+    <div class="alert" role="alert" style="display: none;margin-top:20px"></div>
     <div class="toolbar" style="line-height: 20px">
         <div class="form-inline">
             <div class="form-group">
@@ -81,11 +82,11 @@
 <script src="../../asserts/3rd/moment/moment.js"></script>
 <script src="../../asserts/3rd/jqprint/jquery.jqprint.js"></script>
 <script src="../../asserts/webo/util.js"></script>
-{{str2html .queryParams}}
+<script src="../../static/js/ui.js"></script>
 <script>
     var $table = $("#item_table")
     $(function(){
-        $table.bootstrapTable({url:"{{.listUrl}}", method:"post", sidePagination:"server", pagination:true,
+        $table.bootstrapTable({url:"/item/list/purchase", method:"post", sidePagination:"server", pagination:true,
             height:getHeight(), sortName:"requireddate", sortOrder:"{{.sortOrder}}"});
         $("#add_item").on("click", function(){
             top.showTopModal({url:"{{.addUrl}}", refreshContent:refreshContent});
@@ -178,20 +179,7 @@
     }
     $(function(){
         $("#queryBtn").on("click", function(){
-            $.post("/item/list/purchase",
-                    {
-                        product:$("#product").val(),
-                        model:$("#model").val()
-                    },
-                    function(data,status){
-                        if (status != "success" || data.Status != "success" || data.rows.length <= 0){
-                            analyzChart.clear()
-                            showError("未查到数据！")
-                            return
-                        }
-                        hideAlert()
-                        setChartData(data.rows)
-                    });
+            $table.bootstrapTable('refresh', {query:{supplier:$("supplier").val()}})
         });
         $("#supplier_key").autocomplete({
             source: "/item/autocomplete/supplier",

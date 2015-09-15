@@ -90,7 +90,7 @@
             return row.expenses
         }
         if (diff > 0){
-            return row.expenses + diff * 0.3
+            return parseFloat(row.expenses) + diff * 0.3
         }
         return row.actualexpenses - diff * 0.3
     }

@@ -17,6 +17,10 @@ type TravelController struct {
 }
 
 func (this *TravelController) UiList() {
+	if this.GetCurRole() == s.RoleUser {
+		this.Ctx.WriteString("没有权限")
+		return
+	}
 	item := s.Travel
 	this.Data["item"] = item
 	this.Data["listUrl"] = fmt.Sprintf("/item/list/%s", item)
@@ -26,14 +30,32 @@ func (this *TravelController) UiList() {
 }
 
 func (this *TravelController) UiAdd() {
+	if this.GetCurRole() == s.RoleUser {
+		this.Ctx.WriteString("没有权限")
+		return
+	}
 	item := s.Travel
 	oItemDef, _ := itemDef.EntityDefMap[item]
+	oldValueMap := map[string]interface{}{
+		s.Sn:           u.TUId(),
+		s.ApproverName: this.GetCurUser(),
+		s.Approver:     this.GetCurUserSn(),
+	}
+	approverField, _ := oItemDef.GetField(s.Approver)
+	approverField.Name = "approvername"
+	approverSn, _ := oItemDef.GetField(s.Approver)
+	approverSn.Input = s.InputHidden
+	oItemDef.Fields = append(oItemDef.Fields[:len(oItemDef.Fields)])
+	this.Data["Form"] = ui.BuildUpdatedFormWithStatus(oItemDef, oldValueMap, make(map[string]string))
 	this.Data["Service"] = "/item/add/" + item
-	this.Data["Form"] = ui.BuildAddForm(oItemDef, u.TUId())
 	this.Data["Onload"] = ui.BuildAddOnLoadJs(oItemDef)
 	this.TplNames = "travel/add.tpl"
 }
 func (this *TravelController) UiUpdate() {
+	if this.GetCurRole() == s.RoleUser {
+		this.Ctx.WriteString("没有权限")
+		return
+	}
 	item := s.Travel
 	oItemDef, _ := itemDef.EntityDefMap[item]
 	sn := this.GetString(s.Sn)

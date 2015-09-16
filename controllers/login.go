@@ -2,6 +2,7 @@ package controllers
 
 import (
 	//	"fmt"
+	"encoding/base64"
 	"github.com/astaxie/beego"
 	"webo/models/rpc"
 	"webo/models/svc"
@@ -13,12 +14,16 @@ type LoginController struct {
 }
 
 func (this *LoginController) Get() {
-	//    role := this.GetSession("role")
-	//    if role == nil {
-	this.Redirect("/static/frame/login.html", 302)
-	//    } else {
-	//        this.Redirect("/static/main.html", 302)
-	//    }
+	redirectUrl := "/main"
+	redirectUrlB64 := this.GetString("redirect")
+	if redirectUrlB64 != "" {
+		redirectUrlDec, err := base64.URLEncoding.DecodeString(redirectUrlB64)
+		if err == nil {
+			redirectUrl = string(redirectUrlDec)
+		}
+	}
+	this.Data["redirectUrl"] = redirectUrl
+	this.TplNames = "login/login.html"
 }
 func (this *LoginController) Post() {
 	username := this.GetString("login_username")

@@ -1,14 +1,13 @@
 package s
 
 const (
-	Limit  			= "limit"
-	Offset 			= "offset"
-	Order  			= "order"
-	Sort   			= "sort"
-	Asc    			= "asc"
-	Desc   			= "desc"
-	Like   			= "LIKE"
-
+	Limit  = "limit"
+	Offset = "offset"
+	Order  = "order"
+	Sort   = "sort"
+	Asc    = "asc"
+	Desc   = "desc"
+	Like   = "LIKE"
 )
 
 const (
@@ -39,6 +38,8 @@ const (
 	Paymentamount      = "paymentamount"
 	Paymentdate        = "paymentdate"
 	Requireddepartment = "requireddepartment"
+	Approver           = "approver"
+	ApproverName       = "approvername"
 )
 
 // Field的Type定义目前支持这几种类型
@@ -46,6 +47,10 @@ const (
 	TypeString = "string"
 	TypeInt    = "int"
 	TypeFloat  = "float"
+)
+const (
+	InputHidden = "hidden"
+	InputText   = "text"
 )
 
 const (

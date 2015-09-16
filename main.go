@@ -2,6 +2,7 @@ package main
 
 import (
 	//	"fmt"
+	"encoding/base64"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/context"
 	"github.com/astaxie/beego/orm"
@@ -17,19 +18,19 @@ func initDb() {
 }
 
 var FilterUser = func(ctx *context.Context) {
-	//	fmt.Println("filterUser")
-	//	fmt.Println("url", ctx.Request.RequestURI)
-	//	if strings.HasPrefix(ctx.Request.RequestURI, "/asserts"){
-	//		fmt.Println("assert")
-	//		return
-	//	}
 	if ctx.Request.RequestURI == "/logout" {
+		return
+	}
+	if ctx.Input.Url() == "/login" {
 		return
 	}
 	_, ok := ctx.Input.Session(controllers.SessionUserName).(string)
 	//	fmt.Println("role", role)
 	if !ok && ctx.Request.RequestURI != "/login" {
-		ctx.Redirect(302, "/login")
+		beego.Debug("FilterUser need login: ", ctx.Input.Url(), ctx.Input.Uri())
+		redirect := ctx.Input.Url()
+		redirectB64 := base64.URLEncoding.EncodeToString([]byte(redirect))
+		ctx.Redirect(302, "/login?redirect="+redirectB64)
 	}
 }
 
@@ -54,7 +55,7 @@ var FilterUser = func(ctx *context.Context) {
 func main() {
 	initDb()
 	//	beego.InsertFilter("/*", beego.BeforeStatic, FilterStatic)
-	//		beego.InsertFilter("/*", beego.BeforeRouter, FilterUser)
+	beego.InsertFilter("/*", beego.BeforeRouter, FilterUser)
 	//	params := svc.SvcParams{
 	//		"username": "a",
 	//		"password": "a",

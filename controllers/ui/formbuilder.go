@@ -88,7 +88,8 @@ var autocompleteFormat = `    <div class="form-group">
             </div>
         </div>
 `
-
+var hiddenFormat = `<input type="hidden" id="%s" name="%s" value="%s">
+`
 var initDatePickerFormat = `
 $("#%s").datetimepicker({%sformat:'Y.m.d',lang:'zh',%s})
 `
@@ -224,6 +225,8 @@ func createFromGroup(field itemDef.Field, valueMap map[string]interface{}, statu
 		fromGroup = fmt.Sprintf(dateFormate, field.Label, field.Require, field.Label, field.Name, field.Name, value, status)
 	case "password":
 		fromGroup = fmt.Sprintf(passwordFormat, field.Label, field.Require, field.Label, field.Name, field.Name, "*****", status)
+	case "hidden":
+		fromGroup = fmt.Sprintf(hiddenFormat, field.Name, field.Name, value)
 	case "select":
 		var options string
 		for _, option := range field.Enum {

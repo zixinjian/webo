@@ -3,6 +3,6 @@ title,name,type,label,require,unique,input,model,default,enum,
 field,name,string,姓名,true,true,text,text,,,role_admin
 field,username,string,用户名,true,true,text,text,,,role_admin
 field,password,string,密码,true,false,password,password,12345,,role_admin
-field,department,string,部门,true,false,select,enum,,"department_purchase,department_sale,department_product","role_admin,role_manager"
+field,department,string,部门,true,false,select,enum,,"department_purchase,department_sale,department_product,department_aftersales","role_admin,role_manager"
 field,role,string,权限,true,false,select,enum,role_user,"role_user,role_manager,role_admin",role_admin
 field,flag,string,状态,true,false,select,enum,flag_available,"flag_available,flag_disable",role_admin

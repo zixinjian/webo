@@ -57,4 +57,5 @@ func init() {
 	beego.Router("/travel/ui/list", &controllers.TravelController{}, "*:UiList")
 	beego.Router("/travel/ui/update", &controllers.TravelController{}, "*:UiUpdate")
 	beego.Router("/travel/ui/add", &controllers.TravelController{}, "*:UiAdd")
+	beego.Router("/travel/item/list", &controllers.TravelController{}, "*:List")
 }

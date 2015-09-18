@@ -7,6 +7,7 @@ import (
 	"webo/models/rpc"
 	"webo/models/svc"
 	"webo/models/t"
+	"webo/models/s"
 )
 
 type LoginController struct {
@@ -48,7 +49,7 @@ func (this *LoginController) Post() {
 	}
 	loginRet = this.setSessionFromUser(user)
 	if loginRet.Ret == "success" {
-		this.SetSession(SessionUserName, username)
+		this.SetSession(SessionUser, username)
 	}
 	this.Data["json"] = &loginRet
 	this.ServeJson()
@@ -73,8 +74,15 @@ func (this *LoginController) setSessionFromUser(user map[string]interface{}) rpc
 		loginRet.Result = "获取权限失败"
 		return loginRet
 	}
+	name, ok := user[s.Name]
+	if !ok {
+		loginRet.Ret = "faild"
+		loginRet.Result = "获取权限失败"
+		return loginRet
+	}
 	this.SetSession(SessionUserRole, role)
 	this.SetSession(SessionUserSn, sn)
+	this.SetSession(SessionUserName, name)
 	this.SetSession(SessionUserDepartment, department)
 	loginRet.Ret = "success"
 	loginRet.Result = "登录成功"
@@ -86,7 +94,7 @@ type LogoutController struct {
 }
 
 func (this *LogoutController) Get() {
-	this.DelSession(SessionUserName)
+	this.DelSession(SessionUser)
 	this.DelSession(SessionUserRole)
 	this.DelSession(SessionUserDepartment)
 	this.DelSession(SessionUserSn)

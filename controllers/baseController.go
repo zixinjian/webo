@@ -93,6 +93,9 @@ func (this *BaseController) GetCurUserSn() string {
 	return this.GetSessionString(SessionUserSn)
 }
 func (this *BaseController) GetCurUser() string {
+	return this.GetSessionString(SessionUser)
+}
+func (this *BaseController) GetCurUserName() string {
 	return this.GetSessionString(SessionUserName)
 }
 func (this *BaseController) GetCurRole() string {

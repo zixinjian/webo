@@ -24,7 +24,7 @@ var FilterUser = func(ctx *context.Context) {
 	if ctx.Input.Url() == "/login" {
 		return
 	}
-	_, ok := ctx.Input.Session(controllers.SessionUserName).(string)
+	_, ok := ctx.Input.Session(controllers.SessionUser).(string)
 	//	fmt.Println("role", role)
 	if !ok && ctx.Request.RequestURI != "/login" {
 		beego.Debug("FilterUser need login: ", ctx.Input.Url(), ctx.Input.Uri())

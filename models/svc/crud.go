@@ -100,6 +100,7 @@ func Add(entity string, params t.Params) (string, string) {
 
 	Q := "'"
 	oEntityDef, ok := itemDef.EntityDefMap[entity]
+	beego.Error(oEntityDef.Fields)
 	if !ok {
 		return stat.ItemNotDefine, ""
 	}
@@ -133,7 +134,7 @@ func Add(entity string, params t.Params) (string, string) {
 	columns := strings.Join(fields, sep)
 
 	query := fmt.Sprintf("INSERT INTO %s%s%s (%s%s%s) VALUES (%s)", Q, entity, Q, Q, columns, Q, qmarks)
-	//
+	beego.Debug("Add Item", query, values)
 	o := orm.NewOrm()
 	if res, err := o.Raw(query, values...).Exec(); err == nil {
 		//		b, c := res.LastInsertId()

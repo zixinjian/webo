@@ -111,7 +111,6 @@ var initAutocompleteFormat = `
 			return false;
 		},
 		change: function( event, ui ) {
-			console.log("ui", ui.item)
 			if(!ui.item){
 				$( "#%s_name" ).val("");
 				$( "#%s" ).val("");
@@ -223,9 +222,9 @@ func createFromGroup(field itemDef.Field, valueMap map[string]interface{}, statu
 	case "date", "datetime":
 		//		fmt.Println("date", field.Name, value)
 		fromGroup = fmt.Sprintf(dateFormate, field.Label, field.Require, field.Label, field.Name, field.Name, value, status)
-	case "password":
+	case s.Password:
 		fromGroup = fmt.Sprintf(passwordFormat, field.Label, field.Require, field.Label, field.Name, field.Name, "*****", status)
-	case "hidden":
+	case s.Hidden:
 		fromGroup = fmt.Sprintf(hiddenFormat, field.Name, field.Name, value)
 	case "select":
 		var options string

@@ -1,6 +1,6 @@
 item,travel,,,,,,,,
 title,name,type,label,require,unique,input,model,default,enum
-field,traveler,string,出差人,true,false,text,text,,
+field,traveler,string,出差人,true,false,autocomplete,text,,/item/autocomplete/user
 field,task,string,任务,true,false,text,text,,
 field,starttime,string,开始日期,true,false,date,text,curtime,
 field,endtime,string,结束日期,true,false,date,text,,

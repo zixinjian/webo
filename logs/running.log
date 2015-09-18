@@ -1,327 +1,381 @@
-2015/09/12 09:40:50 [main.go:32] [I] User:admin login as role:role_admin 
-2015/09/12 11:07:33 [purchase.go:58] [I] UiCurList 
-2015/09/12 11:07:38 [purchase.go:58] [I] UiCurList 
-2015/09/12 11:07:39 [purchase.go:58] [I] UiCurList 
-2015/09/12 11:07:40 [purchase.go:156] [I] ExpenseList 
-2015/09/12 11:07:40 [purchase.go:58] [I] UiCurList 
-2015/09/12 11:07:44 [purchase.go:156] [I] ExpenseList 
-2015/09/12 11:07:44 [purchase.go:58] [I] UiCurList 
-2015/09/12 11:22:24 [main.go:32] [I] User:admin login as role:role_admin 
-2015/09/12 11:22:25 [purchase.go:156] [I] ExpenseList 
-2015/09/12 11:22:25 [purchase.go:58] [I] UiCurList 
-2015/09/12 11:39:54 [main.go:32] [I] User:admin login as role:role_admin 
-2015/09/12 11:40:01 [purchase.go:156] [I] ExpenseList 
-2015/09/12 11:40:01 [purchase.go:58] [I] UiCurList 
-2015/09/12 11:40:59 [purchase.go:156] [I] ExpenseList 
-2015/09/12 11:40:59 [purchase.go:58] [I] UiCurList 
-2015/09/12 11:42:27 [purchase.go:156] [I] ExpenseList 
-2015/09/12 11:42:27 [purchase.go:58] [I] UiCurList 
-2015/09/12 11:44:13 [purchase.go:156] [I] ExpenseList 
-2015/09/12 11:44:13 [purchase.go:58] [I] UiCurList 
-2015/09/12 11:44:25 [main.go:32] [I] User:admin login as role:role_admin 
-2015/09/12 11:44:29 [purchase.go:156] [I] ExpenseList 
-2015/09/12 11:44:29 [purchase.go:58] [I] UiCurList 
-2015/09/12 11:44:59 [purchase.go:156] [I] ExpenseList 
-2015/09/12 11:44:59 [purchase.go:58] [I] UiCurList 
-2015/09/12 11:46:18 [purchase.go:156] [I] ExpenseList 
-2015/09/12 11:46:18 [purchase.go:58] [I] UiCurList 
-2015/09/12 11:47:07 [main.go:32] [I] User:admin login as role:role_admin 
-2015/09/12 11:47:08 [purchase.go:156] [I] ExpenseList 
-2015/09/12 11:47:08 [purchase.go:58] [I] UiCurList 
-2015/09/12 11:48:12 [purchase.go:156] [I] ExpenseList 
-2015/09/12 11:48:12 [purchase.go:58] [I] UiCurList 
-2015/09/12 11:48:58 [purchase.go:156] [I] ExpenseList 
-2015/09/12 11:48:58 [purchase.go:58] [I] UiCurList 
-2015/09/12 11:49:16 [purchase.go:156] [I] ExpenseList 
-2015/09/12 11:49:16 [purchase.go:58] [I] UiCurList 
-2015/09/12 11:49:57 [purchase.go:156] [I] ExpenseList 
-2015/09/12 11:49:57 [purchase.go:58] [I] UiCurList 
-2015/09/12 11:51:01 [main.go:32] [I] User:admin login as role:role_admin 
-2015/09/12 11:51:03 [purchase.go:156] [I] ExpenseList 
-2015/09/12 11:51:03 [purchase.go:58] [I] UiCurList 
-2015/09/12 11:51:32 [purchase.go:156] [I] ExpenseList 
-2015/09/12 11:51:32 [purchase.go:58] [I] UiCurList 
-2015/09/12 11:53:35 [purchase.go:156] [I] ExpenseList 
-2015/09/12 11:53:35 [purchase.go:58] [I] UiCurList 
-2015/09/12 11:57:22 [purchase.go:156] [I] ExpenseList 
-2015/09/12 11:57:22 [purchase.go:58] [I] UiCurList 
-2015/09/12 11:57:30 [purchase.go:156] [I] ExpenseList 
-2015/09/12 11:57:30 [purchase.go:58] [I] UiCurList 
-2015/09/12 11:57:33 [purchase.go:156] [I] ExpenseList 
-2015/09/12 11:57:33 [purchase.go:58] [I] UiCurList 
-2015/09/12 11:59:18 [main.go:32] [I] User:admin login as role:role_admin 
-2015/09/12 11:59:20 [purchase.go:156] [I] ExpenseList 
-2015/09/12 11:59:20 [purchase.go:58] [I] UiCurList 
-2015/09/12 12:01:42 [main.go:32] [I] User:admin login as role:role_admin 
-2015/09/12 12:01:45 [purchase.go:156] [I] ExpenseList 
-2015/09/12 12:01:45 [purchase.go:58] [I] UiCurList 
-2015/09/12 12:02:30 [purchase.go:156] [I] ExpenseList 
-2015/09/12 12:02:30 [purchase.go:58] [I] UiCurList 
-2015/09/12 12:38:52 [purchase.go:156] [I] ExpenseList 
-2015/09/12 12:38:52 [purchase.go:58] [I] UiCurList 
-2015/09/12 12:40:41 [purchase.go:156] [I] ExpenseList 
-2015/09/12 12:40:41 [purchase.go:58] [I] UiCurList 
-2015/09/12 12:41:19 [purchase.go:156] [I] ExpenseList 
-2015/09/12 12:41:19 [purchase.go:58] [I] UiCurList 
-2015/09/12 12:42:09 [purchase.go:156] [I] ExpenseList 
-2015/09/12 12:42:09 [purchase.go:58] [I] UiCurList 
-2015/09/12 12:42:49 [purchase.go:156] [I] ExpenseList 
-2015/09/12 12:42:49 [purchase.go:58] [I] UiCurList 
-2015/09/12 12:44:14 [purchase.go:156] [I] ExpenseList 
-2015/09/12 12:44:14 [purchase.go:58] [I] UiCurList 
-2015/09/12 12:44:41 [purchase.go:156] [I] ExpenseList 
-2015/09/12 12:44:41 [purchase.go:58] [I] UiCurList 
-2015/09/12 12:45:31 [purchase.go:156] [I] ExpenseList 
-2015/09/12 12:45:31 [purchase.go:58] [I] UiCurList 
-2015/09/12 12:48:32 [main.go:32] [I] User:admin login as role:role_admin 
-2015/09/12 12:48:35 [purchase.go:156] [I] ExpenseList 
-2015/09/12 12:48:35 [purchase.go:58] [I] UiCurList 
-2015/09/12 12:57:26 [purchase.go:156] [I] ExpenseList 
-2015/09/12 12:57:26 [purchase.go:58] [I] UiCurList 
-2015/09/12 12:57:44 [purchase.go:156] [I] ExpenseList 
-2015/09/12 12:57:44 [purchase.go:58] [I] UiCurList 
-2015/09/12 12:58:05 [purchase.go:156] [I] ExpenseList 
-2015/09/12 12:58:05 [purchase.go:58] [I] UiCurList 
-2015/09/12 12:58:15 [purchase.go:156] [I] ExpenseList 
-2015/09/12 12:58:15 [purchase.go:58] [I] UiCurList 
-2015/09/12 13:06:44 [purchase.go:156] [I] ExpenseList 
-2015/09/12 13:06:44 [purchase.go:58] [I] UiCurList 
-2015/09/12 13:07:21 [purchase.go:156] [I] ExpenseList 
-2015/09/12 13:07:21 [purchase.go:58] [I] UiCurList 
-2015/09/12 13:15:33 [purchase.go:156] [I] ExpenseList 
-2015/09/12 13:15:33 [purchase.go:58] [I] UiCurList 
-2015/09/12 13:20:41 [purchase.go:156] [I] ExpenseList 
-2015/09/12 13:20:41 [purchase.go:58] [I] UiCurList 
-2015/09/12 13:21:01 [purchase.go:156] [I] ExpenseList 
-2015/09/12 13:21:01 [purchase.go:58] [I] UiCurList 
-2015/09/12 13:23:30 [purchase.go:156] [I] ExpenseList 
-2015/09/12 13:23:30 [purchase.go:58] [I] UiCurList 
-2015/09/12 13:27:07 [purchase.go:156] [I] ExpenseList 
-2015/09/12 13:27:07 [purchase.go:58] [I] UiCurList 
-2015/09/12 13:28:12 [purchase.go:156] [I] ExpenseList 
-2015/09/12 13:28:12 [purchase.go:58] [I] UiCurList 
-2015/09/12 13:28:45 [purchase.go:156] [I] ExpenseList 
-2015/09/12 13:28:45 [purchase.go:58] [I] UiCurList 
-2015/09/12 13:29:22 [purchase.go:156] [I] ExpenseList 
-2015/09/12 13:29:22 [purchase.go:58] [I] UiCurList 
-2015/09/12 13:30:07 [purchase.go:156] [I] ExpenseList 
-2015/09/12 13:30:07 [purchase.go:58] [I] UiCurList 
-2015/09/12 13:31:18 [purchase.go:156] [I] ExpenseList 
-2015/09/12 13:31:18 [purchase.go:58] [I] UiCurList 
-2015/09/12 13:32:01 [purchase.go:156] [I] ExpenseList 
-2015/09/12 13:32:01 [purchase.go:58] [I] UiCurList 
-2015/09/12 13:32:01 [purchase.go:156] [I] ExpenseList 
-2015/09/12 13:32:01 [purchase.go:58] [I] UiCurList 
-2015/09/12 13:33:28 [purchase.go:156] [I] ExpenseList 
-2015/09/12 13:33:28 [purchase.go:58] [I] UiCurList 
-2015/09/12 13:33:40 [purchase.go:156] [I] ExpenseList 
-2015/09/12 13:33:40 [purchase.go:58] [I] UiCurList 
-2015/09/12 13:34:09 [purchase.go:156] [I] ExpenseList 
-2015/09/12 13:34:09 [purchase.go:58] [I] UiCurList 
-2015/09/12 13:42:09 [main.go:32] [I] User:admin login as role:role_admin 
-2015/09/12 13:42:10 [purchase.go:156] [I] ExpenseList 
-2015/09/12 13:42:10 [purchase.go:58] [I] UiCurList 
-2015/09/12 13:43:00 [purchase.go:156] [I] ExpenseList 
-2015/09/12 13:43:00 [purchase.go:58] [I] UiCurList 
-2015/09/12 13:44:09 [purchase.go:156] [I] ExpenseList 
-2015/09/12 13:44:09 [purchase.go:58] [I] UiCurList 
-2015/09/12 13:44:58 [purchase.go:156] [I] ExpenseList 
-2015/09/12 13:44:58 [purchase.go:58] [I] UiCurList 
-2015/09/12 13:45:55 [purchase.go:156] [I] ExpenseList 
-2015/09/12 13:45:55 [purchase.go:58] [I] UiCurList 
-2015/09/12 15:58:06 [purchase.go:58] [I] UiCurList 
-2015/09/12 16:46:00 [purchase.go:156] [I] ExpenseList 
-2015/09/12 16:46:00 [purchase.go:58] [I] UiCurList 
-2015/09/12 17:09:09 [purchase.go:156] [I] ExpenseList 
-2015/09/12 17:09:09 [purchase.go:58] [I] UiCurList 
-2015/09/12 17:09:29 [purchase.go:156] [I] ExpenseList 
-2015/09/12 17:09:29 [purchase.go:58] [I] UiCurList 
-2015/09/12 17:09:44 [purchase.go:156] [I] ExpenseList 
-2015/09/12 17:09:44 [purchase.go:58] [I] UiCurList 
-2015/09/12 17:22:50 [purchase.go:156] [I] ExpenseList 
-2015/09/12 17:22:50 [purchase.go:58] [I] UiCurList 
-2015/09/12 17:23:37 [purchase.go:156] [I] ExpenseList 
-2015/09/12 17:23:37 [purchase.go:58] [I] UiCurList 
-2015/09/12 17:34:45 [purchase.go:156] [I] ExpenseList 
-2015/09/12 17:34:45 [purchase.go:58] [I] UiCurList 
-2015/09/12 17:35:09 [purchase.go:58] [I] UiCurList 
-2015/09/12 17:51:16 [purchase.go:156] [I] ExpenseList 
-2015/09/12 17:51:16 [purchase.go:58] [I] UiCurList 
-2015/09/12 17:51:17 [purchase.go:58] [I] UiCurList 
-2015/09/12 17:51:19 [purchase.go:58] [I] UiCurList 
-2015/09/12 17:51:24 [purchase.go:156] [I] ExpenseList 
-2015/09/12 17:51:24 [purchase.go:58] [I] UiCurList 
-2015/09/12 17:55:57 [asm_amd64.s:1696] [I] http server Running on :8080
-2015/09/12 17:56:02 [purchase.go:58] [I] UiCurList 
-2015/09/12 17:56:22 [main.go:32] [I] User:admin login as role:role_admin 
-2015/09/12 17:56:22 [main.go:32] [I] User:admin login as role:role_admin 
-2015/09/12 17:56:24 [purchase.go:58] [I] UiCurList 
-2015/09/12 17:56:25 [purchase.go:58] [I] UiCurList 
-2015/09/12 17:56:27 [purchase.go:58] [I] UiCurList 
-2015/09/12 17:56:49 [purchase.go:58] [I] UiCurList 
-2015/09/12 17:56:50 [purchase.go:58] [I] UiCurList 
-2015/09/12 18:01:11 [purchase.go:58] [I] UiCurList 
-2015/09/12 18:01:11 [purchase.go:58] [I] UiCurList 
-2015/09/12 18:16:06 [purchase.go:58] [I] UiCurList 
-2015/09/12 18:17:12 [purchase.go:58] [I] UiCurList 
-2015/09/12 18:18:07 [purchase.go:58] [I] UiCurList 
-2015/09/12 18:18:27 [main.go:32] [I] User:admin login as role:role_admin 
-2015/09/12 18:18:28 [purchase.go:58] [I] UiCurList 
-2015/09/12 18:18:30 [purchase.go:58] [I] UiCurList 
-2015/09/12 18:18:50 [purchase.go:58] [I] UiCurList 
-2015/09/12 18:19:23 [purchase.go:58] [I] UiCurList 
-2015/09/12 18:19:54 [purchase.go:58] [I] UiCurList 
-2015/09/12 18:20:00 [purchase.go:58] [I] UiCurList 
-2015/09/12 18:20:11 [purchase.go:58] [I] UiCurList 
-2015/09/12 18:21:45 [purchase.go:58] [I] UiCurList 
-2015/09/12 18:23:19 [purchase.go:58] [I] UiCurList 
-2015/09/12 18:29:52 [purchase.go:58] [I] UiCurList 
-2015/09/12 18:30:45 [purchase.go:58] [I] UiCurList 
-2015/09/12 18:30:46 [purchase.go:58] [I] UiCurList 
-2015/09/12 18:30:47 [purchase.go:58] [I] UiCurList 
-2015/09/12 18:30:58 [purchase.go:58] [I] UiCurList 
-2015/09/12 18:30:58 [purchase.go:58] [I] UiCurList 
-2015/09/12 18:31:03 [purchase.go:58] [I] UiCurList 
-2015/09/12 18:31:04 [purchase.go:58] [I] UiCurList 
-2015/09/12 18:31:04 [purchase.go:58] [I] UiCurList 
-2015/09/12 18:31:05 [purchase.go:58] [I] UiCurList 
-2015/09/12 19:23:55 [purchase.go:58] [I] UiCurList 
-2015/09/12 19:23:56 [purchase.go:58] [I] UiCurList 
-2015/09/12 19:23:56 [purchase.go:58] [I] UiCurList 
-2015/09/12 19:23:57 [purchase.go:58] [I] UiCurList 
-2015/09/12 19:23:58 [purchase.go:58] [I] UiCurList 
-2015/09/12 19:23:59 [purchase.go:58] [I] UiCurList 
-2015/09/12 19:27:32 [purchase.go:58] [I] UiCurList 
-2015/09/12 19:27:33 [purchase.go:58] [I] UiCurList 
-2015/09/12 19:27:36 [purchase.go:58] [I] UiCurList 
-2015/09/12 19:27:38 [purchase.go:58] [I] UiCurList 
-2015/09/12 19:27:39 [purchase.go:58] [I] UiCurList 
-2015/09/12 19:27:43 [purchase.go:58] [I] UiCurList 
-2015/09/12 19:27:45 [purchase.go:58] [I] UiCurList 
-2015/09/12 19:27:47 [purchase.go:58] [I] UiCurList 
-2015/09/12 19:27:47 [purchase.go:58] [I] UiCurList 
-2015/09/12 19:38:14 [purchase.go:58] [I] UiCurList 
-2015/09/12 19:38:28 [purchase.go:58] [I] UiCurList 
-2015/09/12 19:42:40 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
-2015/09/12 19:42:40 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
-2015/09/12 19:42:40 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
-2015/09/12 19:42:40 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
-2015/09/12 19:42:43 [main.go:32] [I] User:admin login as role:role_admin 
-2015/09/12 19:42:43 [purchase.go:58] [I] UiCurList 
-2015/09/12 19:51:09 [purchase.go:58] [I] UiCurList 
-2015/09/12 19:51:10 [purchase.go:58] [I] UiCurList 
-2015/09/12 19:51:11 [purchase.go:58] [I] UiCurList 
-2015/09/12 19:51:12 [purchase.go:58] [I] UiCurList 
-2015/09/13 08:38:03 [asm_amd64.s:1696] [I] http server Running on :8080
-2015/09/13 08:38:06 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
-2015/09/13 08:38:06 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
-2015/09/13 08:38:06 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
-2015/09/13 08:38:06 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
-2015/09/13 08:38:08 [login.go:38] [E] User:%s login error code: %s admin item_not_found 
-2015/09/13 08:38:19 [main.go:32] [I] User:admin login as role:role_admin 
-2015/09/13 08:38:38 [purchase.go:58] [I] UiCurList 
-2015/09/13 08:38:57 [purchase.go:58] [I] UiCurList 
-2015/09/13 08:38:58 [purchase.go:58] [I] UiCurList 
-2015/09/13 08:38:59 [purchase.go:58] [I] UiCurList 
-2015/09/13 08:39:01 [purchase.go:58] [I] UiCurList 
-2015/09/13 08:39:02 [purchase.go:58] [I] UiCurList 
-2015/09/13 08:39:03 [purchase.go:58] [I] UiCurList 
-2015/09/13 08:39:16 [purchase.go:58] [I] UiCurList 
-2015/09/13 08:43:29 [purchase.go:58] [I] UiCurList 
-2015/09/13 08:48:48 [purchase.go:58] [I] UiCurList 
-2015/09/13 08:49:23 [purchase.go:58] [I] UiCurList 
-2015/09/13 08:59:53 [main.go:32] [I] User:admin login as role:role_admin 
-2015/09/14 11:23:20 [asm_amd64.s:1696] [I] http server Running on :8080
-2015/09/14 11:27:54 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
-2015/09/14 11:27:54 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
-2015/09/14 11:27:54 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
-2015/09/14 11:27:54 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
-2015/09/14 11:27:59 [main.go:32] [I] User:admin login as role:role_admin 
-2015/09/14 11:28:02 [purchase.go:58] [I] UiCurList 
-2015/09/14 11:43:07 [main.go:32] [I] User:admin login as role:role_admin 
-2015/09/14 11:43:08 [purchase.go:58] [I] UiCurList 
-2015/09/14 11:45:25 [purchase.go:58] [I] UiCurList 
-2015/09/14 11:46:40 [asm_amd64.s:1696] [I] http server Running on :8080
-2015/09/14 11:46:44 [main.go:32] [I] User:admin login as role:role_admin 
-2015/09/14 11:46:46 [purchase.go:58] [I] UiCurList 
-2015/09/14 11:46:46 [staticfile.go:61] [W] Can't find the file: asserts/webo/ui.js stat asserts/webo/ui.js: no such file or directory 
-2015/09/14 11:47:09 [purchase.go:58] [I] UiCurList 
-2015/09/14 11:47:20 [purchase.go:58] [I] UiCurList 
-2015/09/14 11:47:22 [main.go:32] [I] User:admin login as role:role_admin 
-2015/09/14 11:47:24 [purchase.go:58] [I] UiCurList 
-2015/09/14 11:53:35 [purchase.go:58] [I] UiCurList 
-2015/09/15 10:02:08 [asm_amd64.s:1696] [I] http server Running on :8080
-2015/09/15 10:02:16 [main.go:32] [I] User:admin login as role:role_admin 
-2015/09/15 10:02:19 [purchase.go:58] [I] UiCurList 
-2015/09/15 10:02:20 [purchase.go:58] [I] UiCurList 
-2015/09/15 10:02:22 [purchase.go:58] [I] UiCurList 
-2015/09/15 10:02:23 [purchase.go:58] [I] UiCurList 
-2015/09/15 10:09:01 [purchase.go:58] [I] UiCurList 
-2015/09/15 10:09:01 [purchase.go:58] [I] UiCurList 
-2015/09/15 10:09:02 [purchase.go:58] [I] UiCurList 
-2015/09/15 10:09:02 [purchase.go:58] [I] UiCurList 
-2015/09/15 10:09:06 [purchase.go:58] [I] UiCurList 
-2015/09/15 10:09:07 [purchase.go:58] [I] UiCurList 
-2015/09/15 10:09:09 [purchase.go:58] [I] UiCurList 
-2015/09/15 10:09:10 [purchase.go:58] [I] UiCurList 
-2015/09/15 10:09:12 [purchase.go:58] [I] UiCurList 
-2015/09/15 10:09:13 [purchase.go:58] [I] UiCurList 
-2015/09/15 10:09:13 [purchase.go:58] [I] UiCurList 
-2015/09/15 10:10:51 [main.go:56] [I] User:admin login as role:role_admin 
-2015/09/15 10:11:23 [staticfile.go:61] [W] Can't find the file: static/files/travel/20150821163636000 stat static/files/travel/20150821163636000: no such file or directory 
-2015/09/15 10:17:20 [staticfile.go:61] [W] Can't find the file: static/files/travel/20150819175809000 stat static/files/travel/20150819175809000: no such file or directory 
-2015/09/15 10:34:01 [main.go:56] [I] User:admin login as role:role_admin 
-2015/09/15 10:38:19 [asm_amd64.s:1696] [I] http server Running on :8080
-2015/09/15 10:38:23 [main.go:56] [I] User:admin login as role:role_admin 
-2015/09/15 10:46:48 [main.go:56] [I] User:admin login as role:role_admin 
-2015/09/15 10:49:08 [asm_amd64.s:1696] [I] http server Running on :8080
-2015/09/15 10:49:13 [main.go:56] [I] User:admin login as role:role_admin 
-2015/09/15 10:51:08 [staticfile.go:61] [W] Can't find the file: static/files/travel/20150819175809000 stat static/files/travel/20150819175809000: no such file or directory 
-2015/09/15 11:17:44 [main.go:56] [I] User:admin login as role:role_admin 
-2015/09/15 11:17:52 [main.go:56] [I] User:admin login as role:role_admin 
-2015/09/15 11:20:21 [asm_amd64.s:1696] [I] http server Running on :8080
-2015/09/15 11:20:27 [main.go:56] [I] User:admin login as role:role_admin 
-2015/09/15 11:22:18 [main.go:56] [I] User:admin login as role:role_admin 
-2015/09/15 11:22:24 [asm_amd64.s:1696] [I] http server Running on :8080
-2015/09/15 11:22:40 [main.go:56] [I] User:admin login as role:role_admin 
-2015/09/15 11:29:42 [main.go:56] [I] User:admin login as role:role_admin 
-2015/09/15 14:42:33 [asm_amd64.s:1696] [I] http server Running on :8080
-2015/09/15 14:42:39 [main.go:56] [I] User:admin login as role:role_admin 
-2015/09/15 14:45:11 [main.go:56] [I] User:admin login as role:role_admin 
-2015/09/15 14:46:05 [main.go:56] [I] User:admin login as role:role_admin 
-2015/09/15 15:52:14 [asm_amd64.s:1696] [I] http server Running on :8080
-2015/09/15 15:59:47 [asm_amd64.s:1696] [I] http server Running on :8080
-2015/09/15 16:00:05 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
-2015/09/15 16:00:05 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
-2015/09/15 16:00:05 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
-2015/09/15 16:00:05 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
-2015/09/15 16:00:09 [main.go:32] [I] User:admin login as role:role_admin 
-2015/09/15 16:00:16 [main.go:56] [I] User:admin login as role:role_admin 
-2015/09/15 16:04:23 [main.go:56] [I] User:admin login as role:role_admin 
-2015/09/15 16:22:11 [main.go:56] [I] User:admin login as role:role_admin 
-2015/09/15 16:22:17 [main.go:56] [I] User:admin login as role:role_admin 
-2015/09/15 16:22:55 [asm_amd64.s:1696] [I] http server Running on :8080
-2015/09/15 16:22:59 [main.go:56] [I] User:admin login as role:role_admin 
-2015/09/15 16:29:58 [main.go:56] [I] User:admin login as role:role_admin 
-2015/09/15 16:30:31 [main.go:56] [I] User:admin login as role:role_admin 
-2015/09/15 16:34:14 [main.go:56] [I] User:admin login as role:role_admin 
-2015/09/15 16:35:13 [asm_amd64.s:1696] [I] http server Running on :8080
-2015/09/15 16:36:16 [main.go:56] [I] User:admin login as role:role_admin 
-2015/09/15 16:37:04 [main.go:56] [I] User:admin login as role:role_admin 
-2015/09/15 16:39:12 [main.go:56] [I] User:admin login as role:role_admin 
-2015/09/15 16:41:01 [main.go:56] [I] User:admin login as role:role_admin 
-2015/09/15 16:42:01 [main.go:56] [I] User:admin login as role:role_admin 
-2015/09/15 16:43:27 [main.go:56] [I] User:admin login as role:role_admin 
-2015/09/15 16:45:52 [main.go:56] [I] User:admin login as role:role_admin 
-2015/09/15 17:03:18 [main.go:56] [I] User:admin login as role:role_admin 
-2015/09/15 17:04:30 [main.go:56] [I] User:admin login as role:role_admin 
-2015/09/15 17:06:25 [main.go:56] [I] User:admin login as role:role_admin 
-2015/09/15 17:07:49 [asm_amd64.s:1696] [I] http server Running on :8080
-2015/09/15 17:07:53 [main.go:56] [I] User:admin login as role:role_admin 
-2015/09/15 17:08:29 [main.go:56] [I] User:admin login as role:role_admin 
-2015/09/15 17:16:29 [asm_amd64.s:1696] [I] http server Running on :8080
-2015/09/15 17:16:33 [main.go:56] [I] User:admin login as role:role_admin 
-2015/09/15 17:17:42 [main.go:56] [I] User:admin login as role:role_admin 
-2015/09/15 17:19:25 [main.go:56] [I] User:admin login as role:role_admin 
-2015/09/15 17:20:14 [asm_amd64.s:1696] [I] http server Running on :8080
-2015/09/15 17:20:16 [main.go:56] [I] User:admin login as role:role_admin 
+2015/09/16 08:02:46 [main.go:56] [I] User:admin login as role:role_admin 
+2015/09/16 08:02:46 [router.go:879] [C] the request url is  /travel 
+2015/09/16 08:02:46 [router.go:880] [C] Handler crashed with error template: travel.html:36:27: executing "travel.html" at <.activeUrl>: invalid value; expected string 
+2015/09/16 08:02:46 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:437 
+2015/09/16 08:02:46 [router.go:886] [C] /usr/local/go/src/runtime/panic.go:423 
+2015/09/16 08:02:46 [router.go:886] [C] /Users/rick/go/src/github.com/astaxie/beego/router.go:811 
+2015/09/16 08:02:46 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1862 
+2015/09/16 08:02:46 [router.go:886] [C] /usr/local/go/src/net/http/server.go:1361 
+2015/09/16 08:02:46 [router.go:886] [C] /usr/local/go/src/runtime/asm_amd64.s:1696 
+2015/09/16 08:04:16 [main.go:56] [I] User:admin login as role:role_admin 
+2015/09/16 08:05:47 [main.go:56] [I] User:admin login as role:role_admin 
+2015/09/16 08:08:01 [main.go:56] [I] User:admin login as role:role_admin 
+2015/09/16 08:08:04 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 08:08:04 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 08:08:04 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 08:08:04 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 08:08:06 [login.go:38] [E] User:%s login error code: %s admin item_not_found 
+2015/09/16 08:08:32 [main.go:32] [I] User:admin login as role:role_admin 
+2015/09/16 08:08:54 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 08:08:54 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 08:08:54 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 08:08:54 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 08:08:58 [main.go:32] [I] User:admin login as role:role_admin 
+2015/09/16 08:09:14 [main.go:56] [I] User:admin login as role:role_admin 
+2015/09/16 08:09:18 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 08:09:18 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 08:09:18 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 08:09:18 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 08:09:20 [main.go:32] [I] User:admin login as role:role_admin 
+2015/09/16 08:12:14 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/16 08:12:18 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 08:12:18 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 08:12:18 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 08:12:18 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 08:12:20 [main.go:32] [I] User:admin login as role:role_admin 
+2015/09/16 08:12:21 [purchase.go:58] [I] UiCurList 
+2015/09/16 08:12:23 [purchase.go:58] [I] UiCurList 
+2015/09/16 08:12:32 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/16 08:12:38 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 08:12:38 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 08:12:38 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 08:12:38 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 08:12:42 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 08:12:42 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 08:12:42 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 08:12:42 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 08:12:51 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 08:12:51 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 08:12:51 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 08:12:51 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 08:13:36 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/16 08:13:41 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 08:13:41 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 08:13:41 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 08:13:41 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 08:15:01 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 08:15:01 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 08:15:01 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 08:15:01 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 08:30:54 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 08:30:54 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 08:30:54 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 08:30:54 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 08:32:38 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/16 08:33:33 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/16 08:33:46 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/16 08:35:02 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/16 08:35:07 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 08:35:07 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 08:35:07 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 08:35:07 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 08:35:10 [main.go:55] [I] User:admin login as role:role_admin 
+2015/09/16 08:35:18 [main.go:31] [I] User:admin login as role:role_admin 
+2015/09/16 08:35:21 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 08:35:21 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 08:35:21 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 08:35:21 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 08:35:24 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 08:35:24 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 08:35:24 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 08:35:24 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 08:35:27 [main.go:31] [I] User:admin login as role:role_admin 
+2015/09/16 08:36:25 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 08:36:25 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 08:36:25 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 08:36:25 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 08:36:31 [login.go:41] [E] User:%s login error code: %s abc item_not_found 
+2015/09/16 08:36:33 [login.go:41] [E] User:%s login error code: %s abc item_not_found 
+2015/09/16 08:36:34 [login.go:41] [E] User:%s login error code: %s abc item_not_found 
+2015/09/16 08:36:42 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 08:36:42 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 08:36:42 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 08:36:42 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 08:36:43 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 08:36:43 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 08:36:43 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 08:36:43 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 08:36:49 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 08:36:49 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 08:36:49 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 08:36:49 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 08:38:20 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/16 08:38:23 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 08:38:23 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 08:38:23 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 08:38:23 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 08:38:26 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 08:38:26 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 08:38:26 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 08:38:26 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 08:38:51 [main.go:31] [I] User:admin login as role:role_admin 
+2015/09/16 08:39:00 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 08:39:00 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 08:39:00 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 08:39:00 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 08:39:01 [main.go:31] [I] User:admin login as role:role_admin 
+2015/09/16 08:39:17 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 08:39:17 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 08:39:17 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 08:39:17 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 08:39:23 [login.go:43] [E] User:%s login error code: %s ab item_not_found 
+2015/09/16 08:39:25 [login.go:43] [E] User:%s login error code: %s ab item_not_found 
+2015/09/16 08:39:26 [login.go:43] [E] User:%s login error code: %s ab item_not_found 
+2015/09/16 08:39:30 [login.go:43] [E] User:%s login error code: %s ab item_not_found 
+2015/09/16 08:39:34 [main.go:31] [I] User:admin login as role:role_admin 
+2015/09/16 08:39:49 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 08:39:49 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 08:39:49 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 08:39:49 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 08:39:53 [login.go:43] [E] User:%s login error code: %s ab item_not_found 
+2015/09/16 08:39:54 [login.go:43] [E] User:%s login error code: %s ab item_not_found 
+2015/09/16 08:40:31 [login.go:43] [E] User:%s login error code: %s ab item_not_found 
+2015/09/16 08:40:32 [login.go:43] [E] User:%s login error code: %s ab item_not_found 
+2015/09/16 08:40:32 [login.go:43] [E] User:%s login error code: %s ab item_not_found 
+2015/09/16 08:40:32 [login.go:43] [E] User:%s login error code: %s ab item_not_found 
+2015/09/16 08:40:34 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 08:40:34 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 08:40:34 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 08:40:34 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 08:40:40 [login.go:43] [E] User:%s login error code: %s ab item_not_found 
+2015/09/16 08:41:25 [main.go:31] [I] User:admin login as role:role_admin 
+2015/09/16 08:41:43 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 08:41:43 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 08:41:43 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 08:41:43 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 08:41:45 [main.go:31] [I] User:ab login as role:role_manager 
+2015/09/16 08:41:47 [purchase.go:58] [I] UiCurList 
+2015/09/16 08:41:50 [purchase.go:58] [I] UiCurList 
+2015/09/16 08:41:56 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 09:06:39 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 09:06:45 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/16 09:06:48 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 09:06:48 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 09:06:48 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 09:06:48 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 09:06:50 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 09:06:50 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 09:06:50 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 09:06:50 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 09:06:51 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 14:47:04 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 14:51:48 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 14:54:50 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 14:58:14 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/16 14:58:18 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 14:58:18 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 14:58:18 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 14:58:18 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 14:58:20 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 14:59:16 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/16 14:59:22 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 14:59:22 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 14:59:22 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 14:59:22 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 14:59:24 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 15:01:28 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 15:02:21 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 15:04:03 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/16 15:04:08 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 15:04:08 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 15:04:08 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 15:04:08 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 15:04:09 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 15:07:01 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/16 15:07:05 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 15:07:05 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 15:07:05 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 15:07:05 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 15:07:07 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 15:07:37 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 15:08:23 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/16 15:08:28 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 15:08:28 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 15:08:28 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 15:08:28 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 15:08:30 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 15:11:07 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/16 15:11:11 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 15:11:11 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 15:11:11 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 15:11:11 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 15:11:13 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 15:21:12 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/16 15:21:20 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 15:21:20 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 15:21:20 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 15:21:20 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 15:21:21 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 15:22:32 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 15:22:37 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/16 15:22:40 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 15:22:40 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 15:22:40 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 15:22:40 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 15:22:42 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 15:26:08 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/16 15:26:19 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 15:26:19 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 15:26:19 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 15:26:19 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 15:26:20 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 15:27:10 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/16 15:27:15 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 15:27:15 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 15:27:15 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 15:27:15 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 15:27:17 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 15:28:27 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/16 15:28:30 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 15:28:30 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 15:28:30 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 15:28:30 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 15:28:31 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 15:29:01 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/16 15:29:09 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 15:29:09 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 15:29:09 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 15:29:09 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 15:29:10 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 15:29:22 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 15:29:29 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/16 15:29:32 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 15:29:32 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 15:29:32 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 15:29:32 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 15:29:33 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 15:31:33 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/16 15:31:38 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 15:31:38 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 15:31:38 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 15:31:38 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 15:31:39 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 15:50:06 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 15:50:31 [crud.go:148] [E] Add error table travel has no column named approvername 
+2015/09/16 15:50:31 [crud.go:210] [E] ParseSqlError unknown error table travel has no column named approvername 
+2015/09/16 15:50:31 [crud.go:148] [E] Add error table travel has no column named approvername 
+2015/09/16 15:50:31 [crud.go:210] [E] ParseSqlError unknown error table travel has no column named approvername 
+2015/09/16 15:56:03 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/16 15:56:07 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 15:56:07 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 15:56:07 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 15:56:07 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 15:56:08 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 15:56:34 [crud.go:148] [E] Add error table travel has no column named approvername 
+2015/09/16 15:56:34 [crud.go:210] [E] ParseSqlError unknown error table travel has no column named approvername 
+2015/09/16 15:56:35 [crud.go:148] [E] Add error table travel has no column named approvername 
+2015/09/16 15:56:35 [crud.go:210] [E] ParseSqlError unknown error table travel has no column named approvername 
+2015/09/16 15:57:47 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/16 15:57:50 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 15:57:50 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 15:57:50 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 15:57:50 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 15:57:52 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 15:58:04 [crud.go:103] [E] [{sn string 编号 none false false sn []   {true false  false} false} {traveler string 出差人 text true false text []   {true true  true} false} {task string 任务 text true false text []   {true true  true} false} {starttime string 开始日期 date true false text []  curtime {true true  true} false} {endtime string 结束日期 date true false text []   {true true  true} false} {path string 路线 textarea true false text []   {true true  true} false} {requirement string 达标标准 textarea true false text []   {true true  true} false} {expenses float 预计费用 money true false text []   {true true  true} false} {detail string 费用分项 textarea false false text []   {true true  true} false} {actualexpenses float 实际费用 money false false text []   {true true  true} false} {payment float 实报费用 money false false text []   {true true  true} false} {approvername string 审批人 text true false text []   {true true  true} false} {approver string 审批人 hidden true false text []   {true true  true} false} {createtime time 创建时间 none false false curtime []   {false false  false} false}] 
+2015/09/16 15:58:04 [crud.go:149] [E] Add error table travel has no column named approvername 
+2015/09/16 15:58:04 [crud.go:211] [E] ParseSqlError unknown error table travel has no column named approvername 
+2015/09/16 15:59:20 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/16 15:59:24 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 15:59:24 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 15:59:24 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 15:59:24 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 15:59:26 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 15:59:37 [crud.go:103] [E] [{sn string 编号 none false false sn []   {true false  false} false} {traveler string 出差人 text true false text []   {true true  true} false} {task string 任务 text true false text []   {true true  true} false} {starttime string 开始日期 date true false text []  curtime {true true  true} false} {endtime string 结束日期 date true false text []   {true true  true} false} {path string 路线 textarea true false text []   {true true  true} false} {requirement string 达标标准 textarea true false text []   {true true  true} false} {expenses float 预计费用 money true false text []   {true true  true} false} {detail string 费用分项 textarea false false text []   {true true  true} false} {actualexpenses float 实际费用 money false false text []   {true true  true} false} {payment float 实报费用 money false false text []   {true true  true} false} {approver string 审批人 text true false text []   {true true  true} false} {creater string 创建人 none false false curuser []   {false false  false} false} {createtime time 创建时间 none false false curtime []   {false false  false} false}] 
+2015/09/16 16:04:36 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/16 16:04:39 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 16:04:39 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 16:04:39 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 16:04:39 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 16:04:41 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 16:04:51 [crud.go:103] [E] [{sn string 编号 none false false sn []   {true false  false} false} {traveler string 出差人 text true false text []   {true true  true} false} {task string 任务 text true false text []   {true true  true} false} {starttime string 开始日期 date true false text []  curtime {true true  true} false} {endtime string 结束日期 date true false text []   {true true  true} false} {path string 路线 textarea true false text []   {true true  true} false} {requirement string 达标标准 textarea true false text []   {true true  true} false} {expenses float 预计费用 money true false text []   {true true  true} false} {detail string 费用分项 textarea false false text []   {true true  true} false} {actualexpenses float 实际费用 money false false text []   {true true  true} false} {payment float 实报费用 money false false text []   {true true  true} false} {approver string 审批人 text true false text []   {true true  true} false} {creater string 创建人 none false false curuser []   {false false  false} false} {createtime time 创建时间 none false false curtime []   {false false  false} false}] 
+2015/09/16 16:09:00 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/16 16:09:05 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 16:09:05 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 16:09:05 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 16:09:05 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 16:09:20 [crud.go:103] [E] [{sn string 编号 none false false sn []   {true false  false} false} {traveler string 出差人 text true false text []   {true true  true} false} {task string 任务 text true false text []   {true true  true} false} {starttime string 开始日期 date true false text []  curtime {true true  true} false} {endtime string 结束日期 date true false text []   {true true  true} false} {path string 路线 textarea true false text []   {true true  true} false} {requirement string 达标标准 textarea true false text []   {true true  true} false} {expenses float 预计费用 money true false text []   {true true  true} false} {detail string 费用分项 textarea false false text []   {true true  true} false} {actualexpenses float 实际费用 money false false text []   {true true  true} false} {payment float 实报费用 money false false text []   {true true  true} false} {approver string 审批人 text true false text []   {true true  true} false} {creater string 创建人 none false false curuser []   {false false  false} false} {createtime time 创建时间 none false false curtime []   {false false  false} false}] 
+2015/09/16 16:13:15 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/16 16:13:19 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 16:13:19 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 16:13:19 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 16:13:19 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 16:13:20 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 16:13:41 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/16 16:13:44 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 16:13:44 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 16:13:44 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 16:13:44 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 16:13:46 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 16:14:12 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 16:16:36 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/16 16:16:40 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 16:16:40 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 16:16:40 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 16:16:40 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 16:16:41 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 16:32:55 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/16 16:32:59 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 16:32:59 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 16:32:59 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 16:32:59 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 16:33:35 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 16:33:51 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/16 16:34:09 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 16:34:09 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 16:34:09 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 16:34:09 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 16:34:11 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 16:34:14 [crud.go:58] [E] Query error:no such column: keyword for sql:SELECT * FROM user  WHERE keyword LIKE ? ORDER BY keyword ASC LIMIT 100  
+2015/09/16 16:34:17 [crud.go:58] [E] Query error:no such column: keyword for sql:SELECT * FROM user  WHERE keyword LIKE ? ORDER BY keyword ASC LIMIT 100  
+2015/09/16 16:34:19 [crud.go:58] [E] Query error:no such column: keyword for sql:SELECT * FROM user  WHERE keyword LIKE ? ORDER BY keyword ASC LIMIT 100  
+2015/09/16 16:35:12 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/16 16:35:25 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/16 16:35:28 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 16:35:28 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 16:35:28 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 16:35:28 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 16:35:30 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 16:38:43 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 16:38:43 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 16:38:43 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 16:38:43 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 16:38:45 [main.go:31] [I] User:ab login as role:role_manager 
+2015/09/16 16:38:50 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 16:41:02 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 16:41:57 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 16:43:56 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/16 16:43:59 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 16:43:59 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 16:43:59 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 16:43:59 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 16:44:01 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 16:50:19 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/16 16:50:23 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 16:50:23 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 16:50:23 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 16:50:23 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 16:50:25 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 16:55:55 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/16 16:56:03 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 16:56:03 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 16:56:03 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 16:56:03 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 16:56:32 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/16 16:56:35 [main.go:31] [I] User:ab login as role:role_manager 
+2015/09/16 16:56:38 [purchase.go:58] [I] UiCurList 
+2015/09/16 16:56:40 [purchase.go:58] [I] UiCurList 
+2015/09/16 16:56:41 [purchase.go:58] [I] UiCurList 
+2015/09/16 16:56:48 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 16:57:14 [crud.go:103] [E] [{sn string 编号 none false false sn []   {true false  false} false} {traveler string 出差人 autocomplete true false text [] /item/autocomplete/user  {true true  true} false} {task string 任务 text true false text []   {true true  true} false} {starttime string 开始日期 date true false text []  curtime {true true  true} false} {endtime string 结束日期 date true false text []   {true true  true} false} {path string 路线 textarea true false text []   {true true  true} false} {requirement string 达标标准 textarea true false text []   {true true  true} false} {expenses float 预计费用 money true false text []   {true true  true} false} {detail string 费用分项 textarea false false text []   {true true  true} false} {actualexpenses float 实际费用 money false false text []   {true true  true} false} {payment float 实报费用 money false false text []   {true true  true} false} {approver string 审批人 text true false text []   {true true  true} false} {creater string 创建人 none false false curuser []   {false false  false} false} {createtime time 创建时间 none false false curtime []   {false false  false} false}] 
+2015/09/16 17:03:32 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/16 17:03:36 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 17:03:36 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 17:03:36 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 17:03:36 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 17:03:37 [main.go:55] [I] User:ab login as role:role_manager 
+2015/09/16 17:06:06 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/16 17:06:11 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/16 17:06:11 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/16 17:06:11 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/16 17:06:11 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/16 17:06:13 [main.go:55] [I] User:ab login as role:role_manager 

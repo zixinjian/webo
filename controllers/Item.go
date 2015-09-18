@@ -1,7 +1,6 @@
 package controllers
 
 import (
-	"encoding/json"
 	"fmt"
 	"github.com/astaxie/beego"
 	"os"
@@ -18,24 +17,10 @@ type ItemController struct {
 }
 
 func (this *ItemController) ListWithQuery(oItemDef itemDef.ItemDef, addQueryParam t.Params) {
-	requestBody := this.Ctx.Input.RequestBody
-	var requestMap map[string]interface{}
-	json.Unmarshal(requestBody, &requestMap)
-	beego.Debug("ListWithQuery requestMap: ", requestMap)
-
-	limitParams := this.GetLimitParamFromJsonMap(requestMap)
-	delete(requestMap, s.Limit)
-	delete(requestMap, s.Offset)
-
-	orderByParams := this.GetOrderParamFromJsonMap(requestMap)
-	delete(requestMap, s.Order)
-	delete(requestMap, s.Sort)
-
-	queryParams := this.GetQueryParamFromJsonMap(requestMap, oItemDef)
+	queryParams, limitParams, orderByParams := this.GetParams(oItemDef)
 	for k, v := range addQueryParam {
 		queryParams[k] = v
 	}
-
 	result, total, resultMaps := svc.List(oItemDef.Name, queryParams, limitParams, orderByParams)
 	retList := transList(oItemDef, resultMaps)
 	this.Data["json"] = &TableResult{result, int64(total), retList}
@@ -167,6 +152,8 @@ func (this *ItemController) Autocomplete() {
 	switch item {
 	case s.Supplier, s.Product:
 		keyword = s.Keyword
+	case s.User:
+		keyword = s.UserName
 	default:
 		keyword = s.Name
 	}
@@ -186,11 +173,11 @@ func (this *ItemController) BaseAutocomplete(item string, keyword string) {
 	}
 
 	orderByParams := t.Params{
-		s.Keyword: s.Asc,
+		keyword: s.Asc,
 	}
 
 	queryParams := t.Params{
-		"%" + s.Keyword: term,
+		"%" + keyword: term,
 	}
 	_, _, resultMaps := svc.List(oItemDef.Name, queryParams, limitParams, orderByParams)
 	retList := TransAutocompleteList(resultMaps, keyword)

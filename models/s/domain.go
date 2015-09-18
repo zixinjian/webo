@@ -38,7 +38,13 @@ const (
 	Paymentamount      = "paymentamount"
 	Paymentdate        = "paymentdate"
 	Requireddepartment = "requireddepartment"
+
+	Traveler		   = "traveler"
+	TravelerSn		   = "travelersn"
+	TravelerName	   = "travelername"
+	TravelerKey  	   = "travelername"
 	Approver           = "approver"
+	ApproverSn         = "approversn"
 	ApproverName       = "approvername"
 )
 
@@ -47,10 +53,6 @@ const (
 	TypeString = "string"
 	TypeInt    = "int"
 	TypeFloat  = "float"
-)
-const (
-	InputHidden = "hidden"
-	InputText   = "text"
 )
 
 const (
@@ -63,6 +65,7 @@ const (
 	Autocomplete = "autocomplete"
 	Enum         = "enum"
 	Upload       = "upload"
+	Hidden 		 = "hidden"
 )
 
 const (

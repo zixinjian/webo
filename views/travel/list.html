@@ -85,7 +85,7 @@
         return getDiffexpenese(row)
     }
     function diffrateFormat(value, row){
-        return "30%"
+        return row.expayrat *100 + "%"
     }
     function getDiffexpenese(row){
         return wbToMoney(parseFloat(row.actualexpenses) - parseFloat(row.expenses))

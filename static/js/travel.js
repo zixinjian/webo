@@ -5,12 +5,28 @@
 function calPayment(){
     actualexpenses = $("#actualexpenses").val()
     expenses = $("#expenses").val()
-    payment = getPayment(actualexpenses, expenses)
+    rat = $("#expayrat").val()
+    if (isNaN(expenses) || rat == ""){
+        alert("预计费用填写错误")
+        return
+    }
+    if (isNaN(actualexpenses) || rat == ""){
+        alert("实际费用填写错误")
+        return
+    }
+    if (isNaN(rat) || rat == ""){
+        alert("额外报销比例填写错误")
+        return
+    }
+    rat = wbToMoney(rat)
+    payment = getPayment(actualexpenses, expenses, rat)
     $("#payment").val(payment)
-    //console.log("blur", actualexpenses, expenses, payment)
 }
+function getExPayRat(){
+    rat = $("#expayrat").val()
 
-function getPayment(actualexpenses, expenses){
+}
+function getPayment(actualexpenses, expenses, rat){
     if (actualexpenses == 0 && expenses == 0){
         return 0
     }
@@ -22,7 +38,7 @@ function getPayment(actualexpenses, expenses){
         return wbToMoney(expenses)
     }
     if (diff > 0){
-        return wbToMoney(parseFloat(expenses) + parseFloat(diff * 0.3))
+        return wbToMoney(parseFloat(expenses) + parseFloat(diff * rat/100))
     }
-    return wbToMoney(actualexpenses) - wbToMoney(diff * 0.3)
+    return wbToMoney(actualexpenses) - wbToMoney(diff * rat/100)
 }

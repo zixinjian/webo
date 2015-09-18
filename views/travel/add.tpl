@@ -37,6 +37,16 @@
             }
         }
     }
+    function beforeSubmit(a){
+        console.log("before submit", a)
+        for (idx in a){
+            valueMap = a[idx]
+            if (valueMap.name == "expayrat"){
+                valueMap.value = valueMap.value/100
+            }
+        }
+        return true
+    }
     var refreshContent
     function onTopModalOk(options){
         if(options.refreshContent){
@@ -48,14 +58,16 @@
         $("#item_form").ajaxSubmit({
             type: "post",
             url: "{{.Service}}",
+            beforeSubmit:beforeSubmit,
             success: showResponse
         });
     }
     $(function(){
-        $("#expenses").blur(calPayment)
-        $("#expenses").keyup(calPayment)
-        $("#actualexpenses").blur(calPayment)
-        $("#actualexpenses").keyup(calPayment)
+        $("#expayrat").wrapAll('<div class="input-group"></div>')
+        $("#expayrat").after('<span class="input-group-addon">%</span>')
+        $("#payment").wrapAll('<div class="input-group"></div>')
+        $("#payment").after('<a class="btn btn-sm input-group-addon" id="calc">计算</a>')
+        $("#calc").click(calPayment)
     });
 </script>
 {{str2html .Onload}}

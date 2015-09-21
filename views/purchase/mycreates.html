@@ -10,7 +10,6 @@
 <div>
     <p class="toolbar">
         <a id="add_item" class="create btn btn-primary">新建</a>
-        <!--<label class="checkbox-inline-inline"><input data-model="buyers" type="checkbox" name = "showAll" id="show_all"> 显示已入库</label>-->
     </p>
     <table id="item_table"
            data-show-refresh="true"
@@ -25,7 +24,31 @@
                     data-formatter="actionFormatter"
                     data-events="actionEvents"
                     data-width="75px">  [ 操作 ]  </th>
-                {{str2html .thlist}}
+                <th data-field="sn"  data-sortable="true" data-visible="false">编号</th>
+                <th data-field="category"  data-sortable="true">类别</th>
+                <th data-field="productname"  data-sortable="true">商品名称</th>
+                <th data-field="productmodel"  data-sortable="true" data-formatter="modelFormatter">型号</th>
+                <th data-field="productbrand"  data-sortable="true">品牌</th>
+                <th data-field="supplier"  data-sortable="true">供应商</th>
+                <th data-field="buyer"  data-sortable="true">采购人</th>
+                <th data-field="num"  data-sortable="true">数量</th>
+                <th data-field="unitprice"  data-sortable="true">单价</th>
+                <th data-field="productprice"  data-sortable="true">参考价</th>
+                <th data-field="totalprice"  data-sortable="true">总价</th>
+                <th data-field="freightprice"  data-sortable="true">运费</th>
+                <th data-field="placedate"  data-sortable="true">下单日期</th>
+                <th data-field="requireddate"  data-sortable="true">需用日期</th>
+                <th data-field="orderdate"  data-sortable="true" data-order="desc">订货日期</th>
+                <th data-field="predictdeliverydate"  data-sortable="true">预计发货日期</th>
+                <th data-field="actualdeliverydate"  data-sortable="true">实际发货日</th>
+                <th data-field="appointmentarrivaldate"  data-sortable="true">预计到货日</th>
+                <th data-field="godowndate"  data-sortable="true">入库日期</th>
+                <th data-field="paymentamount" data-visible="false" data-sortable="true">付款金额</th>
+                <th data-field="paymentdate" data-visible="false" data-sortable="true">付款日期</th>
+                <th data-field="file" data-visible="false" data-sortable="true">附件</th>
+                <th data-field="requireddepartment"  data-sortable="true">申请部门</th>
+                <th data-field="changelog"  data-sortable="true">变更情况</th>
+                <th data-field="mark"  data-sortable="true">备注</th>
             </tr>
         </thead>
     </table>
@@ -69,6 +92,9 @@
             }
         }
         return {}
+    }
+    function modelFormatter(value, row){
+        return wbSprintf('<a class="file" href="/static/files/product/%s" target="_blank" title="附件" data-toggle="poplayer" data-placement="bottom" data-url="/static">%s</a>', row.product, value)
     }
     function actionFormatter(value, row) {
         return [

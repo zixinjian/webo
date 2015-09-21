@@ -59,7 +59,13 @@ func (this *PurchaseController) UiCurList() {
 	item := s.Purchase
 	this.Data["buyers"] = this.createBuyerList()
 	this.Data["queryParams"] = CurListQueryParamsJs
-	this.Data["listUrl"] = "/item/list/purchase?godowndate"
+	role := this.GetCurRole()
+	department := this.GetCurDepartment()
+	if role == s.RoleManager && department == "department_purchase"{
+		this.Data["listUrl"] = "/item/list/purchase?godowndate"
+	}else {
+		this.Data["listUrl"] = "/item/list/purchase?buyer=curuser&godowndate"
+	}
 	this.Data["addUrl"] = ""
 	this.Data["updateUrl"] = "/ui/purchase/userupdate"
 	oItemDef, _ := itemDef.EntityDefMap[item]
@@ -171,19 +177,17 @@ func (this *PurchaseController) AccountCurrentList() {
 }
 
 func (this *PurchaseController) createBuyerList() string {
+	role := this.GetCurRole()
+	department := this.GetCurDepartment()
+	if role != s.RoleManager || department != "department_purchase"{
+		return ""
+	}
 	queryParam := t.Params{
 		"department": "department_purchase",
 	}
 	_, _, retMaps := svc.List(s.User, queryParam, t.LimitParams{}, t.Params{})
 
-	var allCheked string
-	role := this.GetCurRole()
-	switch role {
-	case s.RoleManager, s.RoleAdmin:
-		allCheked = s.Checked
-	default:
-		allCheked = ""
-	}
+	allCheked := s.Checked
 	userHtml := fmt.Sprintf(AdminUserFormat, allCheked)
 	curUserSn := this.GetCurUserSn()
 	for _, userMap := range retMaps {

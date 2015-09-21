@@ -3,6 +3,7 @@
   <meta charset="UTF-8">
     <link rel="stylesheet" href="../asserts/3rd/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../asserts/css/main.css">
+    <link rel="stylesheet" href="../asserts/css/overwrite.css">
 </head>
 <body style="bottom:0;height:100%">
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -28,7 +29,7 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
+        <div class="col-sm-1 col-md-1 sidebar">
             <ul class="nav nav-sidebar">
                 {{str2html .orderNav}}
                 <li><a href="/ui/purchase/history" target="frame-content">采购历史</a></li>
@@ -38,11 +39,11 @@
             </ul>
             <ul class="nav nav-sidebar">
                 <li><a href="/ui/list/supplier" target="frame-content">供应商</a></li>
-                <li><a href="ui/product/list" target="frame-content">产品信息管理</a></li>
+                <li><a href="ui/product/list" target="frame-content">商品信息管理</a></li>
             </ul>
             {{str2html .userMgr}}
         </div>
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" style="padding: 0;">
+        <div class="col-sm-11 col-sm-offset-1 col-md-11 col-md-offset-1 main" style="padding: 0;">
             {{str2html .activeUrl}}
         </div>
     </div>

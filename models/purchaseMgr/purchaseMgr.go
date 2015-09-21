@@ -5,7 +5,6 @@ import (
 	"github.com/astaxie/beego/orm"
 	"strconv"
 	"strings"
-	"webo/models/lang"
 	"webo/models/productMgr"
 	"webo/models/s"
 	"webo/models/stat"
@@ -97,18 +96,16 @@ func transPurchaseMap(oldMap orm.Params) t.ItemMap {
 	}
 	if supplierSn, ok := retMap[s.Supplier]; ok && !u.IsNullStr(supplierSn) {
 		if supplierMap, sok := supplierMgr.Get(supplierSn.(string)); sok {
-			supplier, _ := supplierMap[s.Name]
-			retMap[s.Supplier] = supplier.(string)
+			retMap[s.Supplier] = u.GetStringValue(supplierMap, s.Name)
 		}
 	}
 	if productSn, ok := retMap[s.Product]; ok && !u.IsNullStr(productSn) {
 		if productMap, sok := productMgr.Get(productSn.(string)); sok {
-			product, _ := productMap[s.Name]
-			retMap[s.Product] = product.(string)
+			retMap[s.Product + s.Name] = u.GetStringValue(productMap, s.Name)
+			retMap[s.Product + s.Brand] = u.GetStringValue(productMap, s.Brand)
+			retMap[s.Product + s.Model] = u.GetStringValue(productMap, s.Model)
 		}
-	}
-	if department, ok := retMap[s.Requireddepartment]; ok {
-		retMap[s.Requireddepartment] = lang.GetLabel(department.(string))
 	}
 	return retMap
 }
+

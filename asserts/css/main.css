@@ -24,7 +24,7 @@
 @media (min-width: 768px) {
     .sidebar {
         position: fixed;
-        top: 51px;
+        top: 31px;
         bottom: 0;
         left: 0;
         z-index: 1000;
@@ -57,7 +57,7 @@
 
 .main {
     position: fixed;
-    top: 51px;
+    top: 31px;
     bottom: 0;
     left: 0;
     z-index: 1000;

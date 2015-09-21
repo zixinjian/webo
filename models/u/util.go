@@ -65,3 +65,12 @@ func init() {
 func ToStr(v interface{}) string {
 	return orm.ToStr(v)
 }
+
+func GetStringValue(productMap map[string]interface{}, key string)string{
+	if value, ok := productMap[key];ok {
+		if v, vok := value.(string); vok {
+			return v
+		}
+	}
+	return ""
+}

@@ -15,6 +15,7 @@ const (
 	Name               = "name"
 	UserName           = "username"
 	Category           = "category"
+	Brand			   = "brand"
 	Model              = "model"
 	Num                = "num"
 	UintPrice          = "unitprice"
@@ -71,6 +72,7 @@ const (
 const (
 	User     = "user"
 	Product  = "product"
+	ProductName  = "productname"
 	Supplier = "supplier"
 	Purchase = "purchase"
 	Travel   = "travel"

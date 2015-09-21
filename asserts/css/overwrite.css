@@ -9,3 +9,22 @@
     border-radius: 2px;
     -webkit-border-radius: 2px;
 }
+.fixed-table-container thead th .th-inner, .fixed-table-container tbody td .th-inner{
+    padding: 4px !important;
+    padding-right: 14px !important;
+}
+
+.bootstrap-table .fixed-table-footer tbody > tr > td {
+    padding: 0 !important;
+}
+
+.fixed-table-footer .th-inner p{
+    margin: 0;
+}
+.fixed-table-footer .th-inner .btn-sm{
+    padding:3px 5px 3px 5px;
+}
+
+.navbar{
+    margin-bottom: 0;
+}

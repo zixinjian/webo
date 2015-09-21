@@ -4,14 +4,13 @@
 <link rel="stylesheet" href="../../asserts/3rd/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="../../asserts/3rd/bootstrap-table/bootstrap-table.css">
 <link rel="stylesheet" href="../../asserts/3rd/bootstrap-editable/bootstrap3-editable/css/bootstrap-editable.css">
+<link rel="stylesheet" href="../../asserts/css/overwrite.css">
+
 </head>
 <body>
-<div style="padding:20px;">
+<div>
     <div class="toolbar" style="line-height: 20px">
         <div class="form-group">
-            <!--<label class="radio-inline">-->
-                <!--<input data-model="buyers" type="radio" name = "buyers" id="all" value="all" checked="true"> 全部-->
-            <!--</label>-->
             {{str2html .buyers}}
         </div>
     </div>
@@ -42,18 +41,19 @@
 <script src="../../asserts/3rd/bootstrap-editable/bootstrap3-editable/js/bootstrap-editable.js"></script>
 <script src="../../asserts/3rd/moment/moment.js"></script>
 <script src="../../asserts/webo/util.js"></script>
+<script src="../../asserts/js/ui.js"></script>
 {{str2html .queryParams}}
 <script>
     var $table = $("#item_table")
     $(function(){
         $table.bootstrapTable({url:"{{.listUrl}}", method:"post", sidePagination:"server", pagination:true,
-            height:getHeight(), sortName:"requireddate", sortOrder:"{{.sortOrder}}"});
+            height:getTableHeight(), sortName:"requireddate", sortOrder:"{{.sortOrder}}"});
         $("#add_item").on("click", function(){
             top.showTopModal({url:"{{.addUrl}}", refreshContent:refreshContent});
         })
         $(window).resize(function () {
             $table.bootstrapTable('resetView', {
-                height: getHeight()
+                height: getTableHeight()
             });
         });
     });
@@ -95,9 +95,6 @@
             }
         }
         return {}
-    }
-    function getHeight() {
-        return $(window).height()-50;
     }
 </script>
 </body>

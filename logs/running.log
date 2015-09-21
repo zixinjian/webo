@@ -444,3 +444,144 @@
 2015/09/18 11:43:12 [main.go:55] [I] User:gdj login as role:role_manager 
 2015/09/18 11:43:40 [crud.go:103] [E] [{sn string 编号 none false false sn []   {true false  false} false} {traveler string 出差人 autocomplete true false text [] /item/autocomplete/user  {true true  true} false} {task string 任务 text true false text []   {true true  true} false} {starttime string 开始日期 date true false text []  curtime {true true  true} false} {endtime string 结束日期 date true false text []   {true true  true} false} {path string 路线 textarea true false text []   {true true  true} false} {requirement string 达标标准 textarea true false text []   {true true  true} false} {expenses float 预计费用 money true false text []   {true true  true} false} {detail string 费用分项 textarea false false text []   {true true  true} false} {expayrat float 额外报销比例 money false false text []   {true true  true} false} {actualexpenses float 实际费用 money false false text []   {true true  true} false} {payment float 实报费用 money false false text []   {true true  true} false} {approver string 审批人 text true false text []   {true true  true} false} {creater string 创建人 none false false curuser []   {false false  false} false} {createtime time 创建时间 none false false curtime []   {false false  false} false}] 
 2015/09/18 12:01:11 [main.go:55] [I] User:gdj login as role:role_manager 
+2015/09/18 14:51:22 [main.go:55] [I] User:gdj login as role:role_manager 
+2015/09/18 14:51:25 [main.go:55] [I] User:gdj login as role:role_manager 
+2015/09/18 14:52:43 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/18 14:52:50 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/18 14:52:50 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/18 14:52:50 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/18 14:52:50 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/18 14:52:52 [main.go:55] [I] User:gdj login as role:role_manager 
+2015/09/21 12:29:17 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/21 12:29:58 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/21 12:29:58 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/21 12:29:58 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/21 12:29:58 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/21 12:29:59 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/21 12:29:59 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/21 12:29:59 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/21 12:29:59 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/21 12:30:08 [main.go:31] [I] User:gdj login as role:role_manager 
+2015/09/21 12:30:10 [purchase.go:58] [I] UiCurList 
+2015/09/21 12:30:12 [purchase.go:58] [I] UiCurList 
+2015/09/21 12:30:13 [purchase.go:58] [I] UiCurList 
+2015/09/21 12:30:16 [purchase.go:58] [I] UiCurList 
+2015/09/21 12:30:22 [purchase.go:58] [I] UiCurList 
+2015/09/21 12:30:23 [purchase.go:58] [I] UiCurList 
+2015/09/21 12:30:25 [purchase.go:58] [I] UiCurList 
+2015/09/21 12:30:26 [purchase.go:58] [I] UiCurList 
+2015/09/21 12:30:26 [purchase.go:58] [I] UiCurList 
+2015/09/21 12:30:28 [purchase.go:58] [I] UiCurList 
+2015/09/21 12:38:36 [purchase.go:58] [I] UiCurList 
+2015/09/21 12:38:36 [purchase.go:58] [I] UiCurList 
+2015/09/21 12:40:10 [main.go:31] [I] User:gdj login as role:role_manager 
+2015/09/21 12:46:30 [main.go:31] [I] User:gdj login as role:role_manager 
+2015/09/21 12:46:33 [purchase.go:58] [I] UiCurList 
+2015/09/21 12:46:35 [purchase.go:58] [I] UiCurList 
+2015/09/21 12:49:53 [main.go:31] [I] User:gdj login as role:role_manager 
+2015/09/21 12:49:55 [purchase.go:58] [I] UiCurList 
+2015/09/21 12:50:53 [main.go:31] [I] User:gdj login as role:role_manager 
+2015/09/21 12:51:08 [main.go:31] [I] User:gdj login as role:role_manager 
+2015/09/21 12:52:01 [main.go:31] [I] User:gdj login as role:role_manager 
+2015/09/21 12:55:28 [main.go:31] [I] User:gdj login as role:role_manager 
+2015/09/21 12:55:46 [main.go:31] [I] User:gdj login as role:role_manager 
+2015/09/21 13:05:02 [main.go:31] [I] User:gdj login as role:role_manager 
+2015/09/21 13:06:12 [main.go:31] [I] User:gdj login as role:role_manager 
+2015/09/21 13:06:14 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:06:15 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:06:16 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:06:19 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:06:39 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:06:42 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:06:46 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:06:47 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:07:07 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:07:23 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:08:09 [main.go:31] [I] User:gdj login as role:role_manager 
+2015/09/21 13:12:52 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:12:54 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:14:25 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:14:26 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:14:27 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:14:28 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:14:28 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:14:29 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:14:29 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:14:33 [main.go:31] [I] User:gdj login as role:role_manager 
+2015/09/21 13:14:35 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:14:36 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:14:37 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:14:39 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:14:39 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:14:40 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:14:44 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:15:20 [main.go:31] [I] User:gdj login as role:role_manager 
+2015/09/21 13:15:22 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:15:24 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:15:26 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:15:26 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:20:01 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/21 13:20:06 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/21 13:20:06 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/21 13:20:06 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/21 13:20:06 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/21 13:20:17 [main.go:31] [I] User:gdj login as role:role_manager 
+2015/09/21 13:20:19 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:20:19 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:20:20 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:20:20 [staticfile.go:61] [W] Can't find the file: static/ui.js stat static/ui.js: no such file or directory 
+2015/09/21 13:20:44 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:20:47 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:21:42 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:21:43 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:21:43 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:21:59 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:22:01 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:22:02 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:22:03 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:22:03 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:22:03 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:22:04 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:22:05 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:22:06 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:22:07 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:22:07 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:22:08 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:22:08 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:22:08 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:22:10 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:22:29 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:22:29 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:22:31 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:22:33 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:22:41 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:22:43 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:22:45 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:22:55 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:23:02 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:23:02 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:23:03 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:23:05 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:23:19 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:23:29 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:23:29 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:23:31 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:23:31 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:23:32 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:23:33 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:23:34 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:23:34 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:23:34 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:23:35 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:23:53 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:23:55 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:23:56 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:23:57 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:23:58 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:26:15 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:27:02 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:27:13 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:27:17 [main.go:31] [I] User:gdj login as role:role_manager 
+2015/09/21 13:27:35 [main.go:31] [I] User:gdj login as role:role_manager 
+2015/09/21 13:28:22 [purchase.go:58] [I] UiCurList 
+2015/09/21 13:28:49 [crud.go:103] [E] [{sn string 编号 none false false sn []   {true true asc true} false} {category string 类别 select true false enum [{pcate_1 pcate_1 分类1} {pcate_2 pcate_2 分类2}]   {true true  true} false} {product string 商品 autocomplete true false text [] /item/autocomplete/product  {true true  true} false} {model string 型号 text true false text []   {true true  true} false} {supplier string 供应商 autocomplete true false text [] /item/autocomplete/supplier  {true true  true} false} {buyer string 采购人 select true false enum []   {true true  true} false} {num int 数量 text true false text []  0 {true true  true} false} {unitprice float 单价 money false false text []   {true true  true} false} {productprice float 参考价 money false false text []   {true true  true} false} {totalprice float 总价 money false false text []   {true true  true} false} {freightprice float 运费 money false false text []   {true true  true} false} {placedate string 下单日期 date true false text []  curtime {true true  true} false} {requireddate string 需用日期 date true false text []   {true true  true} false} {orderdate string 订货日期 date false false text []   {true true desc true} false} {predictdeliverydate string 预计发货日期 date false false text []   {true true  true} false} {actualdeliverydate string 实际发货日 date false false text []   {true true  true} false} {appointmentarrivaldate string 预计到货日 date false false text []   {true true  true} false} {godowndate string 入库日期 date false false text []   {true true  true} false} {paymentamount string 付款金额 money false false text []   {true true asc false} false} {paymentdate string 付款日期 date false false text []   {true true asc false} false} {file string 附件 upload false false upload []   {true true asc false} false} {requireddepartment string 申请部门 select true false enum [{department_purchase department_purchase 采购} {department_sale department_sale 销售} {department_product department_product 生产}]   {true true  true} false} {changelog string 变更情况 text false false text []   {true true  true} false} {mark string 备注 text false false text []   {true true  true} false} {creater string 创建人 none false false curuser []   {false false  false} false} {createtime time 创建时间 none false false curtime []   {false false  false} false}] 

@@ -4,9 +4,10 @@
     <link rel="stylesheet" href="../../asserts/3rd/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../asserts/3rd/bootstrap-table/bootstrap-table.css">
     <link rel="stylesheet" href="../../asserts/3rd/bootstrap-editable/bootstrap3-editable/css/bootstrap-editable.css">
+    <link rel="stylesheet" href="../../asserts/css/overwrite.css">
 </head>
 <body>
-<div style="padding:20px;">
+<div>
     <p class="toolbar">
         <a id="add_item" class="create btn btn-primary">新建</a>
     </p>
@@ -36,16 +37,17 @@
 <script src="../../asserts/3rd/bootstrap-editable/bootstrap3-editable/js/bootstrap-editable.js"></script>
 <script src="../../asserts/webo/poplayer.js"></script>
 <script src="../../asserts/webo/util.js"></script>
+<script src="../../asserts/js/ui.js"></script>
 <script>
     var $table = $("#item_table")
     $(function(){
-        $table.bootstrapTable({url:"{{.listUrl}}", method:"post", sidePagination:"server", pagination:true, height:getHeight()});
+        $table.bootstrapTable({url:"{{.listUrl}}", method:"post", sidePagination:"server", pagination:true, height:getTableHeight()});
         $("#add_item").on("click", function(){
             top.showTopModal({url:"{{.addUrl}}", refreshContent:refreshContent});
         })
         $(window).resize(function () {
             $table.bootstrapTable('resetView', {
-                height: getHeight()
+                height: getTableHeight()
             });
         });
     });
@@ -81,9 +83,6 @@
                 })
             }
         }
-    }
-    function getHeight() {
-        return $(window).height()-50;
     }
 </script>
 </body>

@@ -33,6 +33,7 @@ function layoutAutoHeight(){
 //        }
 //    });
 //});
-//function getTableHeight() {
-//    return $(window).height()-50;
-//}
+
+function getTableHeight() {
+    return $(window).height();
+}

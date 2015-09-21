@@ -1,0 +1,11 @@
+.bootstrap-table .table, .bootstrap-table .table > tbody > tr > th, .bootstrap-table .table > tfoot > tr > th, .bootstrap-table .table > thead > tr > td, .bootstrap-table .table > tbody > tr > td, .bootstrap-table .table > tfoot > tr > td{
+    padding: 4px !important;
+}
+.bootstrap-table{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.fixed-table-container{
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+}

@@ -5,9 +5,11 @@
 <link rel="stylesheet" href="../../asserts/3rd/bootstrap-table/bootstrap-table.css">
 <link rel="stylesheet" href="../../asserts/3rd/bootstrap-editable/bootstrap3-editable/css/bootstrap-editable.css">
 <link rel="stylesheet" href="../../asserts/3rd/jquery-ui/jquery-ui.min.css">
+<link rel="stylesheet" href="../../asserts/css/overwrite.css">
+
 </head>
 <body>
-<div style="padding:20px;">
+<div>
     <div class="alert" role="alert" style="display: none;margin-top:20px"></div>
     <div class="toolbar" style="line-height: 20px">
         <div class="form-inline">
@@ -82,18 +84,18 @@
 <script src="../../asserts/3rd/moment/moment.js"></script>
 <script src="../../asserts/3rd/jqprint/jquery.jqprint.js"></script>
 <script src="../../asserts/webo/util.js"></script>
-<script src="../../static/js/ui.js"></script>
+<script src="../../asserts/js/ui.js"></script>
 <script>
     var $table = $("#item_table")
     $(function(){
         $table.bootstrapTable({url:"/item/list/purchase", method:"post", sidePagination:"server", pagination:true,
-            height:getHeight(), sortName:"requireddate", sortOrder:"{{.sortOrder}}"});
+            height:getTableHeight(), sortName:"requireddate", sortOrder:"{{.sortOrder}}"});
         $("#add_item").on("click", function(){
             top.showTopModal({url:"{{.addUrl}}", refreshContent:refreshContent});
         })
         $(window).resize(function () {
             $table.bootstrapTable('resetView', {
-                height: getHeight()
+                height: getTableHeight()
             });
         });
     });
@@ -224,9 +226,6 @@
             return {classes: "warning"};
         }
         return {}
-    }
-    function getHeight() {
-        return $(window).height()-50;
     }
 </script>
 </body>

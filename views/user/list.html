@@ -4,9 +4,10 @@
     <link rel="stylesheet" href="../../asserts/3rd/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../asserts/3rd/bootstrap-table/bootstrap-table.css">
     <link rel="stylesheet" href="../../asserts/3rd/bootstrap-editable/bootstrap3-editable/css/bootstrap-editable.css">
-</head>
+    <link rel="stylesheet" href="../../asserts/css/overwrite.css">
+    </head>
 <body>
-<div style="padding:20px;">
+<div>
     <p class="toolbar">
         <a id="add_item" class="create btn btn-primary">新建</a>
     </p>
@@ -32,19 +33,18 @@
 <script src="../../asserts/3rd/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
 <script src="../../asserts/3rd/bootstrap-table/extensions/editable/bootstrap-table-editable.js"></script>
 <script src="../../asserts/3rd/bootstrap-editable/bootstrap3-editable/js/bootstrap-editable.js"></script>
-<!--<script src="../../asserts/webo/util.js"></script>-->
-<script src="../../static/js/ui.js"></script>
+<script src="../../asserts/js/ui.js"></script>
 <script>
     var $table = $("#item_table")
     $(function(){
         $table.bootstrapTable({url:"{{.listUrl}}", method:"post", sidePagination:"server", pagination:true,
-            height:getHeight(), rowStyle:rowStyle, sortName:"flag", sortOrder:"asc"});
+            height:getTableHeight(), rowStyle:rowStyle, sortName:"flag", sortOrder:"asc"});
         $("#add_item").on("click", function(){
             top.showTopModal({url:"{{.addUrl}}", refreshContent:refreshContent});
         })
         $(window).resize(function () {
             $table.bootstrapTable('resetView', {
-                height: getHeight()
+                height: getTableHeight()
             });
         });
     });
@@ -55,7 +55,6 @@
     function actionFormatter(value, row) {
         return [
             '<a class="update" href="javascript:" title="修改" style="margin-right: 5px;"><i class="glyphicon glyphicon-edit"></i></a>',
-//            wbSprintf('<a class="file" href="/static/files/user/%s" target="_blank" title="附件" data-toggle="poplayer" data-placement="bottom" data-url="/static"><i class="glyphicon glyphicon-file"></i></a>', row.sn),
         ].join('');
     }
     window.actionEvents = {
@@ -83,9 +82,6 @@
             return {classes: "warning"};
         }
         return {}
-    }
-    function getHeight() {
-        return $(window).height()-50;
     }
 </script>
 </body>

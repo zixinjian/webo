@@ -4,9 +4,10 @@
     <link rel="stylesheet" href="../../asserts/3rd/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../asserts/3rd/bootstrap-table/bootstrap-table.css">
     <link rel="stylesheet" href="../../asserts/3rd/bootstrap-editable/bootstrap3-editable/css/bootstrap-editable.css">
-</head>
+    <link rel="stylesheet" href="../../asserts/css/overwrite.css">
+    </head>
 <body>
-<div style="padding:20px;">
+<div>
     <p class="toolbar">
         <a id="add_item" class="create btn btn-primary">新建</a>
         <!--<label class="checkbox-inline-inline"><input data-model="buyers" type="checkbox" name = "showAll" id="show_all"> 显示已入库</label>-->
@@ -37,17 +38,18 @@
 <script src="../../asserts/3rd/bootstrap-editable/bootstrap3-editable/js/bootstrap-editable.js"></script>
 <script src="../../asserts/3rd/moment/moment.js"></script>
 <script src="../../asserts/webo/util.js"></script>
+<script src="../../asserts/js/ui.js"></script>
 <script>
     var $table = $("#item_table")
     $(function(){
         $table.bootstrapTable({url:"{{.listUrl}}", method:"post", sidePagination:"server", pagination:true,
-            height:getHeight(), sortName:"requireddate", sortOrder:"asc"});
+            height:getTableHeight(), sortName:"requireddate", sortOrder:"asc"});
         $("#add_item").on("click", function(){
             top.showTopModal({url:"{{.addUrl}}", refreshContent:refreshContent});
         })
         $(window).resize(function () {
             $table.bootstrapTable('resetView', {
-                height: getHeight()
+                height: getTableHeight()
             });
         });
     });
@@ -78,9 +80,6 @@
         'click .update': function (e, value, row) {
             top.showTopModal({url:"{{.updateUrl}}?sn=" + row.sn, refreshContent:refreshContent});
         }
-    }
-    function getHeight() {
-        return $(window).height()-50;
     }
 </script>
 </body>

@@ -31,7 +31,7 @@
 <script src="../../asserts/3rd/echart/echarts-all.js"></script>
 <script src="../../asserts/3rd/jquery-ui/jquery-ui.min.js"></script>
 <!--<script src="../../asserts/3rd/pnotify/pnotify.custom.min.js"></script>-->
-<script src="../../static/js/ui.js"></script>
+<script src="../../asserts/js/ui.js"></script>
 <script>
 //    PNotify.prototype.options.styling = "bootstrap3";
     var analyzChart = echarts.init(document.getElementById("analyzeCharts"));

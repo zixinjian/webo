@@ -5,6 +5,7 @@ import (
 	"github.com/astaxie/beego/orm"
 	"reflect"
 	"time"
+	"math"
 )
 
 var gId uint32
@@ -73,4 +74,14 @@ func GetStringValue(productMap map[string]interface{}, key string)string{
 		}
 	}
 	return ""
+}
+
+func GetToday() (totay string){
+	t := time.Now()
+	return t.Format("2006.01.02")
+}
+
+func Round(f float64, n int) float64 {
+	pow10_n := math.Pow10(n)
+	return math.Trunc((f+0.5/pow10_n)*pow10_n) / pow10_n
 }

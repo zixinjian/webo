@@ -3,7 +3,6 @@ package purchaseMgr
 import (
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
-	"strconv"
 	"strings"
 	"webo/models/productMgr"
 	"webo/models/s"
@@ -12,6 +11,8 @@ import (
 	"webo/models/svc"
 	"webo/models/t"
 	"webo/models/u"
+	"webo/models/wborm"
+	"fmt"
 )
 
 const purchaseListSql = "SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer"
@@ -44,6 +45,39 @@ func GetPurchases(queryParams t.Params, limitParams t.LimitParams, orderBy t.Par
 	}
 }
 
+func GetBuyerTimelyList(queryParams t.Params, limitParams t.LimitParams, orderBy t.Params) (string, int64, []map[string]interface{}){
+	status, num, userMaps := svc.List(s.User, queryParams, limitParams, orderBy)
+	if status != stat.Success{
+		return status, num, userMaps
+	}
+	retMaps := make([]map[string]interface{}, len(userMaps))
+	for idx, userMap := range userMaps{
+		sn := u.GetStringValue(userMap, s.Sn)
+		name := u.GetStringValue(userMap, s.Name)
+		retMap := make(map[string]interface{}, 5)
+		noDelay, total, rat := getBuyerTimely(sn)
+		retMap["delay"] = total - noDelay
+		retMap["total"] = total
+		retMap["rat"] = rat
+		retMap[s.Sn] = sn
+		retMap[s.Name] = name
+		retMaps[idx] = retMap
+	}
+	return status, num, retMaps
+}
+func getBuyerTimely(sn string)(noDelay int64, total int64, rat string){
+	noDelaySql := "SELECT count(purchase.id) as count FROM purchase WHERE buyer=? AND purchase.godowndate != '' AND purchase.godowndate < purchase.requireddate"
+	noDelay = wborm.GetCount(noDelaySql, []interface{}{sn})
+	totalSql := "SELECT count(purchase.id) as count FROM purchase WHERE purchase.buyer=? AND (purchase.godowndate != '' OR purchase.requireddate < '?')"
+	total = wborm.GetCount(totalSql, []interface{}{sn, u.GetToday()})
+	if total == 0 || noDelay == 0{
+		rat = "0%"
+		return
+	}
+	rat = fmt.Sprintf("%.2f", float64(noDelay) * 100/float64(total)) + "%"
+	return
+}
+
 func GetPurchaseList(sqlBuilder *svc.SqlBuilder) (string, []map[string]interface{}) {
 	query := sqlBuilder.GetCustomerSql(purchaseListSql)
 	values := sqlBuilder.GetValues()
@@ -68,22 +102,7 @@ func GetPurchaseTotal(sqlBuilder *svc.SqlBuilder) int64 {
 	query := sqlBuilder.GetCustomerSql(purchaseCountSql)
 	values := sqlBuilder.GetValues()
 	beego.Debug("GetPurchaseTotal: ", query, ":", values)
-	o := orm.NewOrm()
-	var maps []orm.Params
-	if _, err := o.Raw(query, values...).Values(&maps); err == nil {
-		if len(maps) <= 0 {
-			return 0
-		}
-		if total, ok := maps[0]["count"]; ok {
-			total64, err := strconv.ParseInt(total.(string), 10, 64)
-			if err != nil {
-				beego.Error("GetPurchaseTotal error: ", err)
-				return 0
-			}
-			return total64
-		}
-	}
-	return 0
+	return wborm.GetCount(query, values)
 }
 
 func transPurchaseMap(oldMap orm.Params) t.ItemMap {
@@ -96,7 +115,8 @@ func transPurchaseMap(oldMap orm.Params) t.ItemMap {
 	}
 	if supplierSn, ok := retMap[s.Supplier]; ok && !u.IsNullStr(supplierSn) {
 		if supplierMap, sok := supplierMgr.Get(supplierSn.(string)); sok {
-			retMap[s.Supplier] = u.GetStringValue(supplierMap, s.Name)
+			retMap[s.Supplier + s.Name] = u.GetStringValue(supplierMap, s.Name)
+			retMap[s.Supplier + s.Key] = u.GetStringValue(supplierMap, s.Keyword)
 		}
 	}
 	if productSn, ok := retMap[s.Product]; ok && !u.IsNullStr(productSn) {

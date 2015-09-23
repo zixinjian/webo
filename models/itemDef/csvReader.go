@@ -161,7 +161,7 @@ func readItemDefCsv(fileName string) ItemDef {
 		switch input {
 		case "":
 			field.Input = "text"
-		case "text", "select", "password", "date", "time", "none", "textarea", "datetime", "money", s.Upload:
+		case "text", "select", "password", "date", "time", "none", "textarea", "datetime", "money", s.Upload, s.Float:
 			field.Input = input
 		case s.Autocomplete:
 			field.Input = input

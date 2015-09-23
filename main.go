@@ -15,6 +15,7 @@ import (
 func initDb() {
 	orm.RegisterDriver("sqlite", orm.DR_Sqlite)
 	orm.RegisterDataBase("default", "sqlite3", "db/frame.sqlite3")
+	orm.Debug = true
 }
 
 var FilterUser = func(ctx *context.Context) {

@@ -1,0 +1,73 @@
+2015/09/22 08:17:10 [purchase.go:58] [I] UiCurList 
+2015/09/22 08:17:11 [purchase.go:58] [I] UiCurList 
+2015/09/22 08:17:12 [purchase.go:58] [I] UiCurList 
+2015/09/22 08:17:12 [purchase.go:58] [I] UiCurList 
+2015/09/22 08:17:13 [purchase.go:58] [I] UiCurList 
+2015/09/22 08:17:13 [purchase.go:58] [I] UiCurList 
+2015/09/22 08:17:14 [purchase.go:58] [I] UiCurList 
+2015/09/22 08:17:14 [purchase.go:58] [I] UiCurList 
+2015/09/22 15:30:36 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/22 15:30:36 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/22 15:30:36 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/22 15:30:36 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/22 15:30:37 [main.go:28] [I] User:gdj login as role:role_manager 
+2015/09/22 16:02:57 [purchaseMgr.go:63] [E] GetPurchaseList Query error: no such column: purchase.productpower 
+2015/09/22 16:02:58 [purchaseMgr.go:63] [E] GetPurchaseList Query error: no such column: purchase.productpower 
+2015/09/22 16:02:59 [purchaseMgr.go:63] [E] GetPurchaseList Query error: no such column: purchase.productpower 
+2015/09/22 16:03:00 [purchaseMgr.go:63] [E] GetPurchaseList Query error: no such column: purchase.productpower 
+2015/09/22 16:03:04 [purchaseMgr.go:63] [E] GetPurchaseList Query error: no such column: purchase.productpower 
+2015/09/22 16:03:50 [purchaseMgr.go:63] [E] GetPurchaseList Query error: no such column: purchase.productmodel 
+2015/09/22 16:03:51 [purchaseMgr.go:63] [E] GetPurchaseList Query error: no such column: purchase.productmodel 
+2015/09/22 16:03:52 [purchaseMgr.go:63] [E] GetPurchaseList Query error: no such column: purchase.productbrand 
+2015/09/22 16:03:53 [purchaseMgr.go:63] [E] GetPurchaseList Query error: no such column: purchase.productbrand 
+2015/09/22 16:03:54 [purchaseMgr.go:63] [E] GetPurchaseList Query error: no such column: purchase.productname 
+2015/09/22 16:03:54 [purchaseMgr.go:63] [E] GetPurchaseList Query error: no such column: purchase.productname 
+2015/09/22 16:03:59 [purchaseMgr.go:63] [E] GetPurchaseList Query error: no such column: purchase.productname 
+2015/09/22 16:04:00 [purchaseMgr.go:63] [E] GetPurchaseList Query error: no such column: purchase.productname 
+2015/09/22 17:51:05 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/22 17:51:05 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/22 17:51:05 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/22 17:51:05 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/22 17:51:06 [main.go:28] [I] User:gdj login as role:role_manager 
+2015/09/22 17:51:09 [purchase.go:58] [I] UiCurList 
+2015/09/22 17:51:41 [main.go:28] [I] User:gdj login as role:role_manager 
+2015/09/22 17:51:43 [purchase.go:58] [I] UiCurList 
+2015/09/22 17:51:44 [purchase.go:58] [I] UiCurList 
+2015/09/22 17:51:46 [purchase.go:58] [I] UiCurList 
+2015/09/22 17:51:47 [purchase.go:58] [I] UiCurList 
+2015/09/22 17:51:48 [purchase.go:58] [I] UiCurList 
+2015/09/22 17:51:48 [purchase.go:58] [I] UiCurList 
+2015/09/22 17:51:52 [purchase.go:58] [I] UiCurList 
+2015/09/22 17:51:52 [purchase.go:58] [I] UiCurList 
+2015/09/22 17:51:56 [purchase.go:58] [I] UiCurList 
+2015/09/22 17:51:56 [purchase.go:58] [I] UiCurList 
+2015/09/22 17:51:58 [purchase.go:58] [I] UiCurList 
+2015/09/22 17:52:02 [purchase.go:58] [I] UiCurList 
+2015/09/22 17:52:03 [purchase.go:58] [I] UiCurList 
+2015/09/22 17:52:04 [purchase.go:58] [I] UiCurList 
+2015/09/22 17:52:05 [purchase.go:58] [I] UiCurList 
+2015/09/22 17:59:13 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/font-awesome.css stat asserts/3rd/beego/css/font-awesome.css: no such file or directory 
+2015/09/22 17:59:13 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/js/widgets.js stat asserts/3rd/beego/js/widgets.js: no such file or directory 
+2015/09/22 17:59:13 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/animate.css stat asserts/3rd/beego/css/animate.css: no such file or directory 
+2015/09/22 17:59:13 [staticfile.go:61] [W] Can't find the file: asserts/3rd/beego/css/uniform.default.css stat asserts/3rd/beego/css/uniform.default.css: no such file or directory 
+2015/09/22 17:59:21 [main.go:28] [I] User:gdj login as role:role_manager 
+2015/09/22 17:59:24 [purchase.go:58] [I] UiCurList 
+2015/09/22 17:59:25 [purchase.go:58] [I] UiCurList 
+2015/09/22 17:59:29 [purchase.go:58] [I] UiCurList 
+2015/09/22 17:59:29 [purchase.go:58] [I] UiCurList 
+2015/09/22 17:59:30 [purchase.go:58] [I] UiCurList 
+2015/09/22 17:59:30 [purchase.go:58] [I] UiCurList 
+2015/09/22 17:59:31 [purchase.go:58] [I] UiCurList 
+2015/09/22 17:59:34 [purchase.go:58] [I] UiCurList 
+2015/09/22 17:59:34 [purchase.go:58] [I] UiCurList 
+2015/09/22 17:59:37 [purchase.go:58] [I] UiCurList 
+2015/09/22 17:59:38 [purchase.go:58] [I] UiCurList 
+2015/09/22 17:59:38 [purchase.go:58] [I] UiCurList 
+2015/09/22 17:59:39 [purchase.go:58] [I] UiCurList 
+2015/09/22 17:59:40 [purchase.go:58] [I] UiCurList 
+2015/09/22 17:59:46 [purchase.go:58] [I] UiCurList 
+2015/09/22 17:59:46 [purchase.go:58] [I] UiCurList 
+2015/09/22 17:59:47 [purchase.go:58] [I] UiCurList 
+2015/09/22 17:59:48 [purchase.go:58] [I] UiCurList 
+2015/09/22 17:59:49 [purchase.go:58] [I] UiCurList 
+2015/09/22 17:59:50 [purchase.go:58] [I] UiCurList 

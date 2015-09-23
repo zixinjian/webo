@@ -1,5 +1,5 @@
 .bootstrap-table .table, .bootstrap-table .table > tbody > tr > th, .bootstrap-table .table > tfoot > tr > th, .bootstrap-table .table > thead > tr > td, .bootstrap-table .table > tbody > tr > td, .bootstrap-table .table > tfoot > tr > td{
-    padding: 4px !important;
+    padding: 4px 8px 4px 8px !important;
 }
 .bootstrap-table{
     padding-left: 20px;
@@ -10,8 +10,7 @@
     -webkit-border-radius: 2px;
 }
 .fixed-table-container thead th .th-inner, .fixed-table-container tbody td .th-inner{
-    padding: 4px !important;
-    padding-right: 14px !important;
+    padding: 4px 8px 4px 8px !important;
 }
 
 .bootstrap-table .fixed-table-footer tbody > tr > td {

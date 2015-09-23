@@ -1695,7 +1695,6 @@
             dataType: this.options.dataType,
             success: function (res) {
                 res = calculateObjectValue(that.options, that.options.responseHandler, [res], res);
-
                 that.load(res);
                 that.trigger('load-success', res);
             },
@@ -2019,7 +2018,7 @@
             fixedScroll = data.fixedScroll;
             data = data.data;
         }
-
+        console.log("data", data)
         this.initData(data);
         this.initSearch();
         this.initPagination();

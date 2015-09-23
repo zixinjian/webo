@@ -97,6 +97,7 @@ func (this *PurchaseController) UiAdd() {
 	this.Data["Service"] = "/item/add/" + item
 	statusMap := map[string]string{
 		s.ProductPrice: s.ReadOnly,
+		s.Power:s.Disabled,
 	}
 	this.Data["Form"] = ui.BuildAddFormWithStatus(addItemDef, u.TUId(), statusMap)
 	this.Data["Onload"] = ui.BuildAddOnLoadJs(addItemDef)
@@ -120,6 +121,7 @@ func (this *PurchaseController) UiUserUpdate() {
 		s.Requireddate:       s.Disabled,
 		s.Requireddepartment: s.Disabled,
 		s.ProductPrice:       s.Disabled,
+		s.Power:       		  s.Disabled,
 	}
 	this.UiUpdateWithStatus(statusMap)
 }
@@ -213,6 +215,18 @@ func (this *PurchaseController) List() {
 	this.Data["json"] = &TableResult{result, int64(total), resultMaps}
 	this.ServeJson()
 }
+func (this *PurchaseController) BuyerTimely() {
+	this.TplNames = "purchase/buyertimely.tpl"
+}
+func (this *PurchaseController) BuyerTimelyList() {
+	item := s.Purchase
+	oItemDef, _ := itemDef.EntityDefMap[item]
+	queryParams, limitParams, orderByParams := this.GetParams(oItemDef)
+	result, total, resultMaps := purchaseMgr.GetBuyerTimelyList(queryParams, limitParams, orderByParams)
+
+	this.Data["json"] = &TableResult{result, int64(total), resultMaps}
+	this.ServeJson()
+}
 
 func expandPurchaseMap(oldMap t.ItemMap) t.ItemMap {
 	var retMap = make(t.ItemMap, 0)
@@ -277,11 +291,11 @@ func getBuyerEnum() []itemDef.EnumValue {
 }
 
 func getAddPurchaseDef(oItemDef itemDef.ItemDef) itemDef.ItemDef {
-	names := []string{s.Sn, s.Category, s.Product, s.Model, s.ProductPrice, s.Buyer, s.Num, s.PlaceDate, s.Requireddate, s.Requireddepartment, s.Mark}
+	names := []string{s.Sn, s.Category, s.Product, s.Model, s.Power, s.ProductPrice, s.Buyer, s.Num, s.PlaceDate, s.Requireddate, s.Requireddepartment, s.Mark}
 	return makeFields(oItemDef, names)
 }
 
 func getExpandListDef(oItemDef itemDef.ItemDef) itemDef.ItemDef {
-	names := []string{s.Sn, s.Category, s.Product, s.Model, s.Num, s.UintPrice, s.ProductPrice, s.TotalPrice, s.Buyer, s.Mark}
+	names := []string{s.Sn, s.Category, s.Product, s.Model, s.Power, s.Num, s.UintPrice, s.ProductPrice, s.TotalPrice, s.Buyer, s.Mark}
 	return makeFields(oItemDef, names)
 }

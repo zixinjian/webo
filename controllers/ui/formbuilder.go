@@ -217,7 +217,7 @@ func createFromGroup(field itemDef.Field, valueMap map[string]interface{}, statu
 		fromGroup = fmt.Sprintf(textFormat, field.Label, field.Require, field.Label, field.Name, field.Name, u.ToStr(value), status)
 	case "static":
 		fromGroup = fmt.Sprintf(staticFormat, field.Label, value)
-	case "money":
+	case "money", s.Float:
 		fromGroup = fmt.Sprintf(moneyFormat, field.Label, field.Require, field.Label, field.Name, field.Name, u.ToStr(value), status)
 	case "date", "datetime":
 		//		fmt.Println("date", field.Name, value)

@@ -13,6 +13,7 @@ const (
 const (
 	Sn                 = "sn"
 	Name               = "name"
+	Key				   = "key"
 	UserName           = "username"
 	Category           = "category"
 	Brand			   = "brand"
@@ -26,6 +27,7 @@ const (
 	Creater            = "creater"
 	Price              = "price"
 	Buyer              = "buyer"
+	Power			   = "power"
 	Term               = "term"
 	CreaterTime        = "createtime"
 	CurUser            = "curuser"
@@ -55,6 +57,9 @@ const (
 	TypeInt    = "int"
 	TypeFloat  = "float"
 )
+const (
+	Float = "float"
+)
 
 const (
 	RoleAdmin   = "role_admin"
@@ -74,6 +79,7 @@ const (
 	Product  = "product"
 	ProductName  = "productname"
 	Supplier = "supplier"
+	SupplierKey = "supplierkey"
 	Purchase = "purchase"
 	Travel   = "travel"
 )

@@ -38,7 +38,6 @@
         }
     }
     function beforeSubmit(a){
-        console.log("before submit", a)
         for (idx in a){
             valueMap = a[idx]
             if (valueMap.name == "expayrat"){

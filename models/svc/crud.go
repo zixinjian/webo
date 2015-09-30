@@ -14,8 +14,8 @@ import (
 	"webo/models/u"
 )
 
-func GetItems(item string, queryParams t.Params, orderBy t.Params) (string, []map[string]interface{}) {
-	code, retMaps := Query(item, queryParams, t.LimitParams{}, orderBy)
+func GetItems(item string, queryParams t.Params, orderBy t.Params, limitParams t.LimitParams) (string, []map[string]interface{}) {
+	code, retMaps := Query(item, queryParams, limitParams, orderBy)
 	return code, retMaps
 }
 func Query(entity string, queryParams t.Params, limitParams map[string]int64, orderBy t.Params) (string, []map[string]interface{}) {

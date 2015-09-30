@@ -10,6 +10,7 @@ import (
 	"webo/models/s"
 	"webo/models/stat"
 	"webo/models/t"
+	"webo/models/userMgr"
 )
 
 type BaseController struct {
@@ -199,5 +200,15 @@ func makeFields(oItemDef itemDef.ItemDef, names []string)itemDef.ItemDef{
 		}
 	}
 	oItemDef.Fields = fields
+	return oItemDef
+}
+
+func FillUserEnum(fieldName string, oItemDef itemDef.ItemDef, queryParams t.Params, orderParams t.Params) itemDef.ItemDef {
+	for idx, field := range oItemDef.Fields {
+		if strings.EqualFold(fieldName, field.Name) {
+			field.Enum = userMgr.GetUserEnum(queryParams, orderParams, t.LimitParams{})
+		}
+		oItemDef.Fields[idx] = field
+	}
 	return oItemDef
 }

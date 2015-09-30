@@ -41,7 +41,8 @@ const (
 	Paymentamount      = "paymentamount"
 	Paymentdate        = "paymentdate"
 	Requireddepartment = "requireddepartment"
-
+	PaymentAmount      = "paymentamount"
+	PaymentDate		   = "paymentdate"
 	Traveler		   = "traveler"
 	TravelerSn		   = "travelersn"
 	TravelerName	   = "travelername"

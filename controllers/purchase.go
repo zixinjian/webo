@@ -14,6 +14,7 @@ import (
 	"webo/models/svc"
 	"webo/models/t"
 	"webo/models/u"
+	"encoding/json"
 )
 
 type PurchaseController struct {
@@ -106,7 +107,10 @@ func (this *PurchaseController) UiAdd() {
 
 //管理者修改
 func (this *PurchaseController) UiUpdate() {
-	statusMap := map[string]string{}
+	statusMap := map[string]string{
+		s.PaymentAmount:	  s.ReadOnly,
+		s.PaymentDate:	  	  s.ReadOnly,
+	}
 	this.UiUpdateWithStatus(statusMap)
 }
 
@@ -122,6 +126,8 @@ func (this *PurchaseController) UiUserUpdate() {
 		s.Requireddepartment: s.Disabled,
 		s.ProductPrice:       s.Disabled,
 		s.Power:       		  s.Disabled,
+		s.PaymentAmount:	  s.ReadOnly,
+		s.PaymentDate:	  	  s.ReadOnly,
 	}
 	this.UiUpdateWithStatus(statusMap)
 }
@@ -137,6 +143,10 @@ func (this *PurchaseController) UiHistoryUpdate() {
 	this.UiUpdateWithStatus(statusMap)
 }
 
+const oldValueFormat = `<script>
+    var oldValue = %s
+</script>
+`
 //修改基本方法
 func (this *PurchaseController) UiUpdateWithStatus(statusMap map[string]string) {
 	item := s.Purchase
@@ -154,6 +164,11 @@ func (this *PurchaseController) UiUpdateWithStatus(statusMap map[string]string) 
 		oItemDef = fillBuyerEnum(oItemDef)
 		this.Data["Form"] = ui.BuildUpdatedFormWithStatus(oItemDef, oldValueMap, statusMap)
 		this.Data["Onload"] = ui.BuildUpdateOnLoadJs(oItemDef)
+		if purchaseStr, err := json.Marshal(oldValueMap);err == nil{
+			this.Data["PuchaseItem"] = fmt.Sprintf(oldValueFormat, string(purchaseStr))
+		}else{
+			this.Data["PuchaseItem"] = fmt.Sprintf(oldValueFormat, "{}")
+		}
 		this.TplNames = "purchase/update.html"
 	} else {
 		this.Ctx.WriteString(stat.ItemNotFound)
@@ -260,36 +275,14 @@ func expandPurchaseMap(oldMap t.ItemMap) t.ItemMap {
 }
 
 func fillBuyerEnum(oItemDef itemDef.ItemDef) itemDef.ItemDef {
-	for idx, field := range oItemDef.Fields {
-		if strings.EqualFold("buyer", field.Name) {
-			field.Enum = getBuyerEnum()
-		}
-		oItemDef.Fields[idx] = field
-	}
-	return oItemDef
-}
-
-func getBuyerEnum() []itemDef.EnumValue {
 	queryParams := t.Params{
 		s.Department: "department_purchase",
 	}
 	orderParams := t.Params{
 		s.Name: s.Asc,
 	}
-	if code, userMaps := svc.GetItems(s.User, queryParams, orderParams); strings.EqualFold(code, stat.Success) {
-		EnumList := make([]itemDef.EnumValue, len(userMaps))
-		for idx, user := range userMaps {
-			v, _ := user[s.Sn]
-			u, _ := user[s.UserName]
-			l, _ := user[s.Name]
-			EnumList[idx] = itemDef.EnumValue{v.(string), u.(string), l.(string)}
-		}
-		return EnumList
-	} else {
-		return make([]itemDef.EnumValue, 0)
-	}
+	return FillUserEnum(s.Buyer, oItemDef, queryParams, orderParams)
 }
-
 func getAddPurchaseDef(oItemDef itemDef.ItemDef) itemDef.ItemDef {
 	names := []string{s.Sn, s.Category, s.Product, s.Model, s.Power, s.ProductPrice, s.Buyer, s.Num, s.PlaceDate, s.Requireddate, s.Requireddepartment, s.Mark}
 	return makeFields(oItemDef, names)

@@ -1091,7 +1091,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
   line-height: 1.42857143;
-  color: #333333;
+  color: #2c2e2f;
   background-color: #ffffff;
 }
 input,
@@ -1103,12 +1103,12 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #337ab7;
+  color: #373e4a;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #23527c;
+  color: #16191e;
   text-decoration: underline;
 }
 a:focus {
@@ -1128,17 +1128,18 @@ img {
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
   display: block;
+  width: 100% \9;
   max-width: 100%;
   height: auto;
 }
 .img-rounded {
-  border-radius: 4px;
+  border-radius: 0px;
 }
 .img-thumbnail {
-  padding: 4px;
+  padding: 7px;
   line-height: 1.42857143;
   background-color: #ffffff;
-  border: 1px solid #dddddd;
+  border: 1px solid #e1e1e1;
   border-radius: 2px;
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
@@ -1151,8 +1152,8 @@ img {
   border-radius: 50%;
 }
 hr {
-  margin-top: 17px;
-  margin-bottom: 17px;
+  margin-top: 18px;
+  margin-bottom: 18px;
   border: 0;
   border-top: 1px solid #eeeeee;
 }

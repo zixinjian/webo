@@ -22,7 +22,7 @@ func createTh() {
 }
 func createsql() {
 	for itemName, oItemDef := range itemDef.EntityDefMap {
-		//        fmt.Println(itemName, oItemDef)
+		fmt.Println(itemName, oItemDef)
 		fieldsql := "CREATE TABLE " + itemName + " (id integer NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE"
 		for _, field := range oItemDef.Fields {
 			//            fmt.Println("idx:", idx)

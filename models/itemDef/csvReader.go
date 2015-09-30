@@ -17,6 +17,7 @@ func ReadDefFromCsv() map[string]ItemDef {
 	filepath.Walk("conf/item/fields", func(filePath string, f os.FileInfo, err error) error {
 		if strings.HasSuffix(filePath, ".csv") {
 			oItemDef := readItemDefCsv(filePath)
+//			fmt.Println(oItemDef)
 			lEntityDefMap[oItemDef.Name] = oItemDef
 		}
 		return nil

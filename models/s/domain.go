@@ -87,7 +87,7 @@ const (
 
 const (
 	EKey   = "_key"
-	EName  = "_Name"
+	EName  = "_name"
 	EPrice = "_price"
 )
 

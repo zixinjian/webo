@@ -24,6 +24,11 @@
     padding:3px 5px 3px 5px;
 }
 
+.fixed-table-toolbar .bars, .fixed-table-toolbar .search, .fixed-table-toolbar .columns{
+    margin-bottom: 5px;
+    margin-top : 5px;
+}
+
 .navbar{
     margin-bottom: 0;
 }

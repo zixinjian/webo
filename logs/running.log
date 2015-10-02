@@ -52,3 +52,37 @@
 2015/09/30 11:44:24 [main.go:28] [I] User:gdj login as role:role_manager 
 2015/09/30 11:44:31 [main.go:46] [I] User:gdj login as role:role_manager 
 2015/09/30 11:45:12 [crud.go:103] [E] [{sn string 编号 none false false sn []   {true false  false} false} {traveler string 出差人 autocomplete true false text [] /item/autocomplete/user  {true true  true} false} {task string 任务 text true false text []   {true true  true} false} {starttime string 开始日期 date true false text []  curtime {true true  true} false} {endtime string 结束日期 date true false text []   {true true  true} false} {path string 路线 textarea true false text []   {true true  true} false} {requirement string 达标标准 textarea true false text []   {true true  true} false} {expenses float 预计费用 money true false text []   {true true  true} false} {detail string 费用分项 textarea false false text []   {true true  true} false} {actualexpenses float 实际费用 money false false text []   {true true  true} false} {expayrat float 额外报销比例 money false false text []   {true true  true} false} {payment float 实报费用 money false false text []   {true true  true} false} {approver string 审批人 text true false text []   {true true  true} false} {creater string 创建人 none false false curuser []   {false false  false} false} {createtime time 创建时间 none false false curtime []   {false false  false} false}] 
+2015/09/30 15:19:19 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/30 15:19:36 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/30 15:19:42 [main.go:46] [I] User:gdj login as role:role_manager 
+2015/09/30 15:23:01 [main.go:46] [I] User:gdj login as role:role_manager 
+2015/09/30 15:26:27 [main.go:28] [I] User:gdj login as role:role_manager 
+2015/09/30 15:38:52 [purchase.go:59] [I] UiCurList 
+2015/09/30 15:42:45 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/30 15:43:37 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/30 16:12:21 [purchase.go:59] [I] UiCurList 
+2015/09/30 16:12:22 [purchase.go:59] [I] UiCurList 
+2015/09/30 16:36:58 [purchase.go:59] [I] UiCurList 
+2015/09/30 16:37:40 [purchase.go:59] [I] UiCurList 
+2015/09/30 16:37:40 [purchase.go:59] [I] UiCurList 
+2015/09/30 17:30:29 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/30 17:32:02 [purchase.go:59] [I] UiCurList 
+2015/09/30 17:32:04 [purchase.go:59] [I] UiCurList 
+2015/09/30 17:32:05 [purchase.go:59] [I] UiCurList 
+2015/09/30 17:32:06 [purchase.go:59] [I] UiCurList 
+2015/09/30 17:32:09 [purchase.go:59] [I] UiCurList 
+2015/09/30 17:32:09 [purchase.go:59] [I] UiCurList 
+2015/09/30 17:37:05 [main.go:28] [I] User:gdj login as role:role_manager 
+2015/09/30 17:37:10 [purchase.go:59] [I] UiCurList 
+2015/09/30 17:55:22 [purchase.go:59] [I] UiCurList 
+2015/09/30 17:55:28 [purchase.go:59] [I] UiCurList 
+2015/09/30 18:54:53 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/30 18:55:01 [orm.go:27] [E] GetCount error:  near "product": syntax error 
+2015/09/30 18:55:01 [orm.go:27] [E] GetCount error:  near "AND": syntax error 
+2015/09/30 18:55:04 [orm.go:27] [E] GetCount error:  near "buyer": syntax error 
+2015/09/30 18:55:04 [orm.go:27] [E] GetCount error:  near "AND": syntax error 
+2015/09/30 18:55:04 [orm.go:27] [E] GetCount error:  near "buyer": syntax error 
+2015/09/30 18:55:04 [orm.go:27] [E] GetCount error:  near "AND": syntax error 
+2015/09/30 18:58:31 [asm_amd64.s:1696] [I] http server Running on :8080
+2015/09/30 19:22:43 [purchase.go:59] [I] UiCurList 
+2015/09/30 19:22:51 [purchase.go:59] [I] UiCurList 

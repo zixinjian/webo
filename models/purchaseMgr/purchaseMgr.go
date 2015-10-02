@@ -66,10 +66,22 @@ func GetBuyerTimelyList(queryParams t.Params, limitParams t.LimitParams, orderBy
 	return status, num, retMaps
 }
 func getBuyerTimely(sn string)(noDelay int64, total int64, rat string){
-	noDelaySql := "SELECT count(purchase.id) as count FROM purchase WHERE buyer=? AND purchase.godowndate != '' AND purchase.godowndate < purchase.requireddate"
-	noDelay = wborm.GetCount(noDelaySql, []interface{}{sn})
-	totalSql := "SELECT count(purchase.id) as count FROM purchase WHERE purchase.buyer=? AND (purchase.godowndate != '' OR purchase.requireddate < '?')"
-	total = wborm.GetCount(totalSql, []interface{}{sn, u.GetToday()})
+	queryParams := t.Params{
+		s.Buyer:sn,
+	}
+	noDelay, total, rat = calcTimely(queryParams)
+	return
+}
+func calcTimely(queryParams t.Params)(noDelay int64, total int64, rat string){
+	sqlBuilder := svc.NewSqlBuilder()
+	for k, v := range queryParams {
+		sqlBuilder.Filter(k, v)
+	}
+	where := sqlBuilder.GetConditonSql()
+	noDelaySql := "SELECT count(id) as count FROM purchase WHERE godowndate != '' AND godowndate < requireddate " + "AND " + where
+	noDelay = wborm.GetCount(noDelaySql, sqlBuilder.GetValues())
+	totalSql := "SELECT count(id) as count FROM purchase WHERE " + where + " AND (godowndate != '' OR requireddate < '?')"
+	total = wborm.GetCount(totalSql, append(sqlBuilder.GetValues(), u.GetToday()))
 	if total == 0 || noDelay == 0{
 		rat = "0%"
 		return
@@ -77,7 +89,6 @@ func getBuyerTimely(sn string)(noDelay int64, total int64, rat string){
 	rat = fmt.Sprintf("%.2f", float64(noDelay) * 100/float64(total)) + "%"
 	return
 }
-
 func GetPurchaseList(sqlBuilder *svc.SqlBuilder) (string, []map[string]interface{}) {
 	query := sqlBuilder.GetCustomerSql(purchaseListSql)
 	values := sqlBuilder.GetValues()
@@ -105,6 +116,14 @@ func GetPurchaseTotal(sqlBuilder *svc.SqlBuilder) int64 {
 	return wborm.GetCount(query, values)
 }
 
+func CalcProductTimely(queryParams t.Params)map[string]interface{}{
+	retMap := make(map[string]interface{}, 3)
+	noDelay, total, rat := calcTimely(queryParams)
+	retMap["delay"] = total - noDelay
+	retMap["total"] = total
+	retMap["rat"] = rat
+	return retMap
+}
 func transPurchaseMap(oldMap orm.Params) t.ItemMap {
 	var retMap = make(t.ItemMap, 0)
 	for key, value := range oldMap {

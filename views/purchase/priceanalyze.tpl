@@ -16,10 +16,6 @@
             <input type="text" class="form-control" id="product_name" placeholder="自动联想" readonly>
             <input type="hidden" id="product">
         </div>
-        <div class="form-group">
-            <label for="model">型号</label>
-            <input type="text" class="form-control" id="model">
-        </div>
         <button type="button" id="analyzeBtn" class="btn btn-default btn-primary">分析</button>
     </div>
     <div class="alert" role="alert" style="display: none;margin-top:20px"></div>
@@ -85,8 +81,7 @@
         $("#analyzeBtn").on("click", function(){
             $.post("/item/list/purchase",
                 {
-                    product:$("#product").val(),
-                    model:$("#model").val()
+                    product:$("#product").val()
                 },
                 function(data,status){
                     if (status != "success" || data.Status != "success" || data.rows.length <= 0){

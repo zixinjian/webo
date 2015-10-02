@@ -233,13 +233,25 @@ func (this *PurchaseController) List() {
 func (this *PurchaseController) BuyerTimely() {
 	this.TplNames = "purchase/buyertimely.tpl"
 }
+func (this *PurchaseController) ProductTimely() {
+	this.TplNames = "purchase/producttimely.tpl"
+}
 func (this *PurchaseController) BuyerTimelyList() {
 	item := s.Purchase
 	oItemDef, _ := itemDef.EntityDefMap[item]
 	queryParams, limitParams, orderByParams := this.GetParams(oItemDef)
+	queryParams[s.Department] = "department_purchase"
 	result, total, resultMaps := purchaseMgr.GetBuyerTimelyList(queryParams, limitParams, orderByParams)
 
 	this.Data["json"] = &TableResult{result, int64(total), resultMaps}
+	this.ServeJson()
+}
+func (this *PurchaseController) CalcProductTimely() {
+	item := s.Purchase
+	oItemDef, _ := itemDef.EntityDefMap[item]
+	queryParams, _, _ := this.GetParams(oItemDef)
+	resultMaps := purchaseMgr.CalcProductTimely(queryParams)
+	this.Data["json"] = &resultMaps
 	this.ServeJson()
 }
 

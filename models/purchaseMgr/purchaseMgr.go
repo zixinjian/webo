@@ -45,6 +45,7 @@ func GetPurchases(queryParams t.Params, limitParams t.LimitParams, orderBy t.Par
 	}
 }
 
+
 func GetBuyerTimelyList(queryParams t.Params, limitParams t.LimitParams, orderBy t.Params) (string, int64, []map[string]interface{}){
 	status, num, userMaps := svc.List(s.User, queryParams, limitParams, orderBy)
 	if status != stat.Success{
@@ -79,9 +80,9 @@ func calcTimely(queryParams t.Params)(noDelay int64, total int64, rat string){
 	}
 	where := sqlBuilder.GetConditonSql()
 	noDelaySql := "SELECT count(id) as count FROM purchase WHERE godowndate != '' AND godowndate < requireddate " + "AND " + where
-	noDelay = wborm.GetCount(noDelaySql, sqlBuilder.GetValues())
+	noDelay = wborm.RawCount(noDelaySql, sqlBuilder.GetValues())
 	totalSql := "SELECT count(id) as count FROM purchase WHERE " + where + " AND (godowndate != '' OR requireddate < '?')"
-	total = wborm.GetCount(totalSql, append(sqlBuilder.GetValues(), u.GetToday()))
+	total = wborm.RawCount(totalSql, append(sqlBuilder.GetValues(), u.GetToday()))
 	if total == 0 || noDelay == 0{
 		rat = "0%"
 		return
@@ -113,7 +114,7 @@ func GetPurchaseTotal(sqlBuilder *svc.SqlBuilder) int64 {
 	query := sqlBuilder.GetCustomerSql(purchaseCountSql)
 	values := sqlBuilder.GetValues()
 	beego.Debug("GetPurchaseTotal: ", query, ":", values)
-	return wborm.GetCount(query, values)
+	return wborm.RawCount(query, values)
 }
 
 func CalcProductTimely(queryParams t.Params)map[string]interface{}{

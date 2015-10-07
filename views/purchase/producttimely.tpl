@@ -23,7 +23,7 @@
         </div>
     </div>
     <table id="item_table"
-           data-row-style="rowStyle"
+           data-row-style="rowStyleOvertime"
            data-page-size="25">
         <thead>
         <tr>
@@ -57,6 +57,7 @@
 <script src="../../asserts/3rd/moment/moment.js"></script>
 <script src="../../asserts/webo/util.js"></script>
 <script src="../../asserts/js/ui.js"></script>
+<script src="../../asserts/js/purchase.js"></script>
 <script>
     var $table = $("#item_table")
     function responseHandler(res){
@@ -64,21 +65,6 @@
     }
     function supplierFormatter(value, row){
         return wbSprintf('<span title="%s(%s)">%s</span>', value, row.suppliername, value)
-    }
-    function rowStyle(row, index) {
-        if(row.godowndate == ""){
-            now = moment()
-            requiredDate = moment(row.requireddate, "YYYY.MM.DD")
-            if (requiredDate.diff(now, "days") < 0){
-                return {classes: "danger"};
-            }
-            if (requiredDate.diff(now, "days") < 2 ){
-                return {classes: "warning"};
-            }
-            return {}
-        }
-        
-        return {}
     }
     $(function(){
         $table.bootstrapTable({url:"/item/list/purchase?product", method:"post", sidePagination:"server", pagination:true, height:getTableHeight() -150});
@@ -102,7 +88,7 @@
                         return
                     }
                     calcRet = wbSprintf("延期:%s, 总数:%s, 及时率: %s", data.delay, data.total, data.rat)
-                    console.log("calcRet", calcRet)
+//                    console.log("calcRet", calcRet)
                     showSuccess(calcRet)
                 });
             $table.bootstrapTable('refresh', {

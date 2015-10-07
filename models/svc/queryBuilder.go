@@ -6,6 +6,7 @@ import (
 	"strings"
 	"webo/models/itemDef"
 	"webo/models/s"
+	"webo/models/t"
 )
 
 type SqlBuilder struct {
@@ -48,7 +49,6 @@ func (this *SqlBuilder) QueryTables(tables ...string) {
 }
 
 func (this *SqlBuilder) Filter(key string, value interface{}) {
-
 	switch key[:1] {
 	case "-":
 		if v, ok := value.(string); ok {
@@ -64,6 +64,12 @@ func (this *SqlBuilder) Filter(key string, value interface{}) {
 		}
 	default:
 		this.addCondition(key, value, "=")
+	}
+}
+
+func (this *SqlBuilder) Filters(queryParam t.Params){
+	for k, v := range queryParam{
+		this.Filter(k, v)
 	}
 }
 
@@ -170,3 +176,19 @@ func NewSqlBuilder() *SqlBuilder {
 	return o
 }
 
+func GetSqlBuilder(queryParams t.Params, limitParams t.LimitParams, orderBy t.Params) *SqlBuilder{
+	o := &SqlBuilder{}
+	for k, v := range queryParams {
+		o.Filter(k, v)
+	}
+	if limit, ok := limitParams[s.Limit]; ok {
+		o.Limit(limit)
+	}
+	if offset, ok := limitParams[s.Offset]; ok {
+		o.Offset(offset)
+	}
+	for k, v := range orderBy {
+		o.OrderBy(k, v)
+	}
+	return o
+}

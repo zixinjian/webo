@@ -7,6 +7,7 @@ import (
 	"webo/models/itemDef"
 	"webo/models/s"
 	"webo/models/t"
+	"webo/models/u"
 )
 
 type SqlBuilder struct {
@@ -16,6 +17,7 @@ type SqlBuilder struct {
 	offset     int64
 	orders     []string
 	conditions []condition
+	groupBy	   string
 	//	relations       []relation
 }
 
@@ -73,6 +75,10 @@ func (this *SqlBuilder) Filters(queryParam t.Params){
 	}
 }
 
+func (this *SqlBuilder) GroupBy(groupBy string){
+	this.groupBy = groupBy
+}
+
 func (this *SqlBuilder) addCondition(fieldName string, value interface{}, opt string) {
 	//	beego.Debug("AddCondition:", fieldName, value, opt)
 	this.conditions = append(this.conditions, condition{fieldName, value, opt})
@@ -83,13 +89,19 @@ func (this *SqlBuilder) Limit(limit int64) {
 		this.limit = limit
 	}
 }
-
 func (this *SqlBuilder) Offset(offset int64) {
 	if offset > 0 {
 		this.offset = offset
 	}
 }
-
+func (this *SqlBuilder) Limits(limitParams t.LimitParams) {
+	if limit, ok := limitParams[s.Limit]; ok {
+		this.Limit(limit)
+	}
+	if offset, ok := limitParams[s.Offset]; ok {
+		this.Offset(offset)
+	}
+}
 func (this *SqlBuilder) OrderBy(fieldName string, value interface{}) {
 	if strings.EqualFold(value.(string), "ASC") {
 		this.orders = append(this.orders, fieldName+" ASC")
@@ -97,6 +109,11 @@ func (this *SqlBuilder) OrderBy(fieldName string, value interface{}) {
 	}
 	if strings.EqualFold(value.(string), "DESC") {
 		this.orders = append(this.orders, fieldName+" DESC")
+	}
+}
+func (this *SqlBuilder) OrderBys(orderBy t.Params){
+	for k, v := range orderBy {
+		this.OrderBy(k, v)
 	}
 }
 func (this *SqlBuilder) GetConditonSql() string {
@@ -110,14 +127,13 @@ func (this *SqlBuilder) GetConditonSql() string {
 	return sql
 }
 
-//func (this *SqlBuilder) GetRelationSql() string {
-//
-//}
-
 func (this *SqlBuilder) GetCountSql() string {
 	sql := fmt.Sprintf("SELECT COUNT(id) FROM %s ", this.table)
 	if len(this.conditions) > 0 {
 		sql = sql + "WHERE " + this.GetConditonSql()
+	}
+	if !u.IsNullStr(this.groupBy){
+		sql = sql + " GROUP BY " + this.groupBy
 	}
 	return sql
 }
@@ -137,6 +153,9 @@ func (this *SqlBuilder) GetCustomerSql(sql string) string {
 			sql = sql + "WHERE "
 		}
 		sql = sql + this.GetConditonSql()
+	}
+	if !u.IsNullStr(this.groupBy){
+		sql = sql + " GROUP BY " + this.groupBy + " "
 	}
 	if len(this.orders) > 0 {
 		sql = sql + "ORDER BY "
@@ -176,19 +195,10 @@ func NewSqlBuilder() *SqlBuilder {
 	return o
 }
 
-func GetSqlBuilder(queryParams t.Params, limitParams t.LimitParams, orderBy t.Params) *SqlBuilder{
+func CreateSqlBuilder(queryParams t.Params, limitParams t.LimitParams, orderBy t.Params, groupBy string) *SqlBuilder{
 	o := &SqlBuilder{}
-	for k, v := range queryParams {
-		o.Filter(k, v)
-	}
-	if limit, ok := limitParams[s.Limit]; ok {
-		o.Limit(limit)
-	}
-	if offset, ok := limitParams[s.Offset]; ok {
-		o.Offset(offset)
-	}
-	for k, v := range orderBy {
-		o.OrderBy(k, v)
-	}
+	o.Filters(queryParams)
+	o.GroupBy(groupBy)
+	o.Limits(limitParams)
 	return o
 }

@@ -52,8 +52,10 @@ func init() {
 	beego.Router("/ui/purchase/priceAnalyze", &controllers.PurchaseController{}, "*:PriceAnalyze")
 	beego.Router("/ui/purchase/buyertimely", &controllers.PurchaseController{}, "*:BuyerTimely")
 	beego.Router("/ui/purchase/producttimely", &controllers.PurchaseController{}, "*:ProductTimely")
+	beego.Router("/ui/purchase/suppliertimely", &controllers.PurchaseController{}, "*:SupplierTimely")
 	beego.Router("/purchase/list/buyertimely", &controllers.PurchaseController{}, "*:BuyerTimelyList")
 	beego.Router("/purchase/calc/producttimely", &controllers.PurchaseController{}, "*:CalcProductTimely")
+	beego.Router("/purchase/list/suppliertimely", &controllers.PurchaseController{}, "*:SupplierTimelyList")
 
 	//账目
 	beego.Router("/ui/expense/list", &controllers.PurchaseController{}, "*:ExpenseList")

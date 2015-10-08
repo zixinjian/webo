@@ -236,11 +236,13 @@ func (this *PurchaseController) BuyerTimely() {
 func (this *PurchaseController) ProductTimely() {
 	this.TplNames = "purchase/producttimely.tpl"
 }
+func (this *PurchaseController) SupplierTimely() {
+	this.TplNames = "purchase/suppliertimely.tpl"
+}
 func (this *PurchaseController) BuyerTimelyList() {
 	item := s.Purchase
 	oItemDef, _ := itemDef.EntityDefMap[item]
 	queryParams, limitParams, orderByParams := this.GetParams(oItemDef)
-	queryParams[s.Department] = "department_purchase"
 	result, total, resultMaps := purchaseMgr.GetBuyerTimelyList(queryParams, limitParams, orderByParams)
 
 	this.Data["json"] = &TableResult{result, int64(total), resultMaps}
@@ -254,7 +256,14 @@ func (this *PurchaseController) CalcProductTimely() {
 	this.Data["json"] = &resultMaps
 	this.ServeJson()
 }
-
+func (this *PurchaseController) SupplierTimelyList(){
+	item := s.Purchase
+	oItemDef, _ := itemDef.EntityDefMap[item]
+	queryParams, limitParams, orderByParams := this.GetParams(oItemDef)
+	result, total, resultMaps := purchaseMgr.GetSupplierTimelyList(queryParams, limitParams, orderByParams)
+	this.Data["json"] = &TableResult{result, int64(total), resultMaps}
+	this.ServeJson()
+}
 func expandPurchaseMap(oldMap t.ItemMap) t.ItemMap {
 	var retMap = make(t.ItemMap, 0)
 	for key, value := range oldMap {

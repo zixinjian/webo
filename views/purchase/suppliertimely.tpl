@@ -18,9 +18,9 @@
            data-toolbar=".toolbar">
         <thead>
         <tr>
-            <th data-field="buyer"  data-sortable="true">采购人</th>
-            <th data-field="intime"  data-sortable="true">延期数量</th>
-            <th data-field="total"  data-sortable="true">总数量</th>
+            <th data-field="supplier"  data-sortable="true">供应商</th>
+            <th data-field="intime"  data-sortable="true">达标数</th>
+            <th data-field="total"  data-sortable="true">总数</th>
             <th data-field="rat"  data-sortable="true">及时率(%)</th>
         </tr>
         </thead>
@@ -39,7 +39,7 @@
         return res.rows
     }
     $(function(){
-        $table.bootstrapTable({url:"/purchase/list/buyertimely", method:"post", responseHandler:responseHandler, sidePagination:"server", pagination:true, height:getTableHeight()});
+        $table.bootstrapTable({url:"/purchase/list/suppliertimely", method:"post", responseHandler:responseHandler, sidePagination:"server", pagination:true, height:getTableHeight()});
         $(window).resize(function () {
             $table.bootstrapTable('resetView', {
                 height: getTableHeight()

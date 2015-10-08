@@ -48,7 +48,6 @@ func Query(entity string, queryParams t.Params, limitParams map[string]int64, or
 		for idx, oldMap := range resultMaps {
 			var retMap = make(map[string]interface{}, len(oldMap))
 			for key, value := range oldMap {
-				//				fmt.Println(value.(string))
 				retMap[strings.ToLower(key)] = value
 			}
 			retList[idx] = retMap

@@ -11,7 +11,6 @@
     <table id="item_table"
            data-show-refresh="true"
            data-show-columns="true"
-           data-search="true"
            data-page-size="25"
            data-sort-name="rat"
            data-sort-order="desc"
@@ -35,11 +34,8 @@
 <script src="../../asserts/js/ui.js"></script>
 <script>
     var $table = $("#item_table")
-    function responseHandler(res){
-        return res.rows
-    }
     $(function(){
-        $table.bootstrapTable({url:"/purchase/list/suppliertimely", method:"post", responseHandler:responseHandler, sidePagination:"server", pagination:true, height:getTableHeight()});
+        $table.bootstrapTable({url:"/purchase/list/suppliertimely", method:"post", sidePagination:"server", pagination:true, height:getTableHeight()});
         $(window).resize(function () {
             $table.bootstrapTable('resetView', {
                 height: getTableHeight()

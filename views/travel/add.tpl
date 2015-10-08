@@ -10,7 +10,7 @@
 <body>
 <div class="container-fluid">
     <div class="alert" role="alert" style="display: none">添加成功！</div>
-    <form class="form-horizontal" id="item_form" enctype="multipart/form-data">
+    <form class="form-horizontal" id="item_form">
     {{str2html .Form}}
     </form>
 </div>

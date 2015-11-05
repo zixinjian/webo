@@ -10,10 +10,34 @@ import (
 	"webo/models/t"
 	"webo/models/u"
 	"webo/models/userMgr"
+	"fmt"
 )
 
 type TravelController struct {
 	BaseController
+}
+func (this *TravelController) Travel() {
+	userName := this.GetCurUserUserName()
+	userRole := this.GetCurRole()
+	beego.Info(fmt.Sprintf("User:%s login as role:%s", userName, userRole))
+	this.Data["userName"] = userName
+	switch userRole {
+	case "role_admin", "role_manager":
+		navs := []ui.NavLiValue{
+			{"active", "/travel/ui/myCreate", "我的申请"},
+			{"", "/travel/ui/list", "待我审批的申请"},
+			{"", "/travel/ui/list", "出差申请列表"},
+		}
+		this.Data["travelNav"] = ui.BuildNavs(navs)
+		this.Data["userMgr"] = userMgrHtml
+	default:
+		navs := []ui.NavLiValue{
+			{"active", "/travel/ui/list", "我的申请"},
+		}
+		this.Data["travelNav"] = ui.BuildNavs(navs)
+		this.Data["userMgr"] = ""
+	}
+	this.TplNames = "travel.html"
 }
 
 func (this *TravelController) UiList() {
@@ -26,7 +50,15 @@ func (this *TravelController) UiList() {
 	this.Data["listUrl"] = "/travel/item/list"
 	this.Data["addUrl"] = "/travel/ui/add"
 	this.Data["updateUrl"] = "/travel/ui/update"
-	this.TplNames = "travel/list.html"
+	this.TplNames = "travel/list.tpl"
+}
+func (this *TravelController) MyCreate() {
+	item := s.Travel
+	this.Data["item"] = item
+	this.Data["listUrl"] = "/travel/item/list"
+	this.Data["addUrl"] = "/travel/ui/add"
+	this.Data["updateUrl"] = "/travel/ui/update"
+	this.TplNames = "travel/myCreate.html"
 }
 
 func (this *TravelController) UiAdd() {
@@ -42,7 +74,7 @@ func (this *TravelController) UiAdd() {
 		s.Approver:     this.GetCurUserSn(),
 	}
 
-	this.Data["Form"] = ui.BuildUpdatedFormWithStatus(expandTraveDef(oItemDef), oldValueMap, make(map[string]string))
+	this.Data["Form"] = ui.BuildUpdatedFormWithStatus(extendUserField(oItemDef, s.Approver), oldValueMap, make(map[string]string))
 	this.Data["Service"] = "/item/add/" + item
 	this.Data["Onload"] = ui.BuildAddOnLoadJs(oItemDef)
 	this.TplNames = "travel/add.tpl"
@@ -65,9 +97,9 @@ func (this *TravelController) UiUpdate() {
 	code, oldValueMap := svc.Get(item, params)
 	if code == "success" {
 		this.Data["Service"] = "/item/update/" + item
-		this.Data["Form"] = ui.BuildUpdatedForm(expandTraveDef(oItemDef), expandTravelMapForUpdate(oldValueMap))
+		this.Data["Form"] = ui.BuildUpdatedForm(extendUserField(oItemDef, s.Approver), expandTravelMapForUpdate(oldValueMap))
 		this.Data["Onload"] = ui.BuildUpdateOnLoadJs(oItemDef)
-		this.TplNames = "travel/update.html"
+		this.TplNames = "travel/update.tpl"
 	} else {
 		this.Ctx.WriteString(stat.ItemNotFound)
 	}
@@ -78,33 +110,33 @@ func (this *TravelController) List() {
 	oItemDef, _ := itemDef.EntityDefMap[item]
 	queryParams, limitParams, orderByParams := this.GetParams(oItemDef)
 	result, total, resultMaps := svc.List(oItemDef.Name, queryParams, limitParams, orderByParams)
-	retList := expandTravelList(resultMaps)
+	retList := extendUser2ItemMapList(resultMaps, s.Approver, s.Traveler)
 	this.Data["json"] = &TableResult{result, int64(total), retList}
 	this.ServeJson()
 }
-func expandTravelList(resultMaps []map[string]interface{})[]map[string]interface{}{
-	for idx, travelMap := range resultMaps{
-		resultMaps[idx]=expandTravelMap(travelMap)
-	}
-	return resultMaps
-}
-func expandTravelMap(travelMap map[string]interface{})map[string]interface{}{
-	if sn, ok := travelMap[s.Approver]; ok{
-		if status, userMap := userMgr.Get(sn.(string)); status == stat.Success{
-			name, _ := userMap[s.Name]
-			travelMap[s.ApproverSn]= travelMap[s.Approver]
-			travelMap[s.Approver] = name
-		}
-	}
-	if sn, ok := travelMap[s.Traveler];ok{
-		if status, userMap := userMgr.Get(sn.(string)); status == stat.Success{
-			name, _ := userMap[s.Name]
-			travelMap[s.TravelerSn] = travelMap[s.Traveler]
-			travelMap[s.Traveler] = name
-		}
-	}
-	return travelMap
-}
+//func expandTravelList(resultMaps []map[string]interface{})[]map[string]interface{}{
+//	for idx, travelMap := range resultMaps{
+//		resultMaps[idx]=expandTravelMap(travelMap)
+//	}
+//	return resultMaps
+//}
+//func expandTravelMap(travelMap map[string]interface{})map[string]interface{}{
+//	if sn, ok := travelMap[s.Approver]; ok{
+//		if status, userMap := userMgr.Get(sn.(string)); status == stat.Success{
+//			name, _ := userMap[s.Name]
+//			travelMap[s.ApproverSn]= travelMap[s.Approver]
+//			travelMap[s.Approver] = name
+//		}
+//	}
+//	if sn, ok := travelMap[s.Traveler];ok{
+//		if status, userMap := userMgr.Get(sn.(string)); status == stat.Success{
+//			name, _ := userMap[s.Name]
+//			travelMap[s.TravelerSn] = travelMap[s.Traveler]
+//			travelMap[s.Traveler] = name
+//		}
+//	}
+//	return travelMap
+//}
 func expandTravelMapForUpdate(travelMap map[string]interface{})map[string]interface{}{
 	if sn, ok := travelMap[s.Approver]; ok{
 		if status, userMap := userMgr.Get(sn.(string)); status == stat.Success{
@@ -122,19 +154,4 @@ func expandTravelMapForUpdate(travelMap map[string]interface{})map[string]interf
 	}
 	beego.Debug("expandTravelMapForUpdate", travelMap)
 	return travelMap
-}
-
-func expandTraveDef(oItemDef itemDef.ItemDef)itemDef.ItemDef{
-	approverField, _ := oItemDef.GetField(s.Approver)
-	approverField.Name = s.ApproverName
-	approverSn, _ := oItemDef.GetField(s.Approver)
-	approverSn.Input = s.Hidden
-	newFields := make([]itemDef.Field, 0)
-	for _, field := range oItemDef.Fields[:len(oItemDef.Fields)-3]{
-		newFields = append(newFields, field)
-	}
-	newFields = append(newFields, approverField)
-	newFields = append(newFields, approverSn)
-	oItemDef.Fields = newFields
-	return oItemDef
 }

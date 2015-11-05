@@ -115,9 +115,9 @@ func (field *Field) IsEditable() bool {
 }
 func (field *Field) GetFormValue(valueString string) (interface{}, bool) {
 	switch field.Type {
-	case s.TypeString:
+	case s.TString:
 		return valueString, true
-	case s.TypeInt:
+	case s.TInt:
 		value, err := strconv.ParseInt(valueString, 10, 64)
 		if err == nil {
 			return value, true
@@ -125,7 +125,7 @@ func (field *Field) GetFormValue(valueString string) (interface{}, bool) {
 			beego.Error(fmt.Sprintf("Get field:%s varlue: %s as %s error:%s", field.Name, valueString, field.Type, err.Error()))
 			return 0, false
 		}
-	case s.TypeFloat:
+	case s.TFloat:
 		if strings.EqualFold(strings.TrimSpace(valueString), "") {
 			return 0, false
 		}
@@ -143,13 +143,13 @@ func (field *Field) GetFormValue(valueString string) (interface{}, bool) {
 }
 func (field *Field) GetCheckedValue(input interface{}) (interface{}, bool) {
 	switch field.Type {
-	case s.TypeString:
+	case s.TString:
 		v, ok := input.(string)
 		return v, ok
-	case s.TypeFloat:
+	case s.TFloat:
 		v, ok := input.(float64)
 		return v, ok
-	case s.TypeInt:
+	case s.TInt:
 		v, ok := input.(int64)
 		return v, ok
 	default:

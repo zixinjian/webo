@@ -31,6 +31,20 @@ const staticFormat = `<div class="form-group">
 var moneyFormat = `    <div class="form-group">
 			<label class="col-sm-3 control-label">%s</label>
 			<div class="col-sm-6">
+				<div class="input-group"><span class="input-group-addon">￥</span><input type="text" class="input-block-level form-control" data-validate="{required: %s, number:true, messages:{required:'请输入正确的%s!'}}" name="%s" id="%s" autocomplete="off" value="%s" %s/></div>
+			</div>
+		</div>
+    	`
+var percentFormat = `    <div class="form-group">
+			<label class="col-sm-3 control-label">%s</label>
+			<div class="col-sm-6">
+				<div class="input-group"><input type="text" class="input-block-level form-control" data-validate="{required: %s, number:true, messages:{required:'请输入正确的%s!'}}" name="%s" id="%s" autocomplete="off" value="%s" %s/><span class="input-group-addon">％</span></div>
+			</div>
+		</div>
+    	`
+var floatFormat = `    <div class="form-group">
+			<label class="col-sm-3 control-label">%s</label>
+			<div class="col-sm-6">
 				<input type="text" class="input-block-level form-control" data-validate="{required: %s, number:true, messages:{required:'请输入正确的%s!'}}" name="%s" id="%s" autocomplete="off" value="%s" %s/>
 			</div>
 		</div>
@@ -83,7 +97,7 @@ var autocompleteFormat = `    <div class="form-group">
             <label class="col-sm-3 control-label">%s关键字</label>
             <div class="col-sm-6">
                 <input type="text" class="input-block-level form-control" id="%s_key" value="%s" %s/>
-                <label>%s名称</label><input type="text" class="input-block-level form-control" readonly="true" id="%s_name" name="%s_name" data-validate="{required: %s, messages:{required:'请输入正确的%s!'}}" value="%s" readonly="true" placeholder="自动联想">
+                <label>%s名称</label><input type="text" class="input-block-level form-control" readonly="true" id="%s_name" name="%s_name" data-validate="{required: %s, messages:{required:'请输入正确的%s!'}}" value="%s" placeholder="自动联想">
                 <input type="hidden" id="%s" name="%s" value="%s">
             </div>
         </div>
@@ -91,7 +105,7 @@ var autocompleteFormat = `    <div class="form-group">
 var hiddenFormat = `<input type="hidden" id="%s" name="%s" value="%s">
 `
 var initDatePickerFormat = `
-$("#%s").datetimepicker({%sformat:'Y.m.d',lang:'zh',%s})
+$("#%s").datetimepicker({%sformat:'Y.m.d',scrollMonth:false, lang:'zh'%s})
 `
 var initAutocompleteFormat = `
 	$("#%s_key").autocomplete({
@@ -138,7 +152,7 @@ func BuildAddOnLoadJs(oItemDef itemDef.ItemDef) string {
 		case "date":
 			defaultDate := ""
 			if strings.EqualFold(field.Default.(string), "curtime") {
-				defaultDate = "value:new Date()"
+				defaultDate = ",value:new Date()"
 			}
 			OnLoadJs = OnLoadJs + fmt.Sprintf(initDatePickerFormat, field.Name, "timepicker:false,", defaultDate)
 		case s.Autocomplete:
@@ -217,8 +231,12 @@ func createFromGroup(field itemDef.Field, valueMap map[string]interface{}, statu
 		fromGroup = fmt.Sprintf(textFormat, field.Label, field.Require, field.Label, field.Name, field.Name, u.ToStr(value), status)
 	case "static":
 		fromGroup = fmt.Sprintf(staticFormat, field.Label, value)
-	case "money", s.Float:
+	case "money":
 		fromGroup = fmt.Sprintf(moneyFormat, field.Label, field.Require, field.Label, field.Name, field.Name, u.ToStr(value), status)
+	case s.TFloat:
+		fromGroup = fmt.Sprintf(floatFormat, field.Label, field.Require, field.Label, field.Name, field.Name, u.ToStr(value), status)
+	case s.Percent:
+		fromGroup = fmt.Sprintf(percentFormat, field.Label, field.Require, field.Label, field.Name, field.Name, u.ToStr(value), status)
 	case "date", "datetime":
 		//		fmt.Println("date", field.Name, value)
 		fromGroup = fmt.Sprintf(dateFormate, field.Label, field.Require, field.Label, field.Name, field.Name, value, status)
@@ -258,3 +276,6 @@ func createFromGroup(field itemDef.Field, valueMap map[string]interface{}, statu
 	}
 	return fromGroup
 }
+
+
+//func BuildSelectOptions()

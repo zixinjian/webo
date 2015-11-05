@@ -4,7 +4,6 @@ import (
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
 	"strings"
-	"webo/models/productMgr"
 	"webo/models/s"
 	"webo/models/stat"
 	"webo/models/supplierMgr"
@@ -13,10 +12,11 @@ import (
 	"webo/models/u"
 	"webo/models/wborm"
 	"fmt"
+	"webo/models/lang"
 )
 
-const purchaseListSql = "SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer"
-const purchaseCountSql = "SELECT COUNT(purchase.id) as count FROM purchase, user WHERE user.sn = purchase.buyer"
+const purchaseListSql = "SELECT purchase.*, user.name as user_name, user.username as user_username FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.flag != 'flag_delete'"
+const purchaseCountSql = "SELECT COUNT(purchase.id) as count FROM purchase, user WHERE user.sn = purchase.buyer AND purchase.flag != 'flag_delete'"
 
 func GetPurchases(queryParams t.Params, limitParams t.LimitParams, orderBy t.Params) (string, int64, []map[string]interface{}) {
 	beego.Debug("purchase.GetPurchases:", queryParams, limitParams, orderBy)
@@ -44,7 +44,6 @@ func GetPurchases(queryParams t.Params, limitParams t.LimitParams, orderBy t.Par
 		return code, 0, make([]map[string]interface{}, 0)
 	}
 }
-
 func GetSupplierTimelyList(queryParams t.Params, limitParams t.LimitParams, orderBys t.Params)(string, int64, []map[string]interface{}){
 	countSql := `SELECT count(s.sn) as count FROM
 			(SELECT supplier, count(id) FROM purchase GROUP BY supplier) as p, supplier as s
@@ -73,33 +72,7 @@ func GetBuyerTimelyList(queryParams t.Params, limitParams t.LimitParams, orderBy
 			(SELECT buyer, count(id) AS total, count(CASE WHEN godowndate != "" AND godowndate <= requireddate THEN "intime" END) AS intime FROM purchase GROUP BY buyer) as p, user as s
 			WHERE p.buyer = s.sn AND s.department = "department_purchase" `
 	status, retMaps := wborm.QueryValues(sql, queryParams, limitParams, orderBys, "")
-//	beego.Debug("GetBuyerTimelyList : ", retMaps)
 	return status, total, retMaps
-//	status, num, userMaps := svc.List(s.User, queryParams, limitParams, orderBy)
-//	if status != stat.Success{
-//		return status, num, userMaps
-//	}
-//	retMaps := make([]map[string]interface{}, len(userMaps))
-//	for idx, userMap := range userMaps{
-//		sn := u.GetStringValue(userMap, s.Sn)
-//		name := u.GetStringValue(userMap, s.Name)
-//		retMap := make(map[string]interface{}, 5)
-//		noDelay, total, rat := getBuyerTimely(sn)
-//		retMap["delay"] = total - noDelay
-//		retMap["total"] = total
-//		retMap["rat"] = rat
-//		retMap[s.Sn] = sn
-//		retMap[s.Name] = name
-//		retMaps[idx] = retMap
-//	}
-//	return status, num, retMaps
-}
-func getBuyerTimely(sn string)(noDelay int64, total int64, rat string){
-	queryParams := t.Params{
-		s.Buyer:sn,
-	}
-	noDelay, total, rat = calcTimely(queryParams)
-	return
 }
 func calcTimely(queryParams t.Params)(noDelay int64, total int64, rat string){
 	sqlBuilder := svc.NewSqlBuilder()
@@ -161,17 +134,12 @@ func transPurchaseMap(oldMap orm.Params) t.ItemMap {
 	if userName, ok := oldMap["user_name"]; ok {
 		retMap["buyer"] = userName
 	}
+	catagory, _ := retMap[s.Category].(string)
+	retMap[s.Category] = lang.GetLabel(catagory)
 	if supplierSn, ok := retMap[s.Supplier]; ok && !u.IsNullStr(supplierSn) {
 		if supplierMap, sok := supplierMgr.Get(supplierSn.(string)); sok {
 			retMap[s.Supplier + s.Name] = u.GetStringValue(supplierMap, s.Name)
 			retMap[s.Supplier + s.Key] = u.GetStringValue(supplierMap, s.Keyword)
-		}
-	}
-	if productSn, ok := retMap[s.Product]; ok && !u.IsNullStr(productSn) {
-		if productMap, sok := productMgr.Get(productSn.(string)); sok {
-			retMap[s.Product + s.Name] = u.GetStringValue(productMap, s.Name)
-			retMap[s.Product + s.Brand] = u.GetStringValue(productMap, s.Brand)
-			retMap[s.Product + s.Model] = u.GetStringValue(productMap, s.Model)
 		}
 	}
 	return retMap

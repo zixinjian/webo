@@ -20,7 +20,7 @@ func (this *UserController) UiList() {
 	this.Data["addUrl"] = fmt.Sprintf("/ui/add/%s", item)
 	this.Data["updateUrl"] = fmt.Sprintf("/ui/update/%s", item)
 	this.Data["thlist"] = ui.BuildListThs(oItemDef)
-	this.TplNames = "user/list.html"
+	this.TplNames = "user/list.tpl"
 }
 
 func (this *UserController) Update() {

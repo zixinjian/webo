@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="utf-8" />
+  <title>Webo</title>
+  <meta name="description" content="管理系统" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="../lib/simple-line-icons/css/simple-line-icons.css" type="text/css" />
+  <link rel="stylesheet" href="../lib/app/css/app.min.css" type="text/css" />
+</head>
+<body>
+<div class="app app-header-fixed app-aside-fixed">
+  <header id="header" class="app-header navbar" role="menu">
+    <!-- navbar header -->
+    <div class="navbar-header bg-dark">
+      <button class="pull-right visible-xs dk" ui-toggle-class="show" target=".navbar-collapse">
+        <i class="glyphicon glyphicon-cog"></i>
+      </button>
+      <button class="pull-right visible-xs" ui-toggle-class="off-screen" target=".app-aside" ui-scroll="app">
+        <i class="glyphicon glyphicon-align-justify"></i>
+      </button>
+      <!-- brand -->
+      <a class="navbar-brand text-lt" ui-toggle-class="app-aside-folded" target=".app">
+        <i class="glyphicon glyphicon-th-large "></i>
+        <span class="hidden-folded m-l-xs">HuaLi</span>
+      </a>
+      <!-- / brand -->
+    </div>
+    <div class="collapse pos-rlt navbar-collapse box-shadow bg-white-only">
+      <div class="nav navbar-nav hidden-xs">
+        <a href="#" class="btn no-shadow navbar-btn" ui-toggle-class="app-aside-folded" target=".app">
+          <i class="fa fa-dedent fa-fw text"></i>
+          <i class="fa fa-indent fa-fw text-active"></i>
+        </a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="hidden-xs">
+          <a ui-fullscreen>
+            <i class="fa fa-expand fa-fw text"></i>
+            <i class="fa fa-compress fa-fw text-active"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" data-toggle="dropdown" class="dropdown-toggle clear" data-toggle="dropdown">
+            <i class="icon-user icon text-success-lter m-r-xs"></i>
+            <span class="hidden-sm hidden-md">{{.userName}}</span>
+          </a>
+        </li>
+        <li><a href="/logout"><i class="icon-arrow-right icon text-success-lter"></i></a></li>
+      </ul>
+    </div>
+  </header>
+  <!-- / header -->
+  <aside id="aside" class="app-aside hidden-xs bg-dark">
+    <div class="aside-wrap">
+      <div class="navi-wrap">
+        <!-- nav -->
+        <nav ui-nav class="navi clearfix">
+          <ul class="nav">
+            <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+              <span>账务管理</span>
+            </li>
+            <li>
+              <a href="/account/ui/list" target="main" class="auto">
+                <i class="glyphicon glyphicon-align-justify icon text-primary-dker"></i>
+                <span>流水账</span>
+              </a>
+            </li>
+            <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+              <span>用户管理</span>
+            </li>
+            <li>
+              <a href="/ui/user/list" target="main" class="auto">
+                <i class="icon-users icon text-success-lter"></i>
+                <span>用户</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- nav -->
+      </div>
+    </div>
+  </aside>
+  <!-- / aside -->
+  <div id="content" class="app-content" role="main">
+    <iframe class="hbox hbox-auto-xs bg-light " name="main" src="/account/ui/list" layout-auto-height="-50" style="width:100%;border:none"></iframe>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="top_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content" style="width: 800px;">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="top_modal_title">Modal title</h4>
+      </div>
+      <div class="modal-body" id="top_modal_body">
+        <iframe id="top_modal_content" name = "modal_content" src="" style="width:100%;border:none;height:500px"></iframe>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" id="top_modal_btn_cancel" data-dismiss="modal">取消</button>
+        <button id="top_modal_btn_ok" type="button" class="btn btn-primary">确定</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../lib/app/js/app.min.js"></script>
+<script src="../lib/screenfull/screenfull.min.js"></script>
+<script src="../lib/webo/js/ui.js"></script>
+<script>
+  function showTopModal(options){
+    if(options.url){
+      //console.log("showTopModal, option", options)
+      $("#top_modal_content").attr({src:options.url});
+    }
+    if(options.height){
+      $("#modal_content").css({height:options.height});
+    }
+    $("#top_modal_btn_ok").off("click").on("click", function(evt){
+      var topModalWindows = $("#top_modal_content")[0].contentWindow;
+//            console.log("topModalWindows", topModalWindows, topModalWindows.onOk);
+      if(!topModalWindows || !topModalWindows.onTopModalOk){
+        return;
+      }
+      topModalWindows.onTopModalOk(options)
+//            if(topModalWindows.onTopModalOk(options)=="ok"){
+//            };
+    })
+    $('#top_modal').modal(options);
+  }
+  function hideTopModal(){
+    $("#top_modal_btn_ok").off("click")
+    $("#top_modal_content").attr({src:""});
+    $('#top_modal').modal("hide");
+  }
+  function initFullScreen(){
+    $el = $('[ui-fullscreen]')
+    if (screenfull.enabled && !navigator.userAgent.match(/Trident.*rv:11\./)) {
+      $el.removeClass('hide');
+    }
+    $el.on('click', function(){
+      screenfull.toggle();
+    });
+    $(document).on(screenfull.raw.fullscreenchange, function () {
+      if(screenfull.isFullscreen){
+        $el.addClass('active');
+      }else{
+        $el.removeClass('active');
+      }
+    });
+  }
+  $(function(){
+    initFullScreen();
+  });
+</script>
+</body>
+</html>

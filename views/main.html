@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
   <meta charset="UTF-8">
-    <link rel="stylesheet" href="../asserts/3rd/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../asserts/css/main.css">
-    <link rel="stylesheet" href="../asserts/css/overwrite.css">
+    <link rel="stylesheet" href="../lib/3rd/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../lib/webo/css/main.css">
+    <link rel="stylesheet" href="../lib/webo/css/overwrite.css">
   <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
   <script src="../../asserts/3rd/html5shiv.min.js"></script>
@@ -76,9 +76,9 @@
     </div>
 </div>
 
-<script src="../asserts/3rd/jquery/jquery.js"></script>
-<script src="../asserts/3rd/bootstrap/js/bootstrap.min.js"></script>
-<script src="../asserts/js/ui.js"></script>
+<script src="../lib/3rd/jquery/jquery.js"></script>
+<script src="../lib/3rd/bootstrap/js/bootstrap.min.js"></script>
+<script src="../lib/webo/js/ui.js"></script>
 <script>
     $(function(){
         $(".sidebar li").on("click", function(event){
@@ -100,7 +100,7 @@
         }
         $("#top_modal_btn_ok").off("click").on("click", function(evt){
             var topModalWindows = $("#top_modal_content")[0].contentWindow;
-            console.log("topModalWindows", topModalWindows, topModalWindows.onOk);
+//            console.log("topModalWindows", topModalWindows, topModalWindows.onOk);
             if(!topModalWindows || !topModalWindows.onTopModalOk){
                 return;
             }
@@ -118,7 +118,7 @@
     function autoHeight(){
         $.each($("[layout-auto-height]"), function(){
             var outHeight = $(this).attr("layout-auto-height")
-            console.log("outHeight", outHeight, $(".main").height(), $(".main").height() + parseInt(outHeight))
+//            console.log("outHeight", outHeight, $(".main").height(), $(".main").height() + parseInt(outHeight))
             $(this).height($(".main").height() + parseInt(outHeight))
         });
     }

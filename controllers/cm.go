@@ -1,7 +1,7 @@
 package controllers
 
 const (
-	SessionUser = "user_user"
+	SessionUserUserName = "user_user"
 	SessionUserName = "user_username"
 	SessionUserRole       = "user_role"
 	SessionUserSn         = "user_sn"

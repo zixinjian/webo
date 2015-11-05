@@ -93,8 +93,8 @@ func (this *BaseController) GetSessionString(sessionName string) string {
 func (this *BaseController) GetCurUserSn() string {
 	return this.GetSessionString(SessionUserSn)
 }
-func (this *BaseController) GetCurUser() string {
-	return this.GetSessionString(SessionUser)
+func (this *BaseController) GetCurUserUserName() string {
+	return this.GetSessionString(SessionUserUserName)
 }
 func (this *BaseController) GetCurUserName() string {
 	return this.GetSessionString(SessionUserName)
@@ -211,4 +211,42 @@ func FillUserEnum(fieldName string, oItemDef itemDef.ItemDef, queryParams t.Para
 		oItemDef.Fields[idx] = field
 	}
 	return oItemDef
+}
+
+
+func extendUserField(oItemDef itemDef.ItemDef, fieldName string)itemDef.ItemDef{
+	userField, _ := oItemDef.GetField(fieldName)
+	userField.Name = fieldName + s.Name
+	userSnField, _ := oItemDef.GetField(fieldName)
+	userSnField.Input = s.Hidden
+	newFields := make([]itemDef.Field, 0)
+	for _, field := range oItemDef.Fields{
+		if field.Name == fieldName{
+			newFields = append(newFields, userField)
+			newFields = append(newFields, userSnField)
+		}else{
+			newFields = append(newFields, field)
+		}
+	}
+	oItemDef.Fields = newFields
+	return oItemDef
+}
+
+func extendUser2ItemMapList(resultMaps []map[string]interface{}, fields ...string)[]map[string]interface{}{
+	for idx, travelMap := range resultMaps{
+		resultMaps[idx]=extendUser2ItemMap(travelMap, fields...)
+	}
+	return resultMaps
+}
+
+func extendUser2ItemMap(travelMap map[string]interface{}, fields ...string)map[string]interface{}{
+	for _, fieldName := range fields{
+		if sn, ok := travelMap[fieldName]; ok{
+			if status, userMap := userMgr.Get(sn.(string)); status == stat.Success{
+				name, _ := userMap[s.Name]
+				travelMap[fieldName + s.Name]= name
+			}
+		}
+	}
+	return travelMap
 }

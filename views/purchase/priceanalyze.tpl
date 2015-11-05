@@ -2,8 +2,9 @@
 <html>
 <head lang="zh">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../../asserts/3rd/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="../../asserts/3rd/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../lib/3rd/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../../lib/3rd/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../lib/webo/css/overwrite.css">
     <!--<link rel="stylesheet" href="../../asserts/3rd/pnotify/pnotify.custom.min.css">-->
 </head>
 <body>
@@ -22,12 +23,12 @@
     <div id="analyzeCharts" style="height: 500px;margin-top:20px"></div>
 </div>
 
-<script src="../../asserts/3rd/jquery/jquery.js"></script>
-<script src="../../asserts/3rd/bootstrap/js/bootstrap.min.js"></script>
-<script src="../../asserts/3rd/echart/echarts-all.js"></script>
-<script src="../../asserts/3rd/jquery-ui/jquery-ui.min.js"></script>
+<script src="../../lib/3rd/jquery/jquery.js"></script>
+<script src="../../lib/3rd/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../lib/3rd/echart/echarts-all.js"></script>
+<script src="../../lib/3rd/jquery-ui/jquery-ui.min.js"></script>
 <!--<script src="../../asserts/3rd/pnotify/pnotify.custom.min.js"></script>-->
-<script src="../../asserts/js/ui.js"></script>
+<script src="../../lib/webo/js/ui.js"></script>
 <script>
 //    PNotify.prototype.options.styling = "bootstrap3";
     var analyzChart = echarts.init(document.getElementById("analyzeCharts"));
@@ -65,7 +66,6 @@
     function setChartData(rows){
         option.xAxis[0].data =[]
         option.series[0].data = []
-        console.log("setChartData", rows)
         for (i in rows){
             row = rows[i]
             if(row.unitprice == 0){

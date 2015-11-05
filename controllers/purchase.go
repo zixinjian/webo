@@ -15,6 +15,7 @@ import (
 	"webo/models/t"
 	"webo/models/u"
 	"encoding/json"
+	"webo/models/userMgr"
 )
 
 type PurchaseController struct {
@@ -72,7 +73,7 @@ func (this *PurchaseController) UiCurList() {
 	oItemDef, _ := itemDef.EntityDefMap[item]
 	this.Data["thlist"] = ui.BuildListThs(oItemDef)
 	this.Data["sortOrder"] = s.Asc
-	this.TplNames = "purchase/list.html"
+	this.TplNames = "purchase/list.tpl"
 }
 
 //历史订单列表
@@ -93,23 +94,30 @@ func (this *PurchaseController) PriceAnalyze() {
 // 添加
 func (this *PurchaseController) UiAdd() {
 	item := s.Purchase
-	oItemDef, _ := itemDef.EntityDefMap[item]
-	addItemDef := fillBuyerEnum(getAddPurchaseDef(oItemDef))
 	this.Data["Service"] = "/item/add/" + item
-	statusMap := map[string]string{
-		s.ProductPrice: s.ReadOnly,
-		s.Power:s.Disabled,
-	}
-	this.Data["Form"] = ui.BuildAddFormWithStatus(addItemDef, u.TUId(), statusMap)
-	this.Data["Onload"] = ui.BuildAddOnLoadJs(addItemDef)
+	buyers := userMgr.GetUsersByDepartment("department_purchase")
+	this.Data["sn"] = u.TUId()
+	this.Data["Buyers"] = buyers
 	this.TplNames = "purchase/add.tpl"
 }
 
 //管理者修改
 func (this *PurchaseController) UiUpdate() {
 	statusMap := map[string]string{
-		s.PaymentAmount:	  s.ReadOnly,
-		s.PaymentDate:	  	  s.ReadOnly,
+		s.Sn:                 s.Disabled,
+		s.Category:           s.Disabled,
+		s.Product:            s.Disabled,
+		s.ProductName:        s.Disabled,
+		s.Model:              s.Disabled,
+		s.Brand:			  s.Disabled,
+		s.Num:				  s.Disabled,
+		s.PlaceDate:          s.Disabled,
+		s.Requireddate:       s.Disabled,
+		s.Requireddepartment: s.Disabled,
+		s.ProductPrice:       s.Disabled,
+		s.Power:       		  s.Disabled,
+		s.PaymentAmount:	  s.Disabled,
+		s.PaymentDate:	  	  s.Disabled,
 	}
 	this.UiUpdateWithStatus(statusMap)
 }
@@ -120,7 +128,10 @@ func (this *PurchaseController) UiUserUpdate() {
 		s.Sn:                 s.Disabled,
 		s.Category:           s.Disabled,
 		s.Product:            s.Disabled,
+		s.ProductName:        s.Disabled,
 		s.Model:              s.Disabled,
+		s.Brand:			  s.Disabled,
+		s.Num:				  s.Disabled,
 		s.PlaceDate:          s.Disabled,
 		s.Requireddate:       s.Disabled,
 		s.Requireddepartment: s.Disabled,
@@ -169,7 +180,7 @@ func (this *PurchaseController) UiUpdateWithStatus(statusMap map[string]string) 
 		}else{
 			this.Data["PuchaseItem"] = fmt.Sprintf(oldValueFormat, "{}")
 		}
-		this.TplNames = "purchase/update.html"
+		this.TplNames = "purchase/update.tpl"
 	} else {
 		this.Ctx.WriteString(stat.ItemNotFound)
 	}
@@ -304,10 +315,10 @@ func fillBuyerEnum(oItemDef itemDef.ItemDef) itemDef.ItemDef {
 	}
 	return FillUserEnum(s.Buyer, oItemDef, queryParams, orderParams)
 }
-func getAddPurchaseDef(oItemDef itemDef.ItemDef) itemDef.ItemDef {
-	names := []string{s.Sn, s.Category, s.Product, s.Model, s.Power, s.ProductPrice, s.Buyer, s.Num, s.PlaceDate, s.Requireddate, s.Requireddepartment, s.Mark}
-	return makeFields(oItemDef, names)
-}
+//func getAddPurchaseDef(oItemDef itemDef.ItemDef) itemDef.ItemDef {
+//	names := []string{s.Sn, s.Category, s.Product, s.Model, s.Power, s.ProductPrice, s.Buyer, s.Num, s.PlaceDate, s.Requireddate, s.Requireddepartment, s.Mark}
+//	return makeFields(oItemDef, names)
+//}
 
 func getExpandListDef(oItemDef itemDef.ItemDef) itemDef.ItemDef {
 	names := []string{s.Sn, s.Category, s.Product, s.Model, s.Power, s.Num, s.UintPrice, s.ProductPrice, s.TotalPrice, s.Buyer, s.Mark}

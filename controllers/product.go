@@ -34,7 +34,7 @@ func (this *ProductController) UiList() {
 	this.Data["addUrl"] = "ui/product/add"
 	this.Data["updateUrl"] = "ui/product/update"
 	this.Data["thlist"] = ui.BuildListThs(oItemDef)
-	this.TplNames = "product/list.html"
+	this.TplNames = "product/list.tpl"
 }
 
 func (this *ProductController) UiUpdate() {
@@ -53,7 +53,7 @@ func (this *ProductController) UiUpdate() {
 		this.Data["Service"] = "/item/update/" + item
 		this.Data["Form"] = ui.BuildUpdatedForm(oItemDef, oldValueMap)
 		this.Data["Onload"] = ui.BuildUpdateOnLoadJs(oItemDef)
-		this.TplNames = "product/update.html"
+		this.TplNames = "product/update.tpl"
 	} else {
 		this.Ctx.WriteString(stat.ItemNotFound)
 	}

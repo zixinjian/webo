@@ -1,6 +1,6 @@
 field,showInList,sortable,order,visible
 name,,true,,
-keyword,,true,,
+keyword,,true,,false
 category,,true,,
 brand,,true,,
 price,,true,,

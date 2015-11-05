@@ -12,7 +12,9 @@ import (
 	"webo/models/stat"
 	"webo/models/t"
 	"webo/models/u"
+	"webo/models/wblog"
 )
+const DbMark = "'"
 
 func GetItems(item string, queryParams t.Params, orderBy t.Params, limitParams t.LimitParams) (string, []map[string]interface{}) {
 	code, retMaps := Query(item, queryParams, limitParams, orderBy)
@@ -93,6 +95,21 @@ func Get(entity string, params t.Params) (string, map[string]interface{}) {
 		return stat.Success, retList[0]
 	}
 	return stat.ItemNotFound, nil
+}
+
+func Delete(item string, sn string, deleter string)string{
+	status, oItem := Get(item, t.Params{"sn":sn})
+	if creater, ok := oItem[s.Creater]; ok{
+		if creater != deleter{
+			return stat.PermissionDenied
+		}
+	}
+	if status == stat.Success{
+		wblog.LogItemDelete(oItem, deleter)
+		return DeleteItem(item, sn)
+	}else{
+		return status
+	}
 }
 
 func Add(entity string, params t.Params) (string, string) {
@@ -191,6 +208,33 @@ func Update(entity string, params t.Params) (string, string) {
 		return ParseSqlError(err, oEntityDef)
 	}
 	return stat.UnKnownFailed, ""
+}
+
+func DeleteItem(item string, sn string) string {
+	if _, ok := itemDef.EntityDefMap[item];!ok {
+		return stat.ItemNotDefine
+	}
+
+	Q := DbMark
+	query := fmt.Sprintf("DELETE FROM %s%s%s WHERE sn = ?", Q, item, Q)
+
+	values := make([]interface{}, 1)
+	values[0] = sn
+
+	beego.Debug("Delete sql: %s : sn: %s", query, sn)
+	o := orm.NewOrm()
+	if res, err := o.Raw(query, values...).Exec(); err == nil {
+		if i, e := res.RowsAffected(); e == nil && i > 0 {
+			return stat.Success
+		}else {
+			beego.Error("Delete failed", err)
+			return stat.UnKnownFailed
+		}
+	} else {
+		beego.Error("Delete error", err)
+		return stat.UnKnownFailed
+	}
+	return stat.UnKnownFailed
 }
 
 func ParseSqlError(err error, oEntityDef itemDef.ItemDef) (string, string) {

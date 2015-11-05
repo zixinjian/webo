@@ -25,8 +25,7 @@ var FilterUser = func(ctx *context.Context) {
 	if ctx.Input.Url() == "/login" {
 		return
 	}
-	_, ok := ctx.Input.Session(controllers.SessionUser).(string)
-	//	fmt.Println("role", role)
+	_, ok := ctx.Input.Session(controllers.SessionUserUserName).(string)
 	if !ok && ctx.Request.RequestURI != "/login" {
 		beego.Debug("FilterUser need login: ", ctx.Input.Url(), ctx.Input.Uri())
 		redirect := ctx.Input.Url()
@@ -55,23 +54,7 @@ var FilterUser = func(ctx *context.Context) {
 
 func main() {
 	initDb()
-	//	beego.InsertFilter("/*", beego.BeforeStatic, FilterStatic)
 	beego.InsertFilter("/*", beego.BeforeRouter, FilterUser)
-	//	params := svc.SvcParams{
-	//		"username": "a",
-	//		"password": "a",
-	//	}
-	//	fmt.Println(svc.List("user", params))
-	//	fmt.Println(svc.Get("user", params))
-	//	fmt.Println(util.TUId())
-	//	fmt.Println(svc.Add("user", params))
-	//	o := orm.NewOrm()
-	//	qs := o.QueryTable("user").Limit(10, 0)
-	//	qs=qs.Limit(10, 0)
-	//	var resultMaps []orm.Params
-	//	qs.Values(&resultMaps)
-	//	fmt.Println("res", len(resultMaps), resultMaps)
-	//	fmt.Println("start")
 	beego.SetLogger("file", `{"filename":"logs/running.log", "level":6 }`)
 	beego.Run()
 }

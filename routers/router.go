@@ -62,9 +62,16 @@ func init() {
 	beego.Router("/ui/expense/accountcurrentlist", &controllers.PurchaseController{}, "*:AccountCurrentList")
 
 	//出差管理
-	beego.Router("/travel", &controllers.MainController{}, "*:Travel")
+	beego.Router("/travel", &controllers.TravelController{}, "*:Travel")
+
+	beego.Router("/travel/ui/myCreate", &controllers.TravelController{}, "*:MyCreate")
 	beego.Router("/travel/ui/list", &controllers.TravelController{}, "*:UiList")
 	beego.Router("/travel/ui/update", &controllers.TravelController{}, "*:UiUpdate")
 	beego.Router("/travel/ui/add", &controllers.TravelController{}, "*:UiAdd")
 	beego.Router("/travel/item/list", &controllers.TravelController{}, "*:List")
+
+	beego.Router("/account", &controllers.AccountController{}, "*:Account")
+	beego.Router("/account/ui/add", &controllers.AccountController{}, "*:UiAdd")
+	beego.Router("/account/ui/list", &controllers.AccountController{}, "*:UiList")
+	beego.Router("/account/item/list", &controllers.AccountController{}, "*:List")
 }

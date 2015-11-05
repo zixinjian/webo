@@ -1,8 +1,10 @@
 field,showInList,sortable,order,visible
 name,,true,,
+sname,,true,,
 keyword,,,,
 category,,,,
 spscope,,,,
+url,,,,false
 contact,,,,
 jobtitle,,,,
 phone,,,,

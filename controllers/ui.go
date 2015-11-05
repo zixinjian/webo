@@ -34,7 +34,7 @@ func (this *UiController) List() {
 	this.Data["addUrl"] = fmt.Sprintf("/ui/add/%s", item)
 	this.Data["updateUrl"] = fmt.Sprintf("/ui/update/%s", item)
 	this.Data["thlist"] = ui.BuildListThs(oItemDef)
-	this.TplNames = "item/list.html"
+	this.TplNames = "item/list.tpl"
 }
 
 func (this *UiController) Add() {
@@ -82,7 +82,7 @@ func (this *UiController) Update() {
 		this.Data["Service"] = "/item/update/" + item
 		this.Data["Form"] = ui.BuildUpdatedForm(oItemDef, oldValueMap)
 		this.Data["Onload"] = ui.BuildUpdateOnLoadJs(oItemDef)
-		this.TplNames = "item/update.html"
+		this.TplNames = "item/update.tpl"
 	} else {
 		this.Ctx.WriteString(stat.ItemNotFound)
 	}

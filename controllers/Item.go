@@ -47,7 +47,7 @@ func (this *ItemController) List() {
 
 func (this *ItemController) Add() {
 	item, ok := this.Ctx.Input.Params[":hi"]
-	beego.Debug("params", this.Ctx.Input.Params, this.Ctx.Input)
+//	beego.Debug("params", this.Ctx.Input.Params, this.Ctx.Input)
 	if !ok {
 		beego.Error(stat.ParamItemError)
 		this.Data["json"] = JsonResult{stat.ParamItemError, stat.ParamItemError}
@@ -95,6 +95,35 @@ func (this *ItemController) Update() {
 	svcParams := this.GetFormValues(oEntityDef)
 	status, reason := svc.Update(item, svcParams)
 	this.Data["json"] = &JsonResult{status, reason}
+	this.ServeJson()
+}
+
+func (this *ItemController) Delete() {
+	beego.Debug("Update requestBody: ", this.Ctx.Input.RequestBody)
+	beego.Debug("Update params:", this.Ctx.Input.Params)
+	item, ok := this.Ctx.Input.Params[":hi"]
+	if !ok {
+		beego.Error(stat.ParamItemError)
+		this.Data["json"] = JsonResult{stat.ParamItemError, stat.ParamItemError}
+		this.ServeJson()
+		return
+	}
+	oEntityDef, ok := itemDef.EntityDefMap[item]
+	if !ok {
+		beego.Error(fmt.Sprintf("Item %s not define", item))
+		this.Data["json"] = JsonResult{stat.ItemNotDefine, stat.ItemNotDefine}
+		this.ServeJson()
+		return
+	}
+	svcParams := this.GetFormValues(oEntityDef)
+	sn, ok := svcParams[s.Sn]
+	if !ok {
+		beego.Error(fmt.Sprintf("Item %s Sn not define", item))
+		this.Data["json"] = JsonResult{stat.ItemNotDefine, stat.ItemNotDefine}
+		this.ServeJson()
+	}
+	status := svc.Delete(item, sn.(string), this.GetCurUserSn())
+	this.Data["json"] = &JsonResult{status, ""}
 	this.ServeJson()
 }
 
@@ -150,7 +179,9 @@ func (this *ItemController) Autocomplete() {
 	}
 	var keyword string
 	switch item {
-	case s.Supplier, s.Product:
+	case s.Product:
+		keyword = s.Model
+	case s.Supplier:
 		keyword = s.Keyword
 	case s.User:
 		keyword = s.UserName
@@ -175,11 +206,9 @@ func (this *ItemController) BaseAutocomplete(item string, keyword string) {
 	orderByParams := t.Params{
 		keyword: s.Asc,
 	}
-
-	queryParams := t.Params{
-		"%" + keyword: term,
-	}
-	_, _, resultMaps := svc.List(oItemDef.Name, queryParams, limitParams, orderByParams)
+	addParams := this.GetFormValues(oItemDef)
+	addParams["%" + keyword] = term
+	_, _, resultMaps := svc.List(oItemDef.Name, addParams, limitParams, orderByParams)
 	retList := TransAutocompleteList(resultMaps, keyword)
 	this.Data["json"] = &retList
 	this.ServeJson()

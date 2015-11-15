@@ -26,7 +26,12 @@ func (this *ItemController) ListWithQuery(oItemDef itemDef.ItemDef, addQueryPara
 	this.Data["json"] = &TableResult{result, int64(total), retList}
 	this.ServeJson()
 }
-
+func (this *ItemController) FillFormElement(elementMap map[string]string){
+	pre := "Form_"
+	for k, v:= range elementMap{
+		this.Data[pre + k] = v
+	}
+}
 func (this *ItemController) List() {
 	item, ok := this.Ctx.Input.Params[":hi"]
 	beego.Debug("params", this.Ctx.Input.Params, this.Ctx.Input)

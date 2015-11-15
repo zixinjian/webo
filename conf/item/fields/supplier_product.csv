@@ -1,0 +1,4 @@
+item,supplier_product,,,,,,,,,
+title,name,type,label,require,unique,input,model,default,enum,
+field,product,string,product,true,true,none,text,,,
+field,supplier,string,supplier,true,true,none,text,,,

@@ -1,0 +1,5 @@
+item,category,,,,,,,,,
+title,name,type,label,require,unique,input,model,default,enum,
+field,key,string,关键字,true,true,text,text,,,
+field,name,string,类别名称,true,true,text,text,,,
+field,flag,string,商品与类别同名,true,false,select,enum,,"yes,no",

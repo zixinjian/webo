@@ -17,6 +17,11 @@ type BaseController struct {
 	beego.Controller
 }
 
+func (this *BaseController) JsonError(status string, reason string){
+	this.Data["json"] = &JsonResult{status, reason}
+	this.ServeJson()
+}
+
 func (this *BaseController) GetItemDefFromParamHi() (itemDef.ItemDef, string) {
 	item, ok := this.Ctx.Input.Params[":hi"]
 	if !ok {
@@ -54,8 +59,7 @@ func (this *BaseController) GetParams(oItemDef itemDef.ItemDef) (queryParams t.P
 }
 
 func (this *BaseController) GetFormValues(itemD itemDef.ItemDef) map[string]interface{} {
-	var retMap map[string]interface{}
-	retMap = make(map[string]interface{})
+	retMap := make(map[string]interface{})
 	formValues := this.Input()
 	beego.Debug("BaseController.GetFormValues from values: ", formValues)
 	for k, _ := range formValues {
@@ -67,7 +71,28 @@ func (this *BaseController) GetFormValues(itemD itemDef.ItemDef) map[string]inte
 	}
 	return retMap
 }
-
+func (this *BaseController) GetExFormValues(itemD itemDef.ItemDef)(map[string]interface{}, map[string]interface{}){
+	retMap := make(map[string]interface{})
+	exMap := make(map[string]interface{})
+	formValues := this.Input()
+	beego.Debug("BaseController.GetFormValues from values: ", formValues)
+	for k, v := range formValues {
+		if field, ok := itemD.GetField(k); ok {
+			if fv, fok := field.GetFormValue(this.GetString(field.Name)); fok {
+				retMap[field.Name] = this.ReplaceSpecialValues(fv)
+			}
+		}else{
+			exMap[k] = v
+		}
+	}
+	retMap[s.Creater] = this.GetCurUserSn()
+	for _, field := range itemD.Fields {
+		if strings.EqualFold(field.Model, s.Upload) {
+			delete(retMap, field.Name)
+		}
+	}
+	return retMap, exMap
+}
 func (this *BaseController) ReplaceSpecialValues(value interface{}) interface{} {
 	if str, ok := value.(string); ok {
 		rValue := strings.TrimSpace(str)

@@ -27,6 +27,7 @@ const (
 	Name               = "name"
 	Role			   = "role"
 	Key				   = "key"
+	Label              = "label"
 	UserName           = "username"
 	Category           = "category"
 	Brand			   = "brand"
@@ -91,10 +92,13 @@ const (
 
 
 const (
-	EKey   = "_key"
-	EName  = "_name"
-	EPrice = "_price"
+	Ext	   	= "_"
+	List  	= "list"
+	EKey   	= "_key"
+	EName  	= "_name"
+	EPrice 	= "_price"
 )
+
 
 const (
 	Disabled = "disabled"

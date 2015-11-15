@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../../lib/3rd/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../lib/3rd/bootstrap-table/bootstrap-table.css">
-    <link rel="stylesheet" href="../../lib/3rd/bootstrap-editable/bootstrap3-editable/css/bootstrap-editable.css">
-    <link rel="stylesheet" href="../../lib/webo/css/overwrite.css">
+    <link rel="stylesheet" href="../../lib/app/css/app.min.css">
+    <link rel="stylesheet" href="../../lib/bootstrap-table/bootstrap-table.css">
+    <link rel="stylesheet" href="../../lib/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="../../lib/webo/css/ui.css">
 </head>
 <body>
 <div>
@@ -24,25 +24,37 @@
                     data-align="center"
                     data-formatter="actionFormatter"
                     data-events="actionEvents"
-                    data-width="75px">  [ 操作 ]  </th>
-                {{str2html .thlist}}
+                    data-width="75px"
+                    data-sortable="false"><span style="width: 150px">操作</span></th>
+                <th data-field="sn" data-visible="true" ><span style="width: 150px">编号</span></th>
+                <th data-field="category">类别</th>
+                <th data-field="name">名称</th>
+                <th data-field="brand">品牌</th>
+                <th data-field="keyword" data-visible="false" >关键词</th>
+                <th data-field="model">型号</th>
+                <th data-field="power">功率</th>
+                <th data-field="detail">产品详情</th>
+                <th data-field="supplier" data-formatter="supplierFormatter">供应商</th>
+                <th data-field="size">尺寸重量</th>
+                <th data-field="freight">预计运费</th>
+                <th data-field="price">参考价格</th>
+                <th data-field="profitrat">外卖比例</th>
+                <th data-field="retailprice">卖价</th>
+
             </tr>
         </thead>
     </table>
 </div>
-<script src="../../lib/3rd/jquery/jquery.js"></script>
-<script src="../../lib/3rd/bootstrap/js/bootstrap.min.js"></script>
-<script src="../../lib/3rd/bootstrap-table/bootstrap-table.js"></script>
-<script src="../../lib/3rd/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
-<script src="../../lib/3rd/bootstrap-table/extensions/editable/bootstrap-table-editable.js"></script>
-<script src="../../lib/3rd/bootstrap-editable/bootstrap3-editable/js/bootstrap-editable.js"></script>
-<script src="../../lib/webo/poplayer.js"></script>
-<script src="../../lib/webo/util.js"></script>
+<script src="../../lib/app/js/app.min.js"></script>
+<script src="../../lib/bootstrap-table/bootstrap-table.js"></script>
+<script src="../../lib/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
+<script src="../../lib/webo/js/util.js"></script>
 <script src="../../lib/webo/js/ui.js"></script>
 <script>
     var $table = $("#item_table")
     $(function(){
-        $table.bootstrapTable({url:"{{.listUrl}}", method:"post", sidePagination:"server", pagination:true, height:getTableHeight()});
+        $table.bootstrapTable({url:"{{.listUrl}}", method:"post", sidePagination:"server", pagination:true, height:getTableHeight(),
+            fixedColumns: true,fixedNumber:1});
         $("#add_item").on("click", function(){
             top.showTopModal({url:"{{.addUrl}}", refreshContent:refreshContent});
         })
@@ -59,10 +71,19 @@
     function queryParams(params){
         return params
     }
+    function supplierFormatter(value, row){
+        suppliers = row.supplier_enum
+        ks = []
+        for (i in suppliers){
+            supplier= suppliers[i]
+            ks.push(supplier.keyword)
+        }
+        return ks.join(",")
+    }
     function actionFormatter(value, row) {
         return [
-            '<a class="update" href="javascript:" title="修改" style="margin-right: 5px;"><i class="glyphicon glyphicon-edit"></i></a>',
-            wbSprintf('<a class="file" href="/static/files/product/%s" target="_blank" title="附件" data-toggle="poplayer" data-placement="bottom" data-url="/static"><i class="glyphicon glyphicon-file"></i></a>', row.sn),
+            '<a class="update" href="javascript:" title="修改" style="margin-right: 5px;"><i class="icon-note text-primary-dker"></i></a>',
+            wbSprintf('<a class="file" href="javascript:" title="附件"><i class="icon-tag text-primary-dker"></i></a>', row.sn),
         ].join('');
     }
     window.actionEvents = {
@@ -70,10 +91,7 @@
             top.showTopModal({url:"{{.updateUrl}}?sn=" + row.sn, refreshContent:refreshContent});
         },
         'click .file': function (e, value, row) {
-//            $e = $(e.currentTarget)
-//            $e.poplayer({url:"/static"})
-//            $e.poplayer('show')
-//            console.log(e, value, row)
+            window.open("/static/files/product/" + row.sn)
         }
     }
 </script>

@@ -97,6 +97,16 @@ func (this *ItemDef) GetField(filedName string) (Field, bool) {
 	v, ok := this.fieldMaps[filedName]
 	return v, ok
 }
+func (this *ItemDef) FillEnum(fieldName string, enmu []EnumValue) {
+	fields := make([]Field, len(this.Fields))
+	for idx, field := range this.Fields {
+		if field.Name == fieldName{
+			field.Enum = enmu
+		}
+		fields[idx] = field
+	}
+	this.Fields = fields
+}
 
 func (this *ItemDef) addDefaultFields() {
 	nField := len(this.Fields)

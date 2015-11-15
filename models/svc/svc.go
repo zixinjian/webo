@@ -13,6 +13,7 @@ import (
 	"webo/models/t"
 	"webo/models/u"
 	"webo/models/wblog"
+	"webo/models/wbo"
 )
 const DbMark = "'"
 
@@ -21,7 +22,7 @@ func GetItems(item string, queryParams t.Params, orderBy t.Params, limitParams t
 	return code, retMaps
 }
 func Query(entity string, queryParams t.Params, limitParams map[string]int64, orderBy t.Params) (string, []map[string]interface{}) {
-	sqlBuilder := NewSqlBuilder()
+	sqlBuilder := wbo.NewSqlBuilder()
 	sqlBuilder.QueryTable(entity)
 	for k, v := range queryParams {
 		sqlBuilder.Filter(k, v)
@@ -66,7 +67,7 @@ func List(entity string, queryParams t.Params, limitParams t.LimitParams, orderB
 	return code, total, retMaps
 }
 func Count(entity string, params t.Params) int64 {
-	sqlBuilder := NewSqlBuilder()
+	sqlBuilder := wbo.NewSqlBuilder()
 	sqlBuilder.QueryTable(entity)
 	for k, v := range params {
 		sqlBuilder.Filter(k, v)
@@ -88,7 +89,10 @@ func Count(entity string, params t.Params) int64 {
 	}
 	return -1
 }
-
+func GetAll(item string)(string, []map[string]interface{}){
+	sql := `SELECT * FROM ` + item
+	return wbo.DbQueryValues(sql)
+}
 func Get(entity string, params t.Params) (string, map[string]interface{}) {
 	_, retList := Query(entity, params, map[string]int64{}, t.Params{})
 	if len(retList) > 0 {
@@ -120,6 +124,7 @@ func Add(entity string, params t.Params) (string, string) {
 	if !ok {
 		return stat.ItemNotDefine, ""
 	}
+	sn := u.TUId()
 	fields := make([]string, 0)
 	marks := make([]string, 0)
 	values := make([]interface{}, 0)
@@ -135,7 +140,7 @@ func Add(entity string, params t.Params) (string, string) {
 			continue
 		}
 		if field.Model == s.Sn {
-			values = append(values, u.TUId())
+			values = append(values, sn)
 			continue
 		}
 		if field.Model == s.CurTime {
@@ -156,7 +161,7 @@ func Add(entity string, params t.Params) (string, string) {
 		//		b, c := res.LastInsertId()
 		//		fmt.Println("e", b, c)
 		if i, e := res.LastInsertId(); e == nil && i > 0 {
-			return stat.Success, ""
+			return stat.Success, sn
 		} else {
 			beego.Error(e, i)
 			return ParseSqlError(err, oEntityDef)
@@ -236,7 +241,7 @@ func DeleteItem(item string, sn string) string {
 	}
 	return stat.UnKnownFailed
 }
-
+const SqlErrUniqueConstraint = "UNIQUE constraint failed: "
 func ParseSqlError(err error, oEntityDef itemDef.ItemDef) (string, string) {
 	errStr := err.Error()
 	if strings.HasPrefix(errStr, SqlErrUniqueConstraint) {

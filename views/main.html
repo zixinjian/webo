@@ -1,59 +1,152 @@
 <!DOCTYPE html>
 <html>
-  <meta charset="UTF-8">
-    <link rel="stylesheet" href="../lib/3rd/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../lib/webo/css/main.css">
-    <link rel="stylesheet" href="../lib/webo/css/overwrite.css">
-  <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-  <!--[if lt IE 9]>
-  <script src="../../asserts/3rd/html5shiv.min.js"></script>
-  <![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <title>Webo</title>
+    <meta name="description" content="管理系统" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="../lib/simple-line-icons/css/simple-line-icons.css" type="text/css" />
+    <link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="../lib/app/css/app.min.css" type="text/css" />
 </head>
-<body style="bottom:0;height:100%">
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+<body>
+<div class="app app-header-fixed">
+    <header id="header" class="app-header navbar" role="menu">
+        <!-- navbar header -->
+        <div class="navbar-header bg-dark">
+            <button class="pull-right visible-xs dk" ui-toggle-class="show" target=".navbar-collapse">
+                <i class="glyphicon glyphicon-cog"></i>
             </button>
-            <a class="navbar-brand" href="/">华力机电</a>
+            <button class="pull-right visible-xs" ui-toggle-class="off-screen" target=".app-aside" ui-scroll="app">
+                <i class="glyphicon glyphicon-align-justify"></i>
+            </button>
+            <!-- brand -->
+            <a class="navbar-brand text-lt" ui-toggle-class="app-aside-folded" target=".app">
+                <i class="glyphicon glyphicon-th-large"></i>
+                <span class="hidden-folded m-l-xs">HuaLi</span>
+            </a>
+            <!-- / brand -->
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
+        <div class="collapse pos-rlt navbar-collapse box-shadow bg-white-only">
+            <div class="nav navbar-nav hidden-xs">
+                <a href="#" class="btn no-shadow navbar-btn" ui-toggle-class="app-aside-folded" target=".app">
+                    <i class="fa fa-dedent fa-fw text"></i>
+                    <i class="fa fa-indent fa-fw text-active"></i>
+                </a>
+            </div>
             <ul class="nav navbar-nav navbar-right">
-                <li><a>{{.userName}}</a></li>
-                <li><a href="#">帮助</a></li>
-                <li><a href="/logout">退出</a></li>
+                <li class="hidden-xs">
+                    <a ui-fullscreen>
+                        <i class="fa fa-expand fa-fw text"></i>
+                        <i class="fa fa-compress fa-fw text-active"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle clear" data-toggle="dropdown">
+                        <i class="icon-user icon text-success-lter m-r-xs"></i>
+                        <span class="hidden-sm hidden-md">{{.userName}}</span>
+                    </a>
+                </li>
+                <li><a href="/logout"><i class="icon-arrow-right icon text-success-lter"></i></a></li>
             </ul>
         </div>
-    </div>
-</nav>
-
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-1 col-md-1 sidebar">
-            <ul class="nav nav-sidebar">
-                {{str2html .orderNav}}
-                <li><a href="/ui/purchase/history" target="frame-content">采购历史</a></li>
-                <li><a href="/ui/purchase/priceAnalyze" target="frame-content">成本价分析</a></li>
-                <li><a href="/ui/purchase/buyertimely" target="frame-content">采购及时率</a></li>
-                <li><a href="/ui/purchase/producttimely" target="frame-content">商品及时率</a></li>
-                <li><a href="/ui/purchase/suppliertimely" target="frame-content">供应商及时率</a></li>
-                <!--<li><a href="/ui/list/journalaccount" target="frame-content">流水账</a></li>-->
-                <li><a href="/ui/expense/list" target="frame-content">报账</a></li>
-                <li><a href="/ui/expense/accountcurrentlist" target="frame-content">往来帐</a></li>
-            </ul>
-            <ul class="nav nav-sidebar">
-                <li><a href="/ui/list/supplier" target="frame-content">供应商</a></li>
-                <li><a href="ui/product/list" target="frame-content">商品信息管理</a></li>
-            </ul>
-            {{str2html .userMgr}}
+    </header>
+    <!-- / header -->
+    <aside id="aside" class="app-aside hidden-xs bg-dark">
+        <div class="aside-wrap">
+            <div class="navi-wrap">
+                <!-- nav -->
+                <nav ui-nav class="navi clearfix">
+                    <ul class="nav">
+                        <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+                            <span>采购</span>
+                        </li>
+                        {{str2html .orderNav}}
+                        <li>
+                            <a href="/ui/purchase/history" target="main" class="auto">
+                                <i class="icon-calendar text-success-lter"></i>
+                                <span>采购历史</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/ui/purchase/priceAnalyze" target="main" class="auto">
+                                <i class="icon-pie-chart text-success-lter"></i>
+                                <span>成本价分析</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href class="auto">
+                                <span class="pull-right text-muted">
+                                    <i class="fa fa-fw fa-angle-right text"></i>
+                                    <i class="fa fa-fw fa-angle-down text-active"></i>
+                                </span>
+                                <i class="icon-bar-chart text-primary-dker"></i>
+                                <span class="font-bold">及时率分析</span>
+                            </a>
+                            <ul class="nav nav-sub dk">
+                                <li>
+                                    <a href="/ui/purchase/buyertimely" target="main">
+                                        <span>采购及时率</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/ui/purchase/producttimely" target="main">
+                                        <span>商品及时率</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/ui/purchase/suppliertimely" target="main">
+                                        <span>供应商及时率</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/ui/expense/list" target="main" class="auto">
+                                <i class="icon-book-open text-success-lter"></i>
+                                <span>报账</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/ui/expense/accountcurrentlist" target="main" class="auto">
+                                <i class="icon-directions text-success-lter"></i>
+                                <span>往来帐</span>
+                            </a>
+                        </li>
+                        <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+                            <span>基本信息</span>
+                        </li>
+                        <li>
+                            <a href="/ui/list/supplier" target="main" class="auto">
+                                <i class="icon-briefcase text-success-lter"></i>
+                                <span>供应商信息</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/ui/product/list" target="main" class="auto">
+                                <i class=" icon-diamond text-success-lter"></i>
+                                <span>商品信息</span>
+                            </a>
+                        </li>
+                        <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+                            <span>配置</span>
+                        </li>
+                        <li>
+                            <a href="/ui/list/category" target="main" class="auto">
+                                <i class="icon-list text-success-lter"></i>
+                                <span>商品分类</span>
+                            </a>
+                        </li>
+                        {{str2html .userMgr}}
+                    </ul>
+                </nav>
+                <!-- nav -->
+            </div>
         </div>
-        <div class="col-sm-11 col-sm-offset-1 col-md-11 col-md-offset-1 main" style="padding: 0;">
-            {{str2html .activeUrl}}
-        </div>
+    </aside>
+    <!-- / aside -->
+    <div id="content" class="app-content" role="main">
+        <iframe class="hbox hbox-auto-xs bg-light " name="main" src="{{.activeUrl}}" layout-auto-height="-50" style="width:100%;border:none"></iframe>
     </div>
 </div>
 
@@ -61,9 +154,8 @@
 <div class="modal fade" id="top_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content" style="width: 800px;">
-            <div class="modal-header">
+            <div class="modal-header" style="height: 10px;border-bottom: none">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="top_modal_title">Modal title</h4>
             </div>
             <div class="modal-body" id="top_modal_body">
                 <iframe id="top_modal_content" name = "modal_content" src="" style="width:100%;border:none;height:500px"></iframe>
@@ -76,20 +168,10 @@
     </div>
 </div>
 
-<script src="../lib/3rd/jquery/jquery.js"></script>
-<script src="../lib/3rd/bootstrap/js/bootstrap.min.js"></script>
+<script src="../lib/app/js/app.min.js"></script>
+<script src="../lib/screenfull/screenfull.min.js"></script>
 <script src="../lib/webo/js/ui.js"></script>
 <script>
-    $(function(){
-        $(".sidebar li").on("click", function(event){
-            $(".sidebar li").removeClass("active");
-            $(this).addClass("active");
-        });
-        autoHeight()
-        $(window).resize(function () {
-            autoHeight()
-        });
-    });
     function showTopModal(options){
         if(options.url){
             //console.log("showTopModal, option", options)
@@ -97,6 +179,8 @@
         }
         if(options.height){
             $("#modal_content").css({height:options.height});
+        }else{
+            $("#modal_content").css({height:getTopModelHeight()});
         }
         $("#top_modal_btn_ok").off("click").on("click", function(evt){
             var topModalWindows = $("#top_modal_content")[0].contentWindow;
@@ -115,13 +199,10 @@
         $("#top_modal_content").attr({src:""});
         $('#top_modal').modal("hide");
     }
-    function autoHeight(){
-        $.each($("[layout-auto-height]"), function(){
-            var outHeight = $(this).attr("layout-auto-height")
-//            console.log("outHeight", outHeight, $(".main").height(), $(".main").height() + parseInt(outHeight))
-            $(this).height($(".main").height() + parseInt(outHeight))
-        });
-    }
+
+    $(function(){
+        initFullScreen();
+    });
 </script>
 </body>
 </html>

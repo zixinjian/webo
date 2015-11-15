@@ -11,7 +11,6 @@ import (
 )
 
 var langMap_cn = make(map[string]string)
-
 func readFromCsv(filePath string) {
 	cntb, err := ioutil.ReadFile(filePath)
 	//	fmt.Println("read Ui file: ", fileName)
@@ -38,7 +37,9 @@ func readFromCsv(filePath string) {
 		langMap_cn[key] = value
 	}
 }
-
+func AddLabel(key, label string){
+	langMap_cn[key]=label
+}
 func GetLabel(key string) string {
 	if v, ok := langMap_cn[key]; ok {
 		return v
@@ -53,5 +54,5 @@ func init() {
 		}
 		return nil
 	})
-	//	fmt.Println("init lang", langMap_cn)
 }
+

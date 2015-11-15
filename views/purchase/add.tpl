@@ -2,13 +2,16 @@
 <html>
 <head lang="zh">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../../lib/3rd/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="../../lib/3rd/datetimepicker/jquery.datetimepicker.css">
-    <link rel="stylesheet" href="../../lib/3rd/uploadify/uploadify.css" />
-    <link rel="stylesheet" href="../../lib/3rd/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../lib/app/css/app.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../lib/jquery/datetimepicker/jquery.datetimepicker.css">
+    <link rel="stylesheet" href="../../lib/uploadify/uploadify/uploadify.css" />
+    <link rel="stylesheet" href="../../lib/jquery/jquery-ui/jquery-ui.min.css">
     <style>
         .ui-autocomplete-loading {
             background: white url("../../lib/webo/images/ui-anim_basic_16x16.gif") right center no-repeat;
+        }
+        .container-fluid{
+            background-color: white;
         }
     </style>
 </head>
@@ -18,19 +21,13 @@
     <form class="form-horizontal" id="item_form">
         <input type="hidden" id="sn" name="sn" value="{{.sn}}">
         <div class="form-group">
-        <label class="col-sm-3 control-label">类别</label>
-        <div class="col-sm-6">
-            <select class="input-block-level form-control" name="category" id="category" autocomplete="off" value="" >
-                <option value="cate_engine">柴油机</option>
-                <option value="cate_generator">电机</option>
-                <option value="cate_waterbox">水箱</option>
-                <option value="cate_epart">电器件</option>
-                <option value="cate_parts">配件</option>
-                <option value="cate_other">其他</option>
-                <option value="cate_newpdt">新产品</option>
-            </select>
+            <label class="col-sm-3 control-label">类别</label>
+            <div class="col-sm-6">
+                <select class="input-block-level form-control" data-validate="{required: true, messages:{required:'请输入类别'}}" name="category" id="category" autocomplete="off" value="cate_engine" >
+                    {{str2html .CategoryOptions}}
+                </select>
+            </div>
         </div>
-    </div>
         <input type="hidden" id="product" name="product" value="">
         <input type="hidden" id="supplier" name="supplier" value="">
         <div class="form-group">
@@ -113,24 +110,17 @@
     </form>
 </div>
 
-<script src="../../lib/3rd/jquery/jquery.js"></script>
-<script src="../../lib/3rd/bootstrap/js/bootstrap.min.js"></script>
-<script src="../../lib/3rd/jquery/jquery.form.js"></script>
-<script src="../../lib/3rd/jquery/validate/jquery.validate.min.js"></script>
-<script src="../../lib/3rd/uploadify/jquery.uploadify.js"></script>
-<script src="../../lib/3rd/datetimepicker/jquery.datetimepicker.js"></script>
-<script src="../../lib/3rd/jquery-ui/jquery-ui.min.js"></script>
-<script src="../../lib/webo/js/validateExtend.js"></script>
+<script src="../../lib/jquery/jquery/jquery.js"></script>
+<script src="../../lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../lib/jquery/jquery/jquery.form.js"></script>
+<script src="../../lib/jquery/jquery/validate/jquery.validate.min.js"></script>
+<script src="../../lib/uploadify/uploadify/jquery.uploadify.js"></script>
+<script src="../../lib/jquery/datetimepicker/jquery.datetimepicker.js"></script>
+<script src="../../lib/jquery/jquery-ui/jquery-ui.min.js"></script>
 <script src="../../lib/webo/js/ui.js"></script>
-<script src="../../lib/webo/util.js"></script>
-
+<script src="../../lib/webo/js/util.js"></script>
+<script src="../../lib/webo/js/catagory.js"></script>
 <script>
-    cateNoName = {
-        cate_engine:"柴油机",
-        cate_generator:"电机",
-        cate_waterbox:"水箱"
-    }
-    cateNameValues = wbGetMapValue(cateNoName)
     var $productName = $('#productname')
     var $power = $("#power")
     var $category = $("#category")
@@ -173,34 +163,12 @@
         $power.val("0")
     }
     $(function () {
+
         $("#power").wrapAll('<div class="input-group"></div>')
         $("#power").after('<span class="input-group-addon">KW</span>')
+        $("#retailprice").after('<span class="input-group-addon">计算</span>')
+        initCategory($productName)
 
-        var selectCate = $('#category').val()
-        if(selectCate in cateNoName && $productName.val() == ""){
-            $productName.val(cateNoName[selectCate]);
-            $productName.attr("readonly", true)
-            wbGetParentFromGroup("#productname").hide()
-        }
-        $('#category').change(function(){
-            clearProductValues()
-            var selectCate = $('#category').val()
-            $("#model").autocomplete("option", "source", "/item/autocomplete/product?category=" + selectCate)
-            if(selectCate in cateNoName){
-                $productName.val(cateNoName[selectCate]);
-                $productName.attr("readonly", true)
-                $power.val("")
-                wbGetParentFromGroup("#productname").hide()
-                wbGetParentFromGroup("#power").show()
-
-            }else{
-                $productName.attr("readonly", false)
-                $productName.val("")
-                $power.val("0")
-                wbGetParentFromGroup("#productname").show()
-                wbGetParentFromGroup("#power").hide()
-            }
-        })
         $("#model").autocomplete({
             source: "/item/autocomplete/product?category=" + $("#category").val(),
             autoFocus:false,

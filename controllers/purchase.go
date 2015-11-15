@@ -14,7 +14,6 @@ import (
 	"webo/models/svc"
 	"webo/models/t"
 	"webo/models/u"
-	"encoding/json"
 	"webo/models/userMgr"
 )
 
@@ -98,6 +97,8 @@ func (this *PurchaseController) UiAdd() {
 	buyers := userMgr.GetUsersByDepartment("department_purchase")
 	this.Data["sn"] = u.TUId()
 	this.Data["Buyers"] = buyers
+	_, categorys := svc.GetAll(s.Category)
+	this.Data["CategoryOptions"] = ui.BuildSelectOptions(categorys, "", s.Key, s.Name, s.Flag)
 	this.TplNames = "purchase/add.tpl"
 }
 
@@ -110,10 +111,7 @@ func (this *PurchaseController) UiUpdate() {
 		s.ProductName:        s.Disabled,
 		s.Model:              s.Disabled,
 		s.Brand:			  s.Disabled,
-		s.Num:				  s.Disabled,
 		s.PlaceDate:          s.Disabled,
-		s.Requireddate:       s.Disabled,
-		s.Requireddepartment: s.Disabled,
 		s.ProductPrice:       s.Disabled,
 		s.Power:       		  s.Disabled,
 		s.PaymentAmount:	  s.Disabled,
@@ -170,20 +168,36 @@ func (this *PurchaseController) UiUpdateWithStatus(statusMap map[string]string) 
 	params := t.Params{s.Sn: sn}
 	code, oldValueMap := svc.Get(item, params)
 	oldValueMap = expandPurchaseMap(oldValueMap)
-	if code == stat.Success {
-		this.Data["Service"] = "/item/update/" + item
-		oItemDef = fillBuyerEnum(oItemDef)
-		this.Data["Form"] = ui.BuildUpdatedFormWithStatus(oItemDef, oldValueMap, statusMap)
-		this.Data["Onload"] = ui.BuildUpdateOnLoadJs(oItemDef)
-		if purchaseStr, err := json.Marshal(oldValueMap);err == nil{
-			this.Data["PuchaseItem"] = fmt.Sprintf(oldValueFormat, string(purchaseStr))
-		}else{
-			this.Data["PuchaseItem"] = fmt.Sprintf(oldValueFormat, "{}")
-		}
-		this.TplNames = "purchase/update.tpl"
-	} else {
+	if code != stat.Success {
 		this.Ctx.WriteString(stat.ItemNotFound)
+		return
 	}
+	this.Data["Service"] = "/item/update/" + item
+	oItemDef = fillBuyerEnum(oItemDef)
+	this.FillFormElement(ui.BuildFormElement(oItemDef, oldValueMap, statusMap))
+	this.Data["NeedSupplier"] = false
+	this.Data[s.Supplier] = oldValueMap[s.Supplier]
+	this.Data["suppliername"] = oldValueMap["suppliername"]
+	if product, ok := oldValueMap[s.Product];ok{
+		if productSn:=product.(string);productSn!=""{
+			_, suppliers:= supplierMgr.GetSupplierListByProductSn(productSn)
+			this.Data["SupplierOptions"] = ui.BuildSelectOptions(suppliers, oldValueMap[s.Supplier] , s.Sn, s.Keyword)
+			this.Data["NeedSupplier"] = true
+		}
+	}
+	_, categorys := svc.GetAll(s.Category)
+	categoryOptions:= ui.BuildSelectOptions(categorys, oldValueMap[s.Category], s.Key, s.Name, s.Flag)
+	this.Data["CategoryOptions"] = categoryOptions
+	fields := oItemDef.Fields
+	newFields := make([]itemDef.Field, 0)
+	for _, field := range fields{
+		if field.Name != s.Supplier{
+			newFields = append(newFields, field)
+		}
+	}
+	oItemDef.Fields = newFields
+	this.Data["Onload"] = ui.BuildUpdateOnLoadJs(oItemDef)
+	this.TplNames = "purchase/update.tpl"
 }
 
 func (this *PurchaseController) ExpenseList() {

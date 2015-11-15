@@ -2,8 +2,9 @@
 <html>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../../lib/app/css/app.min.css">
-    <link rel="stylesheet" href="../../lib/3rd/bootstrap-table/bootstrap-table.css">
-    <link rel="stylesheet" href="../../lib/webo/css/overwrite.css">
+    <link rel="stylesheet" href="../../lib/bootstrap-table/bootstrap-table.css">
+    <link rel="stylesheet" href="../../lib/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="../../lib/webo/css/ui.css">
 </head>
 <body>
 <div>
@@ -23,6 +24,7 @@
                     data-align="center"
                     data-formatter="actionFormatter"
                     data-events="actionEvents"
+                    data-sortable="false"
                     data-width="75px">  [ 操作 ]  </th>
                 {{str2html .thlist}}
             </tr>
@@ -30,14 +32,15 @@
     </table>
 </div>
 <script src="../../lib/app/js/app.min.js"></script>
-<script src="../../lib/3rd/bootstrap-table/bootstrap-table.js"></script>
-<script src="../../lib/3rd/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
-<script src="../../lib/webo/util.js"></script>
+<script src="../../lib/bootstrap-table/bootstrap-table.js"></script>
+<script src="../../lib/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
+<script src="../../lib/webo/js/util.js"></script>
 <script src="../../lib/webo/js/ui.js"></script>
 <script>
     var $table = $("#item_table")
     $(function(){
-        $table.bootstrapTable({url:"{{.listUrl}}", method:"post", sidePagination:"server", pagination:true, height:getTableHeight()});
+        $table.bootstrapTable({url:"{{.listUrl}}", method:"post", sidePagination:"server", pagination:true, height:getTableHeight(),
+            fixedColumns: true,fixedNumber:1});
         $("#add_item").on("click", function(){
             top.showTopModal({url:"{{.addUrl}}", refreshContent:refreshContent});
         })
@@ -56,8 +59,8 @@
     }
     function actionFormatter(value, row) {
         return [
-            '<a class="update" href="javascript:" title="修改" style="margin-right: 5px;"><i class="glyphicon glyphicon-edit"></i></a>',
-            wbSprintf('<a class="file" href="/static/files/{{.item}}/%s" target="_blank" title="附件" data-toggle="poplayer" data-placement="bottom" data-url="/static"><i class="glyphicon glyphicon-file"></i></a>', row.sn),
+            '<a class="update" href="javascript:" title="修改" style="margin-right: 5px;"><i class="icon-note text-primary-dker"></i></a>',
+            wbSprintf('<a class="file" href="/static/files/{{.item}}/%s" target="_blank" title="附件"><i class="icon-tag text-primary-dker"></i></a>', row.sn),
         ].join('');
     }
     window.actionEvents = {

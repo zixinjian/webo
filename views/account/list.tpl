@@ -2,8 +2,8 @@
 <html>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../../lib/app/css/app.min.css">
-    <link rel="stylesheet" href="../../lib/3rd/bootstrap-table/bootstrap-table.css">
-    <link rel="stylesheet" href="../../lib/webo/css/overwrite.css">
+    <link rel="stylesheet" href="../../lib/bootstrap-table/bootstrap-table.css">
+    <link rel="stylesheet" href="../../lib/webo/css/ui.css">
 </head>
 <body>
 <div>
@@ -38,14 +38,15 @@
     </table>
 </div>
 <script src="../../lib/app/js/app.min.js"></script>
-<script src="../../lib/3rd/bootstrap-table/bootstrap-table.js"></script>
-<script src="../../lib/3rd/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
-<script src="../../lib/webo/util.js"></script>
+<script src="../../lib/bootstrap-table/bootstrap-table.js"></script>
+<script src="../../lib/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
+<script src="../../lib/webo/js/util.js"></script>
 <script src="../../lib/webo/js/ui.js"></script>
 <script>
     var $table = $("#item_table")
     $(function(){
-        $table.bootstrapTable({url:"{{.listUrl}}", method:"post", sidePagination:"server", pagination:true, height:getTableHeight()});
+        $table.bootstrapTable({url:"{{.listUrl}}", method:"post", sidePagination:"server", pagination:true, height:getTableHeight(),
+            fixedColumns: true,fixedNumber:1});
         $("#add_item").on("click", function(){
             top.showTopModal({url:"{{.addUrl}}", refreshContent:refreshContent});
         })

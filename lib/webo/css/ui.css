@@ -42,13 +42,13 @@
     overflow: visible;
     text-align: center;
     left: 0;
-    top: 0px;
+    top: 2px;
     /* place over all elements, also over modals */
     z-index: 10001;
-    width: 100%;
+    width: 70%;
     border-bottom: 1px solid;
     color: white;
-    padding: 2px;
+    padding: 10px;
     position: fixed;
 }
 

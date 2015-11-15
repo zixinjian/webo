@@ -3,10 +3,10 @@
 <html>
 <head lang="zh">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../../lib/3rd/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="../../lib/3rd/datetimepicker/jquery.datetimepicker.css">
-    <link rel="stylesheet" href="../../lib/3rd/uploadify/uploadify.css" />
-    <link rel="stylesheet" href="../../lib/3rd/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../../lib/jquery/datetimepicker/jquery.datetimepicker.css">
+    <link rel="stylesheet" href="../../lib/uploadify/uploadify/uploadify.css" />
+    <link rel="stylesheet" href="../../lib/jquery/jquery-ui/jquery-ui.min.css">
 </head>
 <body>
 <div class="container-fluid">
@@ -74,14 +74,14 @@
     </form>
 </div>
 
-<script src="../../lib/3rd/jquery/jquery.js"></script>
-<script src="../../lib/3rd/bootstrap/js/bootstrap.min.js"></script>
-<script src="../../lib/3rd/jquery/jquery.form.js"></script>
-<script src="../../lib/3rd/jquery/validate/jquery.metadata.js"></script>
-<script src="../../lib/3rd/jquery/validate/jquery.validate.js"></script>
-<script src="../../lib/3rd/uploadify/jquery.uploadify.js"></script>
-<script src="../../lib/3rd/datetimepicker/jquery.datetimepicker.js"></script>
-<script src="../../lib/3rd/jquery-ui/jquery-ui.min.js"></script>
+<script src="../../lib/jquery/jquery/jquery.js"></script>
+<script src="../../lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../lib/jquery/jquery/jquery.form.js"></script>
+<script src="../../lib/jquery/jquery/validate/jquery.metadata.js"></script>
+<script src="../../lib/jquery/jquery/validate/jquery.validate.js"></script>
+<script src="../../lib/uploadify/uploadify/jquery.uploadify.js"></script>
+<script src="../../lib/jquery/datetimepicker/jquery.datetimepicker.js"></script>
+<script src="../../lib/jquery/jquery-ui/jquery-ui.min.js"></script>
 <script src="../../lib/webo/js/validateExtend.js"></script>
 <script src="../../lib/webo/js/ui.js"></script>
 <script>

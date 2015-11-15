@@ -104,7 +104,7 @@ func readItemDefCsv(fileName string) ItemDef {
 	}
 	r2 := csv.NewReader(strings.NewReader(string(cntb)))
 	rows, _ := r2.ReadAll()
-	//	fmt.Println("file rows", rows)
+	fmt.Println("file rows", rows)
 	if len(rows) < 3 {
 		panic(fmt.Sprintf("File:%s rows < 3", fileName))
 	}

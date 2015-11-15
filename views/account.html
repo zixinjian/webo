@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html>
 <head>
   <meta charset="utf-8" />
   <title>Webo</title>
@@ -92,9 +92,8 @@
 <div class="modal fade" id="top_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content" style="width: 800px;">
-      <div class="modal-header">
+      <div class="modal-header" style="height: 10px;border-bottom: none">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="top_modal_title">Modal title</h4>
       </div>
       <div class="modal-body" id="top_modal_body">
         <iframe id="top_modal_content" name = "modal_content" src="" style="width:100%;border:none;height:500px"></iframe>
@@ -135,22 +134,6 @@
     $("#top_modal_btn_ok").off("click")
     $("#top_modal_content").attr({src:""});
     $('#top_modal').modal("hide");
-  }
-  function initFullScreen(){
-    $el = $('[ui-fullscreen]')
-    if (screenfull.enabled && !navigator.userAgent.match(/Trident.*rv:11\./)) {
-      $el.removeClass('hide');
-    }
-    $el.on('click', function(){
-      screenfull.toggle();
-    });
-    $(document).on(screenfull.raw.fullscreenchange, function () {
-      if(screenfull.isFullscreen){
-        $el.addClass('active');
-      }else{
-        $el.removeClass('active');
-      }
-    });
   }
   $(function(){
     initFullScreen();

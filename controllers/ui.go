@@ -78,7 +78,6 @@ func (this *UiController) Update() {
 	params := t.Params{s.Sn: sn}
 	code, oldValueMap := svc.Get(item, params)
 	if code == "success" {
-		//		fmt.Println("oldValue", oldValueMap)
 		this.Data["Service"] = "/item/update/" + item
 		this.Data["Form"] = ui.BuildUpdatedForm(oItemDef, oldValueMap)
 		this.Data["Onload"] = ui.BuildUpdateOnLoadJs(oItemDef)

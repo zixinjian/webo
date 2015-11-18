@@ -5,6 +5,10 @@
     <link rel="stylesheet" href="../../lib/bootstrap-table/bootstrap-table.css">
     <link rel="stylesheet" href="../../lib/simple-line-icons/css/simple-line-icons.css">
     <link rel="stylesheet" href="../../lib/webo/css/ui.css">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="../../lib/html5shiv.min.js"></script>
+    <![endif]-->
     </head>
 <body>
 <div>

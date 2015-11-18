@@ -2,9 +2,13 @@
 <html>
 <head lang="zh">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../../lib/app/css/app.min.css"/>
     <link rel="stylesheet" href="../../lib/jquery/jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="../../lib/webo/css/ui.css">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="../../lib/html5shiv.min.js"></script>
+    <![endif]-->
 </head>
 <body>
 <div class="container-fluid" style="padding:20px;">
@@ -22,8 +26,7 @@
     <div id="analyzeCharts" style="height: 500px;margin-top:20px"></div>
 </div>
 
-<script src="../../lib/jquery/jquery/jquery.js"></script>
-<script src="../../lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../lib/app/js/app.min.js"></script>
 <script src="../../lib/echart/echarts-all.js"></script>
 <script src="../../lib/jquery/jquery-ui/jquery-ui.min.js"></script>
 <script src="../../lib/webo/js/ui.js"></script>

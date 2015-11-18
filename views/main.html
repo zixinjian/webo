@@ -146,61 +146,49 @@
     </aside>
     <!-- / aside -->
     <div id="content" class="app-content" role="main">
-        <iframe class="hbox hbox-auto-xs bg-light " name="main" src="{{.activeUrl}}" layout-auto-height="-50" style="width:100%;border:none"></iframe>
+        <iframe class="bg-light " name="main" src="{{.activeUrl}}" layout-auto-height="-50" style="width:100%;border:none"></iframe>
     </div>
-</div>
-
-<!-- Modal -->
-<div class="modal fade" id="top_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content" style="width: 800px;">
-            <div class="modal-header" style="height: 10px;border-bottom: none">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            </div>
-            <div class="modal-body" id="top_modal_body">
-                <iframe id="top_modal_content" name = "modal_content" src="" style="width:100%;border:none;height:500px"></iframe>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" id="top_modal_btn_cancel" data-dismiss="modal">取消</button>
-                <button id="top_modal_btn_ok" type="button" class="btn btn-primary">确定</button>
-            </div>
+    <div id="topModal" class="app-content" role="main">
+        <iframe id="topModalContent" class="bg-light " name="topContent" layout-auto-height="-100" style="width:100%;border:none"></iframe>
+        <div>
+            <span class="col-sm-10 pull-right">
+                <button type="button" class="btn btn-primary" id="topModalBtnOk" >确定</button>
+                <button type="button" class="btn btn-default" id="topModalBtnCancel">取消</button>
+            </span>
         </div>
     </div>
 </div>
-
 <script src="../lib/app/js/app.min.js"></script>
 <script src="../lib/screenfull/screenfull.min.js"></script>
 <script src="../lib/webo/js/ui.js"></script>
 <script>
     function showTopModal(options){
-        if(options.url){
-            //console.log("showTopModal, option", options)
-            $("#top_modal_content").attr({src:options.url});
-        }
-        if(options.height){
-            $("#modal_content").css({height:options.height});
-        }else{
-            $("#modal_content").css({height:getTopModelHeight()});
-        }
-        $("#top_modal_btn_ok").off("click").on("click", function(evt){
-            var topModalWindows = $("#top_modal_content")[0].contentWindow;
-//            console.log("topModalWindows", topModalWindows, topModalWindows.onOk);
-            if(!topModalWindows || !topModalWindows.onTopModalOk){
-                return;
+        $("#content").hide()
+        $("#topModalContent").attr({src:options.url})
+        $("#topModal").show()
+        $("#topModalBtnOk").off("click").on("click", function(evt){
+            var topModalWindows = $("#topModalContent")[0].contentWindow;
+            if(topModalWindows && topModalWindows.onTopModalOk){
+                topModalWindows.onTopModalOk(options)
             }
-            topModalWindows.onTopModalOk(options)
-//            if(topModalWindows.onTopModalOk(options)=="ok"){
-//            };
         })
-        $('#top_modal').modal(options);
     }
     function hideTopModal(){
-        $("#top_modal_btn_ok").off("click")
-        $("#top_modal_content").attr({src:""});
-        $('#top_modal').modal("hide");
+        if($("#content").is(":hidden")){
+            $("#topModalBtnOk").off("click")
+            $('#topModal').hide();
+            $("#topModalContent").replaceWith('<iframe id="topModalContent" class="bg-light " name="topContent" layout-auto-height="-100" style="width:100%;border:none"></iframe>');
+            layoutAutoHeight()
+            $("#content").show()
+        }
     }
 
     $(function(){
+        $('#topModal').hide()
+        $("#topModalBtnCancel").click(hideTopModal)
+        $('a[target=main]').click(function(e){
+           hideTopModal()
+        })
         initFullScreen();
     });
 </script>

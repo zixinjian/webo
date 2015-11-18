@@ -1,9 +1,20 @@
+.navbar{
+    margin-bottom: 0;
+}
+
+/*.container-fluid{background-color: white}*/
+.form-horizontal{
+    background-color: white;
+    padding-top:15px;
+    padding-bottom: 5px;
+}
+
 .bootstrap-table .table, .bootstrap-table .table > tbody > tr > th, .bootstrap-table .table > tfoot > tr > th, .bootstrap-table .table > thead > tr > td, .bootstrap-table .table > tbody > tr > td, .bootstrap-table .table > tfoot > tr > td{
     padding: 4px 8px 4px 8px !important;
 }
 .bootstrap-table{
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 .fixed-table-container{
     border-radius: 2px;
@@ -32,9 +43,9 @@
 .fixed-table-toolbar .toolbar{
     margin-bottom: 0;
 }
-.navbar{
-    margin-bottom: 0;
-}
+
+
+
 
 #page_message {
     display: none;

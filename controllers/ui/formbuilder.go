@@ -13,8 +13,8 @@ type FormBuilder struct {
 }
 
 var textFormat = `    <div class="form-group">
-			<label class="col-sm-3 control-label">%s</label>
-			<div class="col-sm-6">
+			<label class="col-sm-2 control-label">%s</label>
+			<div class="col-sm-8">
 				<input type="text" class="input-block-level form-control" data-validate="{required: %s, messages:{required:'请输入正确的%s!'}}" name="%s" id="%s" autocomplete="off" value="%s" %s/>
 				<span class="help-block" id="%sHelpBlock"></span>
 			</div>
@@ -22,72 +22,72 @@ var textFormat = `    <div class="form-group">
     	`
 
 const staticFormat = `<div class="form-group">
-    <label class="col-sm-3 control-label">%s</label>
-    <div class="col-sm-6">
+    <label class="col-sm-2 control-label">%s</label>
+    <div class="col-sm-8">
       <p class="form-control-static">%s</p>
     </div>
   </div>
 `
 
 var moneyFormat = `    <div class="form-group">
-			<label class="col-sm-3 control-label">%s</label>
-			<div class="col-sm-6">
+			<label class="col-sm-2 control-label">%s</label>
+			<div class="col-sm-8">
 				<div class="input-group"><span class="input-group-addon">￥</span><input type="text" class="input-block-level form-control" data-validate="{required: %s, number:true, messages:{required:'请输入正确的%s!'}}" name="%s" id="%s" autocomplete="off" value="%s" %s/></div>
 				<span class="help-block" id="%sHelpBlock"></span>
 			</div>
 		</div>
     	`
 var percentFormat = `    <div class="form-group">
-			<label class="col-sm-3 control-label">%s</label>
-			<div class="col-sm-6">
+			<label class="col-sm-2 control-label">%s</label>
+			<div class="col-sm-8">
 				<div class="input-group"><input type="text" class="input-block-level form-control" data-validate="{required: %s, number:true, messages:{required:'请输入正确的%s!'}}" name="%s" id="%s" autocomplete="off" value="%s" %s/><span class="input-group-addon">％</span></div>
 				<span class="help-block" id="%sHelpBlock"></span>
 			</div>
 		</div>
     	`
 var floatFormat = `    <div class="form-group">
-			<label class="col-sm-3 control-label">%s</label>
-			<div class="col-sm-6">
+			<label class="col-sm-2 control-label">%s</label>
+			<div class="col-sm-8">
 				<input type="text" class="input-block-level form-control" data-validate="{required: %s, number:true, messages:{required:'请输入正确的%s!'}}" name="%s" id="%s" autocomplete="off" value="%s" %s/>
 				<span class="help-block" id="%sHelpBlock"></span>
 			</div>
 		</div>
     	`
 var textareaFormat = `    <div class="form-group">
-			<label class="col-sm-3 control-label">%s</label>
-			<div class="col-sm-6">
+			<label class="col-sm-2 control-label">%s</label>
+			<div class="col-sm-8">
 				<textarea class="form-control" rows="3" class="input-block-level form-control" data-validate="{required: %s, messages:{required:'请输入%s!'}}" name="%s" id="%s" autocomplete="off" %s>%s</textarea>
 				<span class="help-block" id="%sHelpBlock"></span>
 			</div>
 		</div>
     	`
 var datetimeFormat = `    <div class="form-group">
-        	<label class="col-sm-3 control-label">%s</label>
-        	<div class="col-sm-6">
+        	<label class="col-sm-2 control-label">%s</label>
+        	<div class="col-sm-8">
             	<input type="text" class="input-block-level form-control" data-validate="{required: %s, messages:{required:'请输入%s!'}}" name="%s" id="%s" autocomplete="off" value="%s" %s/>
         		<span class="help-block" id="%sHelpBlock"></span>
         	</div>
     	</div>
     	`
 var dateFormate = `    <div class="form-group">
-			<label class="col-sm-3 control-label">%s</label>
-			<div class="col-sm-6">
+			<label class="col-sm-2 control-label">%s</label>
+			<div class="col-sm-8">
 				<input type="text" class="input-block-level form-control datetimepicker" data-validate="{required: %s, messages:{required:'请输入%s!'}}" name="%s" id="%s" autocomplete="off" value="%s" %s/>
 				<span class="help-block" id="%sHelpBlock"></span>
 			</div>
 		</div>
     	`
 var passwordFormat = `    <div class="form-group">
-			<label class="col-sm-3 control-label">%s</label>
-			<div class="col-sm-6">
+			<label class="col-sm-2 control-label">%s</label>
+			<div class="col-sm-8">
 				<input type="password" class="input-block-level form-control" data-validate="{required: %s, messages:{required:'请输入%s'}}" name="%s" id="%s" autocomplete="off" value="%s" %s/>
 				<span class="help-block" id="%sHelpBlock"></span>
 			</div>
 		</div>
     	`
 var selectFormat = `    <div class="form-group">
-			<label class="col-sm-3 control-label">%s</label>
-			<div class="col-sm-6">
+			<label class="col-sm-2 control-label">%s</label>
+			<div class="col-sm-8">
 				<select class="input-block-level form-control" data-validate="{required: %s, messages:{required:'请输入%s'}}" name="%s" id="%s" autocomplete="off" value="%s" %s>
 				%s
 				</select>
@@ -96,15 +96,15 @@ var selectFormat = `    <div class="form-group">
 		</div>
     	`
 var uploadFormat = `    <div class="form-group">
-        <label class="col-sm-3 control-label">%s</label>
-        <div class="col-sm-6">
+        <label class="col-sm-2 control-label">%s</label>
+        <div class="col-sm-8">
             <input type="file" name="%sUpload" id="%s_upload" %s/>
         </div>
     </div>
 `
 var autocompleteFormat = `    <div class="form-group">
-            <label class="col-sm-3 control-label">%s关键字</label>
-            <div class="col-sm-6">
+            <label class="col-sm-2 control-label">%s关键字</label>
+            <div class="col-sm-8">
                 <input type="text" class="input-block-level form-control" id="%s_key" value="%s" %s/>
                 <label>%s名称</label><input type="text" class="input-block-level form-control" readonly="true" id="%s_name" name="%s_name" data-validate="{required: %s, messages:{required:'请输入正确的%s!'}}" value="%s" placeholder="自动联想">
                 <input type="hidden" id="%s" name="%s" value="%s">
@@ -147,9 +147,9 @@ var initAutocompleteFormat = `
 	};
 `
 var initFileUploadJs = `$('#%s_upload').uploadify({
-            'swf'      : '../../lib/3rd/uploadify/uploadify.swf',
+            'swf'      : '../../lib/uploadify/uploadify/uploadify.swf',
             'uploader' : '/item/upload/%s?sn=' + $("#sn").val(),
-            'cancelImg': '../../lib/3rd/uploadify/uploadify-cancel.png',
+            'cancelImg': '../../lib/uploadify/uploadify/uploadify-cancel.png',
             'fileObjName':'uploadFile'
         });
 `

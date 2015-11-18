@@ -2,10 +2,14 @@
 <html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="stylesheet" href="../../lib/app/css/app.min.css"/>
 <link rel="stylesheet" href="../../lib/simple-line-icons/css/simple-line-icons.css" type="text/css" />
-<link rel="stylesheet" href="../../lib/app/css/app.min.css" type="text/css" />
 <link rel="stylesheet" href="../../lib/bootstrap-table/bootstrap-table.css">
 <link rel="stylesheet" href="../../lib/webo/css/ui.css">
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+<script src="../../lib/html5shiv.min.js"></script>
+<![endif]-->
 </head>
 <body>
 <div>
@@ -36,7 +40,7 @@
             <th data-field="brand"  data-sortable="false">品牌</th>
             <th data-field="model"  data-sortable="false" data-formatter="modelFormatter">型号</th>
             <th data-field="power"  data-sortable="false">功率(KW)</th>
-            <th data-field="num"  data-sortable="true">数量</th>
+            <th data-field="num"  data-sortable="true" data-width="50px" data-align="right">数量</th>
             <th data-field="placedate"  data-sortable="true">下单日期</th>
             <th data-field="requireddate"  data-sortable="true">需用日期</th>
             <th data-field="requireddepartment"  data-sortable="true">申请部门</th>

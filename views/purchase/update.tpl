@@ -2,17 +2,23 @@
 <html>
 <head lang="zh">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../../lib/app/css/app.min.css"/>
     <link rel="stylesheet" href="../../lib/jquery/datetimepicker/jquery.datetimepicker.css">
     <link rel="stylesheet" href="../../lib/uploadify/uploadify/uploadify.css" />
     <link rel="stylesheet" href="../../lib/jquery/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../lib/webo/css/ui.css">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="../../lib/html5shiv.min.js"></script>
+    <![endif]-->
 </head>
+<body>
 <div class="container-fluid">
     <form class="form-horizontal" id="item_form">
         {{str2html .Form_sn}}
         <div class="form-group">
-            <label class="col-sm-3 control-label">类别</label>
-            <div class="col-sm-6">
+            <label class="col-sm-2 control-label">类别</label>
+            <div class="col-sm-8">
                 <select class="input-block-level form-control" data-validate="{required: true, messages:{required:'请输入类别'}}" name="category" id="category" autocomplete="off" value="" disabled>
                     {{str2html .CategoryOptions}}
                 </select>
@@ -33,8 +39,8 @@
         {{str2html .Form_freightprice}}
         {{if .NeedSupplier}}
         <div class="form-group">
-            <label class="col-sm-3 control-label">供应商关键字</label>
-            <div class="col-sm-6">
+            <label class="col-sm-2 control-label">供应商关键字</label>
+            <div class="col-sm-8">
                 <select class="input-block-level form-control" name="supplier" id="supplier" autocomplete="off" value="{{.supplier}}" >
                     {{str2html .SupplierOptions}}
                 </select>
@@ -43,8 +49,8 @@
         </div>
         {{else}}
         <div class="form-group">
-            <label class="col-sm-3 control-label">供应商关键字</label>
-            <div class="col-sm-6">
+            <label class="col-sm-2 control-label">供应商关键字</label>
+            <div class="col-sm-8">
             <input type="text" class="input-block-level form-control" data-validate="{required: true, messages:{required:'请输入正确的供应商!'}}" name="suppliername" id="suppliername" autocomplete="off" value="{{.suppliername}}">
             <input type="hidden" name="supplier" id="supplier2" value="{{.supplier}}">
             </div>
@@ -79,8 +85,7 @@
         </div>
     </div>
 </div>
-<script src="../../lib/jquery/jquery/jquery.js"></script>
-<script src="../../lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../lib/app/js/app.min.js"></script>
 <script src="../../lib/jquery/jquery/jquery.form.js"></script>
 <script src="../../lib/jquery/jquery/validate/jquery.metadata.js"></script>
 <script src="../../lib/jquery/jquery/validate/jquery.validate.js"></script>

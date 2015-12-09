@@ -158,14 +158,14 @@
         $("#supplier").val(item.supplier)
         $power.val(item.power)
     }
-    function clearProductValues(){
-        $("#product").val("");
-        $("#productprice").val("")
-        $("#supplier").val("")
-        $("#brand").val("")
-        $("#model").val("")
-        $power.val("0")
-    }
+//    function clearProductValues(){
+//        $("#product").val("");
+//        $("#productprice").val("")
+//        $("#supplier").val("")
+//        $("#brand").val("")
+//        $("#model").val("")
+//        $power.val("0")
+//    }
     $(function () {
 
         $("#power").wrapAll('<div class="input-group"></div>')
@@ -192,7 +192,7 @@
                     $("#productprice").val("")
                     $("#supplier").val("")
                     $("#brand").val("")
-                    $power.val("")
+//                    $power.val("")
                 }
             }
         }).autocomplete( "instance" )._renderItem = function( ul, item ) {

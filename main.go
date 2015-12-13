@@ -41,5 +41,4 @@ func main() {
 	wbconf.LoadCategory()
 	beego.SetLogger("file", `{"filename":"logs/running.log", "level":6 }`)
 	beego.Run()
-
 }

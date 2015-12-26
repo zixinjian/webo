@@ -23,6 +23,7 @@
 <script src="../../lib/app/js/app.min.js"></script>
 <script src="../../lib/jquery/jquery/validate/jquery.metadata.js"></script>
 <script src="../../lib/jquery/jquery/validate/jquery.validate.js"></script>
+<script src="../../lib/jquery/jquery/jquery.form.js"></script>
 <script src="../../lib/uploadify/uploadify/jquery.uploadify.js"></script>
 <script src="../../lib/jquery/datetimepicker/jquery.datetimepicker.js"></script>
 <script src="../../lib/jquery/jquery-ui/jquery-ui.min.js"></script>

@@ -55,14 +55,14 @@
         <div class="form-group">
             <label class="col-sm-2 control-label">功率</label>
             <div class="col-sm-8">
-                <input type="text" class="input-block-level form-control" name="power" id="power" autocomplete="off" value="" readonly
-                       data-rule-required="true" data-rule-number="true" data-msg-number="请输入正确的功率!" />
+                <input type="text" class="input-block-level form-control" name="power" id="power" autocomplete="off" value=""
+                       data-rule-number="true" data-msg-number="请输入正确的功率!" />
             </div>
         </div>
         <div class="form-group">
             <label class="col-sm-2 control-label">参考价</label>
             <div class="col-sm-8">
-                <input type="text" class="input-block-level form-control" name="productprice" id="productprice" autocomplete="off" value="" readonly='true'/>
+                <input type="text" class="input-block-level form-control" name="productprice" id="productprice" autocomplete="off" value=""/>
             </div>
         </div>
         <div class="form-group">
@@ -171,7 +171,8 @@
         $("#power").wrapAll('<div class="input-group"></div>')
         $("#power").after('<span class="input-group-addon">KW</span>')
         $("#retailprice").after('<span class="input-group-addon">计算</span>')
-        initCategory($productName)
+
+        initCategory($('#productname'))
 
         $("#model").autocomplete({
             source: "/item/autocomplete/product",

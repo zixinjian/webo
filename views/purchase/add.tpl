@@ -42,29 +42,10 @@
         <div class="form-group">
             <label class="col-sm-2 control-label">型号</label>
             <div class="col-sm-8">
-                <input type="text" class="input-block-level form-control" name="model" id="model" autocomplete="off" value=""
-                       data-rule-required="true"/>
+                <input type="text" class="input-block-level form-control" name="model" id="model" autocomplete="off" value=""/>
             </div>
         </div>
-        <div class="form-group">
-            <label class="col-sm-2 control-label">品牌</label>
-            <div class="col-sm-8">
-                <input type="text" class="input-block-level form-control" name="brand" id="brand" autocomplete="off" value="" />
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="col-sm-2 control-label">功率</label>
-            <div class="col-sm-8">
-                <input type="text" class="input-block-level form-control" name="power" id="power" autocomplete="off" value=""
-                       data-rule-number="true" data-msg-number="请输入正确的功率!" />
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="col-sm-2 control-label">参考价</label>
-            <div class="col-sm-8">
-                <input type="text" class="input-block-level form-control" name="productprice" id="productprice" autocomplete="off" value=""/>
-            </div>
-        </div>
+
         <div class="form-group">
             <label class="col-sm-2 control-label">采购人</label>
             <div class="col-sm-8">
@@ -107,6 +88,25 @@
             <label class="col-sm-2 control-label">备注</label>
             <div class="col-sm-8">
                 <input type="text" class="input-block-level form-control" name="mark" id="mark" autocomplete="off" value="" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">品牌</label>
+            <div class="col-sm-8">
+                <input type="text" class="input-block-level form-control" name="brand" id="brand" autocomplete="off" value="" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">功率</label>
+            <div class="col-sm-8">
+                <input type="text" class="input-block-level form-control" name="power" id="power" autocomplete="off" value=""
+                       data-rule-number="true" data-msg-number="请输入正确的功率!" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">参考价</label>
+            <div class="col-sm-8">
+                <input type="text" class="input-block-level form-control" name="productprice" id="productprice" autocomplete="off" value=""/>
             </div>
         </div>
     </form>

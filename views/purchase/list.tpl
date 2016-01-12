@@ -34,32 +34,31 @@
                 data-events="actionEvents"
                 data-sortable="false"
                 data-width="75px">  [ 操作 ]  </th>
-            <th data-field="sn"  data-sortable="true" data-visible="false">[ 编号 ]</th>
-            <th data-field="category"  data-sortable="true">类别</th>
             <th data-field="productname"  data-sortable="false">商品名称</th>
-            <th data-field="brand"  data-sortable="false">品牌</th>
             <th data-field="model"  data-sortable="false" data-formatter="modelFormatter">型号</th>
-            <th data-field="power"  data-sortable="false">功率(KW)</th>
             <th data-field="num"  data-sortable="true" data-width="50px" data-align="right">数量</th>
+            <th data-field="mark"  data-sortable="true">备注</th>
             <th data-field="placedate"  data-sortable="true">下单日期</th>
             <th data-field="requireddate"  data-sortable="true">需用日期</th>
             <th data-field="requireddepartment"  data-sortable="true">申请部门</th>
-            <th data-field="unitprice"  data-sortable="true">单价</th>
-            <th data-field="productprice"  data-sortable="true">参考价</th>
-            <th data-field="totalprice"  data-sortable="true">总价</th>
-            <th data-field="freightprice"  data-sortable="true">运费</th>
-            <th data-field="supplierkey"  data-sortable="true" data-formatter="supplierFormatter">供应商关键词</th>
             <th data-field="buyer"  data-sortable="true">采购人</th>
             <th data-field="orderdate"  data-sortable="true" data-order="desc">订货日期</th>
             <th data-field="predictdeliverydate"  data-sortable="true">预计发货日期</th>
             <th data-field="actualdeliverydate"  data-sortable="true">实际发货日</th>
             <th data-field="arrivaldate"  data-sortable="true">到货日期</th>
             <th data-field="godowndate"  data-sortable="true">入库日期</th>
-            <th data-field="paymentamount" data-visible="false" data-sortable="true">付款金额</th>
-            <th data-field="paymentdate" data-visible="false" data-sortable="true">付款日期</th>
-            <th data-field="file" data-visible="false" data-sortable="true">附件</th>
+            <th data-field="supplierkey"  data-sortable="true" data-formatter="supplierFormatter">供应商关键词</th>
             <th data-field="changelog"  data-sortable="true">变更情况</th>
-            <th data-field="mark"  data-sortable="true">备注</th>
+            <th data-field="totalprice"  data-sortable="true">总价</th>
+            <th data-field="paymentamount" data-visible="false" data-sortable="true">付款金额</th>
+            <th data-field="paymentdate" data-visible="false" data-sortable="true">付款日期
+            <th data-field="file" data-visible="false" data-sortable="true">附件</th>
+            <th data-field="brand"  data-sortable="false">品牌</th>
+            <th data-field="unitprice"  data-sortable="true">单价</th>
+            <th data-field="productprice"  data-sortable="true">参考价</th>
+            <th data-field="freightprice"  data-sortable="true">运费</th>
+            <th data-field="category"  data-sortable="true">类别</th>
+            <th data-field="sn"  data-sortable="true" data-visible="false">[ 编号 ]</th>
         </tr>
         </thead>
     </table>
